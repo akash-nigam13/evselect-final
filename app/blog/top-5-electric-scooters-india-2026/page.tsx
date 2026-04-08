@@ -8,7 +8,7 @@ import { ArrowLeft, Clock, Calendar, Check, ChevronRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Top 5 Electric Scooters in India 2026 — Range, Price & Features Compared",
   description:
-    "Looking for the best electric scooter in India in 2026? We compare the top 5 models on ARAI range, real-world performance, charging time, and value for money to help you make the right choice.",
+    "Looking for the best e-scooter in India in 2026? We compare the top 5 models on ARAI range, real-world performance, charging time, and value for money to help you make the right choice.",
   keywords: ["best electric scooter India 2026", "top electric scooters India", "Ather 450X vs Ola S1 Pro"],
   alternates: { canonical: "https://evselect.in/blog/top-5-electric-scooters-india-2026" },
   openGraph: {
@@ -87,7 +87,7 @@ export default function Article1() {
               Buying Guide
             </span>
             <h1 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-5">
-              Top 5 Electric Scooters in India 2026
+              Top 5 EV Scooters/Scooty in India 2026
             </h1>
             <p className="text-ev-text/60 font-body text-lg leading-relaxed mb-6">
               We analysed India's best electric scooters on ARAI range, real-world performance, charging times, service networks, and 5-year running costs to help you pick the right one.
@@ -142,7 +142,7 @@ export default function Article1() {
               </div>
 
               <h2 className="font-display font-bold text-white text-2xl sm:text-3xl mt-14 mb-6">
-                The Top 5 Electric Scooters of 2026
+                Top 5 EV Scooters in India |  Updated List 2026
               </h2>
 
               {/* Scooter cards */}
