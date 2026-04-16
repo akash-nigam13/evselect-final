@@ -10,8 +10,8 @@ import {
 } from "@/components/blog/BlogImages";
 
 export const metadata: Metadata = {
-  title: "Top 5 Electric Scooters in India 2026 — Range, Price & Features Compared",
-  description: "Looking for the best electric scooter in India in 2026? We compare the top 5 models on ARAI range, real-world performance, charging time, and value for money.",
+  title: "Top 5 Best Electric Scooters in India 2026 — Range, Price & Features Compared",
+  description: "Looking for the best electric scooter in India in 2026? We compare the top and best 5 models on ARAI range, real-world performance, charging time, and value for money.",
   alternates: { canonical: "https://evselect.in/blog/top-5-electric-scooters-india-2026" },
   openGraph: { title: "Top 5 Electric Scooters in India 2026", type: "article" },
 };
@@ -97,10 +97,10 @@ export default function Article1() {
             </Link>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono border mb-4 bg-ev-cyan/10 border-ev-cyan/30 text-ev-cyan">Buying Guide</span>
             <h1 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-4">
-              Top 5 Electric Scooters in India 2026
+             Top & Best Electric Scooters in India 2026
             </h1>
             <p className="text-ev-text/60 font-body text-lg leading-relaxed mb-5">
-              We analysed India&apos;s best electric scooters on ARAI range, real-world performance, charging times, service networks, and 5-year running costs.
+              We analysed India&apos;s best electric scooters in 2026 on ARAI range, real-world performance, charging times, service networks, and 5-year running costs.
             </p>
             <div className="flex flex-wrap gap-5 text-xs font-mono text-ev-muted border-t border-ev-border/30 pt-5">
               <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Jan 15, 2026</span>
@@ -135,7 +135,7 @@ export default function Article1() {
 
               <AdPlaceholder format="leaderboard" slot="9000000001" className="my-8" />
 
-              <h2 className="font-display font-bold text-white text-2xl sm:text-3xl mt-14 mb-6">The Top 5 Electric Scooters of 2026</h2>
+              <h2 className="font-display font-bold text-white text-2xl sm:text-3xl mt-14 mb-6">5 Best Electric Scooters of 2026</h2>
 
               {scooters.map((s) => {
                 const Img = ImageCards[s.ImageCard];
