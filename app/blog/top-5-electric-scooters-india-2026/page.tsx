@@ -114,7 +114,7 @@ export default function Article1() {
           <div className="grid lg:grid-cols-[1fr_280px] gap-12">
             <article>
               <p className="text-ev-text/75 font-body text-base leading-relaxed mb-5">
-                The Indian electric scooter market has matured remarkably. In 2026, monthly EV two-wheeler registrations crossed <strong className="text-ev-cyan">1.5 lakh units</strong> for the first time, and the competition among top brands has never been fiercer. This guide cuts through the marketing noise.
+                The Indian electric scooter market has matured remarkably. In 2026, monthly EV two-wheeler registrations crossed <strong className="text-ev-cyan">1.5 lakh units</strong> for the first time, and the competition among top brands has never been fiercer. This guide cuts through the marketing noise. The top 5 and best electric scooters in India are mentioned below.
               </p>
 
               {/* Stats */}
