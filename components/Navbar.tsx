@@ -49,7 +49,7 @@ export default function Navbar() {
     alt="EVSelect Logo"
     width={160}
     height={50}
-    className="h-18 w-auto"
+    className="h-22 w-auto"
     priority
   />
 </Link>
