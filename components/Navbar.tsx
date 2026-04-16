@@ -42,17 +42,18 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-8 h-8 flex items-center justify-center">
-            <div className="absolute inset-0 bg-ev-cyan/20 rounded-lg rotate-12 group-hover:rotate-45 transition-transform duration-300" />
-            <Zap className="relative w-5 h-5 text-ev-cyan" fill="currentColor" />
-          </div>
-          <span className="font-display text-lg font-bold tracking-wider">
-            <span className="text-white">EV</span>
-            <span className="text-ev-cyan">SELECT</span>
-            <span className="text-ev-muted text-sm">.in</span>
-          </span>
-        </Link>
+        import Image from "next/image";
+
+<Link href="/" className="flex items-center">
+  <Image
+    src="/logo.png"
+    alt="EVSelect Logo"
+    width={160}
+    height={50}
+    className="h-10 w-auto"
+    priority
+  />
+</Link>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-1">
