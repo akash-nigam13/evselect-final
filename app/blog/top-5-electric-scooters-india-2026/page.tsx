@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Top 5 Best Electric Scooters in India 2026 — Range, Price & Features Compared",
   description: "Looking for the best electric scooter in India in 2026? We compare the top and best 5 models on ARAI range, real-world performance, charging time, and value for money.",
   alternates: { canonical: "https://evselect.in/blog/top-5-electric-scooters-india-2026" },
-  openGraph: { title: "Top 5 Electric Scooters in India 2026", type: "article" },
+  openGraph: { title: "Top 5 Best Electric Scooters in India 2026", type: "article" },
 };
 
 const scooters = [
