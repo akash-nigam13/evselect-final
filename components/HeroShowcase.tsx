@@ -17,12 +17,19 @@ export interface HeroEv {
 
 const ROTATE_MS = 5000;
 
+const fallback = (e: React.SyntheticEvent<HTMLImageElement>, id: string) => {
+  const el = e.currentTarget;
+  if (!el.dataset.fb) {
+    el.dataset.fb = "1";
+    el.src = `/vehicles/${id}.jpg`;
+  }
+};
+
 export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
   const [idx, setIdx] = useState(0);
   const [nudge, setNudge] = useState(0); // bump to reset the auto-timer after manual pick
   const tiltRef = useRef<HTMLDivElement>(null);
 
-  // Auto-advance (resets whenever the user picks a thumbnail).
   useEffect(() => {
     if (evs.length < 2) return;
     const id = setInterval(() => setIdx((i) => (i + 1) % evs.length), ROTATE_MS);
@@ -58,18 +65,76 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
       onMouseMove={onMove}
       onMouseLeave={onLeave}
     >
+      <style>{`
+        @keyframes heroScan {
+          0% { transform: translateY(-15%); opacity: 0; }
+          12% { opacity: 1; }
+          88% { opacity: 1; }
+          100% { transform: translateY(115%); opacity: 0; }
+        }
+        @keyframes heroMaterialize {
+          0% { opacity: 0; filter: brightness(2.2) saturate(0.2); }
+          60% { opacity: 1; }
+          100% { opacity: 1; filter: brightness(1) saturate(1); }
+        }
+        @keyframes heroPodium {
+          0%,100% { opacity: .55; transform: translateX(-50%) scaleX(1); }
+          50% { opacity: .85; transform: translateX(-50%) scaleX(1.05); }
+        }
+      `}</style>
+
       {/* accent glow */}
       <div
         className="pointer-events-none absolute -inset-8 -z-10 rounded-[2.5rem] blur-3xl transition-colors duration-700"
         style={{ background: `radial-gradient(60% 60% at 60% 40%, ${ev.accent}33, transparent 70%)` }}
       />
 
-      {/* Floating car */}
+      {/* Car + holographic podium */}
       <Link
         href={`/catalog/${ev.id}`}
         aria-label={`View ${ev.name} specs`}
-        className="relative block h-60 [perspective:1200px]"
+        className="relative block h-72 [perspective:1200px]"
       >
+        {/* Holographic podium (under the car) */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-6 flex flex-col items-center">
+          {/* projected grid disc */}
+          <div
+            className="absolute bottom-0 left-1/2 h-16 w-64"
+            style={{
+              transform: "translateX(-50%) perspective(300px) rotateX(72deg)",
+              background: `repeating-linear-gradient(0deg, ${ev.accent}55 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, ${ev.accent}55 0 1px, transparent 1px 14px)`,
+              maskImage: "radial-gradient(ellipse at center, black 10%, transparent 70%)",
+              WebkitMaskImage: "radial-gradient(ellipse at center, black 10%, transparent 70%)",
+              opacity: 0.5,
+            }}
+          />
+          {/* glowing rings */}
+          <div
+            className="absolute bottom-1 left-1/2 h-5 w-56 rounded-[50%] border"
+            style={{ borderColor: `${ev.accent}aa`, boxShadow: `0 0 24px -4px ${ev.accent}`, animation: "heroPodium 3.5s ease-in-out infinite" }}
+          />
+          <div
+            className="absolute bottom-3 left-1/2 h-3 w-40 -translate-x-1/2 rounded-[50%]"
+            style={{ background: `radial-gradient(ellipse at center, ${ev.accent}66, transparent 70%)`, filter: "blur(2px)" }}
+          />
+        </div>
+
+        {/* Reflection */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          key={`ref-${ev.id}`}
+          src={`/hero-cars/${ev.id}.png`}
+          alt=""
+          aria-hidden
+          onError={(e) => fallback(e, ev.id)}
+          className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto h-28 w-[80%] -scale-y-100 object-contain opacity-20 blur-[1px]"
+          style={{
+            maskImage: "linear-gradient(to bottom, black, transparent 55%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black, transparent 55%)",
+          }}
+        />
+
+        {/* Floating car (tilts with cursor) */}
         <div ref={tiltRef} className="relative h-full w-full transition-transform duration-300 ease-out [transform-style:preserve-3d] animate-float">
           {evs.map((e, i) => (
             // eslint-disable-next-line @next/next/no-img-element
@@ -77,22 +142,32 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
               key={e.id}
               src={`/hero-cars/${e.id}.png`}
               alt={e.name}
-              onError={(ev2) => {
-                const el = ev2.currentTarget;
-                if (!el.dataset.fb) {
-                  el.dataset.fb = "1";
-                  el.src = `/vehicles/${e.id}.jpg`;
-                }
-              }}
-              className="absolute inset-0 h-full w-full object-contain drop-shadow-2xl transition-opacity duration-700 ease-out"
-              style={{ opacity: i === idx ? 1 : 0 }}
+              onError={(ev2) => fallback(ev2, e.id)}
+              className="absolute inset-0 h-[88%] w-full object-contain drop-shadow-2xl transition-opacity duration-700 ease-out"
+              style={
+                i === idx
+                  ? { opacity: 1, animation: "heroMaterialize 0.7s ease-out" }
+                  : { opacity: 0 }
+              }
             />
           ))}
+        </div>
+
+        {/* Materialize scan sweep — replays on each car change (keyed by idx) */}
+        <div
+          key={`scan-${idx}`}
+          className="pointer-events-none absolute inset-x-6 top-0 h-[78%]"
+          style={{ animation: "heroScan 0.7s ease-out" }}
+        >
+          <div
+            className="h-[3px] w-full rounded-full"
+            style={{ background: `linear-gradient(90deg, transparent, ${ev.accent}, transparent)`, boxShadow: `0 0 16px 2px ${ev.accent}` }}
+          />
         </div>
       </Link>
 
       {/* Spec readout */}
-      <div className="mt-2 rounded-2xl border border-ev-border bg-ev-card/80 p-5 shadow-card backdrop-blur">
+      <div className="mt-1 rounded-2xl border border-ev-border bg-ev-card/80 p-5 shadow-card backdrop-blur">
         <div className="mb-4 flex items-center justify-between">
           <div>
             <div className="font-display text-lg font-bold leading-tight text-white">{ev.name}</div>
@@ -142,13 +217,7 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
             <img
               src={`/hero-cars/${e.id}.png`}
               alt={e.name}
-              onError={(ev2) => {
-                const el = ev2.currentTarget;
-                if (!el.dataset.fb) {
-                  el.dataset.fb = "1";
-                  el.src = `/vehicles/${e.id}.jpg`;
-                }
-              }}
+              onError={(ev2) => fallback(ev2, e.id)}
               className="h-full w-full object-contain p-1"
             />
           </button>
