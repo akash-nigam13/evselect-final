@@ -67,10 +67,10 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
     >
       <style>{`
         @keyframes heroScan {
-          0% { transform: translateY(-15%); opacity: 0; }
-          12% { opacity: 1; }
-          88% { opacity: 1; }
-          100% { transform: translateY(115%); opacity: 0; }
+          0% { transform: translateY(-45%); opacity: 0; }
+          18% { opacity: 1; }
+          82% { opacity: 1; }
+          100% { transform: translateY(150%); opacity: 0; }
         }
         @keyframes heroMaterialize {
           0% { opacity: 0; filter: brightness(2.2) saturate(0.2); }
@@ -143,10 +143,10 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
               src={`/hero-cars/${e.id}.png`}
               alt={e.name}
               onError={(ev2) => fallback(ev2, e.id)}
-              className="absolute inset-0 h-[88%] w-full object-contain drop-shadow-2xl transition-opacity duration-700 ease-out"
+              className="absolute inset-0 h-[88%] w-full object-contain drop-shadow-2xl transition-opacity duration-1000 ease-in-out"
               style={
                 i === idx
-                  ? { opacity: 1, animation: "heroMaterialize 0.7s ease-out" }
+                  ? { opacity: 1, animation: "heroMaterialize 1s ease-in-out" }
                   : { opacity: 0 }
               }
             />
@@ -156,12 +156,18 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
         {/* Materialize scan sweep — replays on each car change (keyed by idx) */}
         <div
           key={`scan-${idx}`}
-          className="pointer-events-none absolute inset-x-6 top-0 h-[78%]"
-          style={{ animation: "heroScan 0.7s ease-out" }}
+          className="pointer-events-none absolute inset-x-6 top-[-1.5rem] h-[82%]"
+          style={{ animation: "heroScan 1s ease-in-out" }}
         >
+          {/* soft glowing band for a smoother sweep */}
           <div
-            className="h-[3px] w-full rounded-full"
-            style={{ background: `linear-gradient(90deg, transparent, ${ev.accent}, transparent)`, boxShadow: `0 0 16px 2px ${ev.accent}` }}
+            className="h-10 w-full"
+            style={{ background: `linear-gradient(to bottom, transparent, ${ev.accent}40, transparent)`, filter: "blur(3px)" }}
+          />
+          {/* bright core line */}
+          <div
+            className="mx-auto -mt-5 h-[2px] w-full rounded-full"
+            style={{ background: `linear-gradient(90deg, transparent, ${ev.accent}, transparent)`, boxShadow: `0 0 14px 2px ${ev.accent}` }}
           />
         </div>
       </Link>
