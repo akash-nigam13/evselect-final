@@ -1,0 +1,299 @@
+export interface BlogPost {
+  slug: string;
+  title: string;
+  subtitle: string;
+  excerpt: string;
+  category: string; // label
+  categorySlug: string;
+  readTime: string;
+  date: string;
+  accent: string;
+  featured?: boolean;
+  news?: boolean;
+  related: string[]; // slugs for contextual "Related reads"
+  // Hindi metadata (used by /hi article pages + locale-aware ArticleShell)
+  hiTitle?: string;
+  hiSubtitle?: string;
+  hiExcerpt?: string;
+}
+
+export interface BlogCategory {
+  slug: string;
+  label: string;
+  description: string;
+  accent: string;
+}
+
+export const CATEGORIES: BlogCategory[] = [
+  { slug: "buying-guide", label: "Buying Guide", description: "Practical, step-by-step help for choosing and buying the right EV in India.", accent: "#26E0C4" },
+  { slug: "battery-tech", label: "Battery & Tech", description: "How EV batteries and core technology work — explained for Indian conditions.", accent: "#8B7BFF" },
+  { slug: "charging", label: "Charging", description: "Home charging, public networks, connectors and road-trip planning in India.", accent: "#C6F94E" },
+  { slug: "cost-ownership", label: "Cost & Ownership", description: "Running costs, resale value and the real economics of owning an EV.", accent: "#FFC247" },
+  { slug: "range-efficiency", label: "Range & Efficiency", description: "Real-world range, claimed figures and how to get the most from your EV.", accent: "#34D399" },
+  { slug: "policy-incentives", label: "Policy & Incentives", description: "Subsidies, road tax, FAME / PM E-Drive and state EV policies, decoded.", accent: "#F472B6" },
+  { slug: "market-news", label: "Market News", description: "The latest EV launches, sales numbers and market moves that matter to India.", accent: "#60A5FA" },
+];
+
+export const POSTS: BlogPost[] = [
+  // ── Existing evergreen ───────────────────────────────────────
+  {
+    slug: "top-5-electric-scooters-india-2026",
+    title: "Top 5 Electric Scooters in India 2026",
+    subtitle: "Range, Price & Features Compared",
+    excerpt:
+      "We analysed India's best electric scooters on ARAI range, real-world performance, charging times, service networks, and 5-year running costs to help you pick the right one.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "11 min",
+    date: "Jan 15, 2026",
+    accent: "#00e5ff",
+    featured: true,
+    related: ["how-to-choose-first-ev-india", "petrol-vs-electric-5-year-cost-india", "ev-subsidies-road-tax-by-state-india-2026", "home-ev-charging-cost-india"],
+  },
+  {
+    slug: "ev-battery-life-india-weather",
+    title: "EV Battery Life in Indian Weather",
+    subtitle: "How to Make Your Battery Last 10+ Years",
+    excerpt:
+      "India's 45°C summers and monsoon humidity are uniquely brutal on EV batteries. Here's the science-backed playbook to protect your pack and preserve your warranty.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "13 min",
+    date: "Jan 22, 2026",
+    accent: "#39ff14",
+    related: ["ev-resale-value-battery-health-india", "solid-state-batteries-2026", "real-world-range-vs-arai-india", "home-ev-charging-cost-india"],
+  },
+  {
+    slug: "petrol-vs-electric-5-year-cost-india",
+    title: "Petrol vs Electric: 5-Year Cost Analysis",
+    subtitle: "Total Cost of Ownership for Indian Buyers",
+    excerpt:
+      "A rupee-by-rupee breakdown of purchase price, fuel, insurance, maintenance, and resale value over 5 years. We compare the Tata Nexon EV Max against the Hyundai Creta petrol.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "14 min",
+    date: "Feb 3, 2026",
+    accent: "#ffb800",
+    related: ["how-to-choose-first-ev-india", "ev-resale-value-battery-health-india", "ev-subsidies-road-tax-by-state-india-2026", "home-ev-charging-cost-india"],
+  },
+  {
+    slug: "solid-state-batteries-2026",
+    title: "Solid-State Batteries: The 2026 Turning Point",
+    subtitle: "Why This Year Changes EV Range Forever",
+    excerpt:
+      "After years of promises, solid-state cells are entering limited production. We explain what the technology actually delivers, who is leading, and when Indian EV buyers will feel the impact.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "12 min",
+    date: "Feb 14, 2026",
+    accent: "#a78bfa",
+    related: ["ev-battery-life-india-weather", "real-world-range-vs-arai-india", "ev-resale-value-battery-health-india", "india-ev-sales-fy2026"],
+  },
+  {
+    slug: "ev-charging-infrastructure-india",
+    title: "EV Charging Infrastructure in India 2026",
+    subtitle: "A Complete Road Trip Planning Guide",
+    excerpt:
+      "India now has 25,000+ public chargers and 4,500+ DC fast chargers on highways. We map the best corridors, recommend the top apps, and give you a step-by-step road trip checklist.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "15 min",
+    date: "Feb 28, 2026",
+    accent: "#00e5ff",
+    related: ["home-ev-charging-cost-india", "india-ev-charging-network-2026", "real-world-range-vs-arai-india", "how-to-choose-first-ev-india"],
+  },
+
+  // ── New evergreen ────────────────────────────────────────────
+  {
+    slug: "home-ev-charging-cost-india",
+    title: "Home EV Charging in India: Setup, Costs & What You Actually Need",
+    subtitle: "Chargers, wiring, tariffs and real per-km costs",
+    excerpt:
+      "Home charging is where most EV owners top up. Here's exactly what charger to get, what installation costs, and how cheap charging at home really is in 2026.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "7 min",
+    date: "Mar 12, 2026",
+    accent: "#C6F94E",
+    related: ["ev-charging-infrastructure-india", "india-ev-charging-network-2026", "petrol-vs-electric-5-year-cost-india", "real-world-range-vs-arai-india"],
+    hiTitle: "भारत में घर पर EV चार्जिंग: सेटअप, लागत और आपको असल में क्या चाहिए",
+    hiSubtitle: "चार्जर, वायरिंग, टैरिफ और असली प्रति-किमी लागत",
+    hiExcerpt:
+      "ज़्यादातर EV मालिक घर पर ही चार्ज करते हैं। यहाँ बताया गया है कि कौन-सा चार्जर लें, इंस्टॉलेशन में कितना खर्च आता है, और 2026 में घर पर चार्जिंग असल में कितनी सस्ती है।",
+  },
+  {
+    slug: "how-to-choose-first-ev-india",
+    title: "Buying Your First EV in India: The Complete Checklist",
+    subtitle: "Range, charging, costs and safety — in order",
+    excerpt:
+      "Switching from petrol to electric? This buyer-first checklist walks you through everything that actually matters before you book your first EV in India.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "7 min",
+    date: "Mar 24, 2026",
+    accent: "#26E0C4",
+    related: ["petrol-vs-electric-5-year-cost-india", "ev-resale-value-battery-health-india", "ev-subsidies-road-tax-by-state-india-2026", "real-world-range-vs-arai-india"],
+    hiTitle: "भारत में अपनी पहली EV खरीदना: पूरी चेकलिस्ट",
+    hiSubtitle: "रेंज, चार्जिंग, लागत और सुरक्षा — सही क्रम में",
+    hiExcerpt:
+      "पेट्रोल से इलेक्ट्रिक पर स्विच कर रहे हैं? यह बायर-फर्स्ट चेकलिस्ट भारत में अपनी पहली EV बुक करने से पहले हर ज़रूरी बात समझाती है।",
+  },
+  {
+    slug: "real-world-range-vs-arai-india",
+    title: "Real-World EV Range vs ARAI Claims, Explained",
+    subtitle: "Why the sticker number isn't what you'll get",
+    excerpt:
+      "Your EV's ARAI range and the range you actually get can differ by 20–30%. Here's why, what affects it in Indian conditions, and how to estimate your true range.",
+    category: "Range & Efficiency",
+    categorySlug: "range-efficiency",
+    readTime: "6 min",
+    date: "Apr 7, 2026",
+    accent: "#34D399",
+    related: ["ev-battery-life-india-weather", "home-ev-charging-cost-india", "ev-charging-infrastructure-india", "how-to-choose-first-ev-india"],
+    hiTitle: "असल EV रेंज बनाम ARAI दावे, विस्तार से समझाया गया",
+    hiSubtitle: "स्टिकर का नंबर वह नहीं जो आपको असल में मिलेगा",
+    hiExcerpt:
+      "आपकी EV की ARAI रेंज और असल में मिलने वाली रेंज में 20–30% का अंतर हो सकता है। यहाँ जानिए ऐसा क्यों होता है, भारतीय परिस्थितियों में किन बातों का असर पड़ता है, और अपनी असली रेंज का अनुमान कैसे लगाएँ।",
+  },
+  {
+    slug: "ev-resale-value-battery-health-india",
+    title: "EV Resale Value & Battery Health in India",
+    subtitle: "Will your EV hold its worth?",
+    excerpt:
+      "Battery health drives EV resale value. Learn what affects degradation, how State of Health is measured, and how to protect both your battery and your resale price.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "7 min",
+    date: "Apr 18, 2026",
+    accent: "#FFC247",
+    related: ["ev-battery-life-india-weather", "petrol-vs-electric-5-year-cost-india", "how-to-choose-first-ev-india", "maruti-e-vitara-first-ev-launch"],
+    hiTitle: "भारत में EV रीसेल वैल्यू और बैटरी हेल्थ",
+    hiSubtitle: "क्या आपकी EV अपनी कीमत बनाए रखेगी?",
+    hiExcerpt:
+      "बैटरी हेल्थ EV की रीसेल वैल्यू तय करती है। जानिए डिग्रेडेशन को क्या प्रभावित करता है, State of Health कैसे मापा जाता है, और अपनी बैटरी व रीसेल कीमत दोनों की रक्षा कैसे करें।",
+  },
+  {
+    slug: "ev-subsidies-road-tax-by-state-india-2026",
+    title: "EV Subsidies, Road Tax & Incentives by State (2026 Guide)",
+    subtitle: "What you actually save, and where",
+    excerpt:
+      "Central PM E-Drive incentives, state subsidies and road-tax waivers can change an EV's on-road price by lakhs. Here's how the 2026 incentive landscape works in India.",
+    category: "Policy & Incentives",
+    categorySlug: "policy-incentives",
+    readTime: "7 min",
+    date: "Apr 29, 2026",
+    accent: "#F472B6",
+    related: ["how-to-choose-first-ev-india", "petrol-vs-electric-5-year-cost-india", "india-ev-sales-fy2026", "tesla-model-y-price-cut-india-2026"],
+    hiTitle: "राज्यवार EV सब्सिडी, रोड टैक्स और प्रोत्साहन (2026 गाइड)",
+    hiSubtitle: "आप असल में कितना बचाते हैं, और कहाँ",
+    hiExcerpt:
+      "केंद्र की PM E-Drive प्रोत्साहन योजनाएँ, राज्य सब्सिडी और रोड-टैक्स छूट किसी EV की ऑन-रोड कीमत को लाखों रुपये तक बदल सकती हैं। यहाँ जानिए भारत में 2026 का प्रोत्साहन परिदृश्य कैसे काम करता है।",
+  },
+
+  // ── News (May 2026) ──────────────────────────────────────────
+  {
+    slug: "india-ev-sales-fy2026",
+    title: "India EV Sales Cross 2.45 Million in FY2026",
+    subtitle: "What the record numbers mean for buyers",
+    excerpt:
+      "EV sales grew about 25% to 2.45 million units in FY2026, with electric cars up 84%. We break down the FADA data and what India's broadening EV market means for you.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "6 min",
+    date: "May 8, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["maruti-e-vitara-first-ev-launch", "tesla-model-y-price-cut-india-2026", "india-ev-charging-network-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "FY2026 में भारत की EV बिक्री 24.5 लाख यूनिट के पार",
+    hiSubtitle: "रिकॉर्ड आंकड़े खरीदारों के लिए क्या मायने रखते हैं",
+    hiExcerpt:
+      "FY2026 में EV बिक्री लगभग 25% बढ़कर 24.5 लाख यूनिट हो गई, जिसमें इलेक्ट्रिक कारें 84% ऊपर रहीं। हम FADA डेटा और भारत के बढ़ते EV बाज़ार का आपके लिए मतलब समझाते हैं।",
+  },
+  {
+    slug: "maruti-e-vitara-first-ev-launch",
+    title: "Maruti e Vitara: India's Biggest Carmaker Goes Electric",
+    subtitle: "What its first EV (and BaaS pricing) means",
+    excerpt:
+      "Maruti Suzuki's first EV, the e Vitara, brings a battery-as-a-service option to the mass market. Here's why India's largest carmaker going electric matters for every buyer.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "6 min",
+    date: "May 12, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["india-ev-sales-fy2026", "how-to-choose-first-ev-india", "ev-resale-value-battery-health-india", "tesla-model-y-price-cut-india-2026"],
+    hiTitle: "Maruti e Vitara: भारत की सबसे बड़ी कारमेकर इलेक्ट्रिक हुई",
+    hiSubtitle: "इसकी पहली EV (और BaaS कीमत) का क्या मतलब है",
+    hiExcerpt:
+      "Maruti Suzuki की पहली EV, e Vitara, मास मार्केट में बैटरी-ऐज़-अ-सर्विस विकल्प लाती है। जानिए भारत की सबसे बड़ी कारमेकर का इलेक्ट्रिक होना हर खरीदार के लिए क्यों मायने रखता है।",
+  },
+  {
+    slug: "india-ev-charging-network-2026",
+    title: "India's Charging Network Nears 30,000 Stations",
+    subtitle: "Growth, reliability and a UPI-style fix",
+    excerpt:
+      "India's public charging network is scaling fast — but reliability is still the pain point. Here's the latest on PM E-Drive chargers and the proposed UPI-style payment system.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "6 min",
+    date: "May 20, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["ev-charging-infrastructure-india", "home-ev-charging-cost-india", "india-ev-sales-fy2026", "real-world-range-vs-arai-india"],
+    hiTitle: "भारत का चार्जिंग नेटवर्क 30,000 स्टेशनों के करीब",
+    hiSubtitle: "विकास, विश्वसनीयता और एक UPI-जैसा समाधान",
+    hiExcerpt:
+      "भारत का सार्वजनिक चार्जिंग नेटवर्क तेज़ी से बढ़ रहा है — लेकिन विश्वसनीयता अब भी सबसे बड़ी समस्या है। यहाँ PM E-Drive चार्जर और प्रस्तावित UPI-जैसी भुगतान प्रणाली पर ताज़ा जानकारी है।",
+  },
+  {
+    slug: "tesla-model-y-price-cut-india-2026",
+    title: "Tesla Cuts Model Y Price in India by ₹9 Lakh",
+    subtitle: "Why import duty still keeps it premium",
+    excerpt:
+      "Tesla slashed the Model Y's India price by about ₹9 lakh in May 2026. We unpack the new pricing, the import-duty story, and how it stacks up against home-grown EVs.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "6 min",
+    date: "May 30, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["india-ev-sales-fy2026", "ev-subsidies-road-tax-by-state-india-2026", "maruti-e-vitara-first-ev-launch", "india-ev-charging-network-2026"],
+    hiTitle: "Tesla ने भारत में Model Y की कीमत ₹9 लाख घटाई",
+    hiSubtitle: "इम्पोर्ट ड्यूटी इसे अब भी प्रीमियम क्यों रखती है",
+    hiExcerpt:
+      "Tesla ने मई 2026 में Model Y की भारत कीमत लगभग ₹9 लाख घटाई। हम नई कीमत, इम्पोर्ट-ड्यूटी की कहानी, और यह घरेलू EVs के मुकाबले कैसी टिकती है — सब समझाते हैं।",
+  },
+];
+
+// ── Helpers ──────────────────────────────────────────────────────
+export const getPost = (slug: string): BlogPost | undefined =>
+  POSTS.find((p) => p.slug === slug);
+
+export const getCategory = (slug: string): BlogCategory | undefined =>
+  CATEGORIES.find((c) => c.slug === slug);
+
+export const postsInCategory = (slug: string): BlogPost[] =>
+  POSTS.filter((p) => p.categorySlug === slug);
+
+/** Resolve a post's related list (falls back to same-category posts). */
+export function relatedPosts(slug: string, count = 4): BlogPost[] {
+  const post = getPost(slug);
+  if (!post) return [];
+  const chosen = post.related
+    .map((s) => getPost(s))
+    .filter((p): p is BlogPost => !!p);
+  if (chosen.length >= count) return chosen.slice(0, count);
+  const extra = POSTS.filter(
+    (p) =>
+      p.slug !== slug &&
+      !chosen.some((c) => c.slug === p.slug) &&
+      p.categorySlug === post.categorySlug
+  );
+  return [...chosen, ...extra].slice(0, count);
+}
+
+/** Newest-first ordering by the date string. */
+export const postsByDate = (): BlogPost[] =>
+  [...POSTS].sort((a, b) => +new Date(b.date) - +new Date(a.date));
+
+export type Post = BlogPost;

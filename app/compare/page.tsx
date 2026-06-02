@@ -1,0 +1,56 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import AdPlaceholder from "@/components/AdPlaceholder";
+import Aurora from "@/components/ui/Aurora";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { webAppSchema } from "@/lib/seo";
+import CompareClient from "@/components/compare/CompareClient";
+import type { Metadata } from "next";
+import { altsFor } from "@/lib/i18n";
+
+export const metadata: Metadata = {
+  title: "Compare Electric Vehicles Side by Side",
+  description:
+    "Compare any two (or three) EVs in India side by side — range, battery, price, power, charging speed and more. Live data on 140+ electric cars, scooters and bikes.",
+  alternates: altsFor("/compare", "en"),
+};
+
+export default function ComparePage() {
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen pt-16">
+        <section className="relative overflow-hidden border-b border-ev-border/40">
+          <Aurora variant="dual" />
+          <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
+            <Breadcrumbs items={[{ name: "Compare", path: "/compare" }]} className="mb-6 justify-center" />
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-brand">
+              Comparison Engine
+            </p>
+            <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">
+              Compare <span className="text-gradient-brand">any EVs</span>, instantly
+            </h1>
+            <p className="mx-auto mt-4 max-w-xl font-body text-ev-text/60">
+              Pick two or three electric vehicles and get a full side-by-side
+              breakdown — every spec that matters, with the leader highlighted.
+            </p>
+          </div>
+        </section>
+
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <CompareClient />
+          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+        </div>
+      </main>
+      <Footer />
+      <JsonLd
+        data={webAppSchema(
+          "EV Comparison Tool",
+          "Compare any two or three electric vehicles in India side by side — range, battery, price, power and charging.",
+          "/compare",
+        )}
+      />
+    </>
+  );
+}
