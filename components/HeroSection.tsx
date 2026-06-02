@@ -2,6 +2,32 @@ import Link from "next/link";
 import { ArrowRight, GitCompare, Car, Bike, Zap as ZapIcon } from "lucide-react";
 import { EVS, getById } from "@/lib/ev-data";
 import Counter from "@/components/ui/Counter";
+import HeroSpecCard, { type HeroEv } from "@/components/HeroSpecCard";
+
+/** Curated cars that cycle in the hero card (images live in /public/hero-cars/<id>.png). */
+const HERO_IDS = [
+  "mg-windsor-ev-38-kwh",
+  "bmw-ix1-lwb-edrive20l",
+  "tata-nexon-ev-long-range-45-kwh",
+  "tata-curvv-ev-55-kwh",
+  "byd-seal-premium-82-56-kwh",
+];
+
+function heroEvs(): HeroEv[] {
+  return HERO_IDS.map((id) => getById(id))
+    .filter((e): e is NonNullable<typeof e> => !!e)
+    .map((e) => ({
+      id: e.id,
+      name: e.name,
+      variant: e.variant,
+      bodyType: e.bodyType,
+      range: e.rangeKmARAI,
+      battery: e.batteryKwh,
+      power: e.powerBhp,
+      accel: e.accelSec,
+      accent: e.accent,
+    }));
+}
 
 const brands = Array.from(new Set(EVS.map((e) => e.brand)));
 
@@ -12,14 +38,6 @@ const quickLinks = [
 ];
 
 export default function HeroSection() {
-  const spec = getById("tata-nexon-ev-long-range-45-kwh") ?? EVS[0];
-  const bars = [
-    { label: "Range", value: `${spec.rangeKmARAI} km`, pct: 88 },
-    { label: "Battery", value: `${spec.batteryKwh} kWh`, pct: 64 },
-    { label: "Power", value: `${spec.powerBhp} bhp`, pct: 70 },
-    { label: "0–100", value: spec.accelSec ? `${spec.accelSec}s` : "—", pct: 58 },
-  ];
-
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
       {/* Background layers */}
@@ -104,44 +122,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Floating live spec card */}
-        <div className="absolute right-0 top-1/2 hidden w-72 -translate-y-1/2 animate-float xl:block">
-          <div className="border-gradient relative rounded-2xl border border-ev-border bg-ev-card/90 p-5 shadow-card backdrop-blur">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="font-mono text-xs uppercase tracking-widest text-brand">
-                Live spec
-              </span>
-              <span className="h-2 w-2 animate-pulse rounded-full bg-volt" />
-            </div>
-            <div className="font-display text-xl font-bold text-white">{spec.name}</div>
-            <div className="mb-5 font-body text-xs text-ev-muted">
-              {spec.variant ?? spec.bodyType}
-            </div>
-            <div className="space-y-3">
-              {bars.map((b) => (
-                <div key={b.label}>
-                  <div className="mb-1 flex justify-between text-xs">
-                    <span className="font-body text-ev-muted">{b.label}</span>
-                    <span className="font-mono text-ev-text">{b.value}</span>
-                  </div>
-                  <div className="h-1 overflow-hidden rounded-full bg-ev-border">
-                    <div
-                      className="h-full rounded-full bg-brand-gradient"
-                      style={{ width: `${b.pct}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <Link
-              href={`/catalog/${spec.id}`}
-              className="mt-5 flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand/30 py-2 font-mono text-xs tracking-wide text-brand transition-colors hover:bg-brand/10"
-            >
-              Full specs <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
-          <div className="absolute -inset-4 -z-10 rounded-3xl bg-brand/5 blur-2xl" />
-        </div>
+        {/* Floating auto-cycling EV spec card */}
+        <HeroSpecCard evs={heroEvs()} />
       </div>
 
       {/* Brand marquee */}

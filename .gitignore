@@ -30,3 +30,9 @@ yarn-error.log*
 
 # stray folder
 {app
+
+# hero-car source uploads (only the id-named .png files are served)
+public/hero-cars/*.avif
+public/hero-cars/*.webp
+public/hero-cars/Tata Curvv EV.png
+public/hero-cars/Tata Nexon EV.png
