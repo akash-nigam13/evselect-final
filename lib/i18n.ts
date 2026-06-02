@@ -267,6 +267,19 @@ const en: Dict = {
   "ev.catscooter": "Electric Scooters",
   "ev.catbike": "Electric Bikes",
   "ev.summary": "{name} is a {body} in the {cat} segment.",
+  // site search
+  "search.aria": "Search EVSelect",
+  "search.gVehicles": "Vehicles",
+  "search.gBrands": "Brands",
+  "search.gArticles": "Articles",
+  "search.gPages": "Tools & pages",
+  "search.popular": "Popular searches",
+  "search.hint": "Type to search vehicles, brands & guides",
+  "search.viewAll": "See all results",
+  // blog search
+  "blog.search": "Search articles…",
+  "blog.results": "{n} matching articles",
+  "blog.noMatch": "No exact match — showing all articles",
 };
 
 const hi: Dict = {
@@ -412,6 +425,19 @@ const hi: Dict = {
   "ev.catscooter": "इलेक्ट्रिक स्कूटर",
   "ev.catbike": "इलेक्ट्रिक बाइक",
   "ev.summary": "{name}, {cat} सेगमेंट की एक {body} है।",
+  // site search
+  "search.aria": "EVSelect पर खोजें",
+  "search.gVehicles": "वाहन",
+  "search.gBrands": "ब्रांड",
+  "search.gArticles": "लेख",
+  "search.gPages": "टूल और पेज",
+  "search.popular": "लोकप्रिय खोजें",
+  "search.hint": "वाहन, ब्रांड और गाइड खोजने के लिए टाइप करें",
+  "search.viewAll": "सभी परिणाम देखें",
+  // blog search
+  "blog.search": "लेख खोजें…",
+  "blog.results": "{n} मिलते-जुलते लेख",
+  "blog.noMatch": "कोई सटीक मेल नहीं — सभी लेख दिखाए जा रहे हैं",
 };
 
 const DICTS: Record<string, Dict> = { en, hi };

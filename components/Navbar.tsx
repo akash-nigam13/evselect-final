@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Zap, Menu, X, ChevronDown, GitCompare } from "lucide-react";
 import clsx from "clsx";
 import LangSwitcher from "@/components/LangSwitcher";
+import SiteSearch from "@/components/search/SiteSearch";
 import { localeFromPath, localizedHref, t } from "@/lib/i18n";
 
 type NavChild = { label?: string; labelKey?: string; href: string; desc?: string };
@@ -152,8 +153,11 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA + language */}
+        {/* Search + CTA + language */}
         <div className="hidden items-center gap-2 lg:flex">
+          <div className="w-36 xl:w-56">
+            <SiteSearch />
+          </div>
           <LangSwitcher />
           <Link
             href={L("/compare")}
@@ -185,6 +189,9 @@ export default function Navbar() {
         )}
       >
         <div className="space-y-1 px-4 py-5">
+          <div className="pb-3">
+            <SiteSearch onNavigate={() => setMobileOpen(false)} />
+          </div>
           {navLinks.map((link) => (
             <div key={link.labelKey}>
               <Link

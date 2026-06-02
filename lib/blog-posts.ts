@@ -273,7 +273,9 @@ export const getCategory = (slug: string): BlogCategory | undefined =>
   CATEGORIES.find((c) => c.slug === slug);
 
 export const postsInCategory = (slug: string): BlogPost[] =>
-  POSTS.filter((p) => p.categorySlug === slug);
+  POSTS.filter((p) => p.categorySlug === slug).sort(
+    (a, b) => +new Date(b.date) - +new Date(a.date)
+  );
 
 /** Resolve a post's related list (falls back to same-category posts). */
 export function relatedPosts(slug: string, count = 4): BlogPost[] {
