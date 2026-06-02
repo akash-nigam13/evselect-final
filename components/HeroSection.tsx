@@ -2,13 +2,13 @@ import Link from "next/link";
 import { ArrowRight, GitCompare, Car, Bike, Zap as ZapIcon } from "lucide-react";
 import { EVS, getById } from "@/lib/ev-data";
 import Counter from "@/components/ui/Counter";
-import HeroSpecCard, { type HeroEv } from "@/components/HeroSpecCard";
+import HeroShowcase, { type HeroEv } from "@/components/HeroShowcase";
 
 /** Curated cars that cycle in the hero card (images live in /public/hero-cars/<id>.png). */
 const HERO_IDS = [
+  "tata-nexon-ev-long-range-45-kwh",
   "mg-windsor-ev-38-kwh",
   "bmw-ix1-lwb-edrive20l",
-  "tata-nexon-ev-long-range-45-kwh",
   "tata-curvv-ev-55-kwh",
   "byd-seal-premium-82-56-kwh",
 ];
@@ -122,8 +122,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Floating auto-cycling EV spec card */}
-        <HeroSpecCard evs={heroEvs()} />
+        {/* Cursor-reactive floating EV showcase */}
+        <HeroShowcase evs={heroEvs()} />
       </div>
 
       {/* Brand marquee */}
