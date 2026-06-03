@@ -129,6 +129,8 @@ export function otherEntries(): UrlEntry[] {
     { path: "/compare", lastmod: TODAY, changefreq: "monthly", priority: 0.8 },
     { path: "/tools", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
     { path: "/learn", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
+    { path: "/ev-subsidies-india", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+    { path: "/ev-charging-station-setup-india", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
     { path: "/about-ev-batteries", lastmod: TODAY, changefreq: "monthly", priority: 0.6 },
     { path: "/news", lastmod: TODAY, changefreq: "daily", priority: 0.7 },
     { path: "/contact", lastmod: TODAY, changefreq: "yearly", priority: 0.3 },

@@ -44,7 +44,16 @@ const navLinks: NavLink[] = [
       { label: "Range Estimator", href: "/tools#range", desc: "Real-world range & charging" },
     ],
   },
-  { labelKey: "nav.learn", href: "/learn" },
+  {
+    labelKey: "nav.learn",
+    href: "/learn",
+    children: [
+      { label: "EV 101 — basics & glossary", href: "/learn", desc: "How EVs work, jargon decoded" },
+      { label: "EV Subsidies & Incentives", href: "/ev-subsidies-india", desc: "Central + state savings, 2026" },
+      { label: "Set up a Charging Station", href: "/ev-charging-station-setup-india", desc: "Cost, licence, subsidy & ROI" },
+      { label: "EV Battery Guide", href: "/about-ev-batteries", desc: "How EV batteries work & last" },
+    ],
+  },
   { labelKey: "nav.news", href: "/news" },
   { labelKey: "nav.blog", href: "/blog" },
 ];

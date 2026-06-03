@@ -260,6 +260,44 @@ export function articleSchema(opts: {
   return { ...blogPostingSchema(opts), "@type": "Article" };
 }
 
+// ── FAQ ──────────────────────────────────────────────────────────
+export function faqPageSchema(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+// ── HowTo ────────────────────────────────────────────────────────
+export function howToSchema(opts: {
+  name: string;
+  description: string;
+  path: string;
+  steps: { name: string; text: string }[];
+  totalTime?: string; // ISO 8601 duration, e.g. "P30D"
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    url: abs(opts.path),
+    ...(opts.totalTime ? { totalTime: opts.totalTime } : {}),
+    step: opts.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: `${abs(opts.path)}#step-${i + 1}`,
+    })),
+  };
+}
+
 // ── Glossary (DefinedTermSet) ────────────────────────────────────
 export function definedTermSetSchema(path: string) {
   return {
