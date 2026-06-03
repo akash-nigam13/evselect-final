@@ -77,6 +77,8 @@ export function localeEntries(): UrlEntry[] {
     "/hi/blog/maruti-e-vitara-first-ev-launch",
     "/hi/blog/india-ev-charging-network-2026",
     "/hi/blog/tesla-model-y-price-cut-india-2026",
+    "/hi/ev-subsidies-india",
+    "/hi/ev-charging-station-setup-india",
     // dynamic detail routes (one /hi/... route serves all)
     ...BRANDS.map((b) => `/hi/catalog/brand/${b.slug}`),
     ...EVS.map((e) => `/hi/catalog/${e.id}`),

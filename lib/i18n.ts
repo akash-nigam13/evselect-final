@@ -67,6 +67,8 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/maruti-e-vitara-first-ev-launch",
     "/blog/india-ev-charging-network-2026",
     "/blog/tesla-model-y-price-cut-india-2026",
+    "/ev-subsidies-india",
+    "/ev-charging-station-setup-india",
   ]),
 };
 
