@@ -11,6 +11,10 @@ const CONTACT_EMAIL = "akash.nigam@evselect.in";
 const PRESS_EMAIL   = "akash.nigam@evselect.in";
 const ADS_EMAIL     = "akash.nigam@evselect.in";
 
+// Web3Forms access key (safe to expose in the browser — it only allows submitting
+// to the inbox you registered at web3forms.com). Paste your key below.
+const WEB3FORMS_ACCESS_KEY = "8983ae99-76af-4910-a048-6640052b8464";
+
 const subjects = [
   "General Enquiry",
   "Vehicle Data Correction",
@@ -78,10 +82,25 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setState("submitting");
-    // Simulate API call — replace with your actual form handler (e.g. Resend, Formspree, Nodemailer)
-    await new Promise((r) => setTimeout(r, 1800));
-    // Replace this with: const res = await fetch('/api/contact', { method: 'POST', body: JSON.stringify(form) })
-    setState("success");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `[EVSelect.in] ${form.subject}`,
+          from_name: "EVSelect.in Contact Form",
+          name: form.name,
+          email: form.email,
+          replyto: form.email,
+          message: `Subject: ${form.subject}\nFrom: ${form.name} <${form.email}>\n\n${form.message}`,
+        }),
+      });
+      const data = await res.json();
+      setState(data.success ? "success" : "error");
+    } catch {
+      setState("error");
+    }
   };
 
   return (
