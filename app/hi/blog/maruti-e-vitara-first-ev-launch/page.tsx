@@ -111,7 +111,7 @@ export default function Page() {
         अगर आप e Vitara को उसके प्रतिद्वंद्वियों के मुक़ाबले तौल रहे हैं, तो समझदारी
         भरा अगला कदम यह है कि सिर्फ़ ब्रोशर पर फ़ैसला करने के बजाय दावेदारों को
         साथ-साथ रखकर देखें। हमारा{" "}
-        <Link href={localizedHref("/compare", "hi")}>तुलना टूल</Link> आपको उन्हें रेंज,
+        <Link href={localizedHref("/compare-electric-vehicles", "hi")}>तुलना टूल</Link> आपको उन्हें रेंज,
         बैटरी साइज़, चार्जिंग स्पीड और ऑन-रोड कीमत पर पंक्तिबद्ध करने देता है। और
         अगर यह आपकी पहली इलेक्ट्रिक कार है, तो{" "}
         <Link href={localizedHref("/blog/how-to-choose-first-ev-india", "hi")}>

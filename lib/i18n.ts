@@ -41,12 +41,12 @@ export const localePrefix = (l: Locale): string => (l === DEFAULT_LOCALE ? "" : 
 const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
   hi: new Set<string>([
     "/",
-    "/compare",
+    "/compare-electric-vehicles",
     "/catalog",
     "/catalog/all",
-    "/tools",
-    "/learn",
-    "/news",
+    "/ev-calculators",
+    "/ev-guides",
+    "/ev-news",
     "/blog",
     "/privacy",
     "/terms",
@@ -72,9 +72,9 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/about",
     "/editorial-policy",
     "/advertising-disclosure",
-    "/tools/ev-emi-calculator",
-    "/tools/ev-vs-petrol-cost-calculator",
-    "/tools/ev-range-calculator",
+    "/ev-calculators/ev-emi-calculator",
+    "/ev-calculators/ev-vs-petrol-cost-calculator",
+    "/ev-calculators/ev-range-calculator",
   ]),
 };
 
@@ -107,7 +107,7 @@ export function hasTranslation(path: string, l: Locale): boolean {
  * Build a locale-aware href. Falls back to the English route when the
  * localized version isn't published yet (avoids dead /hi/* links).
  * localizedHref("/", "hi") -> "/hi"   (translated)
- * localizedHref("/compare", "hi") -> "/compare"  (not yet translated)
+ * localizedHref("/compare-electric-vehicles", "hi") -> "/compare-electric-vehicles"  (not yet translated)
  */
 export function localizedHref(path: string, l: Locale): string {
   const clean = path === "/" ? "" : path.replace(/\/+$/, "");
@@ -116,7 +116,7 @@ export function localizedHref(path: string, l: Locale): string {
   return `${pref}${clean}` || "/";
 }
 
-/** Detect the locale from a pathname (e.g. "/hi/compare" -> "hi"). */
+/** Detect the locale from a pathname (e.g. "/hi/compare-electric-vehicles" -> "hi"). */
 export function localeFromPath(pathname: string): Locale {
   const seg = pathname.split("/").filter(Boolean)[0];
   return seg && isLocale(seg) ? (seg as Locale) : "en";
@@ -461,7 +461,7 @@ const SITE_URL = "https://www.evselect.in";
 /**
  * Build Next.js `alternates` for a page: a self-referencing canonical for
  * the given locale, plus hreflang links to every locale + x-default.
- * Usage in metadata: `alternates: altsFor("/compare", "hi")`
+ * Usage in metadata: `alternates: altsFor("/compare-electric-vehicles", "hi")`
  */
 export function altsFor(path: string, locale: Locale) {
   const languages: Record<string, string> = {};

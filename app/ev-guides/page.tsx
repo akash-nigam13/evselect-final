@@ -31,7 +31,7 @@ import { collectionPageSchema, definedTermSetSchema } from "@/lib/seo";
 import Glossary from "@/components/learn/Glossary";
 
 export const metadata: Metadata = {
-  alternates: altsFor("/learn", "en"),
+  alternates: altsFor("/ev-guides", "en"),
   title: "EV 101 — Learn About Electric Vehicles in India",
   description:
     "New to electric vehicles? Understand how EVs work, battery and charging basics, real running costs, government incentives and ownership — explained simply for India in 2026.",
@@ -67,7 +67,7 @@ const startHere = [
     accent: "#26E0C4",
     title: "Costs & savings",
     body: "EVs cost more upfront but far less to run — electricity is much cheaper per km than petrol, and maintenance is lower. Use our calculator to estimate your real running cost and break-even.",
-    href: "/tools#cost",
+    href: "/ev-calculators#cost",
     link: "Open the cost calculator",
   },
   {
@@ -133,7 +133,7 @@ export default function LearnPage() {
           />
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <Breadcrumbs items={[{ name: "Learn", path: "/learn" }]} className="mb-6 justify-center" />
+              <Breadcrumbs items={[{ name: "Learn", path: "/ev-guides" }]} className="mb-6 justify-center" />
               <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-brand">
                 EV 101
               </p>
@@ -420,7 +420,7 @@ export default function LearnPage() {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
-                    href="/compare"
+                    href="/compare-electric-vehicles"
                     className="rounded-full border border-ev-border px-6 py-3 font-display text-sm font-semibold text-ev-text transition-colors hover:border-brand/50"
                   >
                     Compare two EVs
@@ -442,9 +442,9 @@ export default function LearnPage() {
           collectionPageSchema(
             "EV 101 — Learn About Electric Vehicles",
             "Beginner-friendly guides to EV batteries, charging, costs and jargon for India.",
-            "/learn",
+            "/ev-guides",
           ),
-          definedTermSetSchema("/learn"),
+          definedTermSetSchema("/ev-guides"),
         ]}
       />
     </>

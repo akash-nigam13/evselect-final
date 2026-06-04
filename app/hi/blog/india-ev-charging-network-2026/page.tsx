@@ -115,12 +115,12 @@ export default function Page() {
           गुंजाइश दें; हमारे{" "}
           <Link href={localizedHref("/catalog", "hi")}>कैटलॉग</Link> पर विकल्पों की तुलना
           करें और{" "}
-          <Link href={localizedHref("/tools", "hi")}>लागत और रेंज कैलकुलेटर</Link> का
+          <Link href={localizedHref("/ev-calculators", "hi")}>लागत और रेंज कैलकुलेटर</Link> का
           इस्तेमाल कर हिसाब जाँच लें।
         </li>
         <li>
           जब दो कारें क़रीब हों, तो हमारे{" "}
-          <Link href={localizedHref("/compare", "hi")}>तुलना टूल</Link> से उन्हें चार्जिंग
+          <Link href={localizedHref("/compare-electric-vehicles", "hi")}>तुलना टूल</Link> से उन्हें चार्जिंग
           स्पीड और रेंज पर आमने-सामने रखें।
         </li>
       </ul>

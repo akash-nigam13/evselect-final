@@ -243,7 +243,7 @@ export default function Article3() {
 
               <div className="rounded-2xl p-5 my-8 border bg-ev-green/5 border-ev-green/25">
                 <p className="text-xs font-mono text-ev-green uppercase tracking-widest mb-2">Verdict: EV Wins by ~₹3 Lakh Over 5 Years</p>
-                <p className="text-ev-text/70 font-body text-sm leading-relaxed">Even accounting for the higher purchase price and lower resale value, the Nexon EV Max is approximately ₹3 lakh cheaper than the Creta petrol over 5 years of typical urban use. At 15,000+ km/year, the EV advantage grows to over ₹4 lakh. Your exact savings depend on your state's incentives — check our <Link href="/blog/ev-subsidies-road-tax-by-state-india-2026" className="text-ev-green hover:text-ev-cyan underline underline-offset-2">2026 EV subsidy and road tax guide by state</Link> — and you can model your own numbers with our <Link href="/tools" className="text-ev-green hover:text-ev-cyan underline underline-offset-2">free EV cost calculators</Link>.</p>
+                <p className="text-ev-text/70 font-body text-sm leading-relaxed">Even accounting for the higher purchase price and lower resale value, the Nexon EV Max is approximately ₹3 lakh cheaper than the Creta petrol over 5 years of typical urban use. At 15,000+ km/year, the EV advantage grows to over ₹4 lakh. Your exact savings depend on your state's incentives — check our <Link href="/blog/ev-subsidies-road-tax-by-state-india-2026" className="text-ev-green hover:text-ev-cyan underline underline-offset-2">2026 EV subsidy and road tax guide by state</Link> — and you can model your own numbers with our <Link href="/ev-calculators" className="text-ev-green hover:text-ev-cyan underline underline-offset-2">free EV cost calculators</Link>.</p>
               </div>
 
               <section className="mt-16 pt-8 border-t border-ev-border/40">
@@ -278,7 +278,7 @@ export default function Article3() {
               <div className="bg-ev-card border border-ev-cyan/20 rounded-2xl p-5">
                 <p className="font-display font-bold text-white text-sm mb-2">Compare Any Two EVs</p>
                 <p className="text-ev-text/55 text-xs font-body mb-4 leading-relaxed">Full side-by-side spec comparison across 200+ models.</p>
-                <Link href="/compare" className="block text-center py-2.5 rounded-xl text-xs font-display font-bold bg-ev-cyan text-ev-bg hover:bg-ev-green transition-colors">Open Compare Tool →</Link>
+                <Link href="/compare-electric-vehicles" className="block text-center py-2.5 rounded-xl text-xs font-display font-bold bg-ev-cyan text-ev-bg hover:bg-ev-green transition-colors">Open Compare Tool →</Link>
               </div>
               <div className="border border-dashed border-ev-border/40 rounded-xl h-[250px] flex items-center justify-center bg-ev-surface/20">
                 <div className="text-center"><p className="text-[10px] font-mono text-ev-border uppercase tracking-widest">Advertisement</p><p className="text-[10px] font-mono text-ev-border/50 mt-1">300×250</p></div>

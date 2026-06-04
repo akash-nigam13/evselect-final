@@ -111,7 +111,7 @@ export default function AboutBatteriesPage() {
                 homeName="होम"
                 homeHref="/hi"
                 items={[
-                  { name: "जानें", path: "/hi/learn" },
+                  { name: "जानें", path: "/hi/ev-guides" },
                   { name: "बैटरी गाइड", path: "/hi/about-ev-batteries" },
                 ]}
                 className="mb-6"
@@ -410,7 +410,7 @@ export default function AboutBatteriesPage() {
                 <Battery className="w-6 h-6 text-ev-green mb-3" />
                 <h3 className="font-display font-bold text-white text-sm mb-2">EV बैटरियों की तुलना करें</h3>
                 <p className="text-ev-text/55 text-xs font-body mb-4">200+ मॉडलों के बैटरी स्पेक्स की तुलना के लिए हमारा टूल इस्तेमाल करें।</p>
-                <Link href="/hi/compare" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-ev-green text-ev-bg text-xs font-display font-bold tracking-wide hover:opacity-90 transition-opacity">
+                <Link href="/hi/compare-electric-vehicles" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-ev-green text-ev-bg text-xs font-display font-bold tracking-wide hover:opacity-90 transition-opacity">
                   अभी तुलना करें <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

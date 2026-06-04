@@ -107,7 +107,7 @@ export default function EvCard({ ev }: EvCardProps) {
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
           </Link>
           <Link
-            href={`/compare?ids=${ev.id}`}
+            href={`/compare-electric-vehicles?ids=${ev.id}`}
             className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-ev-border bg-ev-surface px-4 py-2.5 font-body text-sm font-medium text-ev-text transition-colors duration-200 hover:border-iris/50 hover:text-iris"
           >
             <GitCompare className="h-4 w-4" />

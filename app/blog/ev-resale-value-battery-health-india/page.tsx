@@ -79,7 +79,7 @@ export default function Page() {
         As a buyer, never accept "the battery feels fine" — ask for a recent SoH figure in writing. As
         a seller, getting a certificate before listing is one of the cheapest ways to justify your
         asking price. When you are weighing two used cars, lay their battery and warranty details side
-        by side; our <Link href="/compare">comparison tool</Link> is built for exactly that kind of
+        by side; our <Link href="/compare-electric-vehicles">comparison tool</Link> is built for exactly that kind of
         spec-by-spec scrutiny, and the full <Link href="/catalog">model catalog</Link> shows you the
         original pack size each figure should be measured against.
       </p>
@@ -139,7 +139,7 @@ export default function Page() {
       <p>
         Do those five things and resale stops being a worry and becomes a strength. If you are still
         shortlisting, browse the <Link href="/catalog">catalog</Link> with battery warranty in mind,
-        and run your top picks through the <Link href="/compare">side-by-side comparison</Link> before
+        and run your top picks through the <Link href="/compare-electric-vehicles">side-by-side comparison</Link> before
         you commit — the car that is easy to live with usually turns out to be the easy one to sell,
         too.
       </p>

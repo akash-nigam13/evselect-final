@@ -76,7 +76,7 @@ export default function HeroSection() {
 
           <div className="mb-8 flex flex-wrap gap-4 animate-fade-up animate-delay-300">
             <Link
-              href="/compare"
+              href="/compare-electric-vehicles"
               className="group inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-6 py-3.5 font-display text-sm font-bold tracking-wide text-ev-bg shadow-ev-glow transition-all duration-300 hover:shadow-iris-glow"
             >
               <GitCompare className="h-4 w-4" />

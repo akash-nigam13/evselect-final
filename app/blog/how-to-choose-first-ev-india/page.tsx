@@ -80,7 +80,7 @@ export default function Page() {
         breakdown of{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">petrol versus electric over five years</Link>{" "}
         lays this out, and you can plug in your own distance and tariff using the{" "}
-        <Link href="/tools">cost and range calculators</Link> to see where the break-even lands for
+        <Link href="/ev-calculators">cost and range calculators</Link> to see where the break-even lands for
         you.
       </p>
 
@@ -139,7 +139,7 @@ export default function Page() {
         Work the list top to bottom: confirm where you will charge, size the battery to your real
         distance, sanity-check the running cost, then compare warranty, incentives, and safety
         across your shortlist. The fastest way to narrow the field is to{" "}
-        <Link href="/compare">compare EVs side by side</Link> on range, battery, price, and charging,
+        <Link href="/compare-electric-vehicles">compare EVs side by side</Link> on range, battery, price, and charging,
         then browse the <Link href="/catalog/all">full catalog</Link> to firm up your top two or
         three. Do that, and your first EV will fit your life rather than your spreadsheet.
       </p>

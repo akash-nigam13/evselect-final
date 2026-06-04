@@ -37,7 +37,7 @@ export default function Page() {
         The right pick depends on your car, your daily distance, and your electrical supply. A
         7.4 kW box is the sweet spot for most four-wheelers, while scooter owners rarely need
         more than the bundled portable charger. If you are still choosing a vehicle, it helps to{" "}
-        <Link href="/compare">compare any two EVs</Link> on their onboard AC charger ratings,
+        <Link href="/compare-electric-vehicles">compare any two EVs</Link> on their onboard AC charger ratings,
         because a car capped at 3.3 kW will not charge faster no matter how powerful your
         wall-box is. You can also browse the full <Link href="/catalog">EV catalog</Link> to see
         which models support 7.4 kW or 11 kW home charging.
@@ -54,7 +54,7 @@ export default function Page() {
       <p>
         Over a year of city driving, that gap compounds into real savings. To see the numbers
         for your own usage and electricity tariff, run them through the{" "}
-        <Link href="/tools">cost and range calculators</Link>, and for the longer-term picture
+        <Link href="/ev-calculators">cost and range calculators</Link>, and for the longer-term picture
         read our breakdown of the{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">
           five-year cost of petrol versus electric
@@ -163,7 +163,7 @@ export default function Page() {
         run a wall-box or fast charge through an extension cord or a multi-plug board. Use the
         cable and connector supplied or specified for your car. Get all of this right once and
         home charging becomes the most boring, reliable part of EV ownership — which is exactly
-        what you want. When you are ready to pick a model, <Link href="/compare">compare EVs</Link>{" "}
+        what you want. When you are ready to pick a model, <Link href="/compare-electric-vehicles">compare EVs</Link>{" "}
         side by side or explore the <Link href="/catalog">catalog</Link> to match a car to your
         charging setup.
       </p>

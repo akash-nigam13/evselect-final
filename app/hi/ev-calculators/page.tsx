@@ -11,7 +11,7 @@ import { altsFor, localizedHref } from "@/lib/i18n";
 import { webPageSchema, itemListSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  alternates: altsFor("/tools", "hi"),
+  alternates: altsFor("/ev-calculators", "hi"),
   title: "मुफ़्त EV टूल्स — EMI, कॉस्ट और रेंज कैलकुलेटर (भारत 2026)",
   description:
     "भारत के लिए इंटरैक्टिव EV कैलकुलेटर: अपनी EV लोन EMI निकालें, EV बनाम पेट्रोल का खर्च तुलना करें, और किसी भी EV की असल रेंज व चार्जिंग समय का अनुमान लगाएँ।",
@@ -21,28 +21,28 @@ const tools = [
   {
     title: "EV EMI कैलकुलेटर",
     desc: "अपनी मासिक EV लोन EMI, कुल ब्याज और देय राशि का अनुमान लगाएँ। डाउन पेमेंट, ब्याज दर और अवधि बदलें।",
-    href: "/tools/ev-emi-calculator",
+    href: "/ev-calculators/ev-emi-calculator",
     Icon: Banknote,
     accent: "#8B7BFF",
   },
   {
     title: "EV बनाम पेट्रोल कॉस्ट कैलकुलेटर",
     desc: "अपनी असल यूसेज के आधार पर देखें कि पेट्रोल के बजाय EV चलाने में कितनी बचत होती है।",
-    href: "/tools/ev-vs-petrol-cost-calculator",
+    href: "/ev-calculators/ev-vs-petrol-cost-calculator",
     Icon: TrendingDown,
     accent: "#26E0C4",
   },
   {
     title: "EV रेंज और चार्जिंग कैलकुलेटर",
     desc: "भारतीय परिस्थितियों में किसी भी EV की असल रेंज और चार्जिंग समय का अनुमान लगाएँ।",
-    href: "/tools/ev-range-calculator",
+    href: "/ev-calculators/ev-range-calculator",
     Icon: Gauge,
     accent: "#34D399",
   },
   {
     title: "EVs की तुलना करें",
     desc: "किन्हीं भी दो या तीन इलेक्ट्रिक वाहनों को रेंज, बैटरी, कीमत और चार्जिंग पर साथ-साथ रखें।",
-    href: "/compare",
+    href: "/compare-electric-vehicles",
     Icon: GitCompare,
     accent: "#60A5FA",
   },
@@ -57,7 +57,7 @@ export default function HiToolsPage() {
           <Aurora variant="dual" />
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <Breadcrumbs
-              items={[{ name: "टूल्स", path: "/hi/tools" }]}
+              items={[{ name: "टूल्स", path: "/hi/ev-calculators" }]}
               homeName="होम"
               homeHref="/hi"
               className="mb-6"
@@ -107,7 +107,7 @@ export default function HiToolsPage() {
           webPageSchema(
             "मुफ़्त EV टूल्स — EMI, कॉस्ट और रेंज कैलकुलेटर",
             "भारत के लिए इंटरैक्टिव EV कैलकुलेटर: EMI, EV बनाम पेट्रोल खर्च, और असल रेंज व चार्जिंग।",
-            "/tools"
+            "/ev-calculators"
           ),
           itemListSchema(tools.map((t) => ({ name: t.title, path: t.href }))),
         ]}

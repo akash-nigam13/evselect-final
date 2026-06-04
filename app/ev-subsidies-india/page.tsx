@@ -102,7 +102,7 @@ export default function EvSubsidiesPage() {
           <div className="relative mx-auto max-w-4xl px-4 pb-12 pt-12 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
-                { name: "Learn", path: "/learn" },
+                { name: "Learn", path: "/ev-guides" },
                 { name: "EV Subsidies & Incentives", path: "/ev-subsidies-india" },
               ]}
               className="mb-6"
@@ -249,8 +249,8 @@ export default function EvSubsidiesPage() {
             <h2>Keep going</h2>
             <p>
               Want to see how incentives change a specific car&apos;s real cost? Use the{" "}
-              <Link href="/tools">cost &amp; savings calculators</Link>, line up models in the{" "}
-              <Link href="/compare">compare tool</Link>, or browse the{" "}
+              <Link href="/ev-calculators">cost &amp; savings calculators</Link>, line up models in the{" "}
+              <Link href="/compare-electric-vehicles">compare tool</Link>, or browse the{" "}
               <Link href="/catalog/all">full EV catalogue</Link>. For the deeper policy background, read{" "}
               <Link href="/blog/ev-subsidies-road-tax-by-state-india-2026">EV subsidies, road tax &amp; incentives by state</Link>.
               Planning to set one up commercially? See our guide to{" "}

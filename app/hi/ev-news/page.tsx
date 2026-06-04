@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "EV समाचार और 2026 लॉन्च — भारत",
   description:
     "भारत के EV बाज़ार की ताज़ा खबरें, नए लॉन्च और 2026 की टाइमलाइन — कारें, स्कूटर और बाइक।",
-  alternates: altsFor("/news", "hi"),
+  alternates: altsFor("/ev-news", "hi"),
 };
 
 const accent: Record<string, string> = {
@@ -44,7 +44,7 @@ export default function HiNewsPage() {
           />
           <div className="mx-auto max-w-7xl px-4 pb-12 pt-14 sm:px-6 lg:px-8">
             <Breadcrumbs
-              items={[{ name: "समाचार", path: "/hi/news" }]}
+              items={[{ name: "समाचार", path: "/hi/ev-news" }]}
               homeName="होम"
               homeHref="/hi"
               className="mb-6"
@@ -95,7 +95,7 @@ export default function HiNewsPage() {
         data={collectionPageSchema(
           "EV News & 2026 Launches in India",
           "Latest India EV launches, sales and policy news.",
-          "/news"
+          "/ev-news"
         )}
       />
     </>

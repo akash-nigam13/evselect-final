@@ -53,7 +53,7 @@ export default function Page() {
         In practice this means the subsidy on a typical electric scooter is a few thousand rupees
         rather than a transformative sum — useful, but smaller than the previous year's. Treat it as
         one input into total cost rather than the whole story; our{" "}
-        <Link href="/tools">savings and cost calculators</Link> let you fold the incentive into running
+        <Link href="/ev-calculators">savings and cost calculators</Link> let you fold the incentive into running
         costs and see the real picture over the years you will own the vehicle.
       </p>
 
@@ -71,7 +71,7 @@ export default function Page() {
         EVs entirely; others add a purchase subsidy on top; a few have wound their support back as
         budgets tightened. Because the saving is decided at the state level, two buyers purchasing the
         identical car in different states can end up paying very different on-road prices. When you
-        shortlist, it pays to <Link href="/compare">compare models on full on-road cost</Link> rather
+        shortlist, it pays to <Link href="/compare-electric-vehicles">compare models on full on-road cost</Link> rather
         than ex-showroom alone, and to browse the <Link href="/catalog">catalog</Link> with your own
         state's policy in mind.
       </p>
@@ -103,9 +103,9 @@ export default function Page() {
       </p>
       <p>
         So when you compare an EV against a petrol equivalent, do it on the on-road number, not the
-        sticker. Our <Link href="/compare">comparison view</Link> is built to surface that on-road
+        sticker. Our <Link href="/compare-electric-vehicles">comparison view</Link> is built to surface that on-road
         context, and feeding your distance and tariff into the{" "}
-        <Link href="/tools">cost tools</Link> shows how a road-tax waiver plus low running costs can
+        <Link href="/ev-calculators">cost tools</Link> shows how a road-tax waiver plus low running costs can
         flip the maths in the EV's favour faster than buyers expect. It also dovetails with the
         ownership thinking in our{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">five-year cost comparison</Link> and the
@@ -123,7 +123,7 @@ export default function Page() {
         <li>Check the road-tax and registration-fee position for EVs — full waiver, partial, or none.</li>
         <li>Confirm at your local RTO, since implementation and paperwork can lag the policy text.</li>
         <li>Ask the dealer to itemise the on-road quote so you can see exactly which waivers were applied.</li>
-        <li>Cross-check the latest policy news in our <Link href="/news">EV news</Link> feed before you sign.</li>
+        <li>Cross-check the latest policy news in our <Link href="/ev-news">EV news</Link> feed before you sign.</li>
       </ol>
       <p>
         Do that and you will walk in knowing your true out-the-door cost rather than a showroom guess.

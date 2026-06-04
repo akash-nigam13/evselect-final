@@ -81,7 +81,7 @@ export default function BlogPage() {
                   Side-by-side specs for any two electric vehicles.
                 </p>
                 <Link
-                  href="/compare"
+                  href="/compare-electric-vehicles"
                   className="block rounded-xl bg-brand-gradient py-2.5 text-center font-display text-xs font-bold text-ev-bg"
                 >
                   Open Compare Tool →

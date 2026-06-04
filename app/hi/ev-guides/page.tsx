@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "EV 101 — भारत में इलेक्ट्रिक वाहनों के बारे में जानें",
   description:
     "इलेक्ट्रिक वाहनों में नए हैं? बैटरी, चार्जिंग, जार्गन और इंसेंटिव सरल भाषा में समझें — भारत के 2026 संदर्भ के लिए।",
-  alternates: altsFor("/learn", "hi"),
+  alternates: altsFor("/ev-guides", "hi"),
 };
 
 const topics = [
@@ -48,7 +48,7 @@ export default function HiLearnPage() {
           />
           <div className="mx-auto max-w-7xl px-4 pb-12 pt-14 sm:px-6 lg:px-8">
             <Breadcrumbs
-              items={[{ name: "जानें", path: "/hi/learn" }]}
+              items={[{ name: "जानें", path: "/hi/ev-guides" }]}
               homeName="होम"
               homeHref="/hi"
               className="mb-6"
@@ -85,7 +85,7 @@ export default function HiLearnPage() {
               <Link href="/hi/catalog" className="inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-5 py-3 font-display text-sm font-bold text-ev-bg">
                 कैटलॉग देखें <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/hi/compare" className="inline-flex items-center gap-2 rounded-xl border border-ev-border px-5 py-3 font-display text-sm font-medium text-ev-text/85 hover:border-brand/40 hover:text-brand">
+              <Link href="/hi/compare-electric-vehicles" className="inline-flex items-center gap-2 rounded-xl border border-ev-border px-5 py-3 font-display text-sm font-medium text-ev-text/85 hover:border-brand/40 hover:text-brand">
                 EV तुलना करें
               </Link>
             </div>
@@ -99,8 +99,8 @@ export default function HiLearnPage() {
       <Footer locale="hi" />
       <JsonLd
         data={[
-          collectionPageSchema("EV 101 — Learn", "Beginner-friendly EV guides for India.", "/learn"),
-          definedTermSetSchema("/learn"),
+          collectionPageSchema("EV 101 — Learn", "Beginner-friendly EV guides for India.", "/ev-guides"),
+          definedTermSetSchema("/ev-guides"),
         ]}
       />
     </>

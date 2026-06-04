@@ -244,7 +244,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
             {/* Primary CTA */}
             <div className="mt-10">
               <Link
-                href={href(`/compare?ids=${ev.id}`)}
+                href={href(`/compare-electric-vehicles?ids=${ev.id}`)}
                 className="group inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-6 py-3 font-body text-sm font-semibold text-ev-bg shadow-ev-glow-sm transition-transform duration-200 hover:-translate-y-0.5"
               >
                 {L("Compare this EV", "ev.compareThis")}
@@ -344,7 +344,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
               {similar.map((other) => (
                 <Link
                   key={other.id}
-                  href={href(`/compare?ids=${ev.id},${other.id}`)}
+                  href={href(`/compare-electric-vehicles?ids=${ev.id},${other.id}`)}
                   className="card-hover group flex flex-col rounded-2xl border border-ev-border bg-ev-card p-5"
                 >
                   <span
@@ -381,7 +381,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
               {(isHi ? t("ev.ctaSub", "hi") : "Stack the {name} against any other EV — specs, charging and value, side by side.").replace("{name}", ev.name)}
             </p>
             <Link
-              href={href(`/compare?ids=${ev.id}`)}
+              href={href(`/compare-electric-vehicles?ids=${ev.id}`)}
               className="group mt-7 inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-6 py-3 font-body text-sm font-semibold text-ev-bg shadow-ev-glow transition-transform duration-200 hover:-translate-y-0.5"
             >
               {L("Compare this EV", "ev.compareThis")}

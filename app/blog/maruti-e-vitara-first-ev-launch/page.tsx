@@ -113,7 +113,7 @@ export default function Page() {
         If you are weighing the e Vitara against its rivals, the sensible next
         step is to put the contenders side by side rather than judging on
         brochures alone. Our{" "}
-        <Link href="/compare">comparison tool</Link> lets you line them up on
+        <Link href="/compare-electric-vehicles">comparison tool</Link> lets you line them up on
         range, battery size, charging speed and on-road price. And if this is your
         first electric car, work through the{" "}
         <Link href="/blog/how-to-choose-first-ev-india">

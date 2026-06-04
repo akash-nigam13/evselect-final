@@ -7,7 +7,7 @@ type Tool = "compare" | "emi" | "cost" | "range";
 /**
  * Compact, contextual card linking to the site's decision tools.
  * Server component — no client JS. Renders only the tools listed in `tools`,
- * in the given order. When `evId` is present, emi/cost/compare deep-link to
+ * in the given order. When `evId` is present, emi/cost/compare-electric-vehicles deep-link to
  * that specific vehicle (and the calculators pre-fill from the ?ev= param).
  */
 export default function ToolsCTA({
@@ -29,22 +29,22 @@ export default function ToolsCTA({
   const items: Record<Tool, { label: string; href: string; Icon: typeof GitCompare }> = {
     compare: {
       label: isHi ? "EVs की तुलना करें" : "Compare EVs",
-      href: href("/compare", evId ? `?ids=${evId}` : ""),
+      href: href("/compare-electric-vehicles", evId ? `?ids=${evId}` : ""),
       Icon: GitCompare,
     },
     emi: {
       label: isHi ? "EMI कैलकुलेट करें" : "Calculate EMI",
-      href: href("/tools/ev-emi-calculator", evId ? `?ev=${evId}` : ""),
+      href: href("/ev-calculators/ev-emi-calculator", evId ? `?ev=${evId}` : ""),
       Icon: Banknote,
     },
     cost: {
       label: isHi ? "पेट्रोल बनाम खर्च" : "Cost vs petrol",
-      href: href("/tools/ev-vs-petrol-cost-calculator", evId ? `?ev=${evId}` : ""),
+      href: href("/ev-calculators/ev-vs-petrol-cost-calculator", evId ? `?ev=${evId}` : ""),
       Icon: TrendingDown,
     },
     range: {
       label: isHi ? "रेंज और चार्जिंग" : "Range & charging",
-      href: href("/tools/ev-range-calculator"),
+      href: href("/ev-calculators/ev-range-calculator"),
       Icon: Gauge,
     },
   };

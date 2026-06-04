@@ -100,7 +100,7 @@ export default function Page() {
       <p>
         If you are shopping in this bracket, it is worth being clinical about what
         you are paying for. The sensible first step is to lay the contenders out
-        side by side — our <Link href="/compare">comparison tool</Link> lets you
+        side by side — our <Link href="/compare-electric-vehicles">comparison tool</Link> lets you
         weigh range, battery, charging speed and price across the{" "}
         <Link href="/catalog/all">full catalogue</Link>. And if this would be your
         first electric car, the{" "}

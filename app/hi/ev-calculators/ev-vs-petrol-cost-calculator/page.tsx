@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title:
     "EV vs Petrol Cost Calculator (India 2026) — Running Cost & Savings | EVSelect.in",
   description: DESC,
-  alternates: altsFor("/tools/ev-vs-petrol-cost-calculator", "hi"),
+  alternates: altsFor("/ev-calculators/ev-vs-petrol-cost-calculator", "hi"),
   openGraph: {
     title: "EV vs Petrol Cost Calculator (India 2026) — Running Cost & Savings",
   },
@@ -73,10 +73,10 @@ export default function EvVsPetrolCostCalculatorPageHi() {
               homeName="होम"
               homeHref="/hi"
               items={[
-                { name: "टूल्स", path: "/tools" },
+                { name: "टूल्स", path: "/ev-calculators" },
                 {
                   name: "EV बनाम पेट्रोल कॉस्ट कैलकुलेटर",
-                  path: "/tools/ev-vs-petrol-cost-calculator",
+                  path: "/ev-calculators/ev-vs-petrol-cost-calculator",
                 },
               ]}
               className="mb-6"
@@ -199,7 +199,7 @@ export default function EvVsPetrolCostCalculatorPageHi() {
               EVs पर 5% GST। दूसरी, चलने के खर्च की बचत हर साल पर्दे के पीछे काम करती
               रहती है। अगर आप कार फाइनेंस कर रहे हैं, तो{" "}
               <Link
-                href={localizedHref("/tools/ev-emi-calculator", "hi")}
+                href={localizedHref("/ev-calculators/ev-emi-calculator", "hi")}
                 className="text-brand hover:underline"
               >
                 EV EMI Calculator
@@ -237,7 +237,7 @@ export default function EvVsPetrolCostCalculatorPageHi() {
               </Link>{" "}
               ब्राउज़ करें या{" "}
               <Link
-                href={localizedHref("/compare", "hi")}
+                href={localizedHref("/compare-electric-vehicles", "hi")}
                 className="text-brand hover:underline"
               >
                 कम्पेयर टूल
@@ -290,12 +290,12 @@ export default function EvVsPetrolCostCalculatorPageHi() {
           webPageSchema(
             "EV vs Petrol Cost Calculator (India 2026)",
             DESC,
-            "/tools/ev-vs-petrol-cost-calculator",
+            "/ev-calculators/ev-vs-petrol-cost-calculator",
           ),
           webAppSchema(
             "EV vs Petrol Cost Calculator",
             DESC,
-            "/tools/ev-vs-petrol-cost-calculator",
+            "/ev-calculators/ev-vs-petrol-cost-calculator",
           ),
           faqPageSchema(faqs),
         ]}

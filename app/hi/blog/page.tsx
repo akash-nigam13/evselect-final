@@ -86,7 +86,7 @@ export default function BlogPage() {
                   किन्हीं भी दो इलेक्ट्रिक वाहनों के स्पेक्स साथ-साथ देखें।
                 </p>
                 <Link
-                  href="/hi/compare"
+                  href="/hi/compare-electric-vehicles"
                   className="block rounded-xl bg-brand-gradient py-2.5 text-center font-display text-xs font-bold text-ev-bg"
                 >
                   तुलना टूल खोलें →

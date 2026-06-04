@@ -35,7 +35,7 @@ export default function Page() {
         यही अंतर का मूल है: टेस्ट उन परिस्थितियों में दक्षता मापता है जो EV के पक्ष में हैं, फिर उसे
         एक अकेले हेडलाइन आँकड़े के रूप में छाप देता है। अगर इसके पीछे का शब्दजाल — kWh, दक्षता, एनर्जी
         डेंसिटी — अनजाना लगता है, तो हमारा{" "}
-        <Link href={localizedHref("/learn", "hi")}>EV लर्न हब</Link> और गहरा{" "}
+        <Link href={localizedHref("/ev-guides", "hi")}>EV लर्न हब</Link> और गहरा{" "}
         <Link href={localizedHref("/about-ev-batteries", "hi")}>बैटरी बेसिक लेख</Link> इन शब्दों को
         सुलझाते हैं ताकि आगे की बातें समझ में आएँ।
       </p>
@@ -105,7 +105,7 @@ export default function Page() {
         गिर सकती है। यह यह भी बदल देता है कि आप यात्राओं की प्लानिंग कैसे करते हैं: शहर के काम रेंज
         पर सस्ते हैं, लंबे तेज़ हाईवे चरण वे जगहें हैं जहाँ आप बैटरी पर नज़र रखते हैं और पब्लिक नेटवर्क
         पर भरोसा करते हैं। आप{" "}
-        <Link href={localizedHref("/compare", "hi")}>EVs की तुलना</Link> उनकी सिटी बनाम हाईवे दक्षता
+        <Link href={localizedHref("/compare-electric-vehicles", "hi")}>EVs की तुलना</Link> उनकी सिटी बनाम हाईवे दक्षता
         पर कर सकते हैं ताकि देख सकें कि कौन-से मॉडल स्पीड पर सबसे अच्छा टिकते हैं।
       </p>
 
@@ -118,7 +118,7 @@ export default function Page() {
       </p>
       <p>
         खास यात्राओं के लिए, अंदाज़ा लगाने के बजाय अपने रूट और परिस्थितियों को मॉडल करने हेतु{" "}
-        <Link href={localizedHref("/tools", "hi")}>EV टूल्स</Link> में रेंज एस्टिमेटर इस्तेमाल करें।
+        <Link href={localizedHref("/ev-calculators", "hi")}>EV टूल्स</Link> में रेंज एस्टिमेटर इस्तेमाल करें।
         लंबी ड्राइव पर, उस अनुमान को{" "}
         <Link href={localizedHref("/blog/ev-charging-infrastructure-india", "hi")}>
           भारत के चार्जिंग इंफ्रास्ट्रक्चर

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Compare Electric Vehicles Side by Side",
   description:
     "Compare any two (or three) EVs in India side by side — range, battery, price, power, charging speed and more. Live data on 140+ electric cars, scooters and bikes.",
-  alternates: altsFor("/compare", "en"),
+  alternates: altsFor("/compare-electric-vehicles", "en"),
 };
 
 export default function ComparePage() {
@@ -24,7 +24,7 @@ export default function ComparePage() {
         <section className="relative overflow-hidden border-b border-ev-border/40">
           <Aurora variant="dual" />
           <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
-            <Breadcrumbs items={[{ name: "Compare", path: "/compare" }]} className="mb-6 justify-center" />
+            <Breadcrumbs items={[{ name: "Compare", path: "/compare-electric-vehicles" }]} className="mb-6 justify-center" />
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-brand">
               Comparison Engine
             </p>
@@ -48,7 +48,7 @@ export default function ComparePage() {
         data={webAppSchema(
           "EV Comparison Tool",
           "Compare any two or three electric vehicles in India side by side — range, battery, price, power and charging.",
-          "/compare",
+          "/compare-electric-vehicles",
         )}
       />
     </>

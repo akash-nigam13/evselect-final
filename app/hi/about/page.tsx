@@ -51,12 +51,12 @@ export default function AboutPage() {
               और मोटरसाइकिलों</strong> को <strong>50+ ब्रांडों</strong> में ट्रैक करते हैं। हर
               वाहन के लिए आपको बैटरी, रेंज, चार्जिंग, परफॉर्मेंस और कीमत की जानकारी मिलती है, साथ
               ही{" "}
-              <Link href={localizedHref("/compare", "hi")}>किन्हीं भी मॉडलों की साथ-साथ तुलना</Link>{" "}
+              <Link href={localizedHref("/compare-electric-vehicles", "hi")}>किन्हीं भी मॉडलों की साथ-साथ तुलना</Link>{" "}
               करने की सुविधा भी। कैटलॉग के अलावा, हम{" "}
               <Link href={localizedHref("/ev-subsidies-india", "hi")}>सब्सिडी और प्रोत्साहन</Link>,{" "}
               <Link href={localizedHref("/ev-charging-station-setup-india", "hi")}>चार्जिंग स्टेशन लगाने</Link>,
               बैटरी तकनीक, वास्तविक रेंज और ताज़ा{" "}
-              <Link href={localizedHref("/news", "hi")}>भारत EV समाचार</Link> पर गाइड प्रकाशित करते हैं।
+              <Link href={localizedHref("/ev-news", "hi")}>भारत EV समाचार</Link> पर गाइड प्रकाशित करते हैं।
             </p>
 
             <h2>हम स्वतंत्र कैसे रहते हैं</h2>

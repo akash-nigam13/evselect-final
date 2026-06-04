@@ -35,28 +35,28 @@ const navLinks: NavLink[] = [
       { labelKey: "nav.allBrands", href: "/catalog", desc: "Browse every brand →" },
     ],
   },
-  { labelKey: "nav.compare", href: "/compare" },
+  { labelKey: "nav.compare", href: "/compare-electric-vehicles" },
   {
     labelKey: "nav.tools",
-    href: "/tools",
+    href: "/ev-calculators",
     children: [
-      { label: "All tools", href: "/tools", desc: "Every EV calculator in one place" },
-      { label: "EMI Calculator", href: "/tools/ev-emi-calculator", desc: "EV loan monthly payment" },
-      { label: "Cost Calculator", href: "/tools/ev-vs-petrol-cost-calculator", desc: "EV vs petrol running cost" },
-      { label: "Range Calculator", href: "/tools/ev-range-calculator", desc: "Real-world range & charging" },
+      { label: "All tools", href: "/ev-calculators", desc: "Every EV calculator in one place" },
+      { label: "EMI Calculator", href: "/ev-calculators/ev-emi-calculator", desc: "EV loan monthly payment" },
+      { label: "Cost Calculator", href: "/ev-calculators/ev-vs-petrol-cost-calculator", desc: "EV vs petrol running cost" },
+      { label: "Range Calculator", href: "/ev-calculators/ev-range-calculator", desc: "Real-world range & charging" },
     ],
   },
   {
     labelKey: "nav.learn",
-    href: "/learn",
+    href: "/ev-guides",
     children: [
-      { label: "EV 101 — basics & glossary", href: "/learn", desc: "How EVs work, jargon decoded" },
+      { label: "EV 101 — basics & glossary", href: "/ev-guides", desc: "How EVs work, jargon decoded" },
       { label: "EV Subsidies & Incentives", href: "/ev-subsidies-india", desc: "Central + state savings, 2026" },
       { label: "Set up a Charging Station", href: "/ev-charging-station-setup-india", desc: "Cost, licence, subsidy & ROI" },
       { label: "EV Battery Guide", href: "/about-ev-batteries", desc: "How EV batteries work & last" },
     ],
   },
-  { labelKey: "nav.news", href: "/news" },
+  { labelKey: "nav.news", href: "/ev-news" },
   { labelKey: "nav.blog", href: "/blog" },
 ];
 
@@ -171,7 +171,7 @@ export default function Navbar() {
           </div>
           <LangSwitcher />
           <Link
-            href={L("/compare")}
+            href={L("/compare-electric-vehicles")}
             className="group inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-4 py-2 font-display text-sm font-semibold text-ev-bg transition-all duration-300 hover:shadow-ev-glow"
           >
             <GitCompare className="h-4 w-4" />
@@ -225,7 +225,7 @@ export default function Navbar() {
             </div>
           ))}
           <Link
-            href={L("/compare")}
+            href={L("/compare-electric-vehicles")}
             className="mt-3 block rounded-xl bg-brand-gradient px-4 py-3 text-center font-display text-sm font-semibold text-ev-bg"
             onClick={() => setMobileOpen(false)}
           >

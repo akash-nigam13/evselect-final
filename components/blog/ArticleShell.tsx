@@ -154,13 +154,13 @@ export default function ArticleShell({
                   {t("article.ctaSub", locale)}
                 </p>
                 <Link
-                  href={L("/compare")}
+                  href={L("/compare-electric-vehicles")}
                   className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient py-2.5 font-display text-xs font-bold text-ev-bg"
                 >
                   <GitCompare className="h-3.5 w-3.5" /> {t("article.ctaBtn", locale)}
                 </Link>
                 <Link
-                  href={L("/tools")}
+                  href={L("/ev-calculators")}
                   className="mt-2 inline-flex w-full items-center justify-center gap-1.5 rounded-xl border border-ev-border py-2.5 font-mono text-xs text-ev-text/80 transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   {t("article.ctaTools", locale)} <ArrowRight className="h-3 w-3" />

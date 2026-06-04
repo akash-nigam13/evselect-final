@@ -13,6 +13,17 @@ const nextConfig = {
         destination: "https://www.evselect.in/:path*",
         permanent: true,
       },
+      // Renamed routes -> EV-keyword URLs (308 permanent, query preserved).
+      { source: "/compare", destination: "/compare-electric-vehicles", permanent: true },
+      { source: "/hi/compare", destination: "/hi/compare-electric-vehicles", permanent: true },
+      { source: "/tools", destination: "/ev-calculators", permanent: true },
+      { source: "/tools/:path*", destination: "/ev-calculators/:path*", permanent: true },
+      { source: "/hi/tools", destination: "/hi/ev-calculators", permanent: true },
+      { source: "/hi/tools/:path*", destination: "/hi/ev-calculators/:path*", permanent: true },
+      { source: "/learn", destination: "/ev-guides", permanent: true },
+      { source: "/hi/learn", destination: "/hi/ev-guides", permanent: true },
+      { source: "/news", destination: "/ev-news", permanent: true },
+      { source: "/hi/news", destination: "/hi/ev-news", permanent: true },
     ];
   },
 };

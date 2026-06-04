@@ -73,7 +73,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
                 </p>
               </div>
               <Link
-                href={href(`/compare?ids=${evs.slice(0, 2).map((e) => e.id).join(",")}`)}
+                href={href(`/compare-electric-vehicles?ids=${evs.slice(0, 2).map((e) => e.id).join(",")}`)}
                 className="ml-auto inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-5 py-3 font-display text-sm font-bold text-ev-bg transition-all hover:shadow-ev-glow"
               >
                 <GitCompare className="h-4 w-4" />

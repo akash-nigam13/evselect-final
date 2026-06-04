@@ -12,7 +12,7 @@ import { altsFor } from "@/lib/i18n";
 import { webPageSchema, itemListSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  alternates: altsFor("/tools", "en"),
+  alternates: altsFor("/ev-calculators", "en"),
   title: "Free EV Tools — EMI, Cost & Range Calculators (India 2026)",
   description:
     "Free interactive EV calculators for India: estimate your EV loan EMI, compare EV vs petrol running costs, and work out real-world range and charging time — all on real 2026 EV data.",
@@ -22,28 +22,28 @@ const tools = [
   {
     title: "EV EMI Calculator",
     desc: "Estimate your monthly EV loan EMI, total interest and amount payable. Adjust down payment, rate and tenure.",
-    href: "/tools/ev-emi-calculator",
+    href: "/ev-calculators/ev-emi-calculator",
     Icon: Banknote,
     accent: "#8B7BFF",
   },
   {
     title: "EV vs Petrol Cost Calculator",
     desc: "See exactly how much you save running an electric vehicle instead of petrol, based on your real usage.",
-    href: "/tools/ev-vs-petrol-cost-calculator",
+    href: "/ev-calculators/ev-vs-petrol-cost-calculator",
     Icon: TrendingDown,
     accent: "#26E0C4",
   },
   {
     title: "EV Range & Charging Calculator",
     desc: "Estimate real-world driving range and charging time for any EV in Indian conditions.",
-    href: "/tools/ev-range-calculator",
+    href: "/ev-calculators/ev-range-calculator",
     Icon: Gauge,
     accent: "#34D399",
   },
   {
     title: "Compare EVs",
     desc: "Put any two or three electric vehicles side by side on range, battery, price and charging.",
-    href: "/compare",
+    href: "/compare-electric-vehicles",
     Icon: GitCompare,
     accent: "#60A5FA",
   },
@@ -58,7 +58,7 @@ export default function ToolsPage() {
           <Aurora variant="dual" />
           <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
             <Reveal className="max-w-3xl">
-              <Breadcrumbs items={[{ name: "Tools", path: "/tools" }]} className="mb-6" />
+              <Breadcrumbs items={[{ name: "Tools", path: "/ev-calculators" }]} className="mb-6" />
               <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-brand">Free Tools</p>
               <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-6xl text-balance">
                 Run the numbers before you <span className="text-gradient-brand">go electric</span>
@@ -105,7 +105,7 @@ export default function ToolsPage() {
           webPageSchema(
             "Free EV Tools — EMI, Cost & Range Calculators",
             "Free interactive EV calculators for India: EMI, EV-vs-petrol running cost, and real-world range & charging.",
-            "/tools"
+            "/ev-calculators"
           ),
           itemListSchema(tools.map((t) => ({ name: t.title, path: t.href }))),
         ]}

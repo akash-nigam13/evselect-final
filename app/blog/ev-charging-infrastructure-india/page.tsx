@@ -256,7 +256,7 @@ export default function Article5() {
               <div className="bg-ev-card border border-ev-cyan/20 rounded-2xl p-5">
                 <p className="font-display font-bold text-white text-sm mb-2">Plan Your Next EV Trip</p>
                 <p className="text-ev-text/55 text-xs font-body mb-4 leading-relaxed">Use our compare tool to check charging speed specs across all vehicles.</p>
-                <Link href="/compare" className="block text-center py-2.5 rounded-xl text-xs font-display font-bold bg-ev-cyan text-ev-bg hover:bg-ev-green transition-colors">Compare Charging Specs →</Link>
+                <Link href="/compare-electric-vehicles" className="block text-center py-2.5 rounded-xl text-xs font-display font-bold bg-ev-cyan text-ev-bg hover:bg-ev-green transition-colors">Compare Charging Specs →</Link>
               </div>
               <div className="border border-dashed border-ev-border/40 rounded-xl h-[250px] flex items-center justify-center bg-ev-surface/20">
                 <div className="text-center"><p className="text-[10px] font-mono text-ev-border uppercase tracking-widest">Advertisement</p><p className="text-[10px] font-mono text-ev-border/50 mt-1">300×250</p></div>

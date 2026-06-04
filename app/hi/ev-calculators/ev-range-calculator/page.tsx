@@ -17,7 +17,7 @@ const DESC =
 export const metadata: Metadata = {
   title: "EV रेंज और चार्जिंग कैलकुलेटर (भारत 2026) — वास्तविक रेंज | EVSelect.in",
   description: DESC,
-  alternates: altsFor("/tools/ev-range-calculator", "hi"),
+  alternates: altsFor("/ev-calculators/ev-range-calculator", "hi"),
   openGraph: {
     title: "EV रेंज और चार्जिंग कैलकुलेटर (भारत 2026) — वास्तविक रेंज",
   },
@@ -72,8 +72,8 @@ export default function EvRangeCalculatorPageHi() {
               homeName="होम"
               homeHref="/hi"
               items={[
-                { name: "टूल्स", path: "/tools" },
-                { name: "EV रेंज कैलकुलेटर", path: "/tools/ev-range-calculator" },
+                { name: "टूल्स", path: "/ev-calculators" },
+                { name: "EV रेंज कैलकुलेटर", path: "/ev-calculators/ev-range-calculator" },
               ]}
               className="mb-6"
             />
@@ -237,7 +237,7 @@ export default function EvRangeCalculatorPageHi() {
               पूरी EV कैटलॉग
             </Link>
             , या दो मॉडल को{" "}
-            <Link href={localizedHref("/compare", "hi")} className="text-brand hover:underline">
+            <Link href={localizedHref("/compare-electric-vehicles", "hi")} className="text-brand hover:underline">
               तुलना टूल
             </Link>{" "}
             में आमने-सामने रखें।
@@ -275,12 +275,12 @@ export default function EvRangeCalculatorPageHi() {
           webPageSchema(
             "EV रेंज और चार्जिंग कैलकुलेटर (भारत 2026)",
             DESC,
-            "/tools/ev-range-calculator",
+            "/ev-calculators/ev-range-calculator",
           ),
           webAppSchema(
             "EV रेंज और चार्जिंग कैलकुलेटर",
             DESC,
-            "/tools/ev-range-calculator",
+            "/ev-calculators/ev-range-calculator",
           ),
           faqPageSchema(faqs),
         ]}

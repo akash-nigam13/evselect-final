@@ -136,7 +136,7 @@ export default function BlogLayout({ meta, children }: BlogLayoutProps) {
                   Use our side-by-side tool to compare any two electric vehicles on specs, range, and price.
                 </p>
                 <Link
-                  href="/compare"
+                  href="/compare-electric-vehicles"
                   className="block text-center py-2.5 rounded-xl text-xs font-display font-bold tracking-wide transition-all"
                   style={{ backgroundColor: meta.heroAccent, color: "#050b14" }}
                 >

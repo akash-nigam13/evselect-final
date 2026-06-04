@@ -35,7 +35,7 @@ export default function Page() {
         That is the heart of the gap: the test measures efficiency in conditions that flatter an
         EV, then publishes that as a single headline figure. If the underlying jargon — kWh,
         efficiency, energy density — feels unfamiliar, our{" "}
-        <Link href="/learn">EV learn hub</Link> and the deeper{" "}
+        <Link href="/ev-guides">EV learn hub</Link> and the deeper{" "}
         <Link href="/about-ev-batteries">battery primer</Link> unpack the terms so the rest of this
         makes sense.
       </p>
@@ -101,7 +101,7 @@ export default function Page() {
         This is why your dashboard range can look great around town and then drop faster than
         expected on a motorway. It also reframes how you plan trips: city errands are cheap on
         range, long fast highway legs are where you watch the battery and lean on the public network.
-        You can <Link href="/compare">compare EVs</Link> on their city versus highway efficiency to
+        You can <Link href="/compare-electric-vehicles">compare EVs</Link> on their city versus highway efficiency to
         see which models hold up best at speed.
       </p>
 
@@ -114,7 +114,7 @@ export default function Page() {
       </p>
       <p>
         For specific trips, use the range estimator in the{" "}
-        <Link href="/tools">EV tools</Link> to model your route and conditions instead of guessing.
+        <Link href="/ev-calculators">EV tools</Link> to model your route and conditions instead of guessing.
         On long drives, pair that estimate with our guide to{" "}
         <Link href="/blog/ev-charging-infrastructure-india">India's charging infrastructure</Link>{" "}
         so you know where the chargers are. And because home charging removes the daily range

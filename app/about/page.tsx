@@ -50,11 +50,11 @@ export default function AboutPage() {
               We track <strong>148+ electric cars, scooters and motorcycles</strong> on sale or
               launching in India, across <strong>50+ brands</strong>. For every vehicle you get
               battery, range, charging, performance and price details, plus the ability to{" "}
-              <Link href="/compare">compare any models side by side</Link>. Beyond the catalogue, we
+              <Link href="/compare-electric-vehicles">compare any models side by side</Link>. Beyond the catalogue, we
               publish guides on <Link href="/ev-subsidies-india">subsidies &amp; incentives</Link>,{" "}
               <Link href="/ev-charging-station-setup-india">setting up charging stations</Link>,
               battery technology, real-world range, and the latest{" "}
-              <Link href="/news">India EV news</Link>.
+              <Link href="/ev-news">India EV news</Link>.
             </p>
 
             <h2>How we stay independent</h2>

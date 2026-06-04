@@ -52,7 +52,7 @@ export default function CompareTool() {
               ))}
             </ul>
             <Link
-              href="/compare"
+              href="/compare-electric-vehicles"
               className="group inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-6 py-3.5 font-display text-sm font-bold tracking-wide text-ev-bg shadow-ev-glow transition-all duration-300 hover:shadow-iris-glow"
             >
               <GitCompare className="h-4 w-4" />
@@ -99,7 +99,7 @@ export default function CompareTool() {
               ))}
               <div className="border-t border-ev-border bg-ev-surface/40 p-4">
                 <Link
-                  href={`/compare?ids=${a.id},${b.id}`}
+                  href={`/compare-electric-vehicles?ids=${a.id},${b.id}`}
                   className="flex w-full items-center justify-center gap-2 rounded-lg border border-brand/30 py-2.5 font-mono text-xs tracking-wide text-brand transition-colors hover:bg-brand/10"
                 >
                   <GitCompare className="h-3.5 w-3.5" />

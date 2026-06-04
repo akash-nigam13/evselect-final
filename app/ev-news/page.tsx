@@ -15,7 +15,7 @@ import { collectionPageSchema } from "@/lib/seo";
 import { NEWS, type NewsCategory } from "@/lib/news";
 
 export const metadata: Metadata = {
-  alternates: altsFor("/news", "en"),
+  alternates: altsFor("/ev-news", "en"),
   title: "EV News & 2026 Launches in India",
   description:
     "A curated editorial timeline of electric-vehicle launches, policy moves, charging infrastructure and technology trends shaping India's EV landscape in 2026.",
@@ -77,7 +77,7 @@ export default function NewsPage() {
           />
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <Breadcrumbs items={[{ name: "News", path: "/news" }]} className="mb-6 justify-center" />
+              <Breadcrumbs items={[{ name: "News", path: "/ev-news" }]} className="mb-6 justify-center" />
               <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-brand">
                 News &amp; Launches
               </p>
@@ -235,7 +235,7 @@ export default function NewsPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/learn"
+                  href="/ev-guides"
                   className="rounded-full border border-ev-border px-5 py-2.5 font-display text-sm font-semibold text-ev-text transition-colors hover:border-brand/50"
                 >
                   EV 101
@@ -251,7 +251,7 @@ export default function NewsPage() {
         data={collectionPageSchema(
           "EV News & 2026 Launches in India",
           "Latest electric vehicle launches, policy and charging news for India in 2026.",
-          "/news",
+          "/ev-news",
         )}
       />
     </>

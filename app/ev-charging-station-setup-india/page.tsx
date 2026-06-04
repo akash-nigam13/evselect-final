@@ -60,7 +60,7 @@ export default function ChargingStationSetupPage() {
           <div className="relative mx-auto max-w-4xl px-4 pb-12 pt-12 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
-                { name: "Learn", path: "/learn" },
+                { name: "Learn", path: "/ev-guides" },
                 { name: "Set up an EV charging station", path: "/ev-charging-station-setup-india" },
               ]}
               className="mb-6"

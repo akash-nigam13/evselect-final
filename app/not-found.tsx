@@ -7,7 +7,7 @@ import Aurora from "@/components/ui/Aurora";
 const links = [
   { href: "/", label: "Home", icon: Home },
   { href: "/catalog", label: "Browse EVs", icon: Car },
-  { href: "/compare", label: "Compare tool", icon: GitCompare },
+  { href: "/compare-electric-vehicles", label: "Compare tool", icon: GitCompare },
   { href: "/blog", label: "Blog & guides", icon: Newspaper },
 ];
 

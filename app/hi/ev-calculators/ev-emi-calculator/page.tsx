@@ -18,7 +18,7 @@ const DESC =
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
-  alternates: altsFor("/tools/ev-emi-calculator", "hi"),
+  alternates: altsFor("/ev-calculators/ev-emi-calculator", "hi"),
   openGraph: {
     title: "EV लोन EMI कैलकुलेटर (India 2026) — मासिक किस्त",
     type: "website",
@@ -74,8 +74,8 @@ export default function EvEmiCalculatorPageHi() {
               homeName="होम"
               homeHref="/hi"
               items={[
-                { name: "टूल्स", path: "/tools" },
-                { name: "EV EMI कैलकुलेटर", path: "/tools/ev-emi-calculator" },
+                { name: "टूल्स", path: "/ev-calculators" },
+                { name: "EV EMI कैलकुलेटर", path: "/ev-calculators/ev-emi-calculator" },
               ]}
               className="mb-6"
             />
@@ -222,14 +222,14 @@ export default function EvEmiCalculatorPageHi() {
                 पढ़ें ताकि देख सकें कि क्या-क्या आपकी on-road कीमत घटाता है। यह
                 जाँचने के लिए कि EV running cost में अपनी कीमत वसूल करती है या नहीं,{" "}
                 <Link
-                  href={localizedHref("/tools/ev-vs-petrol-cost-calculator", "hi")}
+                  href={localizedHref("/ev-calculators/ev-vs-petrol-cost-calculator", "hi")}
                   className="text-brand hover:underline"
                 >
                   EV बनाम पेट्रोल कॉस्ट कैलकुलेटर
                 </Link>{" "}
                 आज़माएँ। और उधार लेने से पहले सही मॉडल चुनने के लिए{" "}
                 <Link
-                  href={localizedHref("/compare", "hi")}
+                  href={localizedHref("/compare-electric-vehicles", "hi")}
                   className="text-brand hover:underline"
                 >
                   कम्पेयर टूल
@@ -281,8 +281,8 @@ export default function EvEmiCalculatorPageHi() {
       <Footer locale="hi" />
       <JsonLd
         data={[
-          webPageSchema(TITLE, DESC, "/tools/ev-emi-calculator"),
-          webAppSchema("EV EMI Calculator", DESC, "/tools/ev-emi-calculator"),
+          webPageSchema(TITLE, DESC, "/ev-calculators/ev-emi-calculator"),
+          webAppSchema("EV EMI Calculator", DESC, "/ev-calculators/ev-emi-calculator"),
           faqPageSchema(faqs),
         ]}
       />

@@ -17,7 +17,7 @@ const DESC =
 export const metadata: Metadata = {
   title: "EV Range & Charging Calculator (India 2026) — Real-World Range | EVSelect.in",
   description: DESC,
-  alternates: altsFor("/tools/ev-range-calculator", "en"),
+  alternates: altsFor("/ev-calculators/ev-range-calculator", "en"),
   openGraph: {
     title: "EV Range & Charging Calculator (India 2026) — Real-World Range",
   },
@@ -70,8 +70,8 @@ export default function EvRangeCalculatorPage() {
           <div className="relative mx-auto max-w-4xl px-4 pb-12 pt-12 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
-                { name: "Tools", path: "/tools" },
-                { name: "EV Range Calculator", path: "/tools/ev-range-calculator" },
+                { name: "Tools", path: "/ev-calculators" },
+                { name: "EV Range Calculator", path: "/ev-calculators/ev-range-calculator" },
               ]}
               className="mb-6"
             />
@@ -235,7 +235,7 @@ export default function EvRangeCalculatorPage() {
               full EV catalogue
             </Link>
             , or line up two models in the{" "}
-            <Link href="/compare" className="text-brand hover:underline">
+            <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
               compare tool
             </Link>
             .
@@ -274,12 +274,12 @@ export default function EvRangeCalculatorPage() {
           webPageSchema(
             "EV Range & Charging Calculator (India 2026)",
             DESC,
-            "/tools/ev-range-calculator",
+            "/ev-calculators/ev-range-calculator",
           ),
           webAppSchema(
             "EV Range & Charging Calculator",
             DESC,
-            "/tools/ev-range-calculator",
+            "/ev-calculators/ev-range-calculator",
           ),
           faqPageSchema(faqs),
         ]}

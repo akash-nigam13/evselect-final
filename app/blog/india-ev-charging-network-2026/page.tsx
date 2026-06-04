@@ -116,12 +116,12 @@ export default function Page() {
           Favour models and battery sizes that give you comfortable margin on the
           drives you actually do; compare options on our{" "}
           <Link href="/catalog">catalogue</Link> and use the{" "}
-          <Link href="/tools">cost and range calculators</Link> to sanity-check
+          <Link href="/ev-calculators">cost and range calculators</Link> to sanity-check
           the maths.
         </li>
         <li>
           When two cars are close, put them head to head on charging speed and
-          range with our <Link href="/compare">comparison tool</Link>.
+          range with our <Link href="/compare-electric-vehicles">comparison tool</Link>.
         </li>
       </ul>
       <p>

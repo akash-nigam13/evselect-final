@@ -14,13 +14,13 @@ const footerLinks = {
     { label: "Electric Scooters", href: "/catalog?type=scooter" },
     { label: "Electric Bikes", href: "/catalog?type=motorcycle" },
     { label: "Browse all EVs", href: "/catalog" },
-    { label: "Compare EVs", href: "/compare" },
+    { label: "Compare EVs", href: "/compare-electric-vehicles" },
   ],
   "Learn & Tools": [
-    { label: "EV 101 — Learn Hub", href: "/learn" },
+    { label: "EV 101 — Learn Hub", href: "/ev-guides" },
     { label: "EV Subsidies & Incentives", href: "/ev-subsidies-india" },
-    { label: "EMI Calculator", href: "/tools/ev-emi-calculator" },
-    { label: "Cost Calculator", href: "/tools/ev-vs-petrol-cost-calculator" },
+    { label: "EMI Calculator", href: "/ev-calculators/ev-emi-calculator" },
+    { label: "Cost Calculator", href: "/ev-calculators/ev-vs-petrol-cost-calculator" },
     { label: "Blog", href: "/blog" },
   ],
   Company: [

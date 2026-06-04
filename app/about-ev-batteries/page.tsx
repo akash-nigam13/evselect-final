@@ -109,7 +109,7 @@ export default function AboutBatteriesPage() {
             <div className="max-w-3xl">
               <Breadcrumbs
                 items={[
-                  { name: "Learn", path: "/learn" },
+                  { name: "Learn", path: "/ev-guides" },
                   { name: "EV Battery Guide", path: "/about-ev-batteries" },
                 ]}
                 className="mb-6"
@@ -408,7 +408,7 @@ export default function AboutBatteriesPage() {
                 <Battery className="w-6 h-6 text-ev-green mb-3" />
                 <h3 className="font-display font-bold text-white text-sm mb-2">Compare EV Batteries</h3>
                 <p className="text-ev-text/55 text-xs font-body mb-4">Use our tool to compare battery specs across 200+ models.</p>
-                <Link href="/compare" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-ev-green text-ev-bg text-xs font-display font-bold tracking-wide hover:opacity-90 transition-opacity">
+                <Link href="/compare-electric-vehicles" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-ev-green text-ev-bg text-xs font-display font-bold tracking-wide hover:opacity-90 transition-opacity">
                   Compare Now <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

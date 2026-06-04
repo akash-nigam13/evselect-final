@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें",
   description:
     "भारत में किन्हीं भी दो या तीन EVs की साथ-साथ तुलना करें — रेंज, बैटरी, कीमत, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक का लाइव डेटा।",
-  alternates: altsFor("/compare", "hi"),
+  alternates: altsFor("/compare-electric-vehicles", "hi"),
 };
 
 export default function HiComparePage() {
@@ -25,7 +25,7 @@ export default function HiComparePage() {
           <Aurora variant="dual" />
           <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
             <Breadcrumbs
-              items={[{ name: "तुलना करें", path: "/hi/compare" }]}
+              items={[{ name: "तुलना करें", path: "/hi/compare-electric-vehicles" }]}
               homeName="होम"
               homeHref="/hi"
               className="mb-6 justify-center"
@@ -53,7 +53,7 @@ export default function HiComparePage() {
         data={webAppSchema(
           "EV Comparison Tool",
           "Compare any two or three electric vehicles in India side by side.",
-          "/compare"
+          "/compare-electric-vehicles"
         )}
       />
     </>

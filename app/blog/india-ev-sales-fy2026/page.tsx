@@ -91,7 +91,7 @@ export default function Page() {
         the same customer means more choice, sharper pricing and faster feature
         upgrades. Where a shopper once had two or three serious options, there are
         now a dozen, and it pays to put them side by side before committing — our{" "}
-        <Link href="/compare">comparison tool</Link> exists precisely for that
+        <Link href="/compare-electric-vehicles">comparison tool</Link> exists precisely for that
         moment when you are torn between two SUVs on range, battery size and
         on-road price.
       </p>
