@@ -18,13 +18,15 @@ const footerLinks = {
   ],
   "Learn & Tools": [
     { label: "EV 101 — Learn Hub", href: "/learn" },
-    { label: "Battery Guide", href: "/about-ev-batteries" },
+    { label: "EV Subsidies & Incentives", href: "/ev-subsidies-india" },
+    { label: "Set up a Charging Station", href: "/ev-charging-station-setup-india" },
     { label: "Cost Calculator", href: "/tools#cost" },
-    { label: "Range Estimator", href: "/tools#range" },
     { label: "Blog", href: "/blog" },
   ],
   Company: [
-    { label: "News & Launches", href: "/news" },
+    { label: "About Us", href: "/about" },
+    { label: "Editorial & Data Policy", href: "/editorial-policy" },
+    { label: "Advertising Disclosure", href: "/advertising-disclosure" },
     { label: "Contact", href: "/contact" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Use", href: "/terms" },

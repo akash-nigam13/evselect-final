@@ -69,6 +69,9 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/tesla-model-y-price-cut-india-2026",
     "/ev-subsidies-india",
     "/ev-charging-station-setup-india",
+    "/about",
+    "/editorial-policy",
+    "/advertising-disclosure",
   ]),
 };
 

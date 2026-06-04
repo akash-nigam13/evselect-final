@@ -6,7 +6,7 @@ export const SITE = {
   shortName: "EVSelect",
   url: "https://www.evselect.in",
   logo: "https://www.evselect.in/logo.png",
-  ogImage: "https://www.evselect.in/logo.png",
+  ogImage: "https://www.evselect.in/og-default.png",
   email: "akash.nigam@evselect.in",
   author: "EVSelect Editorial Team",
   sameAs: ["https://www.linkedin.com/in/akash-shobha-nigam/"],
