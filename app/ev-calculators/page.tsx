@@ -9,7 +9,7 @@ import Reveal from "@/components/ui/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { altsFor } from "@/lib/i18n";
-import { webPageSchema, itemListSchema } from "@/lib/seo";
+import { webPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: altsFor("/ev-calculators", "en"),
@@ -49,6 +49,25 @@ const tools = [
   },
 ];
 
+const faqs = [
+  {
+    q: "What EV calculators does EVSelect.in offer?",
+    a: "EVSelect.in offers three free EV calculators for India: an EV EMI calculator to estimate your monthly loan instalment, an EV vs petrol running cost calculator to see your fuel savings, and an EV range & charging calculator to estimate real-world range and charging time.",
+  },
+  {
+    q: "Are the EV calculators free?",
+    a: "Yes. All of the EV calculators are completely free to use and require no sign-up. You can run as many estimates as you like, as often as you like.",
+  },
+  {
+    q: "How accurate are the estimates?",
+    a: "The calculators are built on real 2026 Indian-market EV specs and standard financial formulas, so they give a reliable ballpark for planning. Actual figures vary with your exact loan terms, electricity and petrol prices, driving style and weather, so treat the results as estimates rather than quotes.",
+  },
+  {
+    q: "Do I need to enter personal details?",
+    a: "No. The EV calculators work entirely in your browser from the figures you enter, such as price, down payment, interest rate and usage. You do not need to share any personal or contact information.",
+  },
+];
+
 export default function ToolsPage() {
   return (
     <>
@@ -72,6 +91,27 @@ export default function ToolsPage() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="prose-ev mb-12 max-w-3xl">
+            <h2>Free EV calculators for India</h2>
+            <p>
+              Going electric is as much a maths decision as a driving one. Our EV calculators
+              India toolkit brings together three free tools that answer the questions buyers ask
+              most. The EV EMI calculator shows your monthly loan instalment, total interest and
+              amount payable once you set the price, down payment, rate and tenure. The EV vs petrol
+              running cost calculator reveals exactly how much you save on fuel each year, and the
+              EV range &amp; charging calculator estimates real-world range and charging time in
+              Indian conditions.
+            </p>
+            <p>
+              Used together they give you a clear picture of both the upfront and the long-term cost
+              of ownership. When you have run the numbers, you can{" "}
+              <Link href="/compare-electric-vehicles">compare electric vehicles side by side</Link>,
+              check how much you can claim through{" "}
+              <Link href="/ev-subsidies-india">EV subsidies in India</Link>, or browse the{" "}
+              <Link href="/catalog/all">full EV catalog</Link> to shortlist your next vehicle.
+            </p>
+          </div>
+
           <div className="grid gap-6 sm:grid-cols-2">
             {tools.map(({ title, desc, href, Icon, accent }) => (
               <Link
@@ -97,6 +137,25 @@ export default function ToolsPage() {
           </div>
 
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <section className="mt-16 max-w-3xl">
+            <h2 className="mb-6 font-display text-2xl font-bold text-white">
+              Frequently asked questions
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-ev-border bg-ev-card p-5"
+                >
+                  <summary className="cursor-pointer list-none font-display font-bold text-white marker:hidden">
+                    {f.q}
+                  </summary>
+                  <p className="mt-3 font-body text-sm leading-relaxed text-ev-text/70">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer />
@@ -108,6 +167,7 @@ export default function ToolsPage() {
             "/ev-calculators"
           ),
           itemListSchema(tools.map((t) => ({ name: t.title, path: t.href }))),
+          faqPageSchema(faqs),
         ]}
       />
     </>

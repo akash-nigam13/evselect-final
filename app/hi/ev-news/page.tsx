@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Aurora from "@/components/ui/Aurora";
@@ -7,7 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { NEWS } from "@/lib/news";
 import { collectionPageSchema } from "@/lib/seo";
-import { altsFor } from "@/lib/i18n";
+import { altsFor, localizedHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "EV समाचार और 2026 लॉन्च — भारत",
@@ -61,6 +62,27 @@ export default function HiNewsPage() {
             </p>
           </div>
         </section>
+
+        <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
+          <div className="prose-ev">
+            <h2>भारत में इलेक्ट्रिक वाहनों की ताज़ा खबरें (2026)</h2>
+            <p>
+              2026 में भारत के EV बाज़ार की हर अहम खबर एक जगह — नए launches और
+              कीमतों में बदलाव से लेकर सरकारी नीति, FAME और राज्य सब्सिडी, तथा
+              तेज़ी से बढ़ते public charging नेटवर्क तक। यह टाइमलाइन उन launches,
+              range और battery अपडेट्स और बाज़ार की हलचलों पर नज़र रखती है जो तय
+              करती हैं कि भारतीय इलेक्ट्रिक कार, स्कूटर और बाइक कैसे ख़रीदते हैं।
+              और गहराई से समझने के लिए हमारा{" "}
+              <Link href={localizedHref("/blog", "hi")}>EV ब्लॉग और गाइड</Link> पढ़ें,{" "}
+              <Link href={localizedHref("/catalog/all", "hi")}>पूरा EV कैटलॉग</Link>{" "}
+              ब्राउज़ करें, या{" "}
+              <Link href={localizedHref("/ev-subsidies-india", "hi")}>
+                भारत में EV सब्सिडी
+              </Link>{" "}
+              से होने वाली बचत देखें।
+            </p>
+          </div>
+        </div>
 
         <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
           <ol className="relative space-y-6 border-l border-ev-border/60 pl-6">

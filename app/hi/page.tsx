@@ -143,6 +143,50 @@ export default function HindiHomePage() {
             यह पेज हिन्दी पायलट का हिस्सा है। बाकी पेज जल्द ही हिन्दी में आ रहे हैं।
           </p>
         </section>
+
+        {/* SEO content */}
+        <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="prose-ev max-w-none">
+            <h2>भारत का EV हब: तुलना करें, हिसाब लगाएँ और तय करें</h2>
+            <p>
+              EVSelect.in भारत का स्वतंत्र इलेक्ट्रिक वाहन हब है, जो EV अपनाना आसान
+              बनाने के लिए बनाया गया है। 140+ इलेक्ट्रिक कारों, स्कूटर और बाइक की
+              कीमत, असली range, battery क्षमता और charging समय पर एक ही जगह साथ-साथ
+              तुलना करें — और सारा डेटा 2026 के लिए अपडेटेड है।
+            </p>
+            <p>
+              कहाँ से शुरू करें, समझ नहीं आ रहा? हमारे मुफ़्त EV टूल्स से अपनी
+              मासिक EMI का अंदाज़ा लगाएँ, पेट्रोल की तुलना में चलने का खर्च निकालें,
+              और देखें कि आपको कौन-सी केंद्र व राज्य सब्सिडी मिल सकती है। चाहे आप
+              सबसे सस्ता इलेक्ट्रिक स्कूटर ढूँढ़ रहे हों या लंबी range वाली प्रीमियम
+              EV कार, EVSelect.in आपको आत्मविश्वास से चुनने के लिए ज़रूरी आँकड़े और
+              गाइड देता है।
+            </p>
+            <p>
+              ख़रीदने की सलाह और ओनरशिप टिप्स से लेकर charging सेटअप और नीति अपडेट तक
+              — भारत में EV अपनाने से पहले और बाद की हर ज़रूरी बात हमारी संपादकीय टीम
+              कवर करती है।
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {[
+              { href: "/catalog/all", label: "सभी EVs देखें" },
+              { href: "/compare-electric-vehicles", label: "EVs की तुलना करें" },
+              { href: "/ev-calculators/ev-emi-calculator", label: "EV EMI कैलकुलेटर" },
+              { href: "/ev-subsidies-india", label: "भारत में EV सब्सिडी" },
+              { href: "/ev-charging-station-setup-india", label: "चार्जिंग स्टेशन सेटअप" },
+              { href: "/blog", label: "EV ब्लॉग और गाइड" },
+            ].map((l) => (
+              <Link
+                key={l.href}
+                href={localizedHref(l.href, LOCALE)}
+                className="rounded-full border border-ev-border bg-ev-card/60 px-4 py-2 font-display text-sm font-medium text-ev-text transition-colors hover:border-brand/50 hover:text-brand"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </section>
       </main>
       <Footer locale={LOCALE} />
     </>

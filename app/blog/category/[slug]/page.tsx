@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
@@ -54,6 +55,17 @@ export default function BlogCategoryPage({ params }: { params: { slug: string } 
             </p>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">{cat.label}</h1>
             <p className="mt-4 max-w-2xl font-body text-ev-text/60">{cat.description}</p>
+            <div className="prose-ev mt-6 max-w-3xl">
+              <p>
+                Explore expert {cat.label.toLowerCase()} coverage on EVSelect.in,
+                India&apos;s independent electric vehicle hub. Every {cat.label}{" "}
+                article below is written to help you understand EVs better and make
+                a smarter buying decision — with up-to-date context on prices,
+                range, charging and incentives in India. Browse more in our{" "}
+                <Link href="/blog">full EV blog</Link> or compare specs across the{" "}
+                <Link href="/catalog/all">complete EV catalog</Link>.
+              </p>
+            </div>
           </div>
         </section>
 

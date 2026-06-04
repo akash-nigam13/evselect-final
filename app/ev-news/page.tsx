@@ -94,6 +94,26 @@ export default function NewsPage() {
           </div>
         </section>
 
+        {/* ── SEO intro ── */}
+        <section className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
+          <Reveal className="prose-ev max-w-3xl">
+            <h2>Latest electric vehicle news in India (2026)</h2>
+            <p>
+              Stay on top of the latest electric vehicle news in India for 2026 —
+              from new EV launches and price changes to government policy, FAME
+              and state subsidies, and the rapid build-out of public charging
+              infrastructure. This timeline tracks the launches, range and battery
+              upgrades, and market moves shaping how Indians buy electric cars,
+              scooters and bikes this year. For deeper explainers and buying
+              advice, read our{" "}
+              <Link href="/blog">EV blog and guides</Link>, browse every model in
+              the <Link href="/catalog/all">full EV catalog</Link>, or check what
+              you can save with the latest{" "}
+              <Link href="/ev-subsidies-india">EV subsidies in India</Link>.
+            </p>
+          </Reveal>
+        </section>
+
         {/* ── Featured / latest ── */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>

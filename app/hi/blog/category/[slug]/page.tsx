@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
@@ -10,7 +11,7 @@ import PostCard from "@/components/blog/PostCard";
 import CategoryNav from "@/components/blog/CategoryNav";
 import { CATEGORIES, getCategory, postsInCategory } from "@/lib/blog-posts";
 import { collectionPageSchema, itemListSchema } from "@/lib/seo";
-import { altsFor } from "@/lib/i18n";
+import { altsFor, localizedHref } from "@/lib/i18n";
 
 export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ slug: c.slug }));
@@ -56,6 +57,21 @@ export default function BlogCategoryPage({ params }: { params: { slug: string } 
             </p>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">{cat.label}</h1>
             <p className="mt-4 max-w-2xl font-body text-ev-text/60">{cat.description}</p>
+            <div className="prose-ev mt-6 max-w-3xl">
+              <p>
+                EVSelect.in — भारत के स्वतंत्र EV हब — पर {cat.label} से जुड़ी
+                विशेषज्ञ कवरेज पढ़ें। नीचे दिया हर {cat.label} लेख आपको इलेक्ट्रिक
+                वाहनों को बेहतर समझने और समझदारी से ख़रीदने में मदद करता है — भारत
+                में कीमत, range, charging और सब्सिडी की ताज़ा जानकारी के साथ। और
+                पढ़ने के लिए हमारा{" "}
+                <Link href={localizedHref("/blog", "hi")}>पूरा EV ब्लॉग</Link> देखें
+                या{" "}
+                <Link href={localizedHref("/catalog/all", "hi")}>
+                  पूरे EV कैटलॉग
+                </Link>{" "}
+                में specs की तुलना करें।
+              </p>
+            </div>
           </div>
         </section>
 

@@ -20,9 +20,10 @@ import JsonLd from "@/components/JsonLd";
 import VehiclePhoto from "@/components/catalog/VehiclePhoto";
 import ToolsCTA from "@/components/ToolsCTA";
 import { EVS, priceLabel, brandSlug, type EV } from "@/lib/ev-data";
-import { productSchema } from "@/lib/seo";
+import { productSchema, faqPageSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
 import { featureHi } from "@/lib/feature-hi";
+import { evOverview, evFaqs } from "@/lib/ev-content";
 
 type SpecRow = { label: string; value: string };
 
@@ -118,6 +119,8 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
   ].filter((g) => g.rows.length > 0);
 
   const similar = similarEvs(ev);
+  const overview = evOverview(ev, locale);
+  const faqs = evFaqs(ev, locale);
 
   type Tile =
     | { kind: "counter"; icon: typeof Zap; label: string; to: number; decimals: number; suffix: string }
@@ -315,6 +318,23 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
           </section>
         )}
 
+        {/* SEO overview */}
+        <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <div className="prose-ev max-w-3xl">
+            <h2>{ev.name} — {isHi ? "ओवरव्यू, कीमत और स्पेसिफिकेशन" : "overview, price & specifications"}</h2>
+            {overview.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+            <p className="text-sm">
+              {isHi ? "और देखें: " : "Explore more: "}
+              <Link href={href(`/compare-electric-vehicles?ids=${ev.id}`)}>{isHi ? `${ev.name} की तुलना` : `compare the ${ev.name}`}</Link>,{" "}
+              <Link href={href(`/catalog/brand/${brandSlug(ev.brand)}`)}>{isHi ? `सभी ${ev.brand} EVs` : `all ${ev.brand} EVs`}</Link>,{" "}
+              <Link href={href("/ev-subsidies-india")}>{isHi ? "EV सब्सिडी" : "EV subsidies"}</Link> {isHi ? "और" : "and the"}{" "}
+              <Link href={href(`/ev-calculators/ev-emi-calculator?ev=${ev.id}`)}>{isHi ? "EMI कैलकुलेटर" : "EMI calculator"}</Link>.
+            </p>
+          </div>
+        </section>
+
         {/* Leaderboard ad */}
         <div className="mx-auto my-10 max-w-7xl px-4 sm:px-6 lg:px-8">
           <AdPlaceholder format="leaderboard" slot="4444444444" />
@@ -370,6 +390,24 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
           </section>
         )}
 
+        {/* FAQ */}
+        <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
+          <h2 className="font-display text-2xl font-bold text-ev-text sm:text-3xl">
+            {isHi ? "अक्सर पूछे जाने वाले सवाल" : "Frequently asked questions"}
+          </h2>
+          <div className="mt-6 space-y-3">
+            {faqs.map((f) => (
+              <details key={f.q} className="group rounded-2xl border border-ev-border bg-ev-card p-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-sm font-bold text-white">
+                  {f.q}
+                  <span className="text-brand transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 font-body text-sm leading-relaxed text-ev-text/70">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-2xl border border-ev-border bg-ev-card-2 p-8 text-center sm:p-12">
@@ -392,7 +430,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
       </main>
 
       <Footer locale={locale} />
-      <JsonLd data={productSchema(ev)} />
+      <JsonLd data={[productSchema(ev), faqPageSchema(faqs)]} />
     </>
   );
 }

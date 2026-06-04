@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { altsFor } from "@/lib/i18n";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +9,7 @@ import BrandExplorer from "@/components/catalog/BrandExplorer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { EVS, BRANDS } from "@/lib/ev-data";
-import { collectionPageSchema, itemListSchema } from "@/lib/seo";
+import { collectionPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "EV Catalog — Browse by Brand | EVSelect.in",
@@ -20,6 +21,25 @@ export const metadata: Metadata = {
 const carCount = EVS.filter((e) => e.category === "car").length;
 const scooterCount = EVS.filter((e) => e.category === "scooter").length;
 const bikeCount = EVS.filter((e) => e.category === "motorcycle").length;
+
+const faqs = [
+  {
+    q: "How many electric vehicles are on sale in India?",
+    a: `Our catalog tracks ${EVS.length} electric vehicles across ${BRANDS.length} brands in India in 2026, spanning ${carCount} electric cars, ${scooterCount} electric scooters and ${bikeCount} electric motorcycles. New models are added as they launch.`,
+  },
+  {
+    q: "Which is the cheapest EV in India?",
+    a: "Entry-level electric scooters are the most affordable EVs, often starting around ₹1 lakh on-road, while the most budget-friendly electric cars typically begin in the ₹7–10 lakh range. Use the price filter on the all-models page to sort every EV from low to high.",
+  },
+  {
+    q: "How do I compare two EVs?",
+    a: "Open any model and add it to the comparison tool, where you can place electric cars, scooters or bikes side by side and weigh range, battery capacity, charging time, power and price together before deciding.",
+  },
+  {
+    q: "Are EVs eligible for subsidies in India?",
+    a: "Many electric vehicles qualify for central and state incentives, road-tax waivers and registration benefits, though the exact amount varies by state, vehicle category and model. Always confirm the current scheme for your state before buying.",
+  },
+];
 
 export default function CatalogPage() {
   return (
@@ -69,8 +89,75 @@ export default function CatalogPage() {
           <AdPlaceholder format="leaderboard" slot="3333333333" />
         </div>
 
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="prose-ev max-w-3xl">
+            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+              Browse electric vehicles in India by brand
+            </h2>
+            <p className="mt-4 font-body leading-relaxed text-ev-text/70">
+              This is the brand directory for every electric car, scooter and
+              motorcycle on sale in India in 2026. Pick a manufacturer to see
+              its full lineup, then drill into prices, range, battery and
+              charging specs. Looking for the complete, filterable EV price list
+              2026 instead? Jump to{" "}
+              <Link href="/catalog/all" className="text-brand hover:underline">
+                all {EVS.length} models
+              </Link>{" "}
+              and narrow by{" "}
+              <Link href="/catalog?type=car" className="text-brand hover:underline">
+                electric cars
+              </Link>
+              ,{" "}
+              <Link href="/catalog?type=scooter" className="text-brand hover:underline">
+                electric scooters
+              </Link>{" "}
+              or{" "}
+              <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
+                electric motorcycles
+              </Link>
+              .
+            </p>
+            <p className="mt-3 font-body leading-relaxed text-ev-text/70">
+              Want to go deeper? Use the{" "}
+              <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
+                tool to compare electric cars, scooters and bikes
+              </Link>{" "}
+              side by side, check which models qualify for{" "}
+              <Link href="/ev-subsidies-india" className="text-brand hover:underline">
+                EV subsidies in India
+              </Link>
+              , or estimate your monthly payment with the{" "}
+              <Link href="/ev-calculators/ev-emi-calculator" className="text-brand hover:underline">
+                EV EMI calculator
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <BrandExplorer />
+
+          <section className="mx-auto mt-16 max-w-3xl">
+            <h2 className="mb-6 font-display text-2xl font-bold text-white sm:text-3xl">
+              Frequently asked questions
+            </h2>
+            <div className="space-y-3">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-ev-border bg-ev-card p-5"
+                >
+                  <summary className="cursor-pointer font-display font-bold text-white">
+                    {f.q}
+                  </summary>
+                  <p className="mt-3 font-body leading-relaxed text-ev-text/70">
+                    {f.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
 
@@ -85,6 +172,7 @@ export default function CatalogPage() {
           itemListSchema(
             BRANDS.map((b) => ({ name: b.name, path: `/catalog/brand/${b.slug}` }))
           ),
+          faqPageSchema(faqs),
         ]}
       />
     </>

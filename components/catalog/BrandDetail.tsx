@@ -10,8 +10,9 @@ import JsonLd from "@/components/JsonLd";
 import BrandLogo from "@/components/ui/BrandLogo";
 import ToolsCTA from "@/components/ToolsCTA";
 import { byBrandSlug, type Brand, type EVCategory } from "@/lib/ev-data";
-import { collectionPageSchema, itemListSchema } from "@/lib/seo";
+import { collectionPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
+import { brandOverview, brandFaqs } from "@/lib/brand-content";
 
 function catLabelKey(c: EVCategory): "ev.catcar" | "ev.catscooter" | "ev.catbike" {
   if (c === "motorcycle") return "ev.catbike";
@@ -24,6 +25,8 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
   const L = (en: string, hiKey: string) => (isHi ? t(hiKey, "hi") : en);
   const href = (p: string) => localizedHref(p, locale);
   const evs = byBrandSlug(brand.slug);
+  const overview = brandOverview(brand, evs, locale);
+  const faqs = brandFaqs(brand, evs, locale);
 
   const cats = brand.categories.map((c) => t(catLabelKey(c), locale)).join(" · ");
   const modelsWord = brand.count === 1 ? t("brand.model", locale) : t("brand.models", locale);
@@ -84,9 +87,42 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          {/* SEO overview */}
+          <div className="prose-ev mb-10 max-w-3xl">
+            <h2>{brand.name} {isHi ? "इलेक्ट्रिक वाहन — भारत में कीमत और मॉडल" : "electric vehicles in India — prices & models"}</h2>
+            {overview.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+            <p className="text-sm">
+              {isHi ? "और देखें: " : "Explore more: "}
+              <Link href={href("/catalog")}>{isHi ? "सभी ब्रांड" : "all EV brands"}</Link>,{" "}
+              <Link href={href("/compare-electric-vehicles")}>{isHi ? "EVs की तुलना" : "compare EVs"}</Link>,{" "}
+              <Link href={href("/ev-subsidies-india")}>{isHi ? "EV सब्सिडी" : "EV subsidies"}</Link> {isHi ? "और" : "and the"}{" "}
+              <Link href={href("/ev-calculators/ev-emi-calculator")}>{isHi ? "EMI कैलकुलेटर" : "EMI calculator"}</Link>.
+            </p>
+          </div>
+
           <FacetedCatalog pool={evs} lockBrand />
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
           <ToolsCTA locale={locale} tools={["compare", "emi", "cost"]} className="mt-10" />
+
+          {/* FAQ */}
+          <section className="mx-auto mt-12 max-w-3xl">
+            <h2 className="font-display text-2xl font-bold text-ev-text sm:text-3xl">
+              {isHi ? `${brand.name} EV — अक्सर पूछे जाने वाले सवाल` : `${brand.name} EVs — frequently asked questions`}
+            </h2>
+            <div className="mt-6 space-y-3">
+              {faqs.map((f) => (
+                <details key={f.q} className="group rounded-2xl border border-ev-border bg-ev-card p-5">
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-sm font-bold text-white">
+                    {f.q}
+                    <span className="text-brand transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-3 font-body text-sm leading-relaxed text-ev-text/70">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer locale={locale} />
@@ -100,6 +136,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
           itemListSchema(
             evs.map((e) => ({ name: e.name, path: localizedHref(`/catalog/${e.id}`, locale) }))
           ),
+          faqPageSchema(faqs),
         ]}
       />
     </>

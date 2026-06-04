@@ -8,7 +8,7 @@ import Aurora from "@/components/ui/Aurora";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { altsFor, localizedHref } from "@/lib/i18n";
-import { webPageSchema, itemListSchema } from "@/lib/seo";
+import { webPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: altsFor("/ev-calculators", "hi"),
@@ -48,6 +48,25 @@ const tools = [
   },
 ];
 
+const faqs = [
+  {
+    q: "EVSelect.in कौन-कौन से EV कैलकुलेटर देता है?",
+    a: "EVSelect.in भारत के लिए तीन मुफ़्त EV कैलकुलेटर देता है: अपनी मासिक लोन किस्त निकालने के लिए EV EMI कैलकुलेटर, ईंधन की बचत देखने के लिए EV बनाम पेट्रोल कॉस्ट कैलकुलेटर, और असल रेंज व चार्जिंग समय का अनुमान लगाने के लिए EV रेंज और चार्जिंग कैलकुलेटर।",
+  },
+  {
+    q: "क्या ये EV कैलकुलेटर मुफ़्त हैं?",
+    a: "हाँ। सभी EV कैलकुलेटर पूरी तरह मुफ़्त हैं और इनके लिए किसी साइन-अप की ज़रूरत नहीं। आप जितने चाहें उतने अनुमान, जितनी बार चाहें, लगा सकते हैं।",
+  },
+  {
+    q: "अनुमान कितने सटीक होते हैं?",
+    a: "ये कैलकुलेटर असल 2026 भारतीय EV स्पेक्स और मानक वित्तीय फ़ॉर्मूलों पर बने हैं, इसलिए योजना बनाने के लिए भरोसेमंद अंदाज़ा देते हैं। असल आँकड़े आपकी सटीक लोन शर्तों, बिजली व पेट्रोल कीमतों, ड्राइविंग स्टाइल और मौसम के साथ बदलते हैं, इसलिए नतीजों को कोटेशन नहीं बल्कि अनुमान मानें।",
+  },
+  {
+    q: "क्या मुझे व्यक्तिगत जानकारी देनी होगी?",
+    a: "नहीं। ये EV कैलकुलेटर पूरी तरह आपके ब्राउज़र में, आपके दर्ज किए आँकड़ों (जैसे कीमत, डाउन पेमेंट, ब्याज दर और यूसेज) से काम करते हैं। आपको कोई व्यक्तिगत या संपर्क जानकारी साझा करने की ज़रूरत नहीं।",
+  },
+];
+
 export default function HiToolsPage() {
   return (
     <>
@@ -74,6 +93,29 @@ export default function HiToolsPage() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <div className="prose-ev mb-12 max-w-3xl">
+            <h2>भारत के लिए मुफ़्त EV कैलकुलेटर</h2>
+            <p>
+              इलेक्ट्रिक चुनना जितना ड्राइविंग का फ़ैसला है, उतना ही हिसाब-किताब का भी। हमारा EV
+              कैलकुलेटर टूलकिट तीन मुफ़्त टूल एक साथ लाता है जो खरीदारों के सबसे आम सवालों के जवाब देते
+              हैं। EV EMI कैलकुलेटर आपकी मासिक लोन किस्त, कुल ब्याज और देय राशि दिखाता है जब आप कीमत,
+              डाउन पेमेंट, ब्याज दर और अवधि तय करते हैं। EV बनाम पेट्रोल कॉस्ट कैलकुलेटर बताता है कि आप
+              हर साल ईंधन पर कितनी बचत करते हैं, और EV रेंज व चार्जिंग कैलकुलेटर भारतीय परिस्थितियों में
+              असल रेंज और चार्जिंग समय का अनुमान लगाता है।
+            </p>
+            <p>
+              मिलकर ये टूल आपको खरीद की शुरुआती और लंबे समय की लागत — दोनों की साफ़ तस्वीर देते हैं।
+              हिसाब लगाने के बाद आप{" "}
+              <Link href={localizedHref("/compare-electric-vehicles", "hi")}>
+                इलेक्ट्रिक वाहनों की साथ-साथ तुलना
+              </Link>{" "}
+              कर सकते हैं, देख सकते हैं कि{" "}
+              <Link href={localizedHref("/ev-subsidies-india", "hi")}>भारत में EV सब्सिडी</Link> से
+              कितना दावा कर सकते हैं, या अपना अगला वाहन शॉर्टलिस्ट करने के लिए पूरा{" "}
+              <Link href={localizedHref("/catalog/all", "hi")}>EV कैटलॉग</Link> ब्राउज़ कर सकते हैं।
+            </p>
+          </div>
+
           <div className="grid gap-6 sm:grid-cols-2">
             {tools.map(({ title, desc, href, Icon, accent }) => (
               <Link
@@ -99,6 +141,25 @@ export default function HiToolsPage() {
           </div>
 
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <section className="mt-16 max-w-3xl">
+            <h2 className="mb-6 font-display text-2xl font-bold text-white">
+              अक्सर पूछे जाने वाले सवाल
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-ev-border bg-ev-card p-5"
+                >
+                  <summary className="cursor-pointer list-none font-display font-bold text-white marker:hidden">
+                    {f.q}
+                  </summary>
+                  <p className="mt-3 font-body text-sm leading-relaxed text-ev-text/70">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer locale="hi" />
@@ -110,6 +171,7 @@ export default function HiToolsPage() {
             "/ev-calculators"
           ),
           itemListSchema(tools.map((t) => ({ name: t.title, path: t.href }))),
+          faqPageSchema(faqs),
         ]}
       />
     </>

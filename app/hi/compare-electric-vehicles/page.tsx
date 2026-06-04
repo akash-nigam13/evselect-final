@@ -1,11 +1,12 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
 import Aurora from "@/components/ui/Aurora";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import { webAppSchema } from "@/lib/seo";
-import { altsFor } from "@/lib/i18n";
+import { webAppSchema, faqPageSchema } from "@/lib/seo";
+import { altsFor, localizedHref } from "@/lib/i18n";
 import CompareClient from "@/components/compare/CompareClient";
 import type { Metadata } from "next";
 
@@ -15,6 +16,25 @@ export const metadata: Metadata = {
     "भारत में किन्हीं भी दो या तीन EVs की साथ-साथ तुलना करें — रेंज, बैटरी, कीमत, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक का लाइव डेटा।",
   alternates: altsFor("/compare-electric-vehicles", "hi"),
 };
+
+const faqs = [
+  {
+    q: "एक बार में कितने EVs की तुलना कर सकते हैं?",
+    a: "आप एक बार में दो या तीन इलेक्ट्रिक वाहनों की तुलना कर सकते हैं। साफ़ आमने-सामने मुकाबले के लिए कोई भी दो EVs चुनें, या एक ही स्क्रीन पर तीन विकल्पों को तौलने के लिए तीसरा जोड़ें।",
+  },
+  {
+    q: "किन स्पेक्स की तुलना कर सकते हैं?",
+    a: "तुलना टूल हर ज़रूरी स्पेक को साथ-साथ रखता है — एक्स-शोरूम कीमत, असल रेंज, बैटरी क्षमता, पावर और टॉर्क, टॉप स्पीड, चार्जिंग समय और फास्ट-चार्जिंग सपोर्ट — हर पंक्ति में सबसे बेहतर वैल्यू हाइलाइट के साथ।",
+  },
+  {
+    q: "क्या यह तुलना टूल मुफ़्त है?",
+    a: "हाँ। यह तुलना टूल पूरी तरह मुफ़्त है और इसके लिए किसी साइन-अप की ज़रूरत नहीं। यह भारत में बिकने वाली 140+ इलेक्ट्रिक कार, स्कूटर और बाइक के लाइव डेटा पर चलता है।",
+  },
+  {
+    q: "किन इलेक्ट्रिक वाहनों की तुलना कर सकते हैं?",
+    a: "आप भारत में उपलब्ध हर बड़े ब्रांड की इलेक्ट्रिक कार, स्कूटर और बाइक की तुलना कर सकते हैं, जिनमें Tata, MG, Mahindra, Hyundai, BYD, Ola, Ather, TVS और अन्य शामिल हैं।",
+  },
+];
 
 export default function HiComparePage() {
   return (
@@ -44,17 +64,61 @@ export default function HiComparePage() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="prose-ev mx-auto mb-12 max-w-3xl">
+            <h2>भारत में इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें</h2>
+            <p>
+              जब हर आँकड़ा एक ही जगह दिखे, तो दो या तीन EVs के बीच चुनाव कहीं आसान हो जाता है। हमारा
+              तुलना टूल आपको उन्हीं स्पेक्स पर भारत में इलेक्ट्रिक वाहनों की तुलना करने देता है जो असल
+              में खरीदारी तय करते हैं — एक्स-शोरूम कीमत, असल रेंज, बैटरी क्षमता, पावर, चार्जिंग समय और
+              बहुत कुछ — हर पंक्ति में सबसे बेहतर वैल्यू हाइलाइट के साथ, ताकि फ़र्क एक नज़र में साफ़ दिखे।
+            </p>
+            <p>
+              <strong>तुलना टूल कैसे इस्तेमाल करें:</strong> पहला EV चुनें, दूसरा (और चाहें तो तीसरा)
+              जोड़ें, फिर साथ-साथ स्पेक्स टेबल देखें। यह इलेक्ट्रिक कार, स्कूटर और बाइक — सभी पर काम
+              करता है। पहले बड़ी सूची देखना चाहते हैं? पूरा{" "}
+              <Link href={localizedHref("/catalog/all", "hi")}>EV कैटलॉग</Link> ब्राउज़ करें, हमारे{" "}
+              <Link href={localizedHref("/ev-calculators/ev-emi-calculator", "hi")}>
+                EV EMI कैलकुलेटर
+              </Link>{" "}
+              से मासिक खर्च निकालें, या देखें कि आप{" "}
+              <Link href={localizedHref("/ev-subsidies-india", "hi")}>भारत में EV सब्सिडी</Link> से
+              कितनी बचत कर सकते हैं।
+            </p>
+          </div>
+
           <CompareClient />
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <section className="mx-auto mt-16 max-w-3xl">
+            <h2 className="mb-6 font-display text-2xl font-bold text-white">
+              अक्सर पूछे जाने वाले सवाल
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-2xl border border-ev-border bg-ev-card p-5"
+                >
+                  <summary className="cursor-pointer list-none font-display font-bold text-white marker:hidden">
+                    {f.q}
+                  </summary>
+                  <p className="mt-3 font-body text-sm leading-relaxed text-ev-text/70">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <Footer locale="hi" />
       <JsonLd
-        data={webAppSchema(
-          "EV Comparison Tool",
-          "Compare any two or three electric vehicles in India side by side.",
-          "/compare-electric-vehicles"
-        )}
+        data={[
+          webAppSchema(
+            "EV Comparison Tool",
+            "Compare any two or three electric vehicles in India side by side.",
+            "/compare-electric-vehicles"
+          ),
+          faqPageSchema(faqs),
+        ]}
       />
     </>
   );
