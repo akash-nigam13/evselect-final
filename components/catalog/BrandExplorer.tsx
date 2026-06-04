@@ -1,70 +1,51 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Search } from "lucide-react";
-import { BRANDS, byBrandSlug, type EVCategory } from "@/lib/ev-data";
+import { BRANDS } from "@/lib/ev-data";
 import BrandLogo from "@/components/ui/BrandLogo";
 import { usePathname } from "next/navigation";
-import { localeFromPath, t } from "@/lib/i18n";
+import { localeFromPath, localizedHref, t } from "@/lib/i18n";
 import clsx from "clsx";
 
-const CAT_TABS: { key: EVCategory | "all"; label: string }[] = [
-  { key: "all", label: "All brands" },
-  { key: "car", label: "Cars" },
-  { key: "scooter", label: "Scooters" },
-  { key: "motorcycle", label: "Bikes" },
+// "All brands" stays on this page; the category tabs link to the dedicated
+// category pages (/catalog/electric-cars etc.) so they have real, indexable URLs.
+const CAT_TABS: { key: string; path: string; tk: string; active: boolean }[] = [
+  { key: "all", path: "/catalog", tk: "brand.allTab", active: true },
+  { key: "car", path: "/catalog/electric-cars", tk: "cat.cars", active: false },
+  { key: "scooter", path: "/catalog/electric-scooters", tk: "cat.scooters", active: false },
+  { key: "motorcycle", path: "/catalog/electric-bikes", tk: "cat.bikes", active: false },
 ];
-
-const CAT_TAB_KEYS: Record<string, string> = {
-  all: "brand.allTab",
-  car: "cat.cars",
-  scooter: "cat.scooters",
-  motorcycle: "cat.bikes",
-};
 
 export default function BrandExplorer() {
   const locale = localeFromPath(usePathname() || "/");
-  const [category, setCategory] = useState<EVCategory | "all">("all");
   const [query, setQuery] = useState("");
-
-  // preselect from ?type=
-  useEffect(() => {
-    const type = new URLSearchParams(window.location.search).get("type");
-    if (type === "car" || type === "scooter" || type === "motorcycle") setCategory(type);
-  }, []);
 
   const brands = useMemo(() => {
     return BRANDS.filter((b) => {
-      if (category !== "all" && !b.categories.includes(category)) return false;
       if (query.trim() && !b.name.toLowerCase().includes(query.toLowerCase())) return false;
       return true;
-    }).map((b) => ({
-      ...b,
-      shown:
-        category === "all"
-          ? b.count
-          : byBrandSlug(b.slug).filter((e) => e.category === category).length,
-    }));
-  }, [category, query]);
+    }).map((b) => ({ ...b, shown: b.count }));
+  }, [query]);
 
   return (
     <div>
-      {/* Category tabs + search */}
+      {/* Category tabs (links to dedicated pages) + search */}
       <div className="mb-8 flex flex-wrap items-center gap-3">
         <div className="flex flex-wrap gap-2">
           {CAT_TABS.map((tab) => (
-            <button
+            <Link
               key={tab.key}
-              onClick={() => setCategory(tab.key)}
+              href={localizedHref(tab.path, locale)}
               className={clsx(
                 "rounded-xl px-4 py-2 font-display text-sm font-medium transition-colors",
-                category === tab.key
+                tab.active
                   ? "bg-brand text-ev-bg"
                   : "border border-ev-border bg-ev-card text-ev-muted hover:text-brand"
               )}
             >
-              {t(CAT_TAB_KEYS[tab.key], locale)}
-            </button>
+              {t(tab.tk, locale)}
+            </Link>
           ))}
         </div>
         <div className="ml-auto flex min-w-[180px] items-center gap-2 rounded-xl border border-ev-border bg-ev-card px-3">
