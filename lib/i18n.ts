@@ -72,6 +72,9 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/about",
     "/editorial-policy",
     "/advertising-disclosure",
+    "/tools/ev-emi-calculator",
+    "/tools/ev-vs-petrol-cost-calculator",
+    "/tools/ev-range-calculator",
   ]),
 };
 

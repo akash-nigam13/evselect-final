@@ -19,8 +19,8 @@ const footerLinks = {
   "Learn & Tools": [
     { label: "EV 101 — Learn Hub", href: "/learn" },
     { label: "EV Subsidies & Incentives", href: "/ev-subsidies-india" },
-    { label: "Set up a Charging Station", href: "/ev-charging-station-setup-india" },
-    { label: "Cost Calculator", href: "/tools#cost" },
+    { label: "EMI Calculator", href: "/tools/ev-emi-calculator" },
+    { label: "Cost Calculator", href: "/tools/ev-vs-petrol-cost-calculator" },
     { label: "Blog", href: "/blog" },
   ],
   Company: [

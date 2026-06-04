@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { altsFor } from "@/lib/i18n";
 import Link from "next/link";
-import { Calculator, Gauge, ArrowRight, Banknote } from "lucide-react";
+import { Banknote, TrendingDown, Gauge, GitCompare, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
@@ -9,107 +8,107 @@ import Aurora from "@/components/ui/Aurora";
 import Reveal from "@/components/ui/Reveal";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import { webAppSchema } from "@/lib/seo";
-import CostCalculator from "@/components/tools/CostCalculator";
-import RangeEstimator from "@/components/tools/RangeEstimator";
-import EmiCalculator from "@/components/tools/EmiCalculator";
+import { altsFor } from "@/lib/i18n";
+import { webPageSchema, itemListSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: altsFor("/tools", "en"),
-  title: "EV Tools — Cost, EMI Calculator & Range Estimator",
+  title: "Free EV Tools — EMI, Cost & Range Calculators (India 2026)",
   description:
-    "Free interactive EV tools for India: calculate your EV loan EMI, compare EV vs petrol running-cost savings, and estimate real-world driving range and charging times — all on real 2026 EV specs.",
+    "Free interactive EV calculators for India: estimate your EV loan EMI, compare EV vs petrol running costs, and work out real-world range and charging time — all on real 2026 EV data.",
 };
+
+const tools = [
+  {
+    title: "EV EMI Calculator",
+    desc: "Estimate your monthly EV loan EMI, total interest and amount payable. Adjust down payment, rate and tenure.",
+    href: "/tools/ev-emi-calculator",
+    Icon: Banknote,
+    accent: "#8B7BFF",
+  },
+  {
+    title: "EV vs Petrol Cost Calculator",
+    desc: "See exactly how much you save running an electric vehicle instead of petrol, based on your real usage.",
+    href: "/tools/ev-vs-petrol-cost-calculator",
+    Icon: TrendingDown,
+    accent: "#26E0C4",
+  },
+  {
+    title: "EV Range & Charging Calculator",
+    desc: "Estimate real-world driving range and charging time for any EV in Indian conditions.",
+    href: "/tools/ev-range-calculator",
+    Icon: Gauge,
+    accent: "#34D399",
+  },
+  {
+    title: "Compare EVs",
+    desc: "Put any two or three electric vehicles side by side on range, battery, price and charging.",
+    href: "/compare",
+    Icon: GitCompare,
+    accent: "#60A5FA",
+  },
+];
 
 export default function ToolsPage() {
   return (
     <>
       <Navbar />
-
       <main className="min-h-screen pt-16">
-        {/* ─── Hero ─────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
           <Aurora variant="dual" />
-
-          <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
             <Reveal className="max-w-3xl">
               <Breadcrumbs items={[{ name: "Tools", path: "/tools" }]} className="mb-6" />
-              <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-brand">
-                Free Tools
-              </p>
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-brand">Free Tools</p>
               <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-6xl text-balance">
-                Run the numbers before you{" "}
-                <span className="text-gradient-brand">go electric</span>
+                Run the numbers before you <span className="text-gradient-brand">go electric</span>
               </h1>
               <p className="mt-6 max-w-2xl font-body text-base leading-relaxed text-ev-text/60 sm:text-lg">
-                Two precision calculators built on real 2026 Indian-market EV
-                specs. See exactly how much you save versus petrol, and how far
-                a real-world charge will actually take you.
+                Free, interactive calculators built on real 2026 Indian-market EV specs — work out your
+                loan EMI, your savings versus petrol, and how far a real-world charge will take you.
               </p>
-
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="#cost"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3.5 font-display text-sm font-bold tracking-wide text-ev-bg shadow-ev-glow transition-all duration-300 hover:shadow-ev-glow-sm"
-                >
-                  <Calculator className="h-4 w-4" />
-                  Cost Calculator
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  href="#range"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-ev-border bg-ev-card px-6 py-3.5 font-display text-sm font-bold tracking-wide text-ev-text transition-all duration-300 hover:border-iris/50 hover:text-white"
-                >
-                  <Gauge className="h-4 w-4 text-iris" />
-                  Range &amp; Charging Estimator
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  href="#emi"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-ev-border bg-ev-card px-6 py-3.5 font-display text-sm font-bold tracking-wide text-ev-text transition-all duration-300 hover:border-iris/50 hover:text-white"
-                >
-                  <Banknote className="h-4 w-4 text-iris" />
-                  EMI Calculator
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
             </Reveal>
           </div>
         </section>
 
-        {/* ─── Cost calculator ──────────────────────────────── */}
-        <section id="cost" className="scroll-mt-24">
-          <CostCalculator />
-        </section>
+        <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="grid gap-6 sm:grid-cols-2">
+            {tools.map(({ title, desc, href, Icon, accent }) => (
+              <Link
+                key={href}
+                href={href}
+                className="card-hover group flex flex-col rounded-2xl border border-ev-border bg-ev-card p-7"
+              >
+                <span
+                  className="flex h-12 w-12 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: `${accent}18`, border: `1px solid ${accent}40` }}
+                >
+                  <Icon className="h-6 w-6" style={{ color: accent }} />
+                </span>
+                <h2 className="mt-5 font-display text-xl font-bold text-white transition-colors group-hover:text-brand">
+                  {title}
+                </h2>
+                <p className="mt-2 flex-1 font-body text-sm leading-relaxed text-ev-text/60">{desc}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 font-display text-sm font-bold text-brand">
+                  Open <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
 
-        {/* Ad between tools */}
-        <div className="mx-auto mb-4 max-w-7xl px-4 sm:px-6 lg:px-8">
-          <AdPlaceholder format="leaderboard" slot="3333333333" />
+          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
         </div>
-
-        {/* ─── Range estimator ──────────────────────────────── */}
-        <section id="range" className="scroll-mt-24">
-          <RangeEstimator />
-        </section>
-
-        {/* Ad between tools */}
-        <div className="mx-auto my-4 max-w-7xl px-4 sm:px-6 lg:px-8">
-          <AdPlaceholder format="leaderboard" slot="3333333344" />
-        </div>
-
-        {/* ─── EMI calculator ───────────────────────────────── */}
-        <section id="emi" className="scroll-mt-24">
-          <EmiCalculator />
-        </section>
       </main>
-
       <Footer />
       <JsonLd
-        data={webAppSchema(
-          "EV Cost & Range Tools",
-          "Free EV calculators: petrol-vs-electric running cost and real-world range & charging estimator for India.",
-          "/tools",
-        )}
+        data={[
+          webPageSchema(
+            "Free EV Tools — EMI, Cost & Range Calculators",
+            "Free interactive EV calculators for India: EMI, EV-vs-petrol running cost, and real-world range & charging.",
+            "/tools"
+          ),
+          itemListSchema(tools.map((t) => ({ name: t.title, path: t.href }))),
+        ]}
       />
     </>
   );

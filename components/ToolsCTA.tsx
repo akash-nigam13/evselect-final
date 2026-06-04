@@ -34,17 +34,17 @@ export default function ToolsCTA({
     },
     emi: {
       label: isHi ? "EMI कैलकुलेट करें" : "Calculate EMI",
-      href: href("/tools", evId ? `?ev=${evId}#emi` : "#emi"),
+      href: href("/tools/ev-emi-calculator", evId ? `?ev=${evId}` : ""),
       Icon: Banknote,
     },
     cost: {
       label: isHi ? "पेट्रोल बनाम खर्च" : "Cost vs petrol",
-      href: href("/tools", evId ? `?ev=${evId}#cost` : "#cost"),
+      href: href("/tools/ev-vs-petrol-cost-calculator", evId ? `?ev=${evId}` : ""),
       Icon: TrendingDown,
     },
     range: {
       label: isHi ? "रेंज और चार्जिंग" : "Range & charging",
-      href: href("/tools", "#range"),
+      href: href("/tools/ev-range-calculator"),
       Icon: Gauge,
     },
   };

@@ -40,9 +40,10 @@ const navLinks: NavLink[] = [
     labelKey: "nav.tools",
     href: "/tools",
     children: [
-      { label: "Cost Calculator", href: "/tools#cost", desc: "EV vs petrol over 5 years" },
-      { label: "EMI Calculator", href: "/tools#emi", desc: "EV loan monthly payment" },
-      { label: "Range Estimator", href: "/tools#range", desc: "Real-world range & charging" },
+      { label: "All tools", href: "/tools", desc: "Every EV calculator in one place" },
+      { label: "EMI Calculator", href: "/tools/ev-emi-calculator", desc: "EV loan monthly payment" },
+      { label: "Cost Calculator", href: "/tools/ev-vs-petrol-cost-calculator", desc: "EV vs petrol running cost" },
+      { label: "Range Calculator", href: "/tools/ev-range-calculator", desc: "Real-world range & charging" },
     ],
   },
   {
