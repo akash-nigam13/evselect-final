@@ -18,6 +18,7 @@ import Counter from "@/components/ui/Counter";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import VehiclePhoto from "@/components/catalog/VehiclePhoto";
+import ToolsCTA from "@/components/ToolsCTA";
 import { EVS, priceLabel, brandSlug, type EV } from "@/lib/ev-data";
 import { productSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
@@ -317,6 +318,11 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
         {/* Leaderboard ad */}
         <div className="mx-auto my-10 max-w-7xl px-4 sm:px-6 lg:px-8">
           <AdPlaceholder format="leaderboard" slot="4444444444" />
+        </div>
+
+        {/* Tools CTA */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ToolsCTA locale={locale} evId={ev.id} tools={["emi", "cost", "compare"]} className="my-10" />
         </div>
 
         {/* Compare with similar */}

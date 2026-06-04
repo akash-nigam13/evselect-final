@@ -4,6 +4,7 @@ import { Space_Grotesk, DM_Sans, JetBrains_Mono, Noto_Sans_Devanagari } from "ne
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
 import CookieConsent from "@/components/CookieConsent";
+import EnquireWidget from "@/components/EnquireWidget";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 import { GA_MEASUREMENT_ID, ADSENSE_CLIENT_ID } from "@/lib/site-config";
 
@@ -84,6 +85,7 @@ export default function RootLayout({
       <body className="bg-ev-bg text-ev-text antialiased">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         {children}
+        <EnquireWidget />
         <CookieConsent />
 
         {/* Google Analytics (GA4) */}

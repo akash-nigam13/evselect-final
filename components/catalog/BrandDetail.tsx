@@ -8,6 +8,7 @@ import FacetedCatalog from "@/components/catalog/FacetedCatalog";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import BrandLogo from "@/components/ui/BrandLogo";
+import ToolsCTA from "@/components/ToolsCTA";
 import { byBrandSlug, type Brand, type EVCategory } from "@/lib/ev-data";
 import { collectionPageSchema, itemListSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
@@ -85,6 +86,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <FacetedCatalog pool={evs} lockBrand />
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+          <ToolsCTA locale={locale} tools={["compare", "emi", "cost"]} className="mt-10" />
         </div>
       </main>
       <Footer locale={locale} />

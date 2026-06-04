@@ -19,6 +19,7 @@ import {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ToolsCTA from "@/components/ToolsCTA";
 import AdPlaceholder from "@/components/AdPlaceholder";
 import Aurora from "@/components/ui/Aurora";
 import Reveal from "@/components/ui/Reveal";
@@ -429,6 +430,10 @@ export default function LearnPage() {
             </div>
           </Reveal>
         </section>
+
+        <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <ToolsCTA locale="en" tools={["compare", "emi", "cost", "range"]} className="mt-12" />
+        </div>
       </main>
 
       <Footer />

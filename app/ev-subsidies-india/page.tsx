@@ -9,6 +9,7 @@ import AdPlaceholder from "@/components/AdPlaceholder";
 import { ArrowRight, BadgeCheck, AlertTriangle, Landmark, MapPin, Receipt, Calculator } from "lucide-react";
 import { altsFor } from "@/lib/i18n";
 import { articleSchema, faqPageSchema, webPageSchema, SITE } from "@/lib/seo";
+import ToolsCTA from "@/components/ToolsCTA";
 
 const UPDATED = "June 2026";
 
@@ -255,6 +256,8 @@ export default function EvSubsidiesPage() {
               Planning to set one up commercially? See our guide to{" "}
               <Link href="/ev-charging-station-setup-india">setting up an EV charging station in India</Link>.
             </p>
+
+            <ToolsCTA locale="en" tools={["emi", "cost", "compare"]} className="not-prose my-8" />
 
             <h2>Sources &amp; disclaimer</h2>
             <p className="text-sm text-ev-muted">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Calculator,
   Zap,
@@ -48,6 +48,15 @@ export default function CostCalculator() {
   const [years, setYears] = useState(5);
 
   const ev = getById(evId) ?? EVS[0];
+
+  // Pre-fill from a ?ev= query param on mount, if it maps to a real vehicle.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const q = new URLSearchParams(window.location.search).get("ev");
+    if (q && getById(q)) {
+      setEvId(q);
+    }
+  }, []);
 
   const calc = useMemo(() => {
     const perKm = kWhPerKm(ev);

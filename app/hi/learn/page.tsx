@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ToolsCTA from "@/components/ToolsCTA";
 import Aurora from "@/components/ui/Aurora";
 import AdPlaceholder from "@/components/AdPlaceholder";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -91,6 +92,8 @@ export default function HiLearnPage() {
           </div>
 
           <AdPlaceholder format="leaderboard" slot="5555555555" className="mt-12" />
+
+          <ToolsCTA locale="hi" tools={["compare", "emi", "cost", "range"]} className="mt-12" />
         </div>
       </main>
       <Footer locale="hi" />

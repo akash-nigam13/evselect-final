@@ -9,6 +9,7 @@ import AdPlaceholder from "@/components/AdPlaceholder";
 import { BadgeCheck, AlertTriangle, Plug, FileCheck, IndianRupee, Gauge, TrendingUp } from "lucide-react";
 import { altsFor } from "@/lib/i18n";
 import { articleSchema, faqPageSchema, howToSchema, webPageSchema } from "@/lib/seo";
+import ToolsCTA from "@/components/ToolsCTA";
 
 const UPDATED = "June 2026";
 
@@ -246,6 +247,8 @@ export default function ChargingStationSetupPage() {
                 </details>
               ))}
             </div>
+
+            <ToolsCTA locale="en" tools={["cost", "compare", "range"]} className="not-prose my-8" />
 
             <h2>Related</h2>
             <p>

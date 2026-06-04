@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import ToolsCTA from "@/components/ToolsCTA";
 import { getPost, getCategory, relatedPosts } from "@/lib/blog-posts";
 import { blogPostingSchema, SITE } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
@@ -165,6 +166,9 @@ export default function ArticleShell({
                   {t("article.ctaTools", locale)} <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
+
+              {/* Contextual tools CTA */}
+              <ToolsCTA locale={locale} tools={["compare", "emi", "cost"]} />
 
               <AdPlaceholder format="rectangle" slot="8888888888" />
             </aside>

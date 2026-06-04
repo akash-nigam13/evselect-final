@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Banknote, Wallet, Percent, CalendarClock, Info } from "lucide-react";
 import { EVS, getById, type EV } from "@/lib/ev-data";
 import Reveal from "@/components/ui/Reveal";
@@ -24,6 +24,17 @@ export default function EmiCalculator() {
   const [downPct, setDownPct] = useState(15);
   const [rate, setRate] = useState(9.5);
   const [years, setYears] = useState(5);
+
+  // Pre-fill from a ?ev= query param on mount, if it maps to a real vehicle.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const q = new URLSearchParams(window.location.search).get("ev");
+    if (q && getById(q)) {
+      setEvId(q);
+      const e = getById(q);
+      if (e) setPrice(e.priceMinLakh != null ? Math.round(e.priceMinLakh * 100000) : 1500000);
+    }
+  }, []);
 
   // When the chosen EV changes, reset the price to its ex-showroom figure.
   const onSelectEv = (id: string) => {

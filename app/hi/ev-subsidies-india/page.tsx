@@ -9,6 +9,7 @@ import AdPlaceholder from "@/components/AdPlaceholder";
 import { ArrowRight, BadgeCheck, AlertTriangle, Landmark, MapPin, Receipt, Calculator } from "lucide-react";
 import { altsFor, localizedHref } from "@/lib/i18n";
 import { articleSchema, faqPageSchema, webPageSchema, SITE } from "@/lib/seo";
+import ToolsCTA from "@/components/ToolsCTA";
 
 const UPDATED = "जून 2026";
 
@@ -257,6 +258,8 @@ export default function EvSubsidiesPage() {
               इसे व्यावसायिक रूप से लगाने की योजना है? देखें हमारी गाइड{" "}
               <Link href={localizedHref("/ev-charging-station-setup-india", "hi")}>भारत में EV चार्जिंग स्टेशन लगाने पर</Link>।
             </p>
+
+            <ToolsCTA locale="hi" tools={["emi", "cost", "compare"]} className="not-prose my-8" />
 
             <h2>स्रोत और अस्वीकरण</h2>
             <p className="text-sm text-ev-muted">
