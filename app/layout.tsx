@@ -98,13 +98,13 @@ gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');`}
         </Script>
 
-        {/* Google AdSense loader */}
+        {/* Google AdSense loader — beforeInteractive so the snippet renders in <head> (needed for AdSense verification + ad serving) */}
         <Script
           id="adsense"
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
       </body>
     </html>
