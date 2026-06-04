@@ -5,6 +5,7 @@ import { Banknote, Wallet, Percent, CalendarClock, Info } from "lucide-react";
 import { EVS, getById, type EV } from "@/lib/ev-data";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import VehiclePicker from "@/components/tools/VehiclePicker";
 
 const ACCENT = "#8B7BFF";
 const inr = (n: number) => "₹" + Math.round(n).toLocaleString("en-IN");
@@ -68,21 +69,10 @@ export default function EmiCalculator() {
       <Reveal className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
         {/* Inputs */}
         <div className="rounded-2xl border border-ev-border bg-ev-card p-6">
-          {/* EV select */}
-          <label className="mb-2 block font-mono text-xs uppercase tracking-wider text-ev-muted">
-            Vehicle (sets ex-showroom price)
-          </label>
-          <select
-            value={evId}
-            onChange={(e) => onSelectEv(e.target.value)}
-            className="mb-6 w-full rounded-xl border border-ev-border bg-ev-bg px-4 py-3 font-body text-sm text-ev-text outline-none focus:border-brand/50"
-          >
-            {EVS.map((e) => (
-              <option key={e.id} value={e.id} className="bg-ev-surface">
-                {e.name}{e.variant ? ` — ${e.variant}` : ""}
-              </option>
-            ))}
-          </select>
+          {/* Vehicle picker — Type → Brand → Model (searchable) */}
+          <div className="mb-6">
+            <VehiclePicker value={evId} onChange={onSelectEv} />
+          </div>
 
           {/* Price */}
           <div className="mb-5">

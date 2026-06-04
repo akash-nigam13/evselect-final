@@ -13,6 +13,7 @@ import { EVS, getById, type EV } from "@/lib/ev-data";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Counter from "@/components/ui/Counter";
+import VehiclePicker from "@/components/tools/VehiclePicker";
 
 /* ── helpers ─────────────────────────────────────────────── */
 
@@ -124,40 +125,16 @@ export default function CostCalculator() {
               </h3>
             </div>
 
-            {/* EV picker */}
-            <label className="mb-5 block">
+            {/* EV picker — Type → Brand → Model (searchable) */}
+            <div className="mb-5">
               <span className="mb-2 block font-mono text-[11px] uppercase tracking-wider text-ev-muted">
                 Choose your EV
               </span>
-              <select
-                value={evId}
-                onChange={(e) => setEvId(e.target.value)}
-                className="w-full rounded-xl border border-ev-border bg-ev-card-2 px-3.5 py-3 font-body text-sm text-ev-text outline-none transition-colors focus:border-brand"
-                style={{ accentColor: ACCENT }}
-              >
-                {(["car", "scooter", "motorcycle"] as const).map((cat) => (
-                  <optgroup
-                    key={cat}
-                    label={
-                      cat === "car"
-                        ? "Cars"
-                        : cat === "scooter"
-                        ? "Scooters"
-                        : "Motorcycles"
-                    }
-                  >
-                    {EVS.filter((v) => v.category === cat).map((v) => (
-                      <option key={v.id} value={v.id}>
-                        {v.fullName}
-                      </option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
+              <VehiclePicker value={evId} onChange={setEvId} />
               <span className="mt-2 block font-mono text-[11px] text-brand/80">
                 ~{calc.perKm.toFixed(3)} kWh/km efficiency
               </span>
-            </label>
+            </div>
 
             <SliderRow
               label="Annual distance"
