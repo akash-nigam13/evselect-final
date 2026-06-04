@@ -69,50 +69,50 @@ export default function CatalogAllPage() {
           </div>
         </section>
 
-        <div className="mx-auto max-w-3xl px-4 pb-2 sm:px-6 lg:px-8">
-          <div className="prose-ev max-w-3xl">
-            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-              Every EV model with filters, in one place
-            </h2>
-            <p className="mt-4 font-body leading-relaxed text-ev-text/70">
-              Browse every electric car, scooter and motorcycle on sale in India
-              in 2026 — with prices, range, battery and charging specs, all
-              filterable here. Use this EV price list 2026 to narrow by brand,
-              body type, price and range, or jump to a category:{" "}
-              <Link href="/catalog?type=car" className="text-brand hover:underline">
-                electric cars
-              </Link>
-              ,{" "}
-              <Link href="/catalog?type=scooter" className="text-brand hover:underline">
-                electric scooters
-              </Link>{" "}
-              and{" "}
-              <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
-                electric motorcycles
-              </Link>
-              .
-            </p>
-            <p className="mt-3 font-body leading-relaxed text-ev-text/70">
-              Ready to decide? Use the{" "}
-              <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
-                tool to compare electric cars, scooters and bikes
-              </Link>{" "}
-              head to head, see which models are eligible for{" "}
-              <Link href="/ev-subsidies-india" className="text-brand hover:underline">
-                EV subsidies in India
-              </Link>
-              , and work out your instalment with the{" "}
-              <Link href="/ev-calculators/ev-emi-calculator" className="text-brand hover:underline">
-                EV EMI calculator
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <FacetedCatalog pool={EVS} />
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="prose-ev max-w-3xl">
+              <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+                Every EV model with filters, in one place
+              </h2>
+              <p className="mt-4 font-body leading-relaxed text-ev-text/70">
+                Browse every electric car, scooter and motorcycle on sale in India
+                in 2026 — with prices, range, battery and charging specs, all
+                filterable here. Use this EV price list 2026 to narrow by brand,
+                body type, price and range, or jump to a category:{" "}
+                <Link href="/catalog?type=car" className="text-brand hover:underline">
+                  electric cars
+                </Link>
+                ,{" "}
+                <Link href="/catalog?type=scooter" className="text-brand hover:underline">
+                  electric scooters
+                </Link>{" "}
+                and{" "}
+                <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
+                  electric motorcycles
+                </Link>
+                .
+              </p>
+              <p className="mt-3 font-body leading-relaxed text-ev-text/70">
+                Ready to decide? Use the{" "}
+                <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
+                  tool to compare electric cars, scooters and bikes
+                </Link>{" "}
+                head to head, see which models are eligible for{" "}
+                <Link href="/ev-subsidies-india" className="text-brand hover:underline">
+                  EV subsidies in India
+                </Link>
+                , and work out your instalment with the{" "}
+                <Link href="/ev-calculators/ev-emi-calculator" className="text-brand hover:underline">
+                  EV EMI calculator
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
 
           <section className="mx-auto mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white sm:text-3xl">

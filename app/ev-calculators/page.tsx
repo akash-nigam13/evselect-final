@@ -91,27 +91,6 @@ export default function ToolsPage() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div className="prose-ev mb-12 max-w-3xl">
-            <h2>Free EV calculators for India</h2>
-            <p>
-              Going electric is as much a maths decision as a driving one. Our EV calculators
-              India toolkit brings together three free tools that answer the questions buyers ask
-              most. The EV EMI calculator shows your monthly loan instalment, total interest and
-              amount payable once you set the price, down payment, rate and tenure. The EV vs petrol
-              running cost calculator reveals exactly how much you save on fuel each year, and the
-              EV range &amp; charging calculator estimates real-world range and charging time in
-              Indian conditions.
-            </p>
-            <p>
-              Used together they give you a clear picture of both the upfront and the long-term cost
-              of ownership. When you have run the numbers, you can{" "}
-              <Link href="/compare-electric-vehicles">compare electric vehicles side by side</Link>,
-              check how much you can claim through{" "}
-              <Link href="/ev-subsidies-india">EV subsidies in India</Link>, or browse the{" "}
-              <Link href="/catalog/all">full EV catalog</Link> to shortlist your next vehicle.
-            </p>
-          </div>
-
           <div className="grid gap-6 sm:grid-cols-2">
             {tools.map(({ title, desc, href, Icon, accent }) => (
               <Link
@@ -137,6 +116,27 @@ export default function ToolsPage() {
           </div>
 
           <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <div className="prose-ev mb-12 mt-16 max-w-3xl">
+            <h2>Free EV calculators for India</h2>
+            <p>
+              Going electric is as much a maths decision as a driving one. Our EV calculators
+              India toolkit brings together three free tools that answer the questions buyers ask
+              most. The EV EMI calculator shows your monthly loan instalment, total interest and
+              amount payable once you set the price, down payment, rate and tenure. The EV vs petrol
+              running cost calculator reveals exactly how much you save on fuel each year, and the
+              EV range &amp; charging calculator estimates real-world range and charging time in
+              Indian conditions.
+            </p>
+            <p>
+              Used together they give you a clear picture of both the upfront and the long-term cost
+              of ownership. When you have run the numbers, you can{" "}
+              <Link href="/compare-electric-vehicles">compare electric vehicles side by side</Link>,
+              check how much you can claim through{" "}
+              <Link href="/ev-subsidies-india">EV subsidies in India</Link>, or browse the{" "}
+              <Link href="/catalog/all">full EV catalog</Link> to shortlist your next vehicle.
+            </p>
+          </div>
 
           <section className="mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white">

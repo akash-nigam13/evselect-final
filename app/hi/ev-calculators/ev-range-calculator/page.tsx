@@ -93,7 +93,7 @@ export default function EvRangeCalculatorPageHi() {
         </section>
 
         {/* Calculator */}
-        <RangeEstimator />
+        <RangeEstimator embedded />
 
         {/* Ad */}
         <div className="mx-auto my-4 max-w-7xl px-4 sm:px-6 lg:px-8">

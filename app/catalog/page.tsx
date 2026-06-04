@@ -89,54 +89,54 @@ export default function CatalogPage() {
           <AdPlaceholder format="leaderboard" slot="3333333333" />
         </div>
 
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="prose-ev max-w-3xl">
-            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-              Browse electric vehicles in India by brand
-            </h2>
-            <p className="mt-4 font-body leading-relaxed text-ev-text/70">
-              This is the brand directory for every electric car, scooter and
-              motorcycle on sale in India in 2026. Pick a manufacturer to see
-              its full lineup, then drill into prices, range, battery and
-              charging specs. Looking for the complete, filterable EV price list
-              2026 instead? Jump to{" "}
-              <Link href="/catalog/all" className="text-brand hover:underline">
-                all {EVS.length} models
-              </Link>{" "}
-              and narrow by{" "}
-              <Link href="/catalog?type=car" className="text-brand hover:underline">
-                electric cars
-              </Link>
-              ,{" "}
-              <Link href="/catalog?type=scooter" className="text-brand hover:underline">
-                electric scooters
-              </Link>{" "}
-              or{" "}
-              <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
-                electric motorcycles
-              </Link>
-              .
-            </p>
-            <p className="mt-3 font-body leading-relaxed text-ev-text/70">
-              Want to go deeper? Use the{" "}
-              <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
-                tool to compare electric cars, scooters and bikes
-              </Link>{" "}
-              side by side, check which models qualify for{" "}
-              <Link href="/ev-subsidies-india" className="text-brand hover:underline">
-                EV subsidies in India
-              </Link>
-              , or estimate your monthly payment with the{" "}
-              <Link href="/ev-calculators/ev-emi-calculator" className="text-brand hover:underline">
-                EV EMI calculator
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <BrandExplorer />
+
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="prose-ev max-w-3xl">
+              <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+                Browse electric vehicles in India by brand
+              </h2>
+              <p className="mt-4 font-body leading-relaxed text-ev-text/70">
+                This is the brand directory for every electric car, scooter and
+                motorcycle on sale in India in 2026. Pick a manufacturer to see
+                its full lineup, then drill into prices, range, battery and
+                charging specs. Looking for the complete, filterable EV price list
+                2026 instead? Jump to{" "}
+                <Link href="/catalog/all" className="text-brand hover:underline">
+                  all {EVS.length} models
+                </Link>{" "}
+                and narrow by{" "}
+                <Link href="/catalog?type=car" className="text-brand hover:underline">
+                  electric cars
+                </Link>
+                ,{" "}
+                <Link href="/catalog?type=scooter" className="text-brand hover:underline">
+                  electric scooters
+                </Link>{" "}
+                or{" "}
+                <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
+                  electric motorcycles
+                </Link>
+                .
+              </p>
+              <p className="mt-3 font-body leading-relaxed text-ev-text/70">
+                Want to go deeper? Use the{" "}
+                <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
+                  tool to compare electric cars, scooters and bikes
+                </Link>{" "}
+                side by side, check which models qualify for{" "}
+                <Link href="/ev-subsidies-india" className="text-brand hover:underline">
+                  EV subsidies in India
+                </Link>
+                , or estimate your monthly payment with the{" "}
+                <Link href="/ev-calculators/ev-emi-calculator" className="text-brand hover:underline">
+                  EV EMI calculator
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
 
           <section className="mx-auto mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white sm:text-3xl">

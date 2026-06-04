@@ -60,7 +60,7 @@ const inr = (n: number) => Math.round(n).toLocaleString("en-IN");
 
 /* ── component ───────────────────────────────────────────── */
 
-export default function RangeEstimator() {
+export default function RangeEstimator({ embedded = false }: { embedded?: boolean }) {
   const [evId, setEvId] = useState(DEFAULT_ID);
   const [style, setStyle] = useState<StyleKey>("normal");
   const [ac, setAc] = useState<AcKey>("low");
@@ -130,21 +130,23 @@ export default function RangeEstimator() {
   const fillPct = Math.min(100, Math.max(0, calc.vsAraiPct));
 
   return (
-    <div className="relative overflow-hidden py-20 sm:py-24">
+    <div className={`relative overflow-hidden ${embedded ? "py-8" : "py-20 sm:py-24"}`}>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          align="left"
-          eyebrow="Tool 02 — Range & Charging"
-          title={
-            <>
-              Real-world{" "}
-              <span className="text-gradient-volt">range estimator</span>
-            </>
-          }
-          subtitle="ARAI numbers are lab figures. Dial in how and where you drive to get a grounded estimate — plus the charging time to top back up."
-        />
+        {!embedded && (
+          <SectionHeading
+            align="left"
+            eyebrow="Tool 02 — Range & Charging"
+            title={
+              <>
+                Real-world{" "}
+                <span className="text-gradient-volt">range estimator</span>
+              </>
+            }
+            subtitle="ARAI numbers are lab figures. Dial in how and where you drive to get a grounded estimate — plus the charging time to top back up."
+          />
+        )}
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr]">
+        <div className={`grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr] ${embedded ? "" : "mt-12"}`}>
           {/* ── Inputs ─────────────────────────────────────── */}
           <Reveal className="glass rounded-2xl border border-ev-border p-6 sm:p-7">
             <div className="mb-6 flex items-center gap-2">

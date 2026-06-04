@@ -17,7 +17,7 @@ const DEFAULT_ID = getById("tata-nexon-ev-long-range-45-kwh")
 const priceOf = (ev: EV) =>
   ev.priceMinLakh != null ? Math.round(ev.priceMinLakh * 100000) : 1500000;
 
-export default function EmiCalculator() {
+export default function EmiCalculator({ embedded = false }: { embedded?: boolean }) {
   const [evId, setEvId] = useState(DEFAULT_ID);
   const ev = getById(evId) ?? EVS[0];
 
@@ -59,14 +59,16 @@ export default function EmiCalculator() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
-      <SectionHeading
-        align="left"
-        eyebrow="EMI Calculator"
-        title={<>Plan your <span className="text-gradient-brand">EV loan</span></>}
-        subtitle="Estimate your monthly EMI, total interest and amount payable for any electric vehicle. Adjust the down payment, interest rate and tenure to see what fits your budget."
-      />
+      {!embedded && (
+        <SectionHeading
+          align="left"
+          eyebrow="EMI Calculator"
+          title={<>Plan your <span className="text-gradient-brand">EV loan</span></>}
+          subtitle="Estimate your monthly EMI, total interest and amount payable for any electric vehicle. Adjust the down payment, interest rate and tenure to see what fits your budget."
+        />
+      )}
 
-      <Reveal className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
+      <Reveal className={`grid gap-6 lg:grid-cols-[1fr_1fr] ${embedded ? "" : "mt-10"}`}>
         {/* Inputs */}
         <div className="rounded-2xl border border-ev-border bg-ev-card p-6">
           {/* Vehicle picker — Type → Brand → Model (searchable) */}

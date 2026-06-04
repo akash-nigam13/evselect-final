@@ -87,8 +87,12 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <FacetedCatalog pool={evs} lockBrand />
+          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+          <ToolsCTA locale={locale} tools={["compare", "emi", "cost"]} className="mt-10" />
+
           {/* SEO overview */}
-          <div className="prose-ev mb-10 max-w-3xl">
+          <div className="prose-ev mt-12 max-w-3xl">
             <h2>{brand.name} {isHi ? "इलेक्ट्रिक वाहन — भारत में कीमत और मॉडल" : "electric vehicles in India — prices & models"}</h2>
             {overview.map((para, i) => (
               <p key={i}>{para}</p>
@@ -101,10 +105,6 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
               <Link href={href("/ev-calculators/ev-emi-calculator")}>{isHi ? "EMI कैलकुलेटर" : "EMI calculator"}</Link>.
             </p>
           </div>
-
-          <FacetedCatalog pool={evs} lockBrand />
-          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
-          <ToolsCTA locale={locale} tools={["compare", "emi", "cost"]} className="mt-10" />
 
           {/* FAQ */}
           <section className="mx-auto mt-12 max-w-3xl">

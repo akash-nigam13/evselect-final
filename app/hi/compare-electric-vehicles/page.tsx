@@ -64,7 +64,10 @@ export default function HiComparePage() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="prose-ev mx-auto mb-12 max-w-3xl">
+          <CompareClient />
+          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <div className="prose-ev mx-auto mb-12 mt-16 max-w-3xl">
             <h2>भारत में इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें</h2>
             <p>
               जब हर आँकड़ा एक ही जगह दिखे, तो दो या तीन EVs के बीच चुनाव कहीं आसान हो जाता है। हमारा
@@ -85,9 +88,6 @@ export default function HiComparePage() {
               कितनी बचत कर सकते हैं।
             </p>
           </div>
-
-          <CompareClient />
-          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
 
           <section className="mx-auto mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white">

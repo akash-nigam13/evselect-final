@@ -89,74 +89,74 @@ export default function HiCatalogPage() {
           <AdPlaceholder format="leaderboard" slot="3333333333" />
         </div>
 
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="prose-ev max-w-3xl">
-            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-              ब्रांड के अनुसार भारत के इलेक्ट्रिक वाहन देखें
-            </h2>
-            <p className="mt-4 font-body leading-relaxed text-ev-text/70">
-              यह 2026 में भारत में बिक्री पर मौजूद हर इलेक्ट्रिक कार, स्कूटर और
-              मोटरसाइकिल की ब्रांड डायरेक्टरी है। किसी निर्माता को चुनकर उसकी पूरी
-              रेंज देखें, फिर कीमत, रेंज, बैटरी और चार्जिंग स्पेक्स में गहराई से
-              जाएँ। पूरी फ़िल्टर वाली EV price list 2026 चाहिए? सीधे{" "}
-              <Link
-                href={localizedHref("/catalog/all", "hi")}
-                className="text-brand hover:underline"
-              >
-                सभी {EVS.length} मॉडल
-              </Link>{" "}
-              देखें और{" "}
-              <Link
-                href={localizedHref("/catalog?type=car", "hi")}
-                className="text-brand hover:underline"
-              >
-                इलेक्ट्रिक कारें
-              </Link>
-              ,{" "}
-              <Link
-                href={localizedHref("/catalog?type=scooter", "hi")}
-                className="text-brand hover:underline"
-              >
-                इलेक्ट्रिक स्कूटर
-              </Link>{" "}
-              या{" "}
-              <Link
-                href={localizedHref("/catalog?type=motorcycle", "hi")}
-                className="text-brand hover:underline"
-              >
-                इलेक्ट्रिक मोटरसाइकिल
-              </Link>{" "}
-              के आधार पर छाँटें।
-            </p>
-            <p className="mt-3 font-body leading-relaxed text-ev-text/70">
-              और गहराई में जाना है? दो EVs की{" "}
-              <Link
-                href={localizedHref("/compare-electric-vehicles", "hi")}
-                className="text-brand hover:underline"
-              >
-                तुलना (इलेक्ट्रिक कार, स्कूटर और बाइक)
-              </Link>{" "}
-              आमने-सामने करें, देखें कौन-से मॉडल{" "}
-              <Link
-                href={localizedHref("/ev-subsidies-india", "hi")}
-                className="text-brand hover:underline"
-              >
-                भारत में EV सब्सिडी
-              </Link>{" "}
-              के पात्र हैं, या{" "}
-              <Link
-                href={localizedHref("/ev-calculators/ev-emi-calculator", "hi")}
-                className="text-brand hover:underline"
-              >
-                EV EMI कैलकुलेटर
-              </Link>{" "}
-              से अपनी मासिक किस्त का अनुमान लगाएँ।
-            </p>
-          </div>
-        </div>
-
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <BrandExplorer />
+
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="prose-ev max-w-3xl">
+              <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+                ब्रांड के अनुसार भारत के इलेक्ट्रिक वाहन देखें
+              </h2>
+              <p className="mt-4 font-body leading-relaxed text-ev-text/70">
+                यह 2026 में भारत में बिक्री पर मौजूद हर इलेक्ट्रिक कार, स्कूटर और
+                मोटरसाइकिल की ब्रांड डायरेक्टरी है। किसी निर्माता को चुनकर उसकी पूरी
+                रेंज देखें, फिर कीमत, रेंज, बैटरी और चार्जिंग स्पेक्स में गहराई से
+                जाएँ। पूरी फ़िल्टर वाली EV price list 2026 चाहिए? सीधे{" "}
+                <Link
+                  href={localizedHref("/catalog/all", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  सभी {EVS.length} मॉडल
+                </Link>{" "}
+                देखें और{" "}
+                <Link
+                  href={localizedHref("/catalog?type=car", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  इलेक्ट्रिक कारें
+                </Link>
+                ,{" "}
+                <Link
+                  href={localizedHref("/catalog?type=scooter", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  इलेक्ट्रिक स्कूटर
+                </Link>{" "}
+                या{" "}
+                <Link
+                  href={localizedHref("/catalog?type=motorcycle", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  इलेक्ट्रिक मोटरसाइकिल
+                </Link>{" "}
+                के आधार पर छाँटें।
+              </p>
+              <p className="mt-3 font-body leading-relaxed text-ev-text/70">
+                और गहराई में जाना है? दो EVs की{" "}
+                <Link
+                  href={localizedHref("/compare-electric-vehicles", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  तुलना (इलेक्ट्रिक कार, स्कूटर और बाइक)
+                </Link>{" "}
+                आमने-सामने करें, देखें कौन-से मॉडल{" "}
+                <Link
+                  href={localizedHref("/ev-subsidies-india", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  भारत में EV सब्सिडी
+                </Link>{" "}
+                के पात्र हैं, या{" "}
+                <Link
+                  href={localizedHref("/ev-calculators/ev-emi-calculator", "hi")}
+                  className="text-brand hover:underline"
+                >
+                  EV EMI कैलकुलेटर
+                </Link>{" "}
+                से अपनी मासिक किस्त का अनुमान लगाएँ।
+              </p>
+            </div>
+          </div>
 
           <section className="mx-auto mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white sm:text-3xl">

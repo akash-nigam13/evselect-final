@@ -96,7 +96,7 @@ export default function EvEmiCalculatorPageHi() {
 
         {/* ─── Interactive tool ─────────────────────────────── */}
         <section id="emi" className="scroll-mt-24">
-          <EmiCalculator />
+          <EmiCalculator embedded />
         </section>
 
         {/* Ad */}

@@ -40,7 +40,7 @@ const DEFAULT_ID = getById("tata-nexon-ev-long-range-45-kwh")
 
 /* ── component ───────────────────────────────────────────── */
 
-export default function CostCalculator() {
+export default function CostCalculator({ embedded = false }: { embedded?: boolean }) {
   const [evId, setEvId] = useState(DEFAULT_ID);
   const [annualKm, setAnnualKm] = useState(15000);
   const [tariff, setTariff] = useState(8);
@@ -99,21 +99,23 @@ export default function CostCalculator() {
   const saves = calc.savings >= 0;
 
   return (
-    <div className="relative overflow-hidden py-20 sm:py-24">
+    <div className={`relative overflow-hidden ${embedded ? "py-8" : "py-20 sm:py-24"}`}>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          align="left"
-          eyebrow="Tool 01 — Running Cost"
-          title={
-            <>
-              EV vs Petrol{" "}
-              <span className="text-gradient-brand">cost calculator</span>
-            </>
-          }
-          subtitle="Adjust your driving habits and local rates to see what you'd actually spend on energy — and how much an EV saves over the years."
-        />
+        {!embedded && (
+          <SectionHeading
+            align="left"
+            eyebrow="Tool 01 — Running Cost"
+            title={
+              <>
+                EV vs Petrol{" "}
+                <span className="text-gradient-brand">cost calculator</span>
+              </>
+            }
+            subtitle="Adjust your driving habits and local rates to see what you'd actually spend on energy — and how much an EV saves over the years."
+          />
+        )}
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr]">
+        <div className={`grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr] ${embedded ? "" : "mt-12"}`}>
           {/* ── Inputs ─────────────────────────────────────── */}
           <Reveal className="glass rounded-2xl border border-ev-border p-6 sm:p-7">
             <div className="mb-6 flex items-center gap-2">

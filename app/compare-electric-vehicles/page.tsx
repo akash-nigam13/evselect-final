@@ -59,7 +59,10 @@ export default function ComparePage() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="prose-ev mx-auto mb-12 max-w-3xl">
+          <CompareClient />
+          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
+
+          <div className="prose-ev mx-auto mb-12 mt-16 max-w-3xl">
             <h2>Compare electric vehicles in India, side by side</h2>
             <p>
               Choosing between two or three EVs is far easier when you can see every number in
@@ -79,9 +82,6 @@ export default function ComparePage() {
               <Link href="/ev-subsidies-india">EV subsidies in India</Link>.
             </p>
           </div>
-
-          <CompareClient />
-          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
 
           <section className="mx-auto mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white">
