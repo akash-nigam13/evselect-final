@@ -32,9 +32,9 @@ export function heroEvs(): HeroEv[] {
 const brands = Array.from(new Set(EVS.map((e) => e.brand)));
 
 const quickLinks = [
-  { label: "Cars", href: "/catalog?type=car", icon: Car },
-  { label: "Scooters", href: "/catalog?type=scooter", icon: ZapIcon },
-  { label: "Bikes", href: "/catalog?type=motorcycle", icon: Bike },
+  { label: "Cars", href: "/catalog/electric-cars", icon: Car },
+  { label: "Scooters", href: "/catalog/electric-scooters", icon: ZapIcon },
+  { label: "Bikes", href: "/catalog/electric-bikes", icon: Bike },
 ];
 
 export default function HeroSection() {

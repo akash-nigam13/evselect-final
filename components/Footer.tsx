@@ -10,9 +10,9 @@ const headingKey: Record<string, string> = {
 
 const footerLinks = {
   Explore: [
-    { label: "Electric Cars", href: "/catalog?type=car" },
-    { label: "Electric Scooters", href: "/catalog?type=scooter" },
-    { label: "Electric Bikes", href: "/catalog?type=motorcycle" },
+    { label: "Electric Cars", href: "/catalog/electric-cars" },
+    { label: "Electric Scooters", href: "/catalog/electric-scooters" },
+    { label: "Electric Bikes", href: "/catalog/electric-bikes" },
     { label: "Browse all EVs", href: "/catalog" },
     { label: "Compare EVs", href: "/compare-electric-vehicles" },
   ],

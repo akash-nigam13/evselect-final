@@ -110,21 +110,21 @@ export default function HiCatalogPage() {
                 </Link>{" "}
                 देखें और{" "}
                 <Link
-                  href={localizedHref("/catalog?type=car", "hi")}
+                  href={localizedHref("/catalog/electric-cars", "hi")}
                   className="text-brand hover:underline"
                 >
                   इलेक्ट्रिक कारें
                 </Link>
                 ,{" "}
                 <Link
-                  href={localizedHref("/catalog?type=scooter", "hi")}
+                  href={localizedHref("/catalog/electric-scooters", "hi")}
                   className="text-brand hover:underline"
                 >
                   इलेक्ट्रिक स्कूटर
                 </Link>{" "}
                 या{" "}
                 <Link
-                  href={localizedHref("/catalog?type=motorcycle", "hi")}
+                  href={localizedHref("/catalog/electric-bikes", "hi")}
                   className="text-brand hover:underline"
                 >
                   इलेक्ट्रिक मोटरसाइकिल

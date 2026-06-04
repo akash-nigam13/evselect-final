@@ -16,9 +16,9 @@ const navLinks: NavLink[] = [
     labelKey: "nav.catalog",
     href: "/catalog",
     children: [
-      { labelKey: "nav.cars", href: "/catalog?type=car", desc: "Hatchbacks, SUVs, sedans & MPVs" },
-      { labelKey: "nav.scooters", href: "/catalog?type=scooter", desc: "City & long-range scooters" },
-      { labelKey: "nav.bikes", href: "/catalog?type=motorcycle", desc: "Commuter & performance bikes" },
+      { labelKey: "nav.cars", href: "/catalog/electric-cars", desc: "Hatchbacks, SUVs, sedans & MPVs" },
+      { labelKey: "nav.scooters", href: "/catalog/electric-scooters", desc: "City & long-range scooters" },
+      { labelKey: "nav.bikes", href: "/catalog/electric-bikes", desc: "Commuter & performance bikes" },
       { labelKey: "nav.allBrands", href: "/catalog", desc: "Every model in one place" },
     ],
   },

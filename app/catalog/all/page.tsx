@@ -83,15 +83,15 @@ export default function CatalogAllPage() {
                 in 2026 — with prices, range, battery and charging specs, all
                 filterable here. Use this EV price list 2026 to narrow by brand,
                 body type, price and range, or jump to a category:{" "}
-                <Link href="/catalog?type=car" className="text-brand hover:underline">
+                <Link href="/catalog/electric-cars" className="text-brand hover:underline">
                   electric cars
                 </Link>
                 ,{" "}
-                <Link href="/catalog?type=scooter" className="text-brand hover:underline">
+                <Link href="/catalog/electric-scooters" className="text-brand hover:underline">
                   electric scooters
                 </Link>{" "}
                 and{" "}
-                <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
+                <Link href="/catalog/electric-bikes" className="text-brand hover:underline">
                   electric motorcycles
                 </Link>
                 .

@@ -87,21 +87,21 @@ export default function CatalogAllPage() {
                 में ब्रांड, बॉडी टाइप, कीमत और रेंज के आधार पर छाँटें, या किसी
                 श्रेणी पर जाएँ:{" "}
                 <Link
-                  href={localizedHref("/catalog?type=car", "hi")}
+                  href={localizedHref("/catalog/electric-cars", "hi")}
                   className="text-brand hover:underline"
                 >
                   इलेक्ट्रिक कारें
                 </Link>
                 ,{" "}
                 <Link
-                  href={localizedHref("/catalog?type=scooter", "hi")}
+                  href={localizedHref("/catalog/electric-scooters", "hi")}
                   className="text-brand hover:underline"
                 >
                   इलेक्ट्रिक स्कूटर
                 </Link>{" "}
                 और{" "}
                 <Link
-                  href={localizedHref("/catalog?type=motorcycle", "hi")}
+                  href={localizedHref("/catalog/electric-bikes", "hi")}
                   className="text-brand hover:underline"
                 >
                   इलेक्ट्रिक मोटरसाइकिल

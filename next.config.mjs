@@ -24,6 +24,13 @@ const nextConfig = {
       { source: "/hi/learn", destination: "/hi/ev-guides", permanent: true },
       { source: "/news", destination: "/ev-news", permanent: true },
       { source: "/hi/news", destination: "/hi/ev-news", permanent: true },
+      // Old category query URLs -> dedicated category pages (308).
+      { source: "/catalog", has: [{ type: "query", key: "type", value: "car" }], destination: "/catalog/electric-cars", permanent: true },
+      { source: "/catalog", has: [{ type: "query", key: "type", value: "scooter" }], destination: "/catalog/electric-scooters", permanent: true },
+      { source: "/catalog", has: [{ type: "query", key: "type", value: "motorcycle" }], destination: "/catalog/electric-bikes", permanent: true },
+      { source: "/hi/catalog", has: [{ type: "query", key: "type", value: "car" }], destination: "/hi/catalog/electric-cars", permanent: true },
+      { source: "/hi/catalog", has: [{ type: "query", key: "type", value: "scooter" }], destination: "/hi/catalog/electric-scooters", permanent: true },
+      { source: "/hi/catalog", has: [{ type: "query", key: "type", value: "motorcycle" }], destination: "/hi/catalog/electric-bikes", permanent: true },
     ];
   },
 };

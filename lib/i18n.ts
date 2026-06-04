@@ -75,6 +75,9 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/ev-calculators/ev-emi-calculator",
     "/ev-calculators/ev-vs-petrol-cost-calculator",
     "/ev-calculators/ev-range-calculator",
+    "/catalog/electric-cars",
+    "/catalog/electric-scooters",
+    "/catalog/electric-bikes",
   ]),
 };
 

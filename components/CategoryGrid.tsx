@@ -11,7 +11,7 @@ const cats = [
     desc: "Hatchbacks, SUVs, sedans & MPVs — from city runabouts to 600 km+ flagships.",
     icon: Car,
     accent: "#26E0C4",
-    href: "/catalog?type=car",
+    href: "/catalog/electric-cars",
   },
   {
     type: "scooter" as const,
@@ -19,7 +19,7 @@ const cats = [
     desc: "The smart way to commute — connected, low-cost, and zero-emission.",
     icon: Zap,
     accent: "#C6F94E",
-    href: "/catalog?type=scooter",
+    href: "/catalog/electric-scooters",
   },
   {
     type: "motorcycle" as const,
@@ -27,7 +27,7 @@ const cats = [
     desc: "From efficient commuters to 150 km/h performance machines.",
     icon: Bike,
     accent: "#8B7BFF",
-    href: "/catalog?type=motorcycle",
+    href: "/catalog/electric-bikes",
   },
 ];
 

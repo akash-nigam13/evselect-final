@@ -30,9 +30,9 @@ export const metadata: Metadata = {
 };
 
 const quickLinks = [
-  { label: t("nav.cars", LOCALE), href: "/catalog?type=car", icon: Car },
-  { label: t("nav.scooters", LOCALE), href: "/catalog?type=scooter", icon: ZapIcon },
-  { label: t("nav.bikes", LOCALE), href: "/catalog?type=motorcycle", icon: Bike },
+  { label: t("nav.cars", LOCALE), href: "/catalog/electric-cars", icon: Car },
+  { label: t("nav.scooters", LOCALE), href: "/catalog/electric-scooters", icon: ZapIcon },
+  { label: t("nav.bikes", LOCALE), href: "/catalog/electric-bikes", icon: Bike },
 ];
 
 export default function HindiHomePage() {

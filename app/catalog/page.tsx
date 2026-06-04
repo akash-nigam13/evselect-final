@@ -107,15 +107,15 @@ export default function CatalogPage() {
                   all {EVS.length} models
                 </Link>{" "}
                 and narrow by{" "}
-                <Link href="/catalog?type=car" className="text-brand hover:underline">
+                <Link href="/catalog/electric-cars" className="text-brand hover:underline">
                   electric cars
                 </Link>
                 ,{" "}
-                <Link href="/catalog?type=scooter" className="text-brand hover:underline">
+                <Link href="/catalog/electric-scooters" className="text-brand hover:underline">
                   electric scooters
                 </Link>{" "}
                 or{" "}
-                <Link href="/catalog?type=motorcycle" className="text-brand hover:underline">
+                <Link href="/catalog/electric-bikes" className="text-brand hover:underline">
                   electric motorcycles
                 </Link>
                 .
