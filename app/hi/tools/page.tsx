@@ -8,6 +8,7 @@ import { webAppSchema } from "@/lib/seo";
 import { altsFor } from "@/lib/i18n";
 import CostCalculator from "@/components/tools/CostCalculator";
 import RangeEstimator from "@/components/tools/RangeEstimator";
+import EmiCalculator from "@/components/tools/EmiCalculator";
 
 export const metadata: Metadata = {
   title: "EV टूल्स — कॉस्ट कैलकुलेटर और रेंज एस्टिमेटर",
@@ -49,6 +50,9 @@ export default function HiToolsPage() {
           </section>
           <section id="range" className="scroll-mt-24">
             <RangeEstimator />
+          </section>
+          <section id="emi" className="scroll-mt-24">
+            <EmiCalculator />
           </section>
         </div>
       </main>

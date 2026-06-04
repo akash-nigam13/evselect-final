@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { altsFor } from "@/lib/i18n";
 import Link from "next/link";
-import { Calculator, Gauge, ArrowRight } from "lucide-react";
+import { Calculator, Gauge, ArrowRight, Banknote } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
@@ -12,12 +12,13 @@ import JsonLd from "@/components/JsonLd";
 import { webAppSchema } from "@/lib/seo";
 import CostCalculator from "@/components/tools/CostCalculator";
 import RangeEstimator from "@/components/tools/RangeEstimator";
+import EmiCalculator from "@/components/tools/EmiCalculator";
 
 export const metadata: Metadata = {
   alternates: altsFor("/tools", "en"),
-  title: "EV Tools — Cost Calculator & Range Estimator",
+  title: "EV Tools — Cost, EMI Calculator & Range Estimator",
   description:
-    "Free interactive EV tools for India. Calculate EV vs petrol running-cost savings over time and estimate real-world driving range and charging times — all powered by real 2026 EV specs.",
+    "Free interactive EV tools for India: calculate your EV loan EMI, compare EV vs petrol running-cost savings, and estimate real-world driving range and charging times — all on real 2026 EV specs.",
 };
 
 export default function ToolsPage() {
@@ -63,6 +64,14 @@ export default function ToolsPage() {
                   Range &amp; Charging Estimator
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
+                <Link
+                  href="#emi"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-ev-border bg-ev-card px-6 py-3.5 font-display text-sm font-bold tracking-wide text-ev-text transition-all duration-300 hover:border-iris/50 hover:text-white"
+                >
+                  <Banknote className="h-4 w-4 text-iris" />
+                  EMI Calculator
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </div>
             </Reveal>
           </div>
@@ -81,6 +90,16 @@ export default function ToolsPage() {
         {/* ─── Range estimator ──────────────────────────────── */}
         <section id="range" className="scroll-mt-24">
           <RangeEstimator />
+        </section>
+
+        {/* Ad between tools */}
+        <div className="mx-auto my-4 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AdPlaceholder format="leaderboard" slot="3333333344" />
+        </div>
+
+        {/* ─── EMI calculator ───────────────────────────────── */}
+        <section id="emi" className="scroll-mt-24">
+          <EmiCalculator />
         </section>
       </main>
 
