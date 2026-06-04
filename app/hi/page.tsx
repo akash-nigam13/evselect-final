@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Aurora from "@/components/ui/Aurora";
 import Counter from "@/components/ui/Counter";
+import HeroShowcase from "@/components/HeroShowcase";
+import { heroEvs } from "@/components/HeroSection";
 import { EVS } from "@/lib/ev-data";
 import { t, altsFor, localizedHref, type Locale } from "@/lib/i18n";
 
@@ -119,6 +121,9 @@ export default function HindiHomePage() {
                 ))}
               </div>
             </div>
+
+            {/* Cursor-reactive floating EV showcase */}
+            <HeroShowcase evs={heroEvs()} locale="hi" />
           </div>
 
           <div className="absolute bottom-0 inset-x-0 overflow-hidden border-t border-ev-border/40 bg-ev-bg/60 py-4 backdrop-blur">

@@ -13,7 +13,7 @@ const HERO_IDS = [
   "byd-seal-premium-82-56-kwh",
 ];
 
-function heroEvs(): HeroEv[] {
+export function heroEvs(): HeroEv[] {
   return HERO_IDS.map((id) => getById(id))
     .filter((e): e is NonNullable<typeof e> => !!e)
     .map((e) => ({

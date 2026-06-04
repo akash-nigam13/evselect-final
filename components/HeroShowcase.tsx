@@ -2,6 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { localizedHref, type Locale } from "@/lib/i18n";
+
+const LABELS = {
+  en: { live: "Live", fullSpecs: "Full specs", range: "Range", battery: "Battery", power: "Power", accel: "0–100" },
+  hi: { live: "लाइव", fullSpecs: "पूरी जानकारी", range: "रेंज", battery: "बैटरी", power: "पावर", accel: "0–100" },
+} as const;
 
 export interface HeroEv {
   id: string;
@@ -25,7 +31,9 @@ const fallback = (e: React.SyntheticEvent<HTMLImageElement>, id: string) => {
   }
 };
 
-export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
+export default function HeroShowcase({ evs, locale = "en" }: { evs: HeroEv[]; locale?: Locale }) {
+  const lbl = LABELS[locale === "hi" ? "hi" : "en"];
+  const href = (p: string) => localizedHref(p, locale);
   const [idx, setIdx] = useState(0);
   const [nudge, setNudge] = useState(0); // bump to reset the auto-timer after manual pick
   const tiltRef = useRef<HTMLDivElement>(null);
@@ -53,10 +61,10 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
   };
 
   const stats = [
-    { label: "Range", value: ev.range != null ? `${ev.range}` : "—", unit: "km" },
-    { label: "Battery", value: ev.battery != null ? `${ev.battery}` : "—", unit: "kWh" },
-    { label: "Power", value: ev.power != null ? `${ev.power}` : "—", unit: "bhp" },
-    { label: "0–100", value: ev.accel != null ? `${ev.accel}` : "—", unit: "s" },
+    { label: lbl.range, value: ev.range != null ? `${ev.range}` : "—", unit: "km" },
+    { label: lbl.battery, value: ev.battery != null ? `${ev.battery}` : "—", unit: "kWh" },
+    { label: lbl.power, value: ev.power != null ? `${ev.power}` : "—", unit: "bhp" },
+    { label: lbl.accel, value: ev.accel != null ? `${ev.accel}` : "—", unit: "s" },
   ];
 
   return (
@@ -91,7 +99,7 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
 
       {/* Car + holographic podium */}
       <Link
-        href={`/catalog/${ev.id}`}
+        href={href(`/catalog/${ev.id}`)}
         aria-label={`View ${ev.name} specs`}
         className="relative block h-72 [perspective:1200px]"
       >
@@ -180,7 +188,7 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
             <div className="font-body text-xs text-ev-muted">{ev.variant ?? ev.bodyType}</div>
           </div>
           <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-brand">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-volt" /> Live
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-volt" /> {lbl.live}
           </span>
         </div>
 
@@ -195,10 +203,10 @@ export default function HeroShowcase({ evs }: { evs: HeroEv[] }) {
         </div>
 
         <Link
-          href={`/catalog/${ev.id}`}
+          href={href(`/catalog/${ev.id}`)}
           className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand/30 py-2 font-mono text-xs tracking-wide text-brand transition-colors hover:bg-brand/10"
         >
-          Full specs <ArrowRight className="h-3 w-3" />
+          {lbl.fullSpecs} <ArrowRight className="h-3 w-3" />
         </Link>
       </div>
 
