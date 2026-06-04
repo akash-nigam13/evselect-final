@@ -13,12 +13,14 @@ function Combobox({
   options,
   onChange,
   placeholder,
+  align = "left",
 }: {
   label: string;
   value: string;
   options: Opt[];
   onChange: (v: string) => void;
   placeholder: string;
+  align?: "left" | "right";
 }) {
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
@@ -51,7 +53,7 @@ function Combobox({
       </button>
 
       {open && (
-        <div className="absolute z-30 mt-1.5 w-full overflow-hidden rounded-xl border border-ev-border bg-ev-surface shadow-card">
+        <div className={`absolute z-30 mt-1.5 w-max min-w-full max-w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-xl border border-ev-border bg-ev-surface shadow-card ${align === "right" ? "right-0" : "left-0"}`}>
           <div className="flex items-center gap-2 border-b border-ev-border/60 px-3 py-2">
             <Search className="h-3.5 w-3.5 shrink-0 text-ev-muted" />
             {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
@@ -72,10 +74,10 @@ function Combobox({
                 <button
                   type="button"
                   onClick={() => { onChange(o.value); setOpen(false); }}
-                  className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-left font-body text-sm transition-colors hover:bg-brand/10 ${o.value === value ? "text-brand" : "text-ev-text/85"}`}
+                  className={`flex w-full items-start justify-between gap-2 rounded-lg px-3 py-2 text-left font-body text-sm leading-snug transition-colors hover:bg-brand/10 ${o.value === value ? "text-brand" : "text-ev-text/85"}`}
                 >
-                  <span className="truncate">{o.label}</span>
-                  {o.value === value && <Check className="h-3.5 w-3.5 shrink-0 text-brand" />}
+                  <span className="whitespace-normal break-words">{o.label}</span>
+                  {o.value === value && <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />}
                 </button>
               </li>
             ))}
@@ -94,10 +96,11 @@ const TYPE_OPTS: Opt[] = [
   { value: "motorcycle", label: "Bikes" },
 ];
 
+// Brand is already chosen in the previous field, so show just model + variant (short & readable).
 const modelLabel = (id: string) => {
   const e = getById(id);
   if (!e) return id;
-  return e.name + (e.variant ? ` — ${e.variant}` : "");
+  return e.model + (e.variant ? ` — ${e.variant}` : "");
 };
 
 export default function VehiclePicker({
@@ -144,9 +147,9 @@ export default function VehiclePicker({
 
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-      <Combobox label="Type" value={type} options={TYPE_OPTS} onChange={pickType} placeholder="Type" />
-      <Combobox label="Brand" value={brand} options={brandOpts} onChange={pickBrand} placeholder="Brand" />
-      <Combobox label="Model" value={value} options={modelOpts} onChange={onChange} placeholder="Model" />
+      <Combobox label="Type" value={type} options={TYPE_OPTS} onChange={pickType} placeholder="Type" align="left" />
+      <Combobox label="Brand" value={brand} options={brandOpts} onChange={pickBrand} placeholder="Brand" align="left" />
+      <Combobox label="Model" value={value} options={modelOpts} onChange={onChange} placeholder="Model" align="right" />
     </div>
   );
 }
