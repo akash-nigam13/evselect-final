@@ -64,7 +64,7 @@ export default function Page() {
           first-EV buying checklist
         </Link>{" "}
         is a sensible place to start before you browse the{" "}
-        <Link href="/catalog/all">full catalogue</Link>.
+        <Link href="/catalog">full catalogue</Link>.
       </p>
       <p>
         Electric commercial vehicles, though tiny in absolute terms at around

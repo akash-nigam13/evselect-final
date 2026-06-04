@@ -233,7 +233,7 @@ export default function EvRangeCalculatorPageHi() {
               EV चार्जिंग स्टेशन सेटअप गाइड
             </Link>{" "}
             से, देखें{" "}
-            <Link href={localizedHref("/catalog/all", "hi")} className="text-brand hover:underline">
+            <Link href={localizedHref("/catalog", "hi")} className="text-brand hover:underline">
               पूरी EV कैटलॉग
             </Link>
             , या दो मॉडल को{" "}

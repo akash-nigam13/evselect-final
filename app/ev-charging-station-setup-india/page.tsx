@@ -253,7 +253,7 @@ export default function ChargingStationSetupPage() {
             <h2>Related</h2>
             <p>
               See which EVs your future customers are driving in the{" "}
-              <Link href="/catalog/all">EV catalogue</Link>, learn the charging basics in{" "}
+              <Link href="/catalog">EV catalogue</Link>, learn the charging basics in{" "}
               <Link href="/blog/ev-charging-infrastructure-india">India&apos;s charging infrastructure guide</Link>{" "}
               and the latest network numbers in{" "}
               <Link href="/blog/india-ev-charging-network-2026">India&apos;s charging network nears 30,000 stations</Link>.

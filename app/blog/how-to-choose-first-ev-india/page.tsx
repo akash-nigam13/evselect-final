@@ -140,7 +140,7 @@ export default function Page() {
         distance, sanity-check the running cost, then compare warranty, incentives, and safety
         across your shortlist. The fastest way to narrow the field is to{" "}
         <Link href="/compare-electric-vehicles">compare EVs side by side</Link> on range, battery, price, and charging,
-        then browse the <Link href="/catalog/all">full catalog</Link> to firm up your top two or
+        then browse the <Link href="/catalog">full catalog</Link> to firm up your top two or
         three. Do that, and your first EV will fit your life rather than your spreadsheet.
       </p>
     </ArticleShell>

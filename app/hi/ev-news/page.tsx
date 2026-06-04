@@ -74,7 +74,7 @@ export default function HiNewsPage() {
               करती हैं कि भारतीय इलेक्ट्रिक कार, स्कूटर और बाइक कैसे ख़रीदते हैं।
               और गहराई से समझने के लिए हमारा{" "}
               <Link href={localizedHref("/blog", "hi")}>EV ब्लॉग और गाइड</Link> पढ़ें,{" "}
-              <Link href={localizedHref("/catalog/all", "hi")}>पूरा EV कैटलॉग</Link>{" "}
+              <Link href={localizedHref("/catalog", "hi")}>पूरा EV कैटलॉग</Link>{" "}
               ब्राउज़ करें, या{" "}
               <Link href={localizedHref("/ev-subsidies-india", "hi")}>
                 भारत में EV सब्सिडी

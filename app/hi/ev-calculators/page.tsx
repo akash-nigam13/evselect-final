@@ -138,7 +138,7 @@ export default function HiToolsPage() {
               कर सकते हैं, देख सकते हैं कि{" "}
               <Link href={localizedHref("/ev-subsidies-india", "hi")}>भारत में EV सब्सिडी</Link> से
               कितना दावा कर सकते हैं, या अपना अगला वाहन शॉर्टलिस्ट करने के लिए पूरा{" "}
-              <Link href={localizedHref("/catalog/all", "hi")}>EV कैटलॉग</Link> ब्राउज़ कर सकते हैं।
+              <Link href={localizedHref("/catalog", "hi")}>EV कैटलॉग</Link> ब्राउज़ कर सकते हैं।
             </p>
           </div>
 

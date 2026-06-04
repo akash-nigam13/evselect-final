@@ -231,7 +231,7 @@ export default function EvRangeCalculatorPage() {
               EV charging station setup guide
             </Link>
             , browse the{" "}
-            <Link href="/catalog/all" className="text-brand hover:underline">
+            <Link href="/catalog" className="text-brand hover:underline">
               full EV catalogue
             </Link>
             , or line up two models in the{" "}

@@ -134,7 +134,7 @@ export default function ToolsPage() {
               <Link href="/compare-electric-vehicles">compare electric vehicles side by side</Link>,
               check how much you can claim through{" "}
               <Link href="/ev-subsidies-india">EV subsidies in India</Link>, or browse the{" "}
-              <Link href="/catalog/all">full EV catalog</Link> to shortlist your next vehicle.
+              <Link href="/catalog">full EV catalog</Link> to shortlist your next vehicle.
             </p>
           </div>
 

@@ -66,7 +66,7 @@ export default function BlogCategoryPage({ params }: { params: { slug: string } 
                 पढ़ने के लिए हमारा{" "}
                 <Link href={localizedHref("/blog", "hi")}>पूरा EV ब्लॉग</Link> देखें
                 या{" "}
-                <Link href={localizedHref("/catalog/all", "hi")}>
+                <Link href={localizedHref("/catalog", "hi")}>
                   पूरे EV कैटलॉग
                 </Link>{" "}
                 में specs की तुलना करें।

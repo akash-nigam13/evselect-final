@@ -155,7 +155,7 @@ export default function Page() {
         प्रोत्साहन और सेफ्टी की तुलना करें। दायरे को छोटा करने का सबसे तेज़ तरीका है{" "}
         <Link href={localizedHref("/compare-electric-vehicles", "hi")}>EVs की साथ-साथ तुलना</Link> रेंज, बैटरी, कीमत और
         चार्जिंग पर करना, फिर अपने टॉप दो या तीन पक्के करने के लिए{" "}
-        <Link href={localizedHref("/catalog/all", "hi")}>पूरा कैटलॉग</Link> खंगालना। ऐसा कर लीजिए, और
+        <Link href={localizedHref("/catalog", "hi")}>पूरा कैटलॉग</Link> खंगालना। ऐसा कर लीजिए, और
         आपकी पहली EV आपकी स्प्रेडशीट के बजाय आपकी ज़िंदगी में फिट बैठेगी।
       </p>
     </ArticleShell>

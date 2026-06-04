@@ -251,7 +251,7 @@ export default function EvSubsidiesPage() {
               Want to see how incentives change a specific car&apos;s real cost? Use the{" "}
               <Link href="/ev-calculators">cost &amp; savings calculators</Link>, line up models in the{" "}
               <Link href="/compare-electric-vehicles">compare tool</Link>, or browse the{" "}
-              <Link href="/catalog/all">full EV catalogue</Link>. For the deeper policy background, read{" "}
+              <Link href="/catalog">full EV catalogue</Link>. For the deeper policy background, read{" "}
               <Link href="/blog/ev-subsidies-road-tax-by-state-india-2026">EV subsidies, road tax &amp; incentives by state</Link>.
               Planning to set one up commercially? See our guide to{" "}
               <Link href="/ev-charging-station-setup-india">setting up an EV charging station in India</Link>.

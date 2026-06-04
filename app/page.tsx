@@ -79,7 +79,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             {[
-              { href: "/catalog/all", label: "Browse all EVs" },
+              { href: "/catalog", label: "Browse all EVs" },
               { href: "/compare-electric-vehicles", label: "Compare EVs" },
               { href: "/ev-calculators/ev-emi-calculator", label: "EV EMI calculator" },
               { href: "/ev-subsidies-india", label: "EV subsidies in India" },

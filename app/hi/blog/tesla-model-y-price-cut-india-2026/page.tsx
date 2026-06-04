@@ -102,7 +102,7 @@ export default function Page() {
         आप किसके लिए पैसे चुका रहे हैं। समझदारी भरा पहला कदम है दावेदारों को
         साथ-साथ रखना — हमारा{" "}
         <Link href={localizedHref("/compare-electric-vehicles", "hi")}>तुलना टूल</Link> आपको{" "}
-        <Link href={localizedHref("/catalog/all", "hi")}>पूरे कैटलॉग</Link> में रेंज, बैटरी,
+        <Link href={localizedHref("/catalog", "hi")}>पूरे कैटलॉग</Link> में रेंज, बैटरी,
         चार्जिंग स्पीड और कीमत पर तौलने देता है। और अगर यह आपकी पहली इलेक्ट्रिक कार
         होगी, तो{" "}
         <Link href={localizedHref("/blog/how-to-choose-first-ev-india", "hi")}>

@@ -57,7 +57,7 @@ export default function Page() {
         <Link href={localizedHref("/blog/how-to-choose-first-ev-india", "hi")}>
           पहली-EV खरीद चेकलिस्ट
         </Link>{" "}
-        <Link href={localizedHref("/catalog/all", "hi")}>पूरा कैटलॉग</Link> ब्राउज़ करने से पहले शुरू करने की एक समझदारी भरी जगह है।
+        <Link href={localizedHref("/catalog", "hi")}>पूरा कैटलॉग</Link> ब्राउज़ करने से पहले शुरू करने की एक समझदारी भरी जगह है।
       </p>
       <p>
         इलेक्ट्रिक वाणिज्यिक वाहन, हालाँकि करीब 19,648 यूनिट पर निरपेक्ष रूप से बहुत छोटे हैं, करीब 122%

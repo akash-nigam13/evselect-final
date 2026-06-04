@@ -43,7 +43,6 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/",
     "/compare-electric-vehicles",
     "/catalog",
-    "/catalog/all",
     "/ev-calculators",
     "/ev-guides",
     "/ev-news",

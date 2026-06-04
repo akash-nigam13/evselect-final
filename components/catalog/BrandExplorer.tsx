@@ -92,17 +92,6 @@ export default function BrandExplorer() {
           ))}
         </div>
       )}
-
-      {/* Browse all */}
-      <div className="mt-10 text-center">
-        <Link
-          href="/catalog/all"
-          className="inline-flex items-center gap-2 rounded-xl border border-ev-border bg-ev-card px-5 py-3 font-display text-sm font-medium text-ev-text/85 transition-colors hover:border-brand/40 hover:text-brand"
-        >
-          {t("brand.browseAll", locale).replace("{n}", String(BRANDS.reduce((n, b) => n + b.count, 0)))}
-          <ArrowRight className="h-4 w-4" />
-        </Link>
-      </div>
     </div>
   );
 }

@@ -106,7 +106,7 @@ export default function CategoryCatalog({ category, locale = "en" }: { category:
               <Link href={href("/compare-electric-vehicles")}>{isHi ? "EVs की तुलना" : "compare EVs"}</Link>,{" "}
               <Link href={href("/ev-calculators/ev-emi-calculator")}>{isHi ? "EMI कैलकुलेटर" : "EMI calculator"}</Link>,{" "}
               <Link href={href("/ev-subsidies-india")}>{isHi ? "EV सब्सिडी" : "EV subsidies"}</Link> {isHi ? "और" : "and the"}{" "}
-              <Link href={href("/catalog/all")}>{isHi ? "पूरा कैटलॉग" : "full catalog"}</Link>.
+              <Link href={href("/catalog")}>{isHi ? "पूरा कैटलॉग" : "full catalog"}</Link>.
             </p>
           </div>
 

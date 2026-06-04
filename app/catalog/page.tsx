@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Aurora from "@/components/ui/Aurora";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import FacetedCatalog from "@/components/catalog/FacetedCatalog";
 import BrandExplorer from "@/components/catalog/BrandExplorer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
@@ -12,9 +13,9 @@ import { EVS, BRANDS } from "@/lib/ev-data";
 import { collectionPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "EV Catalog — Browse by Brand | EVSelect.in",
+  title: "EV Catalog 2026 — All Electric Vehicles in India | EVSelect.in",
   description:
-    "Pick a brand to explore its electric vehicle lineup, or browse all EVs in India with full filters. Electric cars, scooters and motorcycles compared on range, battery, power and price.",
+    "Browse every electric car, scooter and motorcycle on sale in India in 2026 with full filters — brand, body type, price, range and charging. Or browse the complete EV brand directory.",
   alternates: altsFor("/catalog", "en"),
 };
 
@@ -29,7 +30,7 @@ const faqs = [
   },
   {
     q: "Which is the cheapest EV in India?",
-    a: "Entry-level electric scooters are the most affordable EVs, often starting around ₹1 lakh on-road, while the most budget-friendly electric cars typically begin in the ₹7–10 lakh range. Use the price filter on the all-models page to sort every EV from low to high.",
+    a: "Sort the list by price, low to high, to surface the most affordable models. Entry-level electric scooters often start around ₹1 lakh on-road, while the most budget-friendly electric cars typically begin in the ₹7–10 lakh range.",
   },
   {
     q: "How do I compare two EVs?",
@@ -49,18 +50,18 @@ export default function CatalogPage() {
       <main className="min-h-screen pt-16">
         <section className="relative overflow-hidden">
           <Aurora variant="dual" />
-          <div className="mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 sm:pt-20 lg:px-8">
             <Breadcrumbs items={[{ name: "Catalog", path: "/catalog" }]} className="mb-6" />
             <p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-brand">
               The Catalog
             </p>
             <h1 className="max-w-3xl font-display text-4xl font-bold leading-tight text-ev-text sm:text-5xl lg:text-6xl text-balance">
-              Browse EVs <span className="text-gradient-brand">by brand</span>.
+              All <span className="text-gradient-brand">electric vehicles</span> in India
             </h1>
             <p className="mt-5 max-w-2xl font-body text-base leading-relaxed text-ev-muted sm:text-lg">
-              Choose a brand to explore its full lineup, then filter on the
-              numbers that matter. Or jump straight to all {EVS.length} models
-              with the complete filter set.
+              Every {EVS.length} models in one filterable view — narrow by brand,
+              body type, price, range and charging. Or scroll down to browse the
+              full brand directory.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
@@ -85,28 +86,35 @@ export default function CatalogPage() {
           </div>
         </section>
 
-        <div className="mx-auto mb-10 max-w-7xl px-4 sm:px-6 lg:px-8">
-          <AdPlaceholder format="leaderboard" slot="3333333333" />
+        {/* PRIMARY: full filterable catalog */}
+        <div className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
+          <FacetedCatalog pool={EVS} />
+          <AdPlaceholder format="leaderboard" slot="3333333333" className="mt-12" />
         </div>
 
+        {/* SECONDARY: brand directory */}
         <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <BrandExplorer />
+          <section className="mt-16">
+            <h2 className="mb-2 font-display text-2xl font-bold text-white sm:text-3xl">
+              Or browse EVs <span className="text-gradient-brand">by brand</span>
+            </h2>
+            <p className="mb-8 max-w-2xl font-body text-ev-muted">
+              Pick a manufacturer to explore its full lineup, then drill into
+              prices, range, battery and charging specs.
+            </p>
+            <BrandExplorer />
+          </section>
 
           <div className="mx-auto mt-16 max-w-3xl">
             <div className="prose-ev max-w-3xl">
               <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-                Browse electric vehicles in India by brand
+                Every EV model and brand in India, in one place
               </h2>
               <p className="mt-4 font-body leading-relaxed text-ev-text/70">
-                This is the brand directory for every electric car, scooter and
-                motorcycle on sale in India in 2026. Pick a manufacturer to see
-                its full lineup, then drill into prices, range, battery and
-                charging specs. Looking for the complete, filterable EV price list
-                2026 instead? Jump to{" "}
-                <Link href="/catalog/all" className="text-brand hover:underline">
-                  all {EVS.length} models
-                </Link>{" "}
-                and narrow by{" "}
+                This is the complete directory of every electric car, scooter and
+                motorcycle on sale in India in 2026. Use the filters above to build
+                your EV price list 2026 by brand, body type, price and range, or
+                jump straight to a category:{" "}
                 <Link href="/catalog/electric-cars" className="text-brand hover:underline">
                   electric cars
                 </Link>
@@ -121,7 +129,7 @@ export default function CatalogPage() {
                 .
               </p>
               <p className="mt-3 font-body leading-relaxed text-ev-text/70">
-                Want to go deeper? Use the{" "}
+                Ready to decide? Use the{" "}
                 <Link href="/compare-electric-vehicles" className="text-brand hover:underline">
                   tool to compare electric cars, scooters and bikes
                 </Link>{" "}
@@ -165,8 +173,8 @@ export default function CatalogPage() {
       <JsonLd
         data={[
           collectionPageSchema(
-            "EV Catalog — Browse by Brand",
-            "Browse electric vehicles in India by brand.",
+            "EV Catalog 2026 — All Electric Vehicles in India",
+            "Browse every electric vehicle in India with full filters, plus the complete brand directory.",
             "/catalog"
           ),
           itemListSchema(

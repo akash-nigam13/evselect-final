@@ -2,38 +2,116 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Zap, Menu, X, ChevronDown, GitCompare } from "lucide-react";
+import { Zap, Menu, X, ChevronDown, GitCompare, ArrowRight, Car, Bike, Wrench, BatteryCharging } from "lucide-react";
 import clsx from "clsx";
 import LangSwitcher from "@/components/LangSwitcher";
 import SiteSearch from "@/components/search/SiteSearch";
-import { localeFromPath, localizedHref, t } from "@/lib/i18n";
+import { localeFromPath, localizedHref, t, type Locale } from "@/lib/i18n";
 
-type NavChild = { label?: string; labelKey?: string; href: string; desc?: string };
-type NavLink = { labelKey: string; href: string; children?: NavChild[] };
+type Bi = { en: string; hi: string };
+type MegaItem = { label: Bi; href: string; desc?: Bi };
+type MegaCol = { heading: Bi; items: MegaItem[] };
+type Promo = { title: Bi; desc: Bi; href: string; cta: Bi };
+type SimpleChild = { label?: string; labelKey?: string; href: string; desc?: string };
+type NavLink = {
+  labelKey: string;
+  href: string;
+  mega?: { cols: MegaCol[]; promo?: Promo };
+  children?: SimpleChild[];
+};
+
+const tx = (b: Bi, locale: Locale) => (locale === "hi" ? b.hi : b.en);
 
 const navLinks: NavLink[] = [
   {
     labelKey: "nav.catalog",
     href: "/catalog",
-    children: [
-      { labelKey: "nav.cars", href: "/catalog/electric-cars", desc: "Hatchbacks, SUVs, sedans & MPVs" },
-      { labelKey: "nav.scooters", href: "/catalog/electric-scooters", desc: "City & long-range scooters" },
-      { labelKey: "nav.bikes", href: "/catalog/electric-bikes", desc: "Commuter & performance bikes" },
-      { labelKey: "nav.allBrands", href: "/catalog", desc: "Every model in one place" },
-    ],
+    mega: {
+      cols: [
+        {
+          heading: { en: "Shop by type", hi: "टाइप से चुनें" },
+          items: [
+            { label: { en: "Electric Cars", hi: "इलेक्ट्रिक कारें" }, href: "/catalog/electric-cars", desc: { en: "Hatchbacks, SUVs & sedans", hi: "हैचबैक, SUV और सेडान" } },
+            { label: { en: "Electric Scooters", hi: "इलेक्ट्रिक स्कूटर" }, href: "/catalog/electric-scooters", desc: { en: "City & long-range", hi: "सिटी और लॉन्ग-रेंज" } },
+            { label: { en: "Electric Bikes", hi: "इलेक्ट्रिक बाइक" }, href: "/catalog/electric-bikes", desc: { en: "Commuter & performance", hi: "कम्यूटर और परफ़ॉर्मेंस" } },
+            { label: { en: "All EVs", hi: "सभी EVs" }, href: "/catalog", desc: { en: "Full filterable list", hi: "पूरी फ़िल्टर वाली सूची" } },
+          ],
+        },
+        {
+          heading: { en: "Top brands", hi: "टॉप ब्रांड" },
+          items: [
+            { label: { en: "Tata", hi: "Tata" }, href: "/catalog/brand/tata" },
+            { label: { en: "Mahindra", hi: "Mahindra" }, href: "/catalog/brand/mahindra" },
+            { label: { en: "MG", hi: "MG" }, href: "/catalog/brand/mg" },
+            { label: { en: "Ola", hi: "Ola" }, href: "/catalog/brand/ola" },
+            { label: { en: "Ather", hi: "Ather" }, href: "/catalog/brand/ather" },
+            { label: { en: "Tesla", hi: "Tesla" }, href: "/catalog/brand/tesla" },
+          ],
+        },
+        {
+          heading: { en: "Tools & guides", hi: "टूल और गाइड" },
+          items: [
+            { label: { en: "Compare EVs", hi: "EVs की तुलना" }, href: "/compare-electric-vehicles" },
+            { label: { en: "EV EMI Calculator", hi: "EV EMI कैलकुलेटर" }, href: "/ev-calculators/ev-emi-calculator" },
+            { label: { en: "EV vs Petrol cost", hi: "EV बनाम पेट्रोल खर्च" }, href: "/ev-calculators/ev-vs-petrol-cost-calculator" },
+            { label: { en: "EV Subsidies", hi: "EV सब्सिडी" }, href: "/ev-subsidies-india" },
+          ],
+        },
+      ],
+      promo: {
+        title: { en: "Compare EVs side by side", hi: "EVs की आमने-सामने तुलना" },
+        desc: { en: "Put any two electric vehicles head to head on range, price & specs.", hi: "किन्हीं दो EVs को रेंज, कीमत और स्पेक्स पर आमने-सामने रखें।" },
+        href: "/compare-electric-vehicles",
+        cta: { en: "Start comparing", hi: "तुलना शुरू करें" },
+      },
+    },
   },
   {
     labelKey: "nav.brands",
     href: "/catalog",
-    children: [
-      { label: "Tata", href: "/catalog/brand/tata", desc: "Nexon, Punch, Curvv, Harrier EV" },
-      { label: "Mahindra", href: "/catalog/brand/mahindra", desc: "BE 6, XEV 9e & 9S" },
-      { label: "MG", href: "/catalog/brand/mg", desc: "Windsor, ZS, Comet, Cyberster" },
-      { label: "Ola", href: "/catalog/brand/ola", desc: "S1 scooters & Roadster bikes" },
-      { label: "Ather", href: "/catalog/brand/ather", desc: "450X, Rizta, Apex" },
-      { label: "Tesla", href: "/catalog/brand/tesla", desc: "Model Y, Model 3" },
-      { labelKey: "nav.allBrands", href: "/catalog", desc: "Browse every brand →" },
-    ],
+    mega: {
+      cols: [
+        {
+          heading: { en: "Popular car brands", hi: "लोकप्रिय कार ब्रांड" },
+          items: [
+            { label: { en: "Tata", hi: "Tata" }, href: "/catalog/brand/tata" },
+            { label: { en: "Mahindra", hi: "Mahindra" }, href: "/catalog/brand/mahindra" },
+            { label: { en: "MG", hi: "MG" }, href: "/catalog/brand/mg" },
+            { label: { en: "Hyundai", hi: "Hyundai" }, href: "/catalog/brand/hyundai" },
+            { label: { en: "BYD", hi: "BYD" }, href: "/catalog/brand/byd" },
+            { label: { en: "Kia", hi: "Kia" }, href: "/catalog/brand/kia" },
+          ],
+        },
+        {
+          heading: { en: "Two-wheeler brands", hi: "टू-व्हीलर ब्रांड" },
+          items: [
+            { label: { en: "Ola", hi: "Ola" }, href: "/catalog/brand/ola" },
+            { label: { en: "Ather", hi: "Ather" }, href: "/catalog/brand/ather" },
+            { label: { en: "TVS", hi: "TVS" }, href: "/catalog/brand/tvs" },
+            { label: { en: "Bajaj", hi: "Bajaj" }, href: "/catalog/brand/bajaj" },
+            { label: { en: "Revolt", hi: "Revolt" }, href: "/catalog/brand/revolt" },
+            { label: { en: "Ultraviolette", hi: "Ultraviolette" }, href: "/catalog/brand/ultraviolette" },
+          ],
+        },
+        {
+          heading: { en: "Luxury & global", hi: "लग्ज़री और ग्लोबल" },
+          items: [
+            { label: { en: "Tesla", hi: "Tesla" }, href: "/catalog/brand/tesla" },
+            { label: { en: "BMW", hi: "BMW" }, href: "/catalog/brand/bmw" },
+            { label: { en: "Mercedes-Benz", hi: "Mercedes-Benz" }, href: "/catalog/brand/mercedes-benz" },
+            { label: { en: "Audi", hi: "Audi" }, href: "/catalog/brand/audi" },
+            { label: { en: "Volvo", hi: "Volvo" }, href: "/catalog/brand/volvo" },
+            { label: { en: "Citroen", hi: "Citroen" }, href: "/catalog/brand/citroen" },
+          ],
+        },
+      ],
+      promo: {
+        title: { en: "Browse every EV brand", hi: "हर EV ब्रांड देखें" },
+        desc: { en: "Explore the full brand directory and each maker's complete lineup.", hi: "पूरी ब्रांड डायरेक्टरी और हर निर्माता की पूरी रेंज देखें।" },
+        href: "/catalog",
+        cta: { en: "View all brands", hi: "सभी ब्रांड देखें" },
+      },
+    },
   },
   { labelKey: "nav.compare", href: "/compare-electric-vehicles" },
   {
@@ -60,11 +138,12 @@ const navLinks: NavLink[] = [
   { labelKey: "nav.blog", href: "/blog" },
 ];
 
+const COL_ICON = [Car, Bike, Wrench];
+
 export default function Navbar() {
   const pathname = usePathname() || "/";
   const locale = localeFromPath(pathname);
   const L = (href: string) => {
-    // preserve query strings while prefixing the locale
     const [p, q] = href.split("?");
     return localizedHref(p, locale) + (q ? `?${q}` : "");
   };
@@ -84,7 +163,7 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
   }, [mobileOpen]);
 
-  const childLabel = (c: NavChild) => (c.labelKey ? t(c.labelKey, locale) : c.label ?? "");
+  const childLabel = (c: SimpleChild) => (c.labelKey ? t(c.labelKey, locale) : c.label ?? "");
 
   return (
     <header
@@ -110,58 +189,128 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-0.5 lg:flex">
-          {navLinks.map((link) => (
-            <li
-              key={link.labelKey}
-              className="relative"
-              onMouseEnter={() => setOpenDrop(link.children ? link.labelKey : null)}
-              onMouseLeave={() => setOpenDrop(null)}
-            >
-              {link.children ? (
-                <>
+          {navLinks.map((link) => {
+            const hasMenu = !!(link.mega || link.children);
+            return (
+              <li
+                key={link.labelKey}
+                className="relative"
+                onMouseEnter={() => setOpenDrop(hasMenu ? link.labelKey : null)}
+                onMouseLeave={() => setOpenDrop(null)}
+              >
+                {hasMenu ? (
+                  <>
+                    <Link
+                      href={L(link.href)}
+                      className="flex items-center gap-1 rounded-lg px-3 py-2 font-body text-sm text-ev-text/80 transition-colors hover:text-brand"
+                    >
+                      {t(link.labelKey, locale)}
+                      <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+                    </Link>
+
+                    {/* MEGA panel */}
+                    {link.mega && (
+                      <div
+                        className={clsx(
+                          "absolute left-0 top-full w-[min(54rem,calc(100vw-2rem))] pt-2 transition-all duration-200",
+                          openDrop === link.labelKey
+                            ? "pointer-events-auto translate-y-0 opacity-100"
+                            : "pointer-events-none -translate-y-1 opacity-0"
+                        )}
+                      >
+                        <div className="grid grid-cols-1 gap-1 overflow-hidden rounded-2xl border border-ev-border bg-ev-surface/95 p-4 shadow-card backdrop-blur-xl md:grid-cols-[repeat(3,minmax(0,1fr))_15rem]">
+                          {link.mega.cols.map((col, ci) => {
+                            const Icon = COL_ICON[ci] ?? Wrench;
+                            return (
+                              <div key={col.heading.en} className="px-2">
+                                <p className="mb-2 flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-ev-muted">
+                                  <Icon className="h-3.5 w-3.5 text-brand" />
+                                  {tx(col.heading, locale)}
+                                </p>
+                                <div className="space-y-0.5">
+                                  {col.items.map((it) => (
+                                    <Link
+                                      key={it.href + it.label.en}
+                                      href={L(it.href)}
+                                      className="block rounded-lg px-2 py-1.5 transition-colors hover:bg-brand/10"
+                                    >
+                                      <span className="block text-sm font-medium text-ev-text/90">
+                                        {tx(it.label, locale)}
+                                      </span>
+                                      {it.desc && (
+                                        <span className="block text-xs text-ev-muted">{tx(it.desc, locale)}</span>
+                                      )}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          })}
+
+                          {link.mega.promo && (
+                            <Link
+                              href={L(link.mega.promo.href)}
+                              className="group flex flex-col justify-between rounded-xl border border-brand/30 bg-brand/5 p-4 transition-colors hover:border-brand/60 hover:bg-brand/10"
+                            >
+                              <div>
+                                <BatteryCharging className="mb-2 h-5 w-5 text-brand" />
+                                <p className="font-display text-sm font-bold text-white">
+                                  {tx(link.mega.promo.title, locale)}
+                                </p>
+                                <p className="mt-1 text-xs leading-relaxed text-ev-muted">
+                                  {tx(link.mega.promo.desc, locale)}
+                                </p>
+                              </div>
+                              <span className="mt-3 inline-flex items-center gap-1 font-mono text-xs font-semibold text-brand">
+                                {tx(link.mega.promo.cta, locale)}
+                                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                              </span>
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Compact dropdown (Tools / Learn) */}
+                    {link.children && (
+                      <div
+                        className={clsx(
+                          "absolute left-0 top-full w-64 pt-2 transition-all duration-200",
+                          openDrop === link.labelKey
+                            ? "pointer-events-auto translate-y-0 opacity-100"
+                            : "pointer-events-none -translate-y-1 opacity-0"
+                        )}
+                      >
+                        <div className="overflow-hidden rounded-2xl border border-ev-border bg-ev-surface/95 p-1.5 shadow-card backdrop-blur-xl">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.href + (child.labelKey ?? child.label)}
+                              href={L(child.href)}
+                              className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-brand/10"
+                            >
+                              <span className="block text-sm font-medium text-ev-text/90">
+                                {childLabel(child)}
+                              </span>
+                              {child.desc && (
+                                <span className="block text-xs text-ev-muted">{child.desc}</span>
+                              )}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
                   <Link
                     href={L(link.href)}
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 font-body text-sm text-ev-text/80 transition-colors hover:text-brand"
+                    className="link-underline block rounded-lg px-3 py-2 font-body text-sm text-ev-text/80 transition-colors hover:text-brand"
                   >
                     {t(link.labelKey, locale)}
-                    <ChevronDown className="h-3.5 w-3.5 opacity-60" />
                   </Link>
-                  <div
-                    className={clsx(
-                      "absolute left-0 top-full w-64 pt-2 transition-all duration-200",
-                      openDrop === link.labelKey
-                        ? "pointer-events-auto translate-y-0 opacity-100"
-                        : "pointer-events-none -translate-y-1 opacity-0"
-                    )}
-                  >
-                    <div className="overflow-hidden rounded-2xl border border-ev-border bg-ev-surface/95 p-1.5 shadow-card backdrop-blur-xl">
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.href + (child.labelKey ?? child.label)}
-                          href={L(child.href)}
-                          className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-brand/10"
-                        >
-                          <span className="block text-sm font-medium text-ev-text/90">
-                            {childLabel(child)}
-                          </span>
-                          {child.desc && (
-                            <span className="block text-xs text-ev-muted">{child.desc}</span>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <Link
-                  href={L(link.href)}
-                  className="link-underline block rounded-lg px-3 py-2 font-body text-sm text-ev-text/80 transition-colors hover:text-brand"
-                >
-                  {t(link.labelKey, locale)}
-                </Link>
-              )}
-            </li>
-          ))}
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {/* Search + CTA + language */}
@@ -207,16 +356,37 @@ export default function Navbar() {
             <div key={link.labelKey}>
               <Link
                 href={L(link.href)}
-                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ev-text/90 transition-colors hover:bg-brand/10 hover:text-brand"
+                className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ev-text/90 transition-colors hover:bg-brand/10 hover:text-brand"
                 onClick={() => setMobileOpen(false)}
               >
                 {t(link.labelKey, locale)}
               </Link>
+
+              {/* mega columns flattened */}
+              {link.mega?.cols.map((col) => (
+                <div key={col.heading.en} className="mt-1">
+                  <p className="px-3 pt-2 font-mono text-[10px] uppercase tracking-wider text-ev-muted">
+                    {tx(col.heading, locale)}
+                  </p>
+                  {col.items.map((it) => (
+                    <Link
+                      key={it.href + it.label.en}
+                      href={L(it.href)}
+                      className="block py-2 pl-6 text-sm text-ev-muted transition-colors hover:text-brand"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {tx(it.label, locale)}
+                    </Link>
+                  ))}
+                </div>
+              ))}
+
+              {/* compact children */}
               {link.children?.map((child) => (
                 <Link
                   key={child.href + (child.labelKey ?? child.label)}
                   href={L(child.href)}
-                  className="block py-2 pl-7 text-sm text-ev-muted transition-colors hover:text-brand"
+                  className="block py-2 pl-6 text-sm text-ev-muted transition-colors hover:text-brand"
                   onClick={() => setMobileOpen(false)}
                 >
                   {childLabel(child)}

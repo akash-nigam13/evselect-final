@@ -230,7 +230,7 @@ export default function EvVsPetrolCostCalculatorPageHi() {
               दिशात्मक अनुमान मानें — कोई सटीक भविष्यवाणी नहीं। और गहराई में जाने के
               लिए,{" "}
               <Link
-                href={localizedHref("/catalog/all", "hi")}
+                href={localizedHref("/catalog", "hi")}
                 className="text-brand hover:underline"
               >
                 पूरा EV कैटलॉग

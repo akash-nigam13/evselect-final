@@ -20,8 +20,7 @@ const lc = (s: string) => s.toLowerCase();
 /** Static tool / section pages, bilingual. */
 const PAGES: SearchItem[] = [
   { group: "page", title: "Compare EVs", titleHi: "EVs की तुलना करें", sub: "Side-by-side tool", subHi: "साथ-साथ टूल", path: "/compare-electric-vehicles", keywords: "compare ev tool तुलना साथ", weight: 9 },
-  { group: "page", title: "All electric vehicles", titleHi: "सभी इलेक्ट्रिक वाहन", sub: "Full catalogue with filters", subHi: "फ़िल्टर के साथ कैटलॉग", path: "/catalog/all", keywords: "all catalog catalogue vehicles filter सभी कैटलॉग", weight: 7 },
-  { group: "page", title: "Browse by brand", titleHi: "ब्रांड से ब्राउज़ करें", sub: "Every EV brand", subHi: "हर EV ब्रांड", path: "/catalog", keywords: "brands browse ब्रांड", weight: 6 },
+  { group: "page", title: "EV Catalog — all models & brands", titleHi: "EV कैटलॉग — सभी मॉडल और ब्रांड", sub: "Full filterable catalogue + brand directory", subHi: "फ़िल्टर वाला कैटलॉग + ब्रांड डायरेक्टरी", path: "/catalog", keywords: "all catalog catalogue vehicles filter brands browse सभी कैटलॉग ब्रांड", weight: 8 },
   { group: "page", title: "Electric Cars in India", titleHi: "भारत में इलेक्ट्रिक कारें", sub: "All electric cars", subHi: "सभी इलेक्ट्रिक कारें", path: "/catalog/electric-cars", keywords: "electric cars ev cars इलेक्ट्रिक कार", weight: 7 },
   { group: "page", title: "Electric Scooters in India", titleHi: "भारत में इलेक्ट्रिक स्कूटर", sub: "All electric scooters", subHi: "सभी इलेक्ट्रिक स्कूटर", path: "/catalog/electric-scooters", keywords: "electric scooters ev scooter इलेक्ट्रिक स्कूटर", weight: 7 },
   { group: "page", title: "Electric Bikes in India", titleHi: "भारत में इलेक्ट्रिक बाइक", sub: "All electric bikes", subHi: "सभी इलेक्ट्रिक बाइक", path: "/catalog/electric-bikes", keywords: "electric bikes motorcycles ev bike इलेक्ट्रिक बाइक", weight: 7 },

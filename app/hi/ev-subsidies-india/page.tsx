@@ -253,7 +253,7 @@ export default function EvSubsidiesPage() {
               जानना चाहते हैं कि प्रोत्साहन किसी खास कार की असली लागत को कैसे बदलते हैं? इस्तेमाल करें{" "}
               <Link href={localizedHref("/ev-calculators", "hi")}>कॉस्ट और सेविंग्स कैलकुलेटर</Link>, मॉडलों को आमने-सामने रखें{" "}
               <Link href={localizedHref("/compare-electric-vehicles", "hi")}>कम्पेयर टूल</Link> में, या ब्राउज़ करें{" "}
-              <Link href={localizedHref("/catalog/all", "hi")}>पूरा EV कैटलॉग</Link>। गहरी नीति-पृष्ठभूमि के लिए पढ़ें{" "}
+              <Link href={localizedHref("/catalog", "hi")}>पूरा EV कैटलॉग</Link>। गहरी नीति-पृष्ठभूमि के लिए पढ़ें{" "}
               <Link href={localizedHref("/blog/ev-subsidies-road-tax-by-state-india-2026", "hi")}>राज्यवार EV सब्सिडी, रोड टैक्स और प्रोत्साहन</Link>।
               इसे व्यावसायिक रूप से लगाने की योजना है? देखें हमारी गाइड{" "}
               <Link href={localizedHref("/ev-charging-station-setup-india", "hi")}>भारत में EV चार्जिंग स्टेशन लगाने पर</Link>।

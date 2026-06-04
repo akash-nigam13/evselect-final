@@ -76,7 +76,7 @@ export default function ComparePage() {
               (and optionally a third), then scroll the side-by-side EV specs table. It works
               across electric cars, scooters and bikes, so you can line up direct rivals or weigh
               up two very different options. Want a wider shortlist first? Browse the{" "}
-              <Link href="/catalog/all">full EV catalog</Link>, work out the monthly cost with our{" "}
+              <Link href="/catalog">full EV catalog</Link>, work out the monthly cost with our{" "}
               <Link href="/ev-calculators/ev-emi-calculator">EV EMI calculator</Link>, or check
               what you can save through{" "}
               <Link href="/ev-subsidies-india">EV subsidies in India</Link>.

@@ -24,6 +24,9 @@ const nextConfig = {
       { source: "/hi/learn", destination: "/hi/ev-guides", permanent: true },
       { source: "/news", destination: "/ev-news", permanent: true },
       { source: "/hi/news", destination: "/hi/ev-news", permanent: true },
+      // Consolidated catalog: /catalog/all merged into /catalog (308).
+      { source: "/catalog/all", destination: "/catalog", permanent: true },
+      { source: "/hi/catalog/all", destination: "/hi/catalog", permanent: true },
       // Old category query URLs -> dedicated category pages (308).
       { source: "/catalog", has: [{ type: "query", key: "type", value: "car" }], destination: "/catalog/electric-cars", permanent: true },
       { source: "/catalog", has: [{ type: "query", key: "type", value: "scooter" }], destination: "/catalog/electric-scooters", permanent: true },

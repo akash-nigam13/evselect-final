@@ -79,7 +79,7 @@ export default function HiComparePage() {
               <strong>तुलना टूल कैसे इस्तेमाल करें:</strong> पहला EV चुनें, दूसरा (और चाहें तो तीसरा)
               जोड़ें, फिर साथ-साथ स्पेक्स टेबल देखें। यह इलेक्ट्रिक कार, स्कूटर और बाइक — सभी पर काम
               करता है। पहले बड़ी सूची देखना चाहते हैं? पूरा{" "}
-              <Link href={localizedHref("/catalog/all", "hi")}>EV कैटलॉग</Link> ब्राउज़ करें, हमारे{" "}
+              <Link href={localizedHref("/catalog", "hi")}>EV कैटलॉग</Link> ब्राउज़ करें, हमारे{" "}
               <Link href={localizedHref("/ev-calculators/ev-emi-calculator", "hi")}>
                 EV EMI कैलकुलेटर
               </Link>{" "}

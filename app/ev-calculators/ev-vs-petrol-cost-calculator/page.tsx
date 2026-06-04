@@ -216,7 +216,7 @@ export default function EvVsPetrolCostCalculatorPage() {
               expensive public DC fast chargers would raise your real per-km cost.
               Treat the output as a solid, directional estimate to frame your
               decision — not a precise forecast. To go deeper, browse the{" "}
-              <Link href="/catalog/all" className="text-brand hover:underline">
+              <Link href="/catalog" className="text-brand hover:underline">
                 full EV catalogue
               </Link>{" "}
               or line up specific models in the{" "}

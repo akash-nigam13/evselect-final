@@ -259,7 +259,7 @@ export default function ChargingStationSetupPage() {
             <h2>संबंधित</h2>
             <p>
               देखें कि आपके भावी ग्राहक कौन सी EVs चला रहे हैं —{" "}
-              <Link href={localizedHref("/catalog/all", "hi")}>EV कैटलॉग</Link> में, चार्जिंग की बुनियादी बातें{" "}
+              <Link href={localizedHref("/catalog", "hi")}>EV कैटलॉग</Link> में, चार्जिंग की बुनियादी बातें{" "}
               <Link href={localizedHref("/blog/ev-charging-infrastructure-india", "hi")}>भारत की चार्जिंग इन्फ्रास्ट्रक्चर गाइड</Link>{" "}
               में सीखें और नवीनतम नेटवर्क आँकड़े{" "}
               <Link href={localizedHref("/blog/india-ev-charging-network-2026", "hi")}>भारत का चार्जिंग नेटवर्क 30,000 स्टेशनों के करीब</Link> में पढ़ें।

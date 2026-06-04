@@ -170,7 +170,7 @@ export default function HindiHomePage() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             {[
-              { href: "/catalog/all", label: "सभी EVs देखें" },
+              { href: "/catalog", label: "सभी EVs देखें" },
               { href: "/compare-electric-vehicles", label: "EVs की तुलना करें" },
               { href: "/ev-calculators/ev-emi-calculator", label: "EV EMI कैलकुलेटर" },
               { href: "/ev-subsidies-india", label: "भारत में EV सब्सिडी" },

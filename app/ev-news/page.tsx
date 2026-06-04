@@ -107,7 +107,7 @@ export default function NewsPage() {
               scooters and bikes this year. For deeper explainers and buying
               advice, read our{" "}
               <Link href="/blog">EV blog and guides</Link>, browse every model in
-              the <Link href="/catalog/all">full EV catalog</Link>, or check what
+              the <Link href="/catalog">full EV catalog</Link>, or check what
               you can save with the latest{" "}
               <Link href="/ev-subsidies-india">EV subsidies in India</Link>.
             </p>

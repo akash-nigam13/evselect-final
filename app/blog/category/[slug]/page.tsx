@@ -63,7 +63,7 @@ export default function BlogCategoryPage({ params }: { params: { slug: string } 
                 a smarter buying decision — with up-to-date context on prices,
                 range, charging and incentives in India. Browse more in our{" "}
                 <Link href="/blog">full EV blog</Link> or compare specs across the{" "}
-                <Link href="/catalog/all">complete EV catalog</Link>.
+                <Link href="/catalog">complete EV catalog</Link>.
               </p>
             </div>
           </div>

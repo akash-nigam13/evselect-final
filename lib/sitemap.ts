@@ -57,7 +57,9 @@ export const SITEMAP_FILES = [
 // automatically, and only real files are listed (never a 404).
 const APP_DIR = join(process.cwd(), "app");
 const PAGE_RE = /^page\.(t|j)sx?$/;
-const NOINDEX = new Set<string>(["/search"]);
+// /catalog/all (+ /hi) now 308-redirect to /catalog — keep their leftover
+// route files out of the sitemap.
+const NOINDEX = new Set<string>(["/search", "/catalog/all", "/hi/catalog/all"]);
 
 function discoverRoutes(): string[] {
   const out: string[] = [];
@@ -131,7 +133,6 @@ export function otherEntries(): UrlEntry[] {
   const curated: UrlEntry[] = [
     { path: "/", lastmod: TODAY, changefreq: "weekly", priority: 1.0 },
     { path: "/catalog", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
-    { path: "/catalog/all", lastmod: TODAY, changefreq: "weekly", priority: 0.8 },
     ...BRANDS.map((b) => ({
       path: `/catalog/brand/${b.slug}`,
       lastmod: TODAY,
