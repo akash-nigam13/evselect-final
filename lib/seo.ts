@@ -217,6 +217,7 @@ export function blogPostingSchema(opts: {
   description: string;
   path: string;
   datePublished?: string;
+  dateModified?: string;
   section?: string;
   image?: string;
 }) {
@@ -228,7 +229,7 @@ export function blogPostingSchema(opts: {
     mainEntityOfPage: { "@type": "WebPage", "@id": abs(opts.path) },
     url: abs(opts.path),
     image: opts.image ?? SITE.ogImage,
-    ...(opts.datePublished ? { datePublished: toISODate(opts.datePublished), dateModified: toISODate(opts.datePublished) } : {}),
+    ...(opts.datePublished ? { datePublished: toISODate(opts.datePublished), dateModified: toISODate(opts.dateModified ?? opts.datePublished) } : {}),
     ...(opts.section ? { articleSection: opts.section } : {}),
     author: { "@type": "Organization", name: SITE.author, url: SITE.url },
     publisher: {
@@ -258,6 +259,24 @@ export function articleSchema(opts: {
   section?: string;
 }) {
   return { ...blogPostingSchema(opts), "@type": "Article" };
+}
+
+/** NewsArticle schema for time-sensitive news posts (price cuts, launches, sales). */
+export function newsArticleSchema(opts: {
+  title: string;
+  description: string;
+  path: string;
+  datePublished?: string;
+  dateModified?: string;
+  section?: string;
+  image?: string;
+}) {
+  const base = blogPostingSchema(opts);
+  return {
+    ...base,
+    "@type": "NewsArticle",
+    ...(opts.dateModified ? { dateModified: toISODate(opts.dateModified) } : {}),
+  };
 }
 
 // ── FAQ ──────────────────────────────────────────────────────────

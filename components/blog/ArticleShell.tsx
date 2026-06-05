@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import ToolsCTA from "@/components/ToolsCTA";
 import { getPost, getCategory, relatedPosts } from "@/lib/blog-posts";
-import { blogPostingSchema, SITE } from "@/lib/seo";
+import { blogPostingSchema, newsArticleSchema, SITE } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
 
 /**
@@ -206,11 +206,12 @@ export default function ArticleShell({
       </main>
       <Footer locale={locale} />
       <JsonLd
-        data={blogPostingSchema({
+        data={(post.news ? newsArticleSchema : blogPostingSchema)({
           title,
           description: excerpt,
           path: L(`/blog/${post.slug}`),
           datePublished: post.date,
+          dateModified: post.date,
           section: post.category,
           image: `${SITE.url}/blog/${post.slug}.png`,
         })}
