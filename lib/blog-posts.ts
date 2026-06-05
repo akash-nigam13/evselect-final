@@ -192,6 +192,24 @@ export const POSTS: BlogPost[] = [
 
   // ── News (May 2026) ──────────────────────────────────────────
   {
+    slug: "tata-sierra-ev-launch-2026",
+    title: "Tata Sierra EV: Launch Timeline, Price & Range",
+    subtitle: "What we know about India's most-awaited electric SUV",
+    excerpt:
+      "Tata's iconic Sierra returns as an electric SUV on the Gen-2 Acti.ev platform — with an expected 55–65 kWh battery, up to ~500 km range and RWD/AWD options. Here's everything reported so far.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 6, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["india-ev-sales-fy2026", "maruti-e-vitara-first-ev-launch", "tesla-model-y-price-cut-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "Tata Sierra EV: लॉन्च टाइमलाइन, कीमत और रेंज",
+    hiSubtitle: "भारत की सबसे प्रतीक्षित इलेक्ट्रिक SUV के बारे में अब तक क्या पता है",
+    hiExcerpt:
+      "Tata की प्रतिष्ठित Sierra अब Gen-2 Acti.ev प्लेटफ़ॉर्म पर इलेक्ट्रिक SUV के रूप में लौट रही है — अपेक्षित 55–65 kWh बैटरी, ~500 km तक रेंज और RWD/AWD विकल्पों के साथ। अब तक रिपोर्ट की गई हर जानकारी यहाँ है।",
+  },
+  {
     slug: "india-ev-sales-fy2026",
     title: "India EV Sales Cross 2.45 Million in FY2026",
     subtitle: "What the record numbers mean for buyers",
