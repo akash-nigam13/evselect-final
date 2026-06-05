@@ -151,6 +151,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDrop, setOpenDrop] = useState<string | null>(null);
+  const [mobileSection, setMobileSection] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -161,6 +162,7 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (!mobileOpen) setMobileSection(null);
   }, [mobileOpen]);
 
   const childLabel = (c: SimpleChild) => (c.labelKey ? t(c.labelKey, locale) : c.label ?? "");
@@ -352,48 +354,85 @@ export default function Navbar() {
           <div className="pb-3">
             <SiteSearch onNavigate={() => setMobileOpen(false)} />
           </div>
-          {navLinks.map((link) => (
-            <div key={link.labelKey}>
-              <Link
-                href={L(link.href)}
-                className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ev-text/90 transition-colors hover:bg-brand/10 hover:text-brand"
-                onClick={() => setMobileOpen(false)}
-              >
-                {t(link.labelKey, locale)}
-              </Link>
-
-              {/* mega columns flattened */}
-              {link.mega?.cols.map((col) => (
-                <div key={col.heading.en} className="mt-1">
-                  <p className="px-3 pt-2 font-mono text-[10px] uppercase tracking-wider text-ev-muted">
-                    {tx(col.heading, locale)}
-                  </p>
-                  {col.items.map((it) => (
-                    <Link
-                      key={it.href + it.label.en}
-                      href={L(it.href)}
-                      className="block py-2 pl-6 text-sm text-ev-muted transition-colors hover:text-brand"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {tx(it.label, locale)}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-
-              {/* compact children */}
-              {link.children?.map((child) => (
+          {navLinks.map((link) => {
+            const hasMenu = !!(link.mega || link.children);
+            const expanded = mobileSection === link.labelKey;
+            if (!hasMenu) {
+              return (
                 <Link
-                  key={child.href + (child.labelKey ?? child.label)}
-                  href={L(child.href)}
-                  className="block py-2 pl-6 text-sm text-ev-muted transition-colors hover:text-brand"
+                  key={link.labelKey}
+                  href={L(link.href)}
+                  className="block rounded-lg px-3 py-3 text-sm font-semibold text-ev-text/90 transition-colors hover:bg-brand/10 hover:text-brand"
                   onClick={() => setMobileOpen(false)}
                 >
-                  {childLabel(child)}
+                  {t(link.labelKey, locale)}
                 </Link>
-              ))}
-            </div>
-          ))}
+              );
+            }
+            return (
+              <div key={link.labelKey} className="border-b border-ev-border/30 last:border-0">
+                {/* accordion header: label navigates, chevron toggles */}
+                <div className="flex items-center">
+                  <Link
+                    href={L(link.href)}
+                    className="flex-1 rounded-lg px-3 py-3 text-sm font-semibold text-ev-text/90 transition-colors hover:text-brand"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {t(link.labelKey, locale)}
+                  </Link>
+                  <button
+                    type="button"
+                    aria-label={`Toggle ${t(link.labelKey, locale)}`}
+                    aria-expanded={expanded}
+                    onClick={() => setMobileSection(expanded ? null : link.labelKey)}
+                    className="flex h-11 w-11 items-center justify-center text-ev-muted transition-colors hover:text-brand"
+                  >
+                    <ChevronDown
+                      className={clsx("h-4 w-4 transition-transform duration-200", expanded && "rotate-180")}
+                    />
+                  </button>
+                </div>
+
+                {/* expandable panel */}
+                <div
+                  className={clsx(
+                    "overflow-hidden transition-all duration-300",
+                    expanded ? "max-h-[640px]" : "max-h-0"
+                  )}
+                >
+                  <div className="pb-2">
+                    {link.mega?.cols.map((col) => (
+                      <div key={col.heading.en} className="mt-1">
+                        <p className="px-3 pt-2 font-mono text-[10px] uppercase tracking-wider text-ev-muted">
+                          {tx(col.heading, locale)}
+                        </p>
+                        {col.items.map((it) => (
+                          <Link
+                            key={it.href + it.label.en}
+                            href={L(it.href)}
+                            className="block py-2 pl-6 text-sm text-ev-muted transition-colors hover:text-brand"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {tx(it.label, locale)}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                    {link.children?.map((child) => (
+                      <Link
+                        key={child.href + (child.labelKey ?? child.label)}
+                        href={L(child.href)}
+                        className="block py-2 pl-6 text-sm text-ev-muted transition-colors hover:text-brand"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {childLabel(child)}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
           <Link
             href={L("/compare-electric-vehicles")}
             className="mt-3 block rounded-xl bg-brand-gradient px-4 py-3 text-center font-display text-sm font-semibold text-ev-bg"
