@@ -190,6 +190,24 @@ export const POSTS: BlogPost[] = [
       "केंद्र की PM E-Drive प्रोत्साहन योजनाएँ, राज्य सब्सिडी और रोड-टैक्स छूट किसी EV की ऑन-रोड कीमत को लाखों रुपये तक बदल सकती हैं। यहाँ जानिए भारत में 2026 का प्रोत्साहन परिदृश्य कैसे काम करता है।",
   },
 
+  {
+    slug: "electric-car-vs-hybrid-india",
+    title: "Electric Car vs Hybrid Car in India: Which Should You Buy?",
+    subtitle: "EVs, strong hybrids and PHEVs — honestly compared",
+    excerpt:
+      "An electric car and a hybrid solve different problems. This guide breaks down mild, strong and plug-in hybrids against pure EVs on cost, charging, tax and real-world fit for Indian buyers.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 6, 2026",
+    accent: "#26E0C4",
+    related: ["how-to-choose-first-ev-india", "petrol-vs-electric-5-year-cost-india", "home-ev-charging-cost-india", "ev-subsidies-road-tax-by-state-india-2026"],
+    hiTitle: "भारत में इलेक्ट्रिक कार बनाम हाइब्रिड कार: कौन-सी खरीदें?",
+    hiSubtitle: "EV, स्ट्रॉन्ग हाइब्रिड और PHEV — ईमानदारी से तुलना",
+    hiExcerpt:
+      "एक इलेक्ट्रिक कार और एक हाइब्रिड अलग-अलग समस्याएँ हल करते हैं। यह गाइड माइल्ड, स्ट्रॉन्ग और प्लग-इन हाइब्रिड की तुलना शुद्ध EV से — लागत, चार्जिंग, टैक्स और भारतीय खरीदार के लिए असली फिट के आधार पर — करती है।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
@@ -280,6 +298,44 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "इम्पोर्ट ड्यूटी इसे अब भी प्रीमियम क्यों रखती है",
     hiExcerpt:
       "Tesla ने मई 2026 में Model Y की भारत कीमत लगभग ₹9 लाख घटाई। हम नई कीमत, इम्पोर्ट-ड्यूटी की कहानी, और यह घरेलू EVs के मुकाबले कैसी टिकती है — सब समझाते हैं।",
+  },
+
+  // ── News (June 2026) ─────────────────────────────────────────
+  {
+    slug: "electric-two-wheeler-sales-record-may-2026",
+    title: "Electric Two-Wheeler Sales Near Record High in May 2026",
+    subtitle: "TVS leads, Bajaj and Ather surge as petrol prices bite",
+    excerpt:
+      "India retailed 1.7 lakh electric two-wheelers in May 2026 — up 63% year-on-year and the segment's second-best month ever. TVS led, with Bajaj, Ather and Hero Vida all posting big gains. Here's the full breakdown.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 6, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tata-ev-sales-cross-10000-may-2026", "top-5-electric-scooters-india-2026", "ev-subsidies-road-tax-by-state-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "मई 2026 में इलेक्ट्रिक टू-व्हीलर बिक्री रिकॉर्ड के करीब",
+    hiSubtitle: "TVS आगे, पेट्रोल की कीमतें बढ़ने से Bajaj और Ather में उछाल",
+    hiExcerpt:
+      "मई 2026 में भारत में 1.7 लाख इलेक्ट्रिक टू-व्हीलर बिके — सालाना 63% की बढ़त और सेगमेंट का अब तक का दूसरा सबसे अच्छा महीना। TVS सबसे आगे रहा, जबकि Bajaj, Ather और Hero Vida ने बड़ी बढ़त दर्ज की। यहाँ पूरा ब्योरा है।",
+  },
+  {
+    slug: "tata-ev-sales-cross-10000-may-2026",
+    title: "Tata EV Sales Cross 10,000 in a Month for the First Time",
+    subtitle: "Record May as Tata edges past Mahindra in the sales race",
+    excerpt:
+      "Tata Motors sold over 10,500 EVs in May 2026 — its first month above 10,000 — as India's electric-car market jumped on the back of rising petrol, diesel and CNG prices. Here's what the record numbers mean.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 6, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["electric-two-wheeler-sales-record-may-2026", "india-ev-sales-fy2026", "tata-sierra-ev-launch-2026", "petrol-vs-electric-5-year-cost-india"],
+    hiTitle: "Tata की EV बिक्री पहली बार एक महीने में 10,000 के पार",
+    hiSubtitle: "रिकॉर्ड मई, Tata बिक्री की दौड़ में Mahindra से आगे",
+    hiExcerpt:
+      "Tata Motors ने मई 2026 में 10,500 से अधिक EV बेचीं — पहली बार किसी महीने में 10,000 से ऊपर — क्योंकि पेट्रोल, डीज़ल और CNG की बढ़ती कीमतों ने भारत के इलेक्ट्रिक-कार बाज़ार को गति दी। जानिए रिकॉर्ड आंकड़ों का मतलब।",
   },
 ];
 
