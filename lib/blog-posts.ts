@@ -337,6 +337,42 @@ export const POSTS: BlogPost[] = [
     hiExcerpt:
       "Tata Motors ने मई 2026 में 10,500 से अधिक EV बेचीं — पहली बार किसी महीने में 10,000 से ऊपर — क्योंकि पेट्रोल, डीज़ल और CNG की बढ़ती कीमतों ने भारत के इलेक्ट्रिक-कार बाज़ार को गति दी। जानिए रिकॉर्ड आंकड़ों का मतलब।",
   },
+  {
+    slug: "tata-ev-discounts-june-2026",
+    title: "Tata Offers Up to ₹3.35 Lakh Off on Its EVs in June 2026",
+    subtitle: "Harrier EV leads with benefits of up to ₹2.75 lakh",
+    excerpt:
+      "Tata Motors is running its biggest EV offers of the year, with discounts of up to ₹3.35 lakh across the Nexon, Punch, Tiago, Curvv and Harrier EVs in June 2026. Here's the model-by-model breakdown and what to check before you buy.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 7, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tata-ev-sales-cross-10000-may-2026", "petrol-vs-electric-5-year-cost-india", "ev-subsidies-road-tax-by-state-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "Tata जून 2026 में अपनी EVs पर ₹3.35 लाख तक की छूट दे रही है",
+    hiSubtitle: "Harrier EV सबसे आगे, ₹2.75 लाख तक के फ़ायदे",
+    hiExcerpt:
+      "Tata Motors साल की अपनी सबसे बड़ी EV पेशकश चला रही है, जिसमें जून 2026 में Nexon, Punch, Tiago, Curvv और Harrier EV पर ₹3.35 लाख तक की छूट है। यहाँ मॉडल-दर-मॉडल ब्योरा और खरीदने से पहले जाँचने लायक बातें हैं।",
+  },
+  {
+    slug: "ultraviolette-tesseract-delayed-2027",
+    title: "Ultraviolette Tesseract Pushed to January 2027",
+    subtitle: "Early bookings keep the ₹1.45 lakh launch price",
+    excerpt:
+      "Ultraviolette has delayed its radar-equipped Tesseract electric scooter to January 2027 — its third slip since the 2025 unveil — but has promised to honour the ₹1.45 lakh introductory price for early reservation holders. Here's what changed and why.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 7, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["top-5-electric-scooters-india-2026", "electric-two-wheeler-sales-record-may-2026", "how-to-choose-first-ev-india", "real-world-range-vs-arai-india"],
+    hiTitle: "Ultraviolette Tesseract जनवरी 2027 तक टली",
+    hiSubtitle: "शुरुआती बुकिंग पर ₹1.45 लाख की लॉन्च कीमत बरकरार",
+    hiExcerpt:
+      "Ultraviolette ने अपनी रडार-युक्त Tesseract इलेक्ट्रिक स्कूटर को जनवरी 2027 तक टाल दिया है — 2025 की पहली झलक के बाद यह तीसरी देरी है — लेकिन शुरुआती बुकिंग करने वालों के लिए ₹1.45 लाख की इंट्रोडक्टरी कीमत बनाए रखने का वादा किया है। जानिए क्या बदला और क्यों।",
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────
