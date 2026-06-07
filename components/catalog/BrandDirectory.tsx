@@ -17,26 +17,28 @@ const CAT_TABS: { key: EVCategory | "all"; tk: string }[] = [
   { key: "motorcycle", tk: "cat.bikes" },
 ];
 
-export default function BrandDirectory() {
+export default function BrandDirectory({ limit }: { limit?: number } = {}) {
   const locale = localeFromPath(usePathname() || "/");
   const [category, setCategory] = useState<EVCategory | "all">("all");
   const [query, setQuery] = useState("");
+  const compact = typeof limit === "number"; // homepage "top brands" teaser
 
   const brands = useMemo(() => {
-    return BRANDS.filter((b) => {
+    const list = BRANDS.filter((b) => {
       if (category !== "all" && !b.categories.includes(category)) return false;
       if (query.trim() && !b.name.toLowerCase().includes(query.toLowerCase())) return false;
       return true;
-    })
-      .map((b) => ({
-        ...b,
-        shown:
-          category === "all"
-            ? b.count
-            : byBrandSlug(b.slug).filter((e) => e.category === category).length,
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name));
-  }, [category, query]);
+    }).map((b) => ({
+      ...b,
+      shown:
+        category === "all"
+          ? b.count
+          : byBrandSlug(b.slug).filter((e) => e.category === category).length,
+    }));
+    // Compact mode: show the TOP brands (most models first). Full mode: A–Z.
+    list.sort((a, b) => (compact ? b.shown - a.shown || a.name.localeCompare(b.name) : a.name.localeCompare(b.name)));
+    return compact ? list.slice(0, limit) : list;
+  }, [category, query, compact, limit]);
 
   return (
     <div>
@@ -58,15 +60,17 @@ export default function BrandDirectory() {
             </button>
           ))}
         </div>
-        <div className="ml-auto flex min-w-[180px] items-center gap-2 rounded-xl border border-ev-border bg-ev-card px-3">
-          <Search className="h-4 w-4 text-ev-muted" />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={t("brand.search", locale)}
-            className="w-full bg-transparent py-2.5 text-sm text-ev-text outline-none placeholder:text-ev-muted"
-          />
-        </div>
+        {!compact && (
+          <div className="ml-auto flex min-w-[180px] items-center gap-2 rounded-xl border border-ev-border bg-ev-card px-3">
+            <Search className="h-4 w-4 text-ev-muted" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={t("brand.search", locale)}
+              className="w-full bg-transparent py-2.5 text-sm text-ev-text outline-none placeholder:text-ev-muted"
+            />
+          </div>
+        )}
       </div>
 
       {/* Brand grid with logos */}

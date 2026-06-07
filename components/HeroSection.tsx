@@ -29,7 +29,7 @@ export function heroEvs(): HeroEv[] {
     }));
 }
 
-const brands = Array.from(new Set(EVS.map((e) => e.brand)));
+const brandCount = new Set(EVS.map((e) => e.brand)).size;
 
 const quickLinks = [
   { label: "Cars", href: "/catalog/electric-cars", icon: Car },
@@ -109,7 +109,7 @@ export default function HeroSection() {
           <div className="grid max-w-xl grid-cols-3 gap-6 animate-fade-up animate-delay-500">
             {[
               { to: EVS.length, suffix: "", label: "EV models" },
-              { to: brands.length, suffix: "+", label: "Brands" },
+              { to: brandCount, suffix: "+", label: "Brands" },
               { to: 3, suffix: "", label: "Categories" },
             ].map((s) => (
               <div key={s.label}>
@@ -124,20 +124,6 @@ export default function HeroSection() {
 
         {/* Cursor-reactive floating EV showcase */}
         <HeroShowcase evs={heroEvs()} />
-      </div>
-
-      {/* Brand marquee */}
-      <div className="absolute bottom-0 inset-x-0 overflow-hidden border-t border-ev-border/40 bg-ev-bg/60 py-4 backdrop-blur">
-        <div className="flex w-max animate-marquee gap-10 whitespace-nowrap">
-          {[...brands, ...brands].map((b, i) => (
-            <span
-              key={`${b}-${i}`}
-              className="font-display text-sm font-medium text-ev-muted/50"
-            >
-              {b}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );

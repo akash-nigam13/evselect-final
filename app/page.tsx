@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import CategoryGrid from "@/components/CategoryGrid";
+import BrandDirectory from "@/components/catalog/BrandDirectory";
+import SectionHeading from "@/components/ui/SectionHeading";
 import FeaturedVehicles from "@/components/FeaturedVehicles";
 import CompareTool from "@/components/CompareTool";
 import BatteryTeaser from "@/components/BatteryTeaser";
@@ -27,7 +30,27 @@ export default function HomePage() {
         {/* 1. Hero */}
         <HeroSection />
 
-        {/* 2. Categories */}
+        {/* 2. Browse by brand — top brands, logo grid + vehicle-type pills */}
+        <section className="mx-auto max-w-7xl px-4 pb-8 pt-20 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Browse by brand"
+            title={<>Top <span className="text-gradient-brand">EV brands</span> in India</>}
+            subtitle="Filter by vehicle type, then open any brand to see its full lineup, prices and specs."
+          />
+          <div className="mt-12">
+            <BrandDirectory limit={12} />
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/brand"
+              className="inline-flex items-center gap-2 rounded-xl border border-ev-border bg-ev-card px-5 py-3 font-display text-sm font-medium text-ev-text/85 transition-colors hover:border-brand/40 hover:text-brand"
+            >
+              View all EV brands <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+
+        {/* 3. Categories */}
         <CategoryGrid />
 
         {/* Ad — between categories and featured */}
