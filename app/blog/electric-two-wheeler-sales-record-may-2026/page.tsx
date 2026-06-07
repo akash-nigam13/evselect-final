@@ -47,7 +47,7 @@ export default function Page() {
         <strong>TVS Motor</strong> led the month with about{" "}
         <strong>42,415 units</strong> (up 64% year-on-year), giving it roughly a
         quarter of the market.{" "}
-        <Link href="/catalog/brand/tvs">TVS</Link> was followed closely by{" "}
+        <Link href="/brand/tvs">TVS</Link> was followed closely by{" "}
         <strong>Bajaj Auto</strong>, whose Chetak range sold around{" "}
         <strong>39,142 units</strong> (up 73%) for a ~23% share. <strong>Ather
         Energy</strong> roughly doubled its volumes year-on-year to about{" "}

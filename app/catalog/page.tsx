@@ -178,7 +178,7 @@ export default function CatalogPage() {
             "/catalog"
           ),
           itemListSchema(
-            BRANDS.map((b) => ({ name: b.name, path: `/catalog/brand/${b.slug}` }))
+            BRANDS.map((b) => ({ name: b.name, path: `/brand/${b.slug}` }))
           ),
           faqPageSchema(faqs),
         ]}

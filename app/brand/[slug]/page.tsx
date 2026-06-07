@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title: `${brand.name} Electric Vehicles — Models, Specs & Prices`,
     description: `Explore all ${brand.count} ${brand.name} electric vehicles in India. Compare range, battery, price and specs across the ${brand.name} EV lineup.`,
-    alternates: altsFor(`/catalog/brand/${brand.slug}`, "en"),
+    alternates: altsFor(`/brand/${brand.slug}`, "en"),
   };
 }
 

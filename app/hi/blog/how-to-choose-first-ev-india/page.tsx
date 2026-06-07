@@ -144,7 +144,7 @@ export default function Page() {
         </Link>{" "}
         ठीक इसलिए लोकप्रिय पहली EVs बन गए हैं क्योंकि वे इन बुनियादी बातों में अच्छा संतुलन बनाते हैं,
         और{" "}
-        <Link href={localizedHref("/catalog/brand/tata", "hi")}>Tata की लाइनअप</Link> जैसे ब्रांड पेज
+        <Link href={localizedHref("/brand/tata", "hi")}>Tata की लाइनअप</Link> जैसे ब्रांड पेज
         आपको पूरा परिवार एक नज़र में दिखा देते हैं।
       </p>
 

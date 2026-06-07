@@ -33,9 +33,9 @@ export default function Page() {
         FY2026 में कथित तौर पर करीब 14 लाख यूनिट बेचीं, जो साल-दर-साल करीब 22% ऊपर है, और वॉल्यूम के
         हिसाब से पूरे EV बाज़ार का करीब 57% हिस्सा रहीं। वह अकेला खंड हर इलेक्ट्रिक कार, वैन और ट्रक को
         मिलाकर भी ज़्यादा बेचता है। अगर आप{" "}
-        <Link href={localizedHref("/catalog/brand/ola", "hi")}>Ola</Link>,{" "}
-        <Link href={localizedHref("/catalog/brand/ather", "hi")}>Ather</Link> और{" "}
-        <Link href={localizedHref("/catalog/brand/tvs", "hi")}>TVS</Link> के स्कूटरों को भारतीय सड़कों पर एक
+        <Link href={localizedHref("/brand/ola", "hi")}>Ola</Link>,{" "}
+        <Link href={localizedHref("/brand/ather", "hi")}>Ather</Link> और{" "}
+        <Link href={localizedHref("/brand/tvs", "hi")}>TVS</Link> के स्कूटरों को भारतीय सड़कों पर एक
         आम नज़ारा बनते देख रहे हैं, तो डेटा वही पुष्टि करता है जो आपकी आँखें पहले ही बता चुकी थीं।
       </p>
       <p>
@@ -69,12 +69,12 @@ export default function Page() {
       <h2>Tata अब भी आगे, पर बढ़त सिकुड़ रही है</h2>
       <p>
         सालों तक भारत में इलेक्ट्रिक-कार की चर्चा एक ही नाम से शुरू और खत्म होती थी।{" "}
-        <Link href={localizedHref("/catalog/brand/tata", "hi")}>Tata</Link> FY2026 में इलेक्ट्रिक यात्री वाहनों की नंबर-एक
+        <Link href={localizedHref("/brand/tata", "hi")}>Tata</Link> FY2026 में इलेक्ट्रिक यात्री वाहनों की नंबर-एक
         विक्रेता बनी रही, पर उस खंड में उसका हिस्सा कथित तौर पर करीब 53% से घटकर करीब 39% रह गया क्योंकि
         प्रतिद्वंद्वी भीड़ में घुस आए। यह Tata के लड़खड़ाने की कहानी नहीं, बल्कि बाज़ार के पकड़ बनाने की
-        है: <Link href={localizedHref("/catalog/brand/mahindra", "hi")}>Mahindra</Link>,{" "}
-        <Link href={localizedHref("/catalog/brand/mg", "hi")}>MG</Link>, JSW और{" "}
-        <Link href={localizedHref("/catalog/brand/maruti-suzuki", "hi")}>Maruti Suzuki</Link> सभी ने साल के दौरान
+        है: <Link href={localizedHref("/brand/mahindra", "hi")}>Mahindra</Link>,{" "}
+        <Link href={localizedHref("/brand/mg", "hi")}>MG</Link>, JSW और{" "}
+        <Link href={localizedHref("/brand/maruti-suzuki", "hi")}>Maruti Suzuki</Link> सभी ने साल के दौरान
         अपनी इलेक्ट्रिक लाइन-अप का विस्तार किया।
       </p>
       <p>

@@ -43,7 +43,7 @@ export default function Page() {
       <p>
         एक साल पहले की तुलना में लीडरबोर्ड में बड़ा फेरबदल हुआ। <strong>TVS Motor</strong> लगभग{" "}
         <strong>42,415 यूनिट</strong> (सालाना 64% ऊपर) के साथ महीने में सबसे आगे रहा, यानी करीब एक
-        चौथाई बाज़ार। <Link href={localizedHref("/catalog/brand/tvs", "hi")}>TVS</Link> के ठीक पीछे{" "}
+        चौथाई बाज़ार। <Link href={localizedHref("/brand/tvs", "hi")}>TVS</Link> के ठीक पीछे{" "}
         <strong>Bajaj Auto</strong> रहा, जिसकी Chetak रेंज ने लगभग{" "}
         <strong>39,142 यूनिट</strong> (73% ऊपर) बेचीं, ~23% हिस्सेदारी के साथ। <strong>Ather
         Energy</strong> ने अपनी बिक्री सालाना लगभग दोगुनी कर करीब{" "}

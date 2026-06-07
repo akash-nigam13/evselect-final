@@ -91,7 +91,7 @@ export function localeEntries(): UrlEntry[] {
   const discovered = discoverRoutes().filter((r) => r === "/hi" || r.startsWith("/hi/"));
   const dynamicHi = [
     ...CATEGORIES.map((c) => `/hi/blog/category/${c.slug}`),
-    ...BRANDS.map((b) => `/hi/catalog/brand/${b.slug}`),
+    ...BRANDS.map((b) => `/hi/brand/${b.slug}`),
     ...EVS.map((e) => `/hi/catalog/${e.id}`),
   ];
   const paths = Array.from(new Set([...discovered, ...dynamicHi]));
@@ -134,7 +134,7 @@ export function otherEntries(): UrlEntry[] {
     { path: "/", lastmod: TODAY, changefreq: "weekly", priority: 1.0 },
     { path: "/catalog", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
     ...BRANDS.map((b) => ({
-      path: `/catalog/brand/${b.slug}`,
+      path: `/brand/${b.slug}`,
       lastmod: TODAY,
       changefreq: "weekly" as const,
       priority: 0.6,

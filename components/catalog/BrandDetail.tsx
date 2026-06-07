@@ -48,7 +48,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
               homeHref={isHi ? "/hi" : "/"}
               items={[
                 { name: t("nav.catalog", locale), path: href("/catalog") },
-                { name: brand.name, path: href(`/catalog/brand/${brand.slug}`) },
+                { name: brand.name, path: href(`/brand/${brand.slug}`) },
               ]}
               className="mb-4"
             />
@@ -131,7 +131,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
           collectionPageSchema(
             `${brand.name} Electric Vehicles`,
             `All ${brand.name} EV models in India.`,
-            localizedHref(`/catalog/brand/${brand.slug}`, locale)
+            localizedHref(`/brand/${brand.slug}`, locale)
           ),
           itemListSchema(
             evs.map((e) => ({ name: e.name, path: localizedHref(`/catalog/${e.id}`, locale) }))

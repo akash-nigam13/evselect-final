@@ -31,7 +31,7 @@ export default function Page() {
         <strong>39% हिस्सेदारी</strong> के साथ भारत की सबसे बड़ी इलेक्ट्रिक पैसेंजर-व्हीकल निर्माता
         बनी रही। सभी पावरट्रेन मिलाकर Tata ने लगभग{" "}
         <strong>59,790 पैसेंजर वाहन</strong> (~42% सालाना बढ़त) बेचे, जो{" "}
-        <Link href={localizedHref("/catalog/brand/tata", "hi")}>Tata</Link> को प्रतिद्वंद्वी
+        <Link href={localizedHref("/brand/tata", "hi")}>Tata</Link> को प्रतिद्वंद्वी
         Mahindra से आगे रखने के लिए काफ़ी थे, जिसने करीब 58,000 घरेलू SUV बिक्री दर्ज की।
         उद्योग स्तर पर भी मई में भारत की EV बिक्री तेज़ी से बढ़ी, और Tata व Mahindra दोनों ने
         शीर्ष पर अपनी बढ़त मज़बूत की।

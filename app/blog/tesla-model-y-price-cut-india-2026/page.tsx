@@ -92,7 +92,7 @@ export default function Page() {
         EV that costs far less to put on the road. At one end you have Tesla's
         brand, software and charging ecosystem; at the other, a fast-improving
         field of domestic and Asian rivals. Brands such as{" "}
-        <Link href="/catalog/brand/byd">BYD</Link> are pitching premium electric
+        <Link href="/brand/byd">BYD</Link> are pitching premium electric
         cars built closer to home, and the just-launched{" "}
         <Link href="/blog/maruti-e-vitara-first-ev-launch">Maruti e Vitara</Link>{" "}
         shows how aggressively the mass market is being priced.

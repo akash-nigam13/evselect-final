@@ -24,6 +24,7 @@ const PAGES: SearchItem[] = [
   { group: "page", title: "Electric Cars in India", titleHi: "भारत में इलेक्ट्रिक कारें", sub: "All electric cars", subHi: "सभी इलेक्ट्रिक कारें", path: "/catalog/electric-cars", keywords: "electric cars ev cars इलेक्ट्रिक कार", weight: 7 },
   { group: "page", title: "Electric Scooters in India", titleHi: "भारत में इलेक्ट्रिक स्कूटर", sub: "All electric scooters", subHi: "सभी इलेक्ट्रिक स्कूटर", path: "/catalog/electric-scooters", keywords: "electric scooters ev scooter इलेक्ट्रिक स्कूटर", weight: 7 },
   { group: "page", title: "Electric Bikes in India", titleHi: "भारत में इलेक्ट्रिक बाइक", sub: "All electric bikes", subHi: "सभी इलेक्ट्रिक बाइक", path: "/catalog/electric-bikes", keywords: "electric bikes motorcycles ev bike इलेक्ट्रिक बाइक", weight: 7 },
+  { group: "page", title: "All EV Brands", titleHi: "सभी EV ब्रांड", sub: "Every EV maker, by type", subHi: "हर EV निर्माता, टाइप अनुसार", path: "/brand", keywords: "brands makers manufacturers directory ब्रांड निर्माता", weight: 7 },
   { group: "page", title: "Cost & range calculators", titleHi: "कॉस्ट और रेंज कैलकुलेटर", sub: "EV vs petrol, range estimator", subHi: "EV बनाम पेट्रोल, रेंज", path: "/ev-calculators", keywords: "tools cost range calculator petrol टूल कॉस्ट रेंज कैलकुलेटर", weight: 8 },
   { group: "page", title: "EV Learn hub", titleHi: "EV लर्न हब", sub: "EV basics explained", subHi: "EV की बुनियादी बातें", path: "/ev-guides", keywords: "learn basics glossary guide लर्न सीखें", weight: 5 },
   { group: "page", title: "EV battery guide", titleHi: "EV बैटरी गाइड", sub: "How EV batteries work", subHi: "EV बैटरी कैसे काम करती है", path: "/about-ev-batteries", keywords: "battery guide बैटरी", weight: 5 },
@@ -48,7 +49,7 @@ function buildIndex(): SearchItem[] {
     title: b.name,
     sub: `${b.count} ${b.count === 1 ? "model" : "models"}`,
     subHi: `${b.count} मॉडल`,
-    path: `/catalog/brand/${b.slug}`,
+    path: `/brand/${b.slug}`,
     keywords: lc(`${b.name} ${b.slug}`),
     weight: 4,
   }));

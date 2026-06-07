@@ -78,7 +78,7 @@ export default function Page() {
         ₹15 लाख और ₹20 लाख के बीच का मिड-साइज़ इलेक्ट्रिक SUV वर्ग वही जगह है जहाँ
         भारत की EV जंग जीती और हारी जा रही है। Maruti का प्रवेश एक ऐसे मुक़ाबले को
         और तेज़ करता है जो पहले से ही{" "}
-        <Link href={localizedHref("/catalog/brand/maruti-suzuki", "hi")}>Maruti</Link> के
+        <Link href={localizedHref("/brand/maruti-suzuki", "hi")}>Maruti</Link> के
         जमे-जमाए प्रतिद्वंद्वियों से भरा है — Tata, Mahindra, Hyundai और MG, हर एक
         के पास इस बैंड में या इसके आस-पास एक गंभीर इलेक्ट्रिक SUV है। खरीदारों के
         लिए इसका व्यावहारिक नतीजा है ज़्यादा बढ़त: ज़्यादा विकल्प, तीखी शुरुआती

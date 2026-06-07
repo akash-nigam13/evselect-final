@@ -24,6 +24,11 @@ const nextConfig = {
       { source: "/hi/learn", destination: "/hi/ev-guides", permanent: true },
       { source: "/news", destination: "/ev-news", permanent: true },
       { source: "/hi/news", destination: "/hi/ev-news", permanent: true },
+      // Brand pages moved out of /catalog into a dedicated /brand directory (308).
+      { source: "/catalog/brand", destination: "/brand", permanent: true },
+      { source: "/catalog/brand/:slug", destination: "/brand/:slug", permanent: true },
+      { source: "/hi/catalog/brand", destination: "/hi/brand", permanent: true },
+      { source: "/hi/catalog/brand/:slug", destination: "/hi/brand/:slug", permanent: true },
       // Consolidated catalog: /catalog/all merged into /catalog (308).
       { source: "/catalog/all", destination: "/catalog", permanent: true },
       { source: "/hi/catalog/all", destination: "/hi/catalog", permanent: true },

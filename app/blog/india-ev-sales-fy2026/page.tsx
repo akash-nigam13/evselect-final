@@ -36,9 +36,9 @@ export default function Page() {
         FY2026, up about 22% year on year, and accounted for roughly 57% of the
         entire EV market by volume. That single segment outsells every electric
         car, van and truck combined. If you have been watching scooters from{" "}
-        <Link href="/catalog/brand/ola">Ola</Link>,{" "}
-        <Link href="/catalog/brand/ather">Ather</Link> and{" "}
-        <Link href="/catalog/brand/tvs">TVS</Link> become a routine sight on
+        <Link href="/brand/ola">Ola</Link>,{" "}
+        <Link href="/brand/ather">Ather</Link> and{" "}
+        <Link href="/brand/tvs">TVS</Link> become a routine sight on
         Indian roads, the data confirms what your eyes already told you.
       </p>
       <p>
@@ -77,13 +77,13 @@ export default function Page() {
       <h2>Tata still leads, but the lead is shrinking</h2>
       <p>
         For years the electric-car conversation in India began and ended with one
-        name. <Link href="/catalog/brand/tata">Tata</Link> remained the
+        name. <Link href="/brand/tata">Tata</Link> remained the
         number-one seller of electric passenger vehicles in FY2026, but its share
         of that segment reportedly slipped from around 53% to about 39% as rivals
         crowded in. That is not a story of Tata stumbling so much as the market
-        catching up: <Link href="/catalog/brand/mahindra">Mahindra</Link>,{" "}
-        <Link href="/catalog/brand/mg">MG</Link>, JSW and{" "}
-        <Link href="/catalog/brand/maruti-suzuki">Maruti Suzuki</Link> all
+        catching up: <Link href="/brand/mahindra">Mahindra</Link>,{" "}
+        <Link href="/brand/mg">MG</Link>, JSW and{" "}
+        <Link href="/brand/maruti-suzuki">Maruti Suzuki</Link> all
         expanded their electric line-ups during the year.
       </p>
       <p>

@@ -159,7 +159,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
               homeHref={isHi ? "/hi" : "/"}
               items={[
                 { name: t("nav.catalog", locale), path: href("/catalog") },
-                { name: ev.brand, path: href(`/catalog/brand/${brandSlug(ev.brand)}`) },
+                { name: ev.brand, path: href(`/brand/${brandSlug(ev.brand)}`) },
                 { name: ev.name, path: href(`/catalog/${ev.id}`) },
               ]}
               className="mb-5"
@@ -328,7 +328,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
             <p className="text-sm">
               {isHi ? "और देखें: " : "Explore more: "}
               <Link href={href(`/compare-electric-vehicles?ids=${ev.id}`)}>{isHi ? `${ev.name} की तुलना` : `compare the ${ev.name}`}</Link>,{" "}
-              <Link href={href(`/catalog/brand/${brandSlug(ev.brand)}`)}>{isHi ? `सभी ${ev.brand} EVs` : `all ${ev.brand} EVs`}</Link>,{" "}
+              <Link href={href(`/brand/${brandSlug(ev.brand)}`)}>{isHi ? `सभी ${ev.brand} EVs` : `all ${ev.brand} EVs`}</Link>,{" "}
               <Link href={href("/ev-subsidies-india")}>{isHi ? "EV सब्सिडी" : "EV subsidies"}</Link> {isHi ? "और" : "and the"}{" "}
               <Link href={href(`/ev-calculators/ev-emi-calculator?ev=${ev.id}`)}>{isHi ? "EMI कैलकुलेटर" : "EMI calculator"}</Link>.
             </p>

@@ -36,7 +36,7 @@ export default function Page() {
         provisions for advanced driver-assistance features. In other words, the
         Sierra EV is engineered as an electric vehicle first, rather than a petrol
         SUV converted to batteries. It slots in as a premium offering from{" "}
-        <Link href="/catalog/brand/tata">Tata</Link>, the brand that has led
+        <Link href="/brand/tata">Tata</Link>, the brand that has led
         India&apos;s electric-car market for years.
       </p>
 

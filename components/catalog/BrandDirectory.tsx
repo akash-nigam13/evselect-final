@@ -2,50 +2,60 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Search } from "lucide-react";
-import { BRANDS } from "@/lib/ev-data";
+import { BRANDS, byBrandSlug, type EVCategory } from "@/lib/ev-data";
 import BrandLogo from "@/components/ui/BrandLogo";
 import { usePathname } from "next/navigation";
 import { localeFromPath, localizedHref, t } from "@/lib/i18n";
 import clsx from "clsx";
 
-// "All brands" stays on this page; the category tabs link to the dedicated
-// category pages (/catalog/electric-cars etc.) so they have real, indexable URLs.
-const CAT_TABS: { key: string; path: string; tk: string; active: boolean }[] = [
-  { key: "all", path: "/catalog", tk: "brand.allTab", active: true },
-  { key: "car", path: "/catalog/electric-cars", tk: "cat.cars", active: false },
-  { key: "scooter", path: "/catalog/electric-scooters", tk: "cat.scooters", active: false },
-  { key: "motorcycle", path: "/catalog/electric-bikes", tk: "cat.bikes", active: false },
+// Category PILLS filter the brand grid in-place (show brands that make that
+// vehicle type). Brand cards link to the dedicated brand page at /brand/<slug>.
+const CAT_TABS: { key: EVCategory | "all"; tk: string }[] = [
+  { key: "all", tk: "brand.allTab" },
+  { key: "car", tk: "cat.cars" },
+  { key: "scooter", tk: "cat.scooters" },
+  { key: "motorcycle", tk: "cat.bikes" },
 ];
 
-export default function BrandExplorer() {
+export default function BrandDirectory() {
   const locale = localeFromPath(usePathname() || "/");
+  const [category, setCategory] = useState<EVCategory | "all">("all");
   const [query, setQuery] = useState("");
 
   const brands = useMemo(() => {
     return BRANDS.filter((b) => {
+      if (category !== "all" && !b.categories.includes(category)) return false;
       if (query.trim() && !b.name.toLowerCase().includes(query.toLowerCase())) return false;
       return true;
-    }).map((b) => ({ ...b, shown: b.count }));
-  }, [query]);
+    })
+      .map((b) => ({
+        ...b,
+        shown:
+          category === "all"
+            ? b.count
+            : byBrandSlug(b.slug).filter((e) => e.category === category).length,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [category, query]);
 
   return (
     <div>
-      {/* Category tabs (links to dedicated pages) + search */}
+      {/* Category pills + search */}
       <div className="mb-8 flex flex-wrap items-center gap-3">
         <div className="flex flex-wrap gap-2">
           {CAT_TABS.map((tab) => (
-            <Link
+            <button
               key={tab.key}
-              href={localizedHref(tab.path, locale)}
+              onClick={() => setCategory(tab.key)}
               className={clsx(
                 "rounded-xl px-4 py-2 font-display text-sm font-medium transition-colors",
-                tab.active
+                category === tab.key
                   ? "bg-brand text-ev-bg"
                   : "border border-ev-border bg-ev-card text-ev-muted hover:text-brand"
               )}
             >
               {t(tab.tk, locale)}
-            </Link>
+            </button>
           ))}
         </div>
         <div className="ml-auto flex min-w-[180px] items-center gap-2 rounded-xl border border-ev-border bg-ev-card px-3">
@@ -59,7 +69,7 @@ export default function BrandExplorer() {
         </div>
       </div>
 
-      {/* Brand grid */}
+      {/* Brand grid with logos */}
       {brands.length === 0 ? (
         <p className="py-16 text-center font-display text-ev-muted">{t("brand.noMatch", locale)}</p>
       ) : (
@@ -67,7 +77,7 @@ export default function BrandExplorer() {
           {brands.map((b) => (
             <Link
               key={b.slug}
-              href={`/brand/${b.slug}`}
+              href={localizedHref(`/brand/${b.slug}`, locale)}
               className="card-hover group relative flex flex-col items-start overflow-hidden rounded-2xl border border-ev-border bg-ev-card p-5"
             >
               <div

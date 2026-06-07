@@ -43,6 +43,7 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/",
     "/compare-electric-vehicles",
     "/catalog",
+    "/brand",
     "/ev-calculators",
     "/ev-guides",
     "/ev-news",
@@ -68,6 +69,7 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/tesla-model-y-price-cut-india-2026",
     "/blog/electric-two-wheeler-sales-record-may-2026",
     "/blog/tata-ev-sales-cross-10000-may-2026",
+    "/blog/tata-sierra-ev-launch-2026",
     "/ev-subsidies-india",
     "/ev-charging-station-setup-india",
     "/about",
@@ -94,9 +96,9 @@ const basePath = (path: string) => normPath(path.split(/[?#]/)[0]);
  * Dynamic route families that are fully translated for Hindi via a single
  * /hi/... route (so we don't enumerate every id/slug in the set above):
  *  - /catalog/<vehicle-id>
- *  - /catalog/brand/<brand-slug>
+ *  - /brand/<brand-slug>
  */
-const HI_DYNAMIC: RegExp[] = [/^\/catalog\/brand\/[^/]+$/, /^\/catalog\/[^/]+$/];
+const HI_DYNAMIC: RegExp[] = [/^\/brand\/[^/]+$/, /^\/catalog\/[^/]+$/];
 
 /** Is there a published translation of `path` for locale `l`? */
 export function hasTranslation(path: string, l: Locale): boolean {

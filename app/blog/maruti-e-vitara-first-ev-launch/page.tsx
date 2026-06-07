@@ -80,7 +80,7 @@ export default function Page() {
         The mid-size electric SUV bracket between ₹15 lakh and ₹20 lakh is where
         India's EV battle is being won and lost. Maruti's entry intensifies a
         contest already crowded with{" "}
-        <Link href="/catalog/brand/maruti-suzuki">Maruti</Link>'s established
+        <Link href="/brand/maruti-suzuki">Maruti</Link>'s established
         rivals — Tata, Mahindra, Hyundai and MG — each with a serious electric SUV
         in or near this band. The practical upshot for buyers is more leverage:
         more choice, sharper introductory pricing and faster feature upgrades as

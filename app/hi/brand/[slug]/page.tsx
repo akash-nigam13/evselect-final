@@ -20,7 +20,7 @@ export async function generateMetadata({
   return {
     title: `${brand.name} इलेक्ट्रिक वाहन — मॉडल, स्पेसिफिकेशन और कीमत`,
     description: `भारत में सभी ${brand.count} ${brand.name} इलेक्ट्रिक वाहन देखें। ${brand.name} EV लाइनअप में रेंज, बैटरी, कीमत और स्पेसिफिकेशन की तुलना करें।`,
-    alternates: altsFor(`/catalog/brand/${brand.slug}`, "hi"),
+    alternates: altsFor(`/brand/${brand.slug}`, "hi"),
   };
 }
 

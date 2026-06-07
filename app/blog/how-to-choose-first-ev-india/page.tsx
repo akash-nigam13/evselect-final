@@ -130,7 +130,7 @@ export default function Page() {
         Models like the{" "}
         <Link href="/catalog/tata-nexon-ev-long-range-45-kwh">Tata Nexon EV Long Range</Link> have
         become popular first EVs precisely because they balance these fundamentals well, and brand
-        pages such as <Link href="/catalog/brand/tata">Tata's lineup</Link> let you see the full
+        pages such as <Link href="/brand/tata">Tata's lineup</Link> let you see the full
         family at a glance.
       </p>
 

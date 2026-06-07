@@ -33,7 +33,7 @@ export default function Page() {
         maker with close to a <strong>39% share</strong> of the EV market for the
         month. Across all powertrains, Tata sold about{" "}
         <strong>59,790 passenger vehicles</strong> (a ~42% annual rise), enough to
-        pip <Link href="/catalog/brand/tata">Tata</Link>&apos;s rival Mahindra,
+        pip <Link href="/brand/tata">Tata</Link>&apos;s rival Mahindra,
         which reported around 58,000 domestic SUV sales. Industry-wide, India&apos;s
         EV sales climbed sharply in May, with both Tata and Mahindra extending their
         lead at the top.

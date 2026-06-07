@@ -93,7 +93,7 @@ export default function Page() {
         है। एक छोर पर आपके पास Tesla का ब्रांड, सॉफ़्टवेयर और चार्जिंग इकोसिस्टम है;
         दूसरे पर, घरेलू और एशियाई प्रतिद्वंद्वियों का तेज़ी से सुधरता मैदान। BYD
         जैसे ब्रांड घर के क़रीब बनी प्रीमियम इलेक्ट्रिक कारें पेश कर रहे हैं —{" "}
-        <Link href={localizedHref("/catalog/brand/byd", "hi")}>BYD</Link> — और अभी-अभी लॉन्च हुई{" "}
+        <Link href={localizedHref("/brand/byd", "hi")}>BYD</Link> — और अभी-अभी लॉन्च हुई{" "}
         <Link href={localizedHref("/blog/maruti-e-vitara-first-ev-launch", "hi")}>Maruti e Vitara</Link>{" "}
         दिखाती है कि मास मार्केट को कितनी आक्रामक तरीके से कीमत दी जा रही है।
       </p>
