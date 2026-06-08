@@ -208,6 +208,42 @@ export const POSTS: BlogPost[] = [
       "एक इलेक्ट्रिक कार और एक हाइब्रिड अलग-अलग समस्याएँ हल करते हैं। यह गाइड माइल्ड, स्ट्रॉन्ग और प्लग-इन हाइब्रिड की तुलना शुद्ध EV से — लागत, चार्जिंग, टैक्स और भारतीय खरीदार के लिए असली फिट के आधार पर — करती है।",
   },
 
+  {
+    slug: "ev-maintenance-cost-india",
+    title: "EV Maintenance Cost in India: What You'll Actually Pay",
+    subtitle: "Service intervals, what gets checked, and the real bills",
+    excerpt:
+      "Electric cars need far less servicing than petrol — no oil, no spark plugs, no clutch. Here's exactly what an EV needs, how often, and what maintenance really costs in India.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "8 min",
+    date: "Jun 8, 2026",
+    accent: "#FFC247",
+    related: ["petrol-vs-electric-5-year-cost-india", "ev-resale-value-battery-health-india", "ev-battery-life-india-weather", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में EV मेंटेनेंस लागत: आप असल में कितना चुकाएँगे",
+    hiSubtitle: "सर्विस इंटरवल, क्या-क्या जाँचा जाता है, और असली बिल",
+    hiExcerpt:
+      "इलेक्ट्रिक कारों को पेट्रोल से कहीं कम सर्विसिंग चाहिए — न ऑयल, न स्पार्क प्लग, न क्लच। यहाँ जानिए एक EV को असल में क्या चाहिए, कितनी बार, और भारत में मेंटेनेंस पर सच में कितना खर्च आता है।",
+  },
+
+  {
+    slug: "best-electric-cars-under-15-lakh-india",
+    title: "Best Electric Cars Under ₹15 Lakh in India (2026)",
+    subtitle: "Seven EVs that make the switch genuinely affordable",
+    excerpt:
+      "From the sub-₹7-lakh Tata Tiago EV to feature-loaded compact SUVs, here are the best electric cars under ₹15 lakh in India in 2026 — compared on range, price, battery and real-world fit.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 8, 2026",
+    accent: "#26E0C4",
+    related: ["how-to-choose-first-ev-india", "petrol-vs-electric-5-year-cost-india", "real-world-range-vs-arai-india", "ev-subsidies-road-tax-by-state-india-2026"],
+    hiTitle: "भारत में ₹15 लाख से कम की सबसे अच्छी इलेक्ट्रिक कारें (2026)",
+    hiSubtitle: "सात EV जो स्विच करना सचमुच किफ़ायती बनाती हैं",
+    hiExcerpt:
+      "₹7 लाख से कम की Tata Tiago EV से लेकर फ़ीचर-भरपूर कॉम्पैक्ट SUV तक, यहाँ 2026 में भारत में ₹15 लाख से कम की सबसे अच्छी इलेक्ट्रिक कारें हैं — रेंज, कीमत, बैटरी और असली फिट पर तुलना।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
