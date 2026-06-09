@@ -409,6 +409,42 @@ export const POSTS: BlogPost[] = [
     hiExcerpt:
       "Ultraviolette ने अपनी रडार-युक्त Tesseract इलेक्ट्रिक स्कूटर को जनवरी 2027 तक टाल दिया है — 2025 की पहली झलक के बाद यह तीसरी देरी है — लेकिन शुरुआती बुकिंग करने वालों के लिए ₹1.45 लाख की इंट्रोडक्टरी कीमत बनाए रखने का वादा किया है। जानिए क्या बदला और क्यों।",
   },
+  {
+    slug: "tata-tiago-ev-2026-update-launch",
+    title: "2026 Tata Tiago EV Launched From ₹6.99 Lakh",
+    subtitle: "A full generation update — six airbags, faster charging, new cabin",
+    excerpt:
+      "Tata has launched the 2026 Tiago EV as a generation update, not a facelift — priced from ₹6.99 lakh (or ₹4.69 lakh on its battery-as-a-service plan). It gets six airbags as standard, a redesigned cabin, two battery packs with up to 285 km of range, and 40% faster charging. Here's everything that's new.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 9, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["best-electric-cars-under-15-lakh-india", "tata-ev-discounts-june-2026", "india-ev-sales-fy2026", "how-to-choose-first-ev-india"],
+    hiTitle: "2026 Tata Tiago EV ₹6.99 लाख से लॉन्च",
+    hiSubtitle: "पूरा जनरेशन अपडेट — छह एयरबैग, तेज़ चार्जिंग, नया केबिन",
+    hiExcerpt:
+      "Tata ने 2026 Tiago EV को महज़ फेसलिफ्ट नहीं, बल्कि एक पूरे जनरेशन अपडेट के रूप में लॉन्च किया है — कीमत ₹6.99 लाख से (या बैटरी-ऐज़-अ-सर्विस प्लान पर ₹4.69 लाख से)। इसमें मानक रूप से छह एयरबैग, नया केबिन, दो बैटरी पैक (285 km तक रेंज) और 40% तेज़ चार्जिंग मिलती है। यहाँ जानिए सब कुछ जो नया है।",
+  },
+  {
+    slug: "ather-rizta-price-hike-june-2026",
+    title: "Ather Hikes Rizta Prices; Now Starts at ₹1.21 Lakh",
+    subtitle: "Family e-scooter is up to ₹4,000 dearer from June 1",
+    excerpt:
+      "Ather Energy has raised prices of its best-selling Rizta family scooter by ₹3,000–4,000, effective June 1, 2026. The four-variant lineup now spans ₹1.21–1.59 lakh (ex-showroom). Here's the variant-wise breakdown and what the hike means for buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "4 min",
+    date: "Jun 9, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["top-5-electric-scooters-india-2026", "electric-two-wheeler-sales-record-may-2026", "ev-subsidies-road-tax-by-state-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "Ather ने Rizta की कीमतें बढ़ाईं; अब ₹1.21 लाख से शुरू",
+    hiSubtitle: "1 जून से फैमिली ई-स्कूटर ₹4,000 तक महँगा",
+    hiExcerpt:
+      "Ather Energy ने अपनी सबसे ज़्यादा बिकने वाली Rizta फैमिली स्कूटर की कीमतें ₹3,000–4,000 बढ़ा दी हैं, जो 1 जून 2026 से लागू हैं। चार-वेरिएंट लाइनअप अब ₹1.21–1.59 लाख (एक्स-शोरूम) तक फैली है। यहाँ वेरिएंट-वार ब्योरा और खरीदारों के लिए इसका मतलब है।",
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────
