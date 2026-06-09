@@ -244,6 +244,24 @@ export const POSTS: BlogPost[] = [
       "₹7 लाख से कम की Tata Tiago EV से लेकर फ़ीचर-भरपूर कॉम्पैक्ट SUV तक, यहाँ 2026 में भारत में ₹15 लाख से कम की सबसे अच्छी इलेक्ट्रिक कारें हैं — रेंज, कीमत, बैटरी और असली फिट पर तुलना।",
   },
 
+  {
+    slug: "best-electric-motorcycles-india-2026",
+    title: "Best Electric Motorcycles in India 2026: Price, Range & Picks",
+    subtitle: "Seven electric bikes — from commuter to flagship — compared",
+    excerpt:
+      "Electric motorcycles in India now span ₹90,000 commuters to ₹4-lakh performance machines. Here are the best electric bikes in India in 2026 — Ola Roadster X, Revolt RV400, Oben Rorr, Tork Kratos, Matter Aera and Ultraviolette — compared on price, range and real-world fit.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 10, 2026",
+    accent: "#26E0C4",
+    related: ["top-5-electric-scooters-india-2026", "how-to-choose-first-ev-india", "ev-subsidies-road-tax-by-state-india-2026", "real-world-range-vs-arai-india"],
+    hiTitle: "भारत में 2026 की सबसे अच्छी इलेक्ट्रिक मोटरसाइकिलें: कीमत, रेंज और पसंद",
+    hiSubtitle: "सात इलेक्ट्रिक बाइक — कम्यूटर से फ्लैगशिप तक — तुलना",
+    hiExcerpt:
+      "भारत में इलेक्ट्रिक मोटरसाइकिलें अब ₹90,000 के कम्यूटर से लेकर ₹4 लाख की परफ़ॉर्मेंस मशीनों तक फैली हैं। यहाँ 2026 में भारत की सबसे अच्छी इलेक्ट्रिक बाइक हैं — Ola Roadster X, Revolt RV400, Oben Rorr, Tork Kratos, Matter Aera और Ultraviolette — कीमत, रेंज और असली फिट पर तुलना।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
