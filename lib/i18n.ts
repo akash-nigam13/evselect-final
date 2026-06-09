@@ -83,6 +83,7 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/catalog/electric-cars",
     "/catalog/electric-scooters",
     "/catalog/electric-bikes",
+    "/ev-selection-tool",
   ]),
 };
 

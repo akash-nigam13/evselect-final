@@ -118,6 +118,7 @@ const navLinks: NavLink[] = [
     labelKey: "nav.tools",
     href: "/ev-calculators",
     children: [
+      { label: "EV Selection Tool", href: "/ev-selection-tool", desc: "Find your perfect EV" },
       { label: "All tools", href: "/ev-calculators", desc: "Every EV calculator in one place" },
       { label: "EMI Calculator", href: "/ev-calculators/ev-emi-calculator", desc: "EV loan monthly payment" },
       { label: "Cost Calculator", href: "/ev-calculators/ev-vs-petrol-cost-calculator", desc: "EV vs petrol running cost" },
