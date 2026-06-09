@@ -14,9 +14,9 @@ import ToolsCTA from "@/components/ToolsCTA";
 const UPDATED = "June 2026";
 
 export const metadata: Metadata = {
-  title: "How to Set Up an EV Charging Station in India 2026 — Cost, Licence, Subsidy & ROI | EVSelect.in",
+  title: "How to Install & Set Up an EV Charging Station in India (2026): Cost, Licence, Subsidy & Profit | EVSelect.in",
   description:
-    "Step-by-step 2026 guide to opening a commercial/public EV charging station in India: no licence needed, discom connection process, charger standards (CCS2), costs, PM E-DRIVE & state subsidies, and realistic ROI.",
+    "Step-by-step 2026 guide on how to install, set up and start an EV charging station business in India: no licence needed, discom connection, charger types (CCS2), cost, PM E-DRIVE & state subsidies, and realistic profit/ROI.",
   alternates: altsFor("/ev-charging-station-setup-india", "en"),
   openGraph: {
     title: "How to Set Up an EV Charging Station in India (2026)",
@@ -38,6 +38,9 @@ const steps = [
 ];
 
 const faqs = [
+  { q: "How do I install an EV charging station in India?", a: "To install an EV charging station: (1) assess the site and EV demand, (2) secure the land or parking space, (3) choose your charger mix (AC Type 2 and/or DC CCS2), (4) apply to your discom for a separate metered EV-tariff connection, (5) build the upstream electrical and civil infrastructure, (6) get CEIG electrical-safety and Fire NOC clearances, (7) integrate network software and payments, (8) register with the nodal agency, and (9) commission and go live. No electricity licence is required — public charging is de-licensed." },
+  { q: "How do I start an EV charging station business in India?", a: "Starting an EV charging business means treating the install as a commercial venture: pick a high-footfall, high-dwell-time location, decide whether to self-operate or partner a Charge Point Operator (CPO), claim PM E-DRIVE and state capital subsidies to cut your investment, set a per-kWh service charge above your electricity cost, and plan for utilisation (break-even typically needs roughly 10–12%). Payback at strong sites is around 18–36 months." },
+  { q: "How do I install a charging station for electric cars?", a: "For electric cars specifically, the dominant DC fast-charging standard is CCS2 (50–250 kW), with Type 2 AC (7.4–22 kW) for slower destination charging. A public car-charging point must offer at least 7.4 kW. Choose BIS-certified, type-tested chargers, get a dedicated EV-tariff connection from your discom, and complete CEIG and Fire NOC approvals before going live." },
   { q: "Do I need a licence to open an EV charging station in India?", a: "No. Setting up a public charging station is a de-licensed activity under the Ministry of Power's EV charging infrastructure guidelines. You do not need an electricity licence — you only have to meet the technical, safety and performance standards and obtain the usual electrical (CEIG) and fire clearances." },
   { q: "Who is allowed to set one up?", a: "Any individual, business, housing society, mall, hotel or office can install a public charging station, including for visitors' vehicles. Note that direct PM E-DRIVE subsidy applicants are limited to government bodies, CPSEs and states/UTs — private players participate as Charge Point Operators selected through their bidding." },
   { q: "Can I set up a charging point at my shop or apartment for commercial use?", a: "Yes. You can request a separate metered connection with a dedicated EV tariff from your discom. Homes, apartment complexes and shops are explicitly permitted, and group housing societies must reserve at least 10% of parking for EV charging." },
@@ -69,12 +72,13 @@ export default function ChargingStationSetupPage() {
               <Plug className="h-3 w-3" /> Charging Business · Updated {UPDATED}
             </p>
             <h1 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl text-balance">
-              How to Set Up a Commercial EV Charging Station in India <span className="text-gradient-brand">(2026)</span>
+              How to Install &amp; Set Up an EV Charging Station in India <span className="text-gradient-brand">(2026)</span>
             </h1>
             <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-ev-text/60 sm:text-lg">
-              A complete, technical-but-readable playbook for businesses and landowners: the rules, the
-              discom process, charger standards, real costs, the subsidies you can claim, and an honest
-              look at the returns.
+              A complete, technical-but-readable playbook on how to install, set up and start a
+              commercial EV charging station business in India — the rules, the discom connection
+              process, charger types, real costs, the subsidies you can claim, and an honest look at the
+              profit and returns.
             </p>
           </div>
         </section>

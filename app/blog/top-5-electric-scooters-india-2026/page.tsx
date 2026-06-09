@@ -11,13 +11,20 @@ import {
   BajajChetakCard, HeroVidaCard, ScooterRangeChart,
 } from "@/components/blog/BlogImages";
 import { POSTS } from "@/lib/blog-posts";
-import { blogPostingSchema } from "@/lib/seo";
+import { blogPostingSchema, faqPageSchema } from "@/lib/seo";
 
 const post = POSTS.find((p) => p.slug === "top-5-electric-scooters-india-2026")!;
 
+const faqs = [
+  { q: "Which is the best electric scooter in India in 2026?", a: "There's no single winner — it depends on your priority. The Ather Rizta leads for family practicality and software, the Ola S1 Pro for range and performance per rupee, the TVS iQube for reliability and service reach, the Bajaj Chetak for build quality, and the Hero Vida for value. Compare them side by side on range, price and charging before deciding." },
+  { q: "What is the best electric scooter under ₹1 lakh in India?", a: "Several strong options sit under ₹1 lakh, including base variants of the TVS iQube and Hero Vida, plus value models from Ola. For the lowest running cost, prioritise real-world range and a reliable service network in your city rather than top speed." },
+  { q: "Which electric scooter has the longest range in India?", a: "Among mainstream models, the Ola S1 Pro and higher-capacity Ather and Vida variants offer the most real-world range. Remember that certified (ARAI/IDC) range is measured in ideal conditions — expect real range to be lower depending on speed, load and riding mode." },
+  { q: "Are electric scooters cheaper than petrol scooters in India?", a: "Yes, over time. Electric scooters cost only a fraction of petrol per kilometre and need far less maintenance, so even a higher purchase price is typically recovered within 3–4 years for daily riders — before counting state subsidies." },
+];
+
 export const metadata: Metadata = {
-  title: "Top 5 Electric Scooters in India 2026 — Range, Price & Features Compared",
-  description: "Looking for the best electric scooter in India in 2026? We compare the top 5 models on ARAI range, real-world performance, charging time, and value for money.",
+  title: "Best Electric Scooters in India 2026: Top 5 Compared (Price, Range & Features)",
+  description: "Which is the best electric scooter in India in 2026? We compare the top 5 — Ather Rizta, Ola S1 Pro, TVS iQube, Bajaj Chetak & Hero Vida — on price, real-world range, charging time and value to help you pick.",
   alternates: { canonical: "https://www.evselect.in/blog/top-5-electric-scooters-india-2026" },
   openGraph: { title: "Top 5 Electric Scooters in India 2026", type: "article" },
 };
@@ -260,6 +267,18 @@ export default function Article1() {
               </div>
 
               <section className="mt-16 pt-8 border-t border-ev-border/40">
+                <h2 className="font-display font-bold text-white text-xl mb-5 flex items-center gap-3"><span className="w-1 h-5 rounded-full bg-ev-cyan inline-block" />Frequently asked questions</h2>
+                <div className="space-y-3">
+                  {faqs.map((f) => (
+                    <details key={f.q} className="group rounded-2xl border border-ev-border bg-ev-card p-5">
+                      <summary className="cursor-pointer font-display font-bold text-white text-sm">{f.q}</summary>
+                      <p className="mt-3 font-body text-sm leading-relaxed text-ev-text/70">{f.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+
+              <section className="mt-16 pt-8 border-t border-ev-border/40">
                 <h2 className="font-display font-bold text-white text-xl mb-5 flex items-center gap-3"><span className="w-1 h-5 rounded-full bg-ev-muted inline-block" />Sources &amp; References</h2>
                 <ol className="space-y-2 pl-2">
                   {sources.map(({label,url},i)=>(
@@ -307,13 +326,16 @@ export default function Article1() {
       </main>
       <Footer />
       <JsonLd
-        data={blogPostingSchema({
-          title: post.title,
-          description: post.excerpt,
-          path: `/blog/${post.slug}`,
-          datePublished: post.date,
-          section: post.category,
-        })}
+        data={[
+          blogPostingSchema({
+            title: post.title,
+            description: post.excerpt,
+            path: `/blog/${post.slug}`,
+            datePublished: post.date,
+            section: post.category,
+          }),
+          faqPageSchema(faqs),
+        ]}
       />
     </>
   );
