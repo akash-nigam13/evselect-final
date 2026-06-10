@@ -13,6 +13,7 @@ import { byBrandSlug, type Brand, type EVCategory } from "@/lib/ev-data";
 import { collectionPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
 import { brandOverview, brandFaqs } from "@/lib/brand-content";
+import { BRAND_GUIDES, guideTitle } from "@/lib/brand-guide";
 
 function catLabelKey(c: EVCategory): "ev.catcar" | "ev.catscooter" | "ev.catbike" {
   if (c === "motorcycle") return "ev.catbike";
@@ -27,6 +28,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
   const evs = byBrandSlug(brand.slug);
   const overview = brandOverview(brand, evs, locale);
   const faqs = brandFaqs(brand, evs, locale);
+  const brandGuides = BRAND_GUIDES.filter((g) => g.brandSlug === brand.slug);
 
   const cats = brand.categories.map((c) => t(catLabelKey(c), locale)).join(" · ");
   const modelsWord = brand.count === 1 ? t("brand.model", locale) : t("brand.models", locale);
@@ -105,6 +107,24 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
               <Link href={href("/ev-calculators/ev-emi-calculator")}>{isHi ? "EMI कैलकुलेटर" : "EMI calculator"}</Link>.
             </p>
           </div>
+
+          {/* Brand guide listicles */}
+          {brandGuides.length > 0 && (
+            <div className="mt-8 max-w-3xl rounded-2xl border border-brand/25 bg-ev-card p-5">
+              <p className="font-display text-sm font-bold text-white">
+                {isHi ? `${brand.name} EV गाइड पढ़ें` : `In-depth ${brand.name} EV guides`}
+              </p>
+              <ul className="mt-3 space-y-2">
+                {brandGuides.map((g) => (
+                  <li key={g.slug}>
+                    <Link href={href(`/blog/${g.slug}`)} className="text-sm text-brand hover:underline">
+                      {guideTitle(g)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* FAQ */}
           <section className="mx-auto mt-12 max-w-3xl">

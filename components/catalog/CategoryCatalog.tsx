@@ -11,6 +11,7 @@ import ToolsCTA from "@/components/ToolsCTA";
 import { byCategory, priceFromLakh, type EVCategory } from "@/lib/ev-data";
 import { collectionPageSchema, faqPageSchema } from "@/lib/seo";
 import { type Locale, localizedHref } from "@/lib/i18n";
+import { BRAND_GUIDES, guideTitle } from "@/lib/brand-guide";
 
 type Copy = { label: string; labelHi: string; h1: string; h1Hi: string; lead: string; leadHi: string };
 
@@ -41,6 +42,7 @@ export default function CategoryCatalog({ category, locale = "en" }: { category:
   const c = COPY[category];
   const pool = byCategory(category);
   const label = isHi ? c.labelHi : c.label;
+  const guides = BRAND_GUIDES.filter((g) => g.category === category);
 
   const cheapest = [...pool].filter((e) => e.priceMinLakh != null).sort((a, b) => a.priceMinLakh! - b.priceMinLakh!)[0];
   const longest = [...pool].filter((e) => e.rangeKmARAI != null).sort((a, b) => b.rangeKmARAI! - a.rangeKmARAI!)[0];
@@ -109,6 +111,30 @@ export default function CategoryCatalog({ category, locale = "en" }: { category:
               <Link href={href("/catalog")}>{isHi ? "पूरा कैटलॉग" : "full catalog"}</Link>.
             </p>
           </div>
+
+          {/* Brand guides for this category */}
+          {guides.length > 0 && (
+            <div className="mt-12 max-w-3xl">
+              <h2 className="font-display text-2xl font-bold text-ev-text sm:text-3xl">
+                {isHi ? `ब्रांड के अनुसार ${label}` : `${c.label} by brand`}
+              </h2>
+              <p className="mt-3 font-body text-sm text-ev-muted">
+                {isHi ? "किसी ब्रांड की पूरी रेंज एक ही जगह देखें:" : "See a brand's full lineup, prices and which to buy:"}
+              </p>
+              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                {guides.map((g) => (
+                  <li key={g.slug}>
+                    <Link
+                      href={href(`/blog/${g.slug}`)}
+                      className="text-sm text-brand hover:underline"
+                    >
+                      {guideTitle(g).replace(": Models, Prices & Range", "")}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* FAQ */}
           <section className="mt-12 max-w-3xl">
