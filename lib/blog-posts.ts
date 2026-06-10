@@ -552,6 +552,24 @@ export const POSTS: BlogPost[] = [
       "भारत में इलेक्ट्रिक मोटरसाइकिलें अब ₹90,000 के कम्यूटर से लेकर ₹4 लाख की परफ़ॉर्मेंस मशीनों तक फैली हैं। यहाँ 2026 में भारत की सबसे अच्छी इलेक्ट्रिक बाइक हैं — Ola Roadster X, Revolt RV400, Oben Rorr, Tork Kratos, Matter Aera और Ultraviolette — कीमत, रेंज और असली फिट पर तुलना।",
   },
 
+  {
+    slug: "ev-charging-apartments-housing-societies-india",
+    title: "EV Charging in Apartments in India: Rules, Rights & How to Set It Up",
+    subtitle: "RWA permissions, wiring, billing and what the law now says",
+    excerpt:
+      "Living in a flat doesn't mean you can't charge an EV. Here's how to install a charger in an apartment or housing society in India — the rules, your rights, the costs and the paperwork.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "9 min",
+    date: "Jun 10, 2026",
+    accent: "#C6F94E",
+    related: ["home-ev-charging-cost-india", "ev-charging-infrastructure-india", "india-ev-charging-network-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में अपार्टमेंट में EV चार्जिंग: नियम, अधिकार और सेटअप कैसे करें",
+    hiSubtitle: "RWA अनुमति, वायरिंग, बिलिंग और अब कानून क्या कहता है",
+    hiExcerpt:
+      "फ्लैट में रहने का मतलब यह नहीं कि आप EV चार्ज नहीं कर सकते। यहाँ बताया गया है कि भारत में अपार्टमेंट या हाउसिंग सोसाइटी में चार्जर कैसे लगवाएँ — नियम, आपके अधिकार, लागत और कागज़ी कार्रवाई।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
