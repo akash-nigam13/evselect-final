@@ -631,17 +631,53 @@ export const POSTS: BlogPost[] = [
       "फ्लैट में रहने का मतलब यह नहीं कि आप EV चार्ज नहीं कर सकते। यहाँ बताया गया है कि भारत में अपार्टमेंट या हाउसिंग सोसाइटी में चार्जर कैसे लगवाएँ — नियम, आपके अधिकार, लागत और कागज़ी कार्रवाई।",
   },
 
+  {
+    slug: "ev-insurance-india",
+    title: "Electric Car Insurance in India: Costs, Add-Ons & What's Actually Covered",
+    subtitle: "Premiums, the battery question and the add-ons that matter",
+    excerpt:
+      "EV insurance in India works differently from petrol-car cover — a cheaper third-party rate but a pricier own-damage side, all because of the battery. Here's what electric car insurance costs in 2026 and the add-ons you shouldn't skip.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "9 min",
+    date: "Jun 11, 2026",
+    accent: "#FFC247",
+    related: ["petrol-vs-electric-5-year-cost-india", "ev-maintenance-cost-india", "ev-resale-value-battery-health-india", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में इलेक्ट्रिक कार बीमा: लागत, ऐड-ऑन और असल में क्या कवर होता है",
+    hiSubtitle: "प्रीमियम, बैटरी का सवाल और वे ऐड-ऑन जो मायने रखते हैं",
+    hiExcerpt:
+      "भारत में EV बीमा पेट्रोल-कार कवर से अलग काम करता है — थर्ड-पार्टी दर सस्ती, पर ओन-डैमेज पक्ष महँगा, और इसकी वजह है बैटरी। यहाँ जानिए 2026 में इलेक्ट्रिक कार बीमा की लागत कितनी है और कौन-से ऐड-ऑन नहीं छोड़ने चाहिए।",
+  },
+
+  {
+    slug: "electric-car-loan-india",
+    title: "Electric Car Loan in India: Interest Rates, EMI & 80EEB Tax Benefit (2026)",
+    subtitle: "Green car loans, what you'll pay each month, and the tax catch",
+    excerpt:
+      "How does an electric car loan work in India? A 2026 guide to green car loan interest rates, how much banks finance, EMIs and tenure, and the Section 80EEB tax benefit most buyers get wrong.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "9 min",
+    date: "Jun 12, 2026",
+    accent: "#FFC247",
+    related: ["petrol-vs-electric-5-year-cost-india", "ev-insurance-india", "ev-subsidies-road-tax-by-state-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में इलेक्ट्रिक कार लोन: ब्याज दरें, EMI और 80EEB टैक्स लाभ (2026)",
+    hiSubtitle: "ग्रीन कार लोन, हर महीने कितना देंगे, और टैक्स वाली पेच",
+    hiExcerpt:
+      "भारत में इलेक्ट्रिक कार लोन कैसे काम करता है? 2026 की यह गाइड बताती है ग्रीन कार लोन ब्याज दरें, बैंक कितना फाइनेंस करते हैं, EMI और अवधि, और Section 80EEB टैक्स लाभ जिसे ज़्यादातर खरीदार ग़लत समझते हैं।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
-    title: "Tata Sierra EV: Launch Timeline, Price & Range",
-    subtitle: "What we know about India's most-awaited electric SUV",
+    title: "Tata Sierra EV to Debut on June 30, 2026: Price, Range, AWD & Specs",
+    subtitle: "Tata confirms the Sierra EV's launch date — here's what to expect",
     excerpt:
-      "Tata's iconic Sierra returns as an electric SUV on the Gen-2 Acti.ev platform — with an expected 55–65 kWh battery, up to ~500 km range and RWD/AWD options. Here's everything reported so far.",
+      "Tata Motors will debut the Sierra EV on June 30, 2026. Built on the acti.ev+ platform with 65–75 kWh batteries, RWD and AWD (QWD) options and an expected ₹18–25 lakh price — here's everything confirmed so far.",
     category: "Market News",
     categorySlug: "market-news",
     readTime: "5 min",
-    date: "Jun 6, 2026",
+    date: "Jun 9, 2026",
     accent: "#60A5FA",
     news: true,
     related: ["india-ev-sales-fy2026", "maruti-e-vitara-first-ev-launch", "tesla-model-y-price-cut-india-2026", "how-to-choose-first-ev-india"],
@@ -831,6 +867,42 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "1 जून से फैमिली ई-स्कूटर ₹4,000 तक महँगा",
     hiExcerpt:
       "Ather Energy ने अपनी सबसे ज़्यादा बिकने वाली Rizta फैमिली स्कूटर की कीमतें ₹3,000–4,000 बढ़ा दी हैं, जो 1 जून 2026 से लागू हैं। चार-वेरिएंट लाइनअप अब ₹1.21–1.59 लाख (एक्स-शोरूम) तक फैली है। यहाँ वेरिएंट-वार ब्योरा और खरीदारों के लिए इसका मतलब है।",
+  },
+  {
+    slug: "tesla-hyderabad-experience-centre-june-2026",
+    title: "Tesla to Open Its 5th India Centre in Hyderabad on June 17",
+    subtitle: "Showroom push widens as Model Y deliveries near",
+    excerpt:
+      "Tesla will open its fifth India experience centre in Hyderabad on June 17, 2026, adding to outlets in Delhi, Gurugram, Mumbai and Bengaluru. The expansion comes as Model Y deliveries are set to begin in July. Here's what it means for Indian buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "4 min",
+    date: "Jun 10, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tesla-model-y-price-cut-india-2026", "tesla-electric-cars-india", "india-ev-charging-network-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "Tesla 17 जून को हैदराबाद में अपना 5वाँ भारत केंद्र खोलेगी",
+    hiSubtitle: "Model Y डिलीवरी नज़दीक आते ही शोरूम विस्तार तेज़",
+    hiExcerpt:
+      "Tesla 17 जून 2026 को हैदराबाद में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोलेगी, जो दिल्ली, गुड़गाँव, मुंबई और बेंगलुरु के केंद्रों में जुड़ जाएगा। यह विस्तार तब हो रहा है जब Model Y की डिलीवरी जुलाई में शुरू होने वाली है। जानिए भारतीय खरीदारों के लिए इसका क्या मतलब है।",
+  },
+  {
+    slug: "jsw-mg-1000-community-ev-chargers-2026",
+    title: "JSW MG Becomes First Carmaker to Install 1,000 Community EV Chargers",
+    subtitle: "470+ sites covered; three new EVs including a PHEV due in 2026",
+    excerpt:
+      "JSW MG Motor India says it is the first carmaker in the country to install 1,000 community EV chargers, spread across 470+ residential, hospital and campus sites. The company also confirmed three new electric vehicles for 2026, including its first plug-in hybrid. Here's why community charging matters.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 10, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["india-ev-charging-network-2026", "ev-charging-apartments-housing-societies-india", "mg-electric-cars", "home-ev-charging-cost-india"],
+    hiTitle: "JSW MG बनी 1,000 कम्युनिटी EV चार्जर लगाने वाली पहली कारमेकर",
+    hiSubtitle: "470+ साइटें कवर; 2026 में एक PHEV समेत तीन नई EV",
+    hiExcerpt:
+      "JSW MG Motor India का कहना है कि वह देश में 1,000 कम्युनिटी EV चार्जर लगाने वाली पहली कारमेकर है, जो 470+ रिहायशी, अस्पताल और कैंपस साइटों में फैले हैं। कंपनी ने 2026 के लिए तीन नई इलेक्ट्रिक वाहनों की भी पुष्टि की, जिनमें उसकी पहली प्लग-इन हाइब्रिड शामिल है। जानिए कम्युनिटी चार्जिंग क्यों मायने रखती है।",
   },
 ];
 

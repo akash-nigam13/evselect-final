@@ -1,6 +1,6 @@
 import { readdirSync, existsSync } from "fs";
 import { join } from "path";
-import { EVS, BRANDS } from "@/lib/ev-data";
+import { EVS, BRANDS, vehiclePath } from "@/lib/ev-data";
 import { POSTS, CATEGORIES } from "@/lib/blog-posts";
 import { SITE, toISODate } from "@/lib/seo";
 
@@ -92,7 +92,7 @@ export function localeEntries(): UrlEntry[] {
   const dynamicHi = [
     ...CATEGORIES.map((c) => `/hi/blog/category/${c.slug}`),
     ...BRANDS.map((b) => `/hi/brand/${b.slug}`),
-    ...EVS.map((e) => `/hi/catalog/${e.id}`),
+    ...EVS.map((e) => `/hi${vehiclePath(e)}`),
   ];
   const paths = Array.from(new Set([...discovered, ...dynamicHi]));
   return paths.map((path) => ({ path, lastmod: TODAY, changefreq: "weekly", priority: 0.7 }));
@@ -101,7 +101,7 @@ export function localeEntries(): UrlEntry[] {
 // ── Per-section collectors ───────────────────────────────────────
 const vehicleEntries = (cat: "car" | "scooter" | "motorcycle"): UrlEntry[] =>
   EVS.filter((e) => e.category === cat).map((e) => ({
-    path: `/catalog/${e.id}`,
+    path: vehiclePath(e),
     lastmod: TODAY,
     changefreq: "weekly",
     priority: 0.7,

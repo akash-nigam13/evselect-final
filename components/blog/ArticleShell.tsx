@@ -90,11 +90,14 @@ export default function ArticleShell({
             <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-ev-border/40 pt-5 font-mono text-xs text-ev-muted">
               <span className="flex items-center gap-1.5">
                 <User className="h-3.5 w-3.5" style={{ color: accent }} />
-                {SITE.author}
+                {isHi ? "द्वारा " : "By "}
+                <Link href={L("/editorial-policy")} className="text-ev-text/80 transition-colors hover:text-brand">
+                  {isHi ? `${SITE.author} संपादकीय टीम` : `${SITE.author} Editorial Team`}
+                </Link>
               </span>
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" style={{ color: accent }} />
-                {post.date}
+                {isHi ? "अपडेटेड " : "Updated "}{post.date}
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-3.5 w-3.5" style={{ color: accent }} />

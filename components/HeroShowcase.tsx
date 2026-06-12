@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { vehiclePathById } from "@/lib/ev-data";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { localizedHref, type Locale } from "@/lib/i18n";
@@ -99,7 +100,7 @@ export default function HeroShowcase({ evs, locale = "en" }: { evs: HeroEv[]; lo
 
       {/* Car + holographic podium */}
       <Link
-        href={href(`/catalog/${ev.id}`)}
+        href={href(vehiclePathById(ev.id))}
         aria-label={`View ${ev.name} specs`}
         className="relative block h-72 [perspective:1200px]"
       >
@@ -203,7 +204,7 @@ export default function HeroShowcase({ evs, locale = "en" }: { evs: HeroEv[]; lo
         </div>
 
         <Link
-          href={href(`/catalog/${ev.id}`)}
+          href={href(vehiclePathById(ev.id))}
           className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand/30 py-2 font-mono text-xs tracking-wide text-brand transition-colors hover:bg-brand/10"
         >
           {lbl.fullSpecs} <ArrowRight className="h-3 w-3" />

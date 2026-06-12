@@ -1,4 +1,4 @@
-import { CATEGORY_LABELS, priceLabel, type EV } from "@/lib/ev-data";
+import { CATEGORY_LABELS, priceLabel, type EV, vehiclePath } from "@/lib/ev-data";
 import { TERMS } from "@/lib/glossary";
 
 export const SITE = {
@@ -188,7 +188,7 @@ export function productSchema(ev: EV) {
     category: CATEGORY_LABELS[ev.category],
     brand: { "@type": "Brand", name: ev.brand },
     image: SITE.ogImage,
-    url: abs(`/catalog/${ev.id}`),
+    url: abs(vehiclePath(ev)),
     productionDate: ev.year ? String(ev.year) : undefined,
     additionalProperty: props,
   };

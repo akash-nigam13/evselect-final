@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Gauge, BatteryCharging, Zap } from "lucide-react";
-import { getById, EVS, priceLabel, type EV } from "@/lib/ev-data";
+import { getById, EVS, priceLabel, type EV, vehiclePath } from "@/lib/ev-data";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SpotlightCard from "@/components/ui/SpotlightCard";
@@ -88,7 +88,7 @@ export default function FeaturedVehicles() {
                     {priceLabel(ev)}
                   </span>
                   <Link
-                    href={`/catalog/${ev.id}`}
+                    href={vehiclePath(ev)}
                     className="inline-flex items-center gap-1.5 rounded-lg border border-ev-border px-3 py-2 font-mono text-xs text-ev-text/80 transition-colors hover:border-brand/40 hover:text-brand"
                   >
                     Specs <ArrowRight className="h-3 w-3" />

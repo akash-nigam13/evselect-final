@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { localeFromPath, t } from "@/lib/i18n";
 import { GitCompare, ArrowLeftRight, Trophy, Plus } from "lucide-react";
-import { EVS, getById, priceLabel, type EV } from "@/lib/ev-data";
+import { EVS, getById, priceLabel, type EV, vehiclePath } from "@/lib/ev-data";
 import VehiclePicker from "./VehiclePicker";
 import clsx from "clsx";
 
@@ -296,7 +296,7 @@ export default function CompareClient() {
             {chosen.map((ev) => (
               <Link
                 key={ev.id}
-                href={`/catalog/${ev.id}`}
+                href={vehiclePath(ev)}
                 className="inline-flex items-center gap-2 rounded-lg border border-ev-border px-3 py-2 text-xs font-medium text-ev-text/80 transition-colors hover:border-brand/40 hover:text-brand"
               >
                 {`${t("cmp.fullSpecs", locale)} ${ev.name} →`}

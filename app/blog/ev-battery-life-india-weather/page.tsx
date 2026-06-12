@@ -86,7 +86,7 @@ export default function Article2() {
             <div className="flex flex-wrap gap-5 text-xs font-mono text-ev-muted border-t border-ev-border/30 pt-5">
               <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-green" />Jan 22, 2026</span>
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-ev-green" />13 min read</span>
-              <span>EVSelect Editorial Team</span>
+              <Link href="/editorial-policy" className="hover:text-brand transition-colors">By EVSelect Editorial Team</Link>
             </div>
           </div>
         </div>

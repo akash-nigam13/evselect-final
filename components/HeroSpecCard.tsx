@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { vehiclePathById } from "@/lib/ev-data";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -61,7 +62,7 @@ export default function HeroSpecCard({ evs }: { evs: HeroEv[] }) {
 
         {/* Floating EV image (cross-fades; falls back to the branded tile until a real photo is added) */}
         <Link
-          href={`/catalog/${ev.id}`}
+          href={vehiclePathById(ev.id)}
           aria-label={`View ${ev.name} specs`}
           className="relative mb-4 block h-36 [perspective:1000px]"
         >
@@ -108,7 +109,7 @@ export default function HeroSpecCard({ evs }: { evs: HeroEv[] }) {
         </div>
 
         <Link
-          href={`/catalog/${ev.id}`}
+          href={vehiclePathById(ev.id)}
           className="mt-5 flex w-full items-center justify-center gap-1.5 rounded-lg border border-brand/30 py-2 font-mono text-xs tracking-wide text-brand transition-colors hover:bg-brand/10"
         >
           Full specs <ArrowRight className="h-3 w-3" />

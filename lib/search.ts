@@ -1,4 +1,4 @@
-import { EVS, BRANDS, priceLabel, CATEGORY_LABELS } from "@/lib/ev-data";
+import { EVS, BRANDS, priceLabel, CATEGORY_LABELS, vehiclePath } from "@/lib/ev-data";
 import { POSTS, postsByDate } from "@/lib/blog-posts";
 import { localizedHref, type Locale } from "@/lib/i18n";
 
@@ -38,7 +38,7 @@ function buildIndex(): SearchItem[] {
     group: "vehicle",
     title: ev.name + (ev.variant ? ` ${ev.variant}` : ""),
     sub: `${ev.brand} · ${priceLabel(ev)}`,
-    path: `/catalog/${ev.id}`,
+    path: vehiclePath(ev),
     keywords: lc(
       [ev.name, ev.fullName, ev.brand, ev.model, ev.variant ?? "", ev.bodyType, CATEGORY_LABELS[ev.category]].join(" ")
     ),

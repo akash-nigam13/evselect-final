@@ -19,7 +19,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import VehiclePhoto from "@/components/catalog/VehiclePhoto";
 import ToolsCTA from "@/components/ToolsCTA";
-import { EVS, priceLabel, brandSlug, type EV } from "@/lib/ev-data";
+import { EVS, priceLabel, brandSlug, type EV, vehiclePath } from "@/lib/ev-data";
 import { productSchema, faqPageSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
 import { featureHi } from "@/lib/feature-hi";
@@ -160,7 +160,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
               items={[
                 { name: t("nav.catalog", locale), path: href("/catalog") },
                 { name: ev.brand, path: href(`/brand/${brandSlug(ev.brand)}`) },
-                { name: ev.name, path: href(`/catalog/${ev.id}`) },
+                { name: ev.name, path: href(vehiclePath(ev)) },
               ]}
               className="mb-5"
             />

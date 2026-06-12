@@ -9,7 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import BrandLogo from "@/components/ui/BrandLogo";
 import ToolsCTA from "@/components/ToolsCTA";
-import { byBrandSlug, type Brand, type EVCategory } from "@/lib/ev-data";
+import { byBrandSlug, type Brand, type EVCategory, vehiclePath } from "@/lib/ev-data";
 import { collectionPageSchema, itemListSchema, faqPageSchema } from "@/lib/seo";
 import { Locale, t, localizedHref } from "@/lib/i18n";
 import { brandOverview, brandFaqs } from "@/lib/brand-content";
@@ -154,7 +154,7 @@ export default function BrandDetail({ brand, locale = "en" }: { brand: Brand; lo
             localizedHref(`/brand/${brand.slug}`, locale)
           ),
           itemListSchema(
-            evs.map((e) => ({ name: e.name, path: localizedHref(`/catalog/${e.id}`, locale) }))
+            evs.map((e) => ({ name: e.name, path: localizedHref(vehiclePath(e), locale) }))
           ),
           faqPageSchema(faqs),
         ]}

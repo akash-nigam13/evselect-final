@@ -1837,7 +1837,8 @@ export const EVS: EV[] = [
   {"id":"oben-rorr-evo-3-4-kwh","category":"motorcycle","brand":"Oben","model":"Rorr Evo","variant":"3.4 kWh","name":"Oben Rorr Evo","fullName":"Oben Rorr Evo 3.4 kWh","bodyType":"Motorcycle","priceMinLakh":1,"priceMaxLakh":1.25,"batteryKwh":3.4,"rangeKmARAI":180,"realRangeKm":145,"powerBhp":12.07,"torqueNm":250,"accelSec":3,"accelNote":"0-40 km/h","topSpeedKmph":110,"fastChargeKw":null,"fastChargeTime":"0-80% in 90 min","acChargeKw":null,"chargeTimeFull":null,"driveType":null,"seating":2,"bootLitres":null,"kerbWeightKg":140,"year":2026,"accent":"#fb923c","upcoming":false,"notableFeatures":["SmartIQ AI ride mode","9 kW motor, 250 Nm wheel torque","0-80% fast charge in 90 min","8-year battery warranty"]},
   {"id":"vinfast-vf6-59-6-kwh","category":"car","brand":"VinFast","model":"VF6","variant":null,"name":"VinFast VF6","fullName":"VinFast VF6","bodyType":"SUV","priceMinLakh":17.29,"priceMaxLakh":19.19,"batteryKwh":59.6,"rangeKmARAI":468,"realRangeKm":370,"powerBhp":204,"torqueNm":310,"accelSec":8.9,"accelNote":"0-100 km/h (Wind)","topSpeedKmph":null,"fastChargeKw":100,"fastChargeTime":"10-70% in 25 min","acChargeKw":11,"chargeTimeFull":null,"driveType":"FWD","seating":5,"bootLitres":null,"kerbWeightKg":null,"year":2026,"accent":"#22d3ee","upcoming":false,"notableFeatures":["Level-2 ADAS","Panoramic glass roof","100 kW DC fast charging","Compact 5-seat e-SUV"]},
   {"id":"vinfast-vf7-70-8-kwh","category":"car","brand":"VinFast","model":"VF7","variant":null,"name":"VinFast VF7","fullName":"VinFast VF7","bodyType":"SUV","priceMinLakh":21.89,"priceMaxLakh":26.79,"batteryKwh":70.8,"rangeKmARAI":532,"realRangeKm":420,"powerBhp":349,"torqueNm":500,"accelSec":5.8,"accelNote":"0-100 km/h (AWD)","topSpeedKmph":null,"fastChargeKw":null,"fastChargeTime":null,"acChargeKw":11,"chargeTimeFull":null,"driveType":"AWD","seating":5,"bootLitres":null,"kerbWeightKg":null,"year":2026,"accent":"#22d3ee","upcoming":false,"notableFeatures":["Bharat NCAP 5-star safety","Dual-motor AWD (349 bhp)","Level-2 ADAS","59.6/70.8 kWh battery options"]},
-  {"id":"tvs-iqube-s-4-7-kwh","category":"scooter","brand":"TVS","model":"iQube S","variant":"4.7 kWh","name":"TVS iQube S","fullName":"TVS iQube S 4.7 kWh","bodyType":"Scooter","priceMinLakh":1.37,"priceMaxLakh":1.37,"batteryKwh":4.7,"rangeKmARAI":175,"realRangeKm":122,"powerBhp":6,"torqueNm":140,"accelSec":4.3,"accelNote":"0-40 km/h","topSpeedKmph":82,"fastChargeKw":null,"fastChargeTime":null,"acChargeKw":null,"chargeTimeFull":"0-80% in approx 4h","driveType":null,"seating":2,"bootLitres":32,"kerbWeightKg":null,"year":2026,"accent":"#a3e635","upcoming":false,"notableFeatures":["Bigger 4.7 kWh battery pack","175 km IDC claimed range","17.78 cm TFT with navigation","32 L under-seat storage"]}
+  {"id":"tvs-iqube-s-4-7-kwh","category":"scooter","brand":"TVS","model":"iQube S","variant":"4.7 kWh","name":"TVS iQube S","fullName":"TVS iQube S 4.7 kWh","bodyType":"Scooter","priceMinLakh":1.37,"priceMaxLakh":1.37,"batteryKwh":4.7,"rangeKmARAI":175,"realRangeKm":122,"powerBhp":6,"torqueNm":140,"accelSec":4.3,"accelNote":"0-40 km/h","topSpeedKmph":82,"fastChargeKw":null,"fastChargeTime":null,"acChargeKw":null,"chargeTimeFull":"0-80% in approx 4h","driveType":null,"seating":2,"bootLitres":32,"kerbWeightKg":null,"year":2026,"accent":"#a3e635","upcoming":false,"notableFeatures":["Bigger 4.7 kWh battery pack","175 km IDC claimed range","17.78 cm TFT with navigation","32 L under-seat storage"]},
+  {"id":"vinfast-vf-mpv-7-60-13-kwh","category":"car","brand":"VinFast","model":"VF MPV 7","variant":null,"name":"VinFast VF MPV 7","fullName":"VinFast VF MPV 7","bodyType":"MPV","priceMinLakh":24.49,"priceMaxLakh":24.49,"batteryKwh":60.13,"rangeKmARAI":517,"realRangeKm":388,"powerBhp":201,"torqueNm":280,"accelSec":null,"accelNote":"0-100 km/h under 9s (claimed)","topSpeedKmph":140,"fastChargeKw":80,"fastChargeTime":"10-70% in 30 min","acChargeKw":6.9,"chargeTimeFull":null,"driveType":"FWD","seating":7,"bootLitres":126,"kerbWeightKg":null,"year":2026,"accent":"#22d3ee","upcoming":false,"notableFeatures":["Three-row 7-seat electric MPV","517 km ARAI claimed range","Theatre-style 2nd-row seats","10-year battery warranty"]}
 ];
 
 export const CATEGORY_LABELS: Record<EVCategory, string> = {
@@ -1991,3 +1992,26 @@ export const getBrandBySlug = (slug: string): Brand | undefined =>
 
 export const byBrandSlug = (slug: string): EV[] =>
   EVS.filter((e) => brandSlug(e.brand) === slug);
+
+// ── Vehicle URL helpers ──────────────────────────────────────────
+// Vehicle pages live at /<brandSlug>/<vehicleSlug>, where vehicleSlug is the
+// internal id with the leading brand prefix stripped (e.g. id
+// "tata-tiago-ev-long-range-24-kwh" -> /tata/tiago-ev-long-range-24-kwh).
+// The internal id stays unchanged; the slug is just a derived URL view.
+export const vehicleSlug = (ev: EV): string => {
+  const b = brandSlug(ev.brand);
+  return ev.id.startsWith(b + "-") ? ev.id.slice(b.length + 1) : ev.id;
+};
+
+/** Root-relative path to a vehicle's detail page (no locale prefix). */
+export const vehiclePath = (ev: EV): string => `/${brandSlug(ev.brand)}/${vehicleSlug(ev)}`;
+
+/** Resolve a vehicle from its brand slug + vehicle slug (the URL parts). */
+export const getByBrandAndSlug = (brand: string, slug: string): EV | undefined =>
+  EVS.find((e) => brandSlug(e.brand) === brand && vehicleSlug(e) === slug);
+
+/** Vehicle path from an id alone (for components that only carry the id). */
+export const vehiclePathById = (id: string): string => {
+  const ev = getById(id);
+  return ev ? vehiclePath(ev) : `/catalog/${id}`;
+};

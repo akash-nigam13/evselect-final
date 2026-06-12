@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ArrowRight, GitCompare } from "lucide-react";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import VehiclePhoto from "@/components/catalog/VehiclePhoto";
-import { priceLabel, CATEGORY_LABELS, type EV } from "@/lib/ev-data";
+import { priceLabel, CATEGORY_LABELS, vehiclePath, type EV } from "@/lib/ev-data";
 import { usePathname } from "next/navigation";
-import { localeFromPath, t } from "@/lib/i18n";
+import { localeFromPath, localizedHref, t } from "@/lib/i18n";
 
 interface EvCardProps {
   ev: EV;
@@ -21,9 +21,11 @@ export default function EvCard({ ev }: EvCardProps) {
   const chipLabel =
     ev.bodyType || CATEGORY_LABELS[ev.category] || ev.category;
 
+  const vHref = localizedHref(vehiclePath(ev), locale);
+
   return (
     <SpotlightCard accent={ev.accent} className="h-full">
-      <div className="flex h-full flex-col p-5 sm:p-6">
+      <div className="group relative flex h-full flex-col p-5 sm:p-6">
         {/* Cover image */}
         <VehiclePhoto
           id={ev.id}
@@ -56,9 +58,12 @@ export default function EvCard({ ev }: EvCardProps) {
           )}
         </div>
 
-        {/* Name + subtitle */}
-        <h3 className="font-display text-xl font-bold leading-tight text-ev-text">
-          {ev.name}
+        {/* Name + subtitle — the name is the anchor; its ::before stretches over
+            the whole card so clicking anywhere opens the vehicle page. */}
+        <h3 className="font-display text-xl font-bold leading-tight text-ev-text transition-colors group-hover:text-brand">
+          <Link href={vHref} className="before:absolute before:inset-0 before:content-['']">
+            {ev.name}
+          </Link>
         </h3>
         <p className="mt-1 font-body text-sm text-ev-muted">
           {ev.variant ?? ev.bodyType}
@@ -97,18 +102,16 @@ export default function EvCard({ ev }: EvCardProps) {
           </div>
         </div>
 
-        {/* Actions */}
+        {/* Actions. The "view specs" pill is visual only (pointer-events-none) so
+            clicks pass through to the card-wide name link. Compare sits above it. */}
         <div className="mt-auto flex items-center gap-3 pt-6">
-          <Link
-            href={`/catalog/${ev.id}`}
-            className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-brand-gradient px-4 py-2.5 font-body text-sm font-semibold text-ev-bg transition-transform duration-200 hover:-translate-y-0.5"
-          >
+          <span className="pointer-events-none inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-brand-gradient px-4 py-2.5 font-body text-sm font-semibold text-ev-bg transition-transform duration-200 group-hover:-translate-y-0.5">
             {t("card.viewSpecs", locale)}
-            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
-          </Link>
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </span>
           <Link
-            href={`/compare-electric-vehicles?ids=${ev.id}`}
-            className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-ev-border bg-ev-surface px-4 py-2.5 font-body text-sm font-medium text-ev-text transition-colors duration-200 hover:border-iris/50 hover:text-iris"
+            href={localizedHref(`/compare-electric-vehicles?ids=${ev.id}`, locale)}
+            className="relative z-10 inline-flex items-center justify-center gap-1.5 rounded-xl border border-ev-border bg-ev-surface px-4 py-2.5 font-body text-sm font-medium text-ev-text transition-colors duration-200 hover:border-iris/50 hover:text-iris"
           >
             <GitCompare className="h-4 w-4" />
             {t("card.compare", locale)}

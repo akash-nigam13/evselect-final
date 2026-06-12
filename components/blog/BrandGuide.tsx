@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { vehiclePath } from "@/lib/ev-data";
 import { ArrowRight, BatteryCharging, Gauge, Zap, IndianRupee } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 import { faqPageSchema } from "@/lib/seo";
@@ -57,7 +58,7 @@ export default function BrandGuide({ slug }: { slug: string }) {
               {ev.powerBhp && <span className="inline-flex items-center gap-1"><Zap className="h-3.5 w-3.5 text-brand" /> {ev.powerBhp} bhp</span>}
             </div>
             <Link
-              href={`/catalog/${ev.id}`}
+              href={vehiclePath(ev)}
               className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] font-medium text-brand hover:underline"
             >
               Full specs <ArrowRight className="h-3 w-3" />
@@ -98,21 +99,21 @@ export default function BrandGuide({ slug }: { slug: string }) {
         {picks.cheapest && (
           <li>
             <strong>Best value / most affordable:</strong> the{" "}
-            <Link href={`/catalog/${picks.cheapest.id}`}>{picks.cheapest.name}</Link>{" "}
+            <Link href={vehiclePath(picks.cheapest)}>{picks.cheapest.name}</Link>{" "}
             at {priceLabel(picks.cheapest)} — the easiest way into the {name} {sing} range.
           </li>
         )}
         {picks.longest && picks.longest.rangeKmARAI && (
           <li>
             <strong>Longest range:</strong> the{" "}
-            <Link href={`/catalog/${picks.longest.id}`}>{picks.longest.name}</Link>{" "}
+            <Link href={vehiclePath(picks.longest)}>{picks.longest.name}</Link>{" "}
             with a claimed {picks.longest.rangeKmARAI} km — best for highway and long-distance use.
           </li>
         )}
         {picks.powerful && picks.powerful.powerBhp && (
           <li>
             <strong>Most powerful:</strong> the{" "}
-            <Link href={`/catalog/${picks.powerful.id}`}>{picks.powerful.name}</Link>{" "}
+            <Link href={vehiclePath(picks.powerful)}>{picks.powerful.name}</Link>{" "}
             making {picks.powerful.powerBhp} bhp — for buyers who want performance.
           </li>
         )}

@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tata Sierra EV: Launch Timeline, Price & Range (2026)",
+  title: "Tata Sierra EV to Debut on June 30, 2026: Price, Range, AWD & Specs",
   description:
-    "Tata's Sierra returns as an electric SUV on the Gen-2 Acti.ev platform — expected 55–65 kWh battery, up to ~500 km range and RWD/AWD options. Here's everything reported so far.",
+    "Tata Motors will debut the Sierra EV on June 30, 2026. Built on the acti.ev+ platform with 65–75 kWh batteries, RWD and AWD (QWD), and an expected ₹18–25 lakh price — here's everything confirmed so far.",
   alternates: altsFor("/blog/tata-sierra-ev-launch-2026", "en"),
   openGraph: {
-    title: "Tata Sierra EV: Launch Timeline, Price & Range (2026)",
+    title: "Tata Sierra EV to Debut on June 30, 2026: Price, Range, AWD & Specs",
     type: "article",
   },
 };
@@ -18,13 +18,12 @@ export default function Page() {
   return (
     <ArticleShell slug="tata-sierra-ev-launch-2026">
       <p>
-        One of the most anticipated electric launches in India is finally taking
-        shape. The Tata Sierra EV — a modern, all-electric revival of the iconic
-        1990s nameplate — is moving toward its market debut, and the details
-        emerging from Tata point to a premium electric SUV aimed squarely at
-        India&apos;s fast-growing electric-car buyer. Here is what has been
-        reported so far, with the usual caveat that figures remain expected until
-        Tata confirms them at launch.
+        It&apos;s official: Tata Motors will <strong>debut the Sierra EV on June 30,
+        2026</strong>. The modern, all-electric revival of the iconic 1990s nameplate
+        is one of the most anticipated launches of the year — a premium electric SUV
+        aimed squarely at India&apos;s fast-growing electric-car buyer. Here is
+        everything confirmed and reported so far ahead of the reveal (final pricing
+        will be announced at launch).
       </p>
 
       <h2>What is the Tata Sierra EV?</h2>
@@ -42,23 +41,24 @@ export default function Page() {
 
       <h2>Battery, range and performance</h2>
       <p>
-        According to multiple reports, the Sierra EV is expected to offer a choice
-        of battery packs — broadly in the <strong>55 kWh to 65 kWh</strong> range,
-        shared with the Curvv EV and Harrier EV — delivering a claimed driving
-        range of around <strong>500 kilometres</strong> on the higher trims. Tata
-        is also reported to offer both rear-wheel-drive (RWD) and all-wheel-drive
-        (AWD) versions, with the dual-motor AWD setup enabling stronger
-        performance and the platform supporting Level 2+ ADAS. As always, expect
-        real-world range to sit somewhat below the claimed figure depending on
-        driving style, terrain and air-conditioning use.
+        The Sierra EV is built on Tata&apos;s <strong>acti.ev+ platform</strong> —
+        the same architecture as the Harrier EV — and is reported to use{" "}
+        <strong>65 kWh and 75 kWh</strong> battery packs, with a claimed driving
+        range of up to around <strong>500–550 kilometres</strong> on the higher trim.
+        Tata has confirmed both rear-wheel-drive (RWD) and all-wheel-drive versions;
+        the dual-motor AWD setup is badged <strong>QWD (Quad Wheel Drive)</strong> and
+        is expected on the 75 kWh variant, making the Sierra EV the most affordable
+        Tata to offer all-wheel drive. As always, real-world range will sit somewhat
+        below the claimed figure depending on driving style, terrain and AC use.
       </p>
 
       <h2>Expected price and positioning</h2>
       <p>
         Reported pricing places the Sierra EV in the premium electric-SUV bracket,
         with most sources pointing to an expected ex-showroom range of roughly{" "}
-        <strong>₹20–25 lakh</strong>, the base RWD variant starting near the lower
-        end. That positions it above Tata&apos;s more affordable EVs and into
+        <strong>₹18–25 lakh</strong> — slotting between the Curvv EV and Harrier EV,
+        with the base RWD variant near the lower end. That positions it above
+        Tata&apos;s more affordable EVs and into
         direct competition with other mid-size electric SUVs. For buyers
         cross-shopping the segment, it is worth lining the Sierra EV up against
         rivals on range, battery size and on-road price — our{" "}
@@ -81,7 +81,7 @@ export default function Page() {
       <h2>What to watch next</h2>
       <ul>
         <li>
-          Official launch date and final, confirmed pricing from Tata.
+          Final on-road pricing, revealed at the June 30, 2026 launch.
         </li>
         <li>
           Confirmed battery options, certified range and charging speeds per
