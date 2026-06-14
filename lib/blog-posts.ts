@@ -667,6 +667,42 @@ export const POSTS: BlogPost[] = [
       "भारत में इलेक्ट्रिक कार लोन कैसे काम करता है? 2026 की यह गाइड बताती है ग्रीन कार लोन ब्याज दरें, बैंक कितना फाइनेंस करते हैं, EMI और अवधि, और Section 80EEB टैक्स लाभ जिसे ज़्यादातर खरीदार ग़लत समझते हैं।",
   },
 
+  {
+    slug: "ev-charger-types-connectors-india",
+    title: "EV Charger Types & Connectors in India (2026): Type 2, CCS2 & GB/T Explained",
+    subtitle: "AC vs DC, the plugs your EV uses, and which charger is which",
+    excerpt:
+      "What are the different EV charger types in India? A 2026 guide to AC vs DC charging and the connectors — Type 2, CCS2, CHAdeMO, GB/T and the new LECCS for scooters — so you always plug into the right one.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "8 min",
+    date: "Jun 13, 2026",
+    accent: "#C6F94E",
+    related: ["home-ev-charging-cost-india", "ev-charging-infrastructure-india", "india-ev-charging-network-2026", "ev-charging-apartments-housing-societies-india"],
+    hiTitle: "भारत में EV चार्जर के प्रकार और कनेक्टर (2026): Type 2, CCS2 और GB/T समझाए गए",
+    hiSubtitle: "AC बनाम DC, आपकी EV जो प्लग इस्तेमाल करती है, और कौन-सा चार्जर कौन-सा है",
+    hiExcerpt:
+      "भारत में EV चार्जर के अलग-अलग प्रकार क्या हैं? 2026 की यह गाइड AC बनाम DC चार्जिंग और कनेक्टरों — Type 2, CCS2, CHAdeMO, GB/T और स्कूटरों के लिए नया LECCS — को समझाती है, ताकि आप हमेशा सही चार्जर में प्लग करें।",
+  },
+
+  {
+    slug: "electric-car-vs-cng-car-india",
+    title: "Electric Car vs CNG Car in India (2026): Which Should You Buy?",
+    subtitle: "Running cost, refuelling, GST and real-world fit — honestly compared",
+    excerpt:
+      "Electric car vs CNG car is the value buyer's real dilemma in India. This 2026 guide compares EVs and CNG cars on upfront price, running cost, GST, refuelling, boot space and resale to help you choose.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 14, 2026",
+    accent: "#26E0C4",
+    related: ["how-to-choose-first-ev-india", "petrol-vs-electric-5-year-cost-india", "electric-car-vs-hybrid-india", "home-ev-charging-cost-india"],
+    hiTitle: "भारत में इलेक्ट्रिक कार बनाम CNG कार (2026): कौन-सी खरीदें?",
+    hiSubtitle: "रनिंग कॉस्ट, रिफ्यूलिंग, GST और असली फिट — ईमानदारी से तुलना",
+    hiExcerpt:
+      "इलेक्ट्रिक कार बनाम CNG कार भारत में किफ़ायती खरीदार की असली दुविधा है। यह 2026 गाइड EV और CNG कारों की तुलना अपफ्रंट कीमत, रनिंग कॉस्ट, GST, रिफ्यूलिंग, बूट स्पेस और रीसेल पर करती है ताकि आप सही चुनाव कर सकें।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
@@ -903,6 +939,42 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "470+ साइटें कवर; 2026 में एक PHEV समेत तीन नई EV",
     hiExcerpt:
       "JSW MG Motor India का कहना है कि वह देश में 1,000 कम्युनिटी EV चार्जर लगाने वाली पहली कारमेकर है, जो 470+ रिहायशी, अस्पताल और कैंपस साइटों में फैले हैं। कंपनी ने 2026 के लिए तीन नई इलेक्ट्रिक वाहनों की भी पुष्टि की, जिनमें उसकी पहली प्लग-इन हाइब्रिड शामिल है। जानिए कम्युनिटी चार्जिंग क्यों मायने रखती है।",
+  },
+  {
+    slug: "tvs-1-million-electric-scooter-sales-2026",
+    title: "TVS Crosses 1 Million Electric Scooter Sales in India",
+    subtitle: "Only the second brand after Ola to hit the 10-lakh mark",
+    excerpt:
+      "TVS Motor has crossed 10 lakh (1 million) cumulative electric scooter sales in India — 10,04,148 units of the iQube and Orbiter as of June 11, 2026 — becoming only the second EV maker after Ola Electric to reach the milestone. Here's how fast it got there and what it signals.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 14, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["electric-two-wheeler-sales-record-may-2026", "tvs-electric-scooters", "top-5-electric-scooters-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "TVS ने भारत में 10 लाख इलेक्ट्रिक स्कूटर बिक्री पार की",
+    hiSubtitle: "Ola के बाद यह मुकाम छूने वाला सिर्फ़ दूसरा ब्रांड",
+    hiExcerpt:
+      "TVS Motor ने भारत में 10 लाख (1 मिलियन) संचयी इलेक्ट्रिक स्कूटर बिक्री पार कर ली है — 11 जून 2026 तक iQube और Orbiter की 10,04,148 यूनिट — और Ola Electric के बाद यह उपलब्धि हासिल करने वाली दूसरी EV निर्माता बन गई है। जानिए यह कितनी तेज़ी से पहुँची और इसका क्या मतलब है।",
+  },
+  {
+    slug: "petrol-price-100-ev-demand-june-2026",
+    title: "Petrol Tops ₹100 in Major Cities — and EV Interest Is Surging",
+    subtitle: "A ₹7.5/litre fuel-price jump sharpens the case for going electric",
+    excerpt:
+      "Petrol and diesel have risen by nearly ₹7.5 a litre in under two weeks, pushing petrol past ₹100 in several Indian cities amid West Asia tensions. As pump prices bite, EV running-cost savings look bigger than ever. Here's what the fuel shock means for Indian buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 14, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["petrol-vs-electric-5-year-cost-india", "electric-car-vs-cng-car-india", "ev-maintenance-cost-india", "how-to-choose-first-ev-india"],
+    hiTitle: "बड़े शहरों में पेट्रोल ₹100 के पार — EV में दिलचस्पी बढ़ी",
+    hiSubtitle: "₹7.5/लीटर की उछाल ने इलेक्ट्रिक चुनने का तर्क और मज़बूत किया",
+    hiExcerpt:
+      "पश्चिम एशिया में तनाव के बीच दो हफ़्तों से भी कम समय में पेट्रोल-डीज़ल करीब ₹7.5 प्रति लीटर महँगे हुए हैं, जिससे कई भारतीय शहरों में पेट्रोल ₹100 के पार चला गया है। पंप की कीमतें चुभने के साथ EV की रनिंग-कॉस्ट बचत पहले से कहीं बड़ी दिखती है। जानिए इस ईंधन झटके का भारतीय खरीदारों के लिए क्या मतलब है।",
   },
 ];
 

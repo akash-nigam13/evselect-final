@@ -72,6 +72,7 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/tata-sierra-ev-launch-2026",
     "/blog/tata-ev-discounts-june-2026",
     "/blog/ultraviolette-tesseract-delayed-2027",
+    "/blog/electric-car-vs-cng-car-india",
     "/ev-subsidies-india",
     "/ev-charging-station-setup-india",
     "/about",
