@@ -78,6 +78,8 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/petrol-price-100-ev-demand-june-2026",
     "/blog/mercedes-s-class-s450e-phev-india-2026",
     "/blog/byd-dm-i-phev-india-2026",
+    "/blog/ev-cars-record-share-may-2026",
+    "/blog/pm-e-drive-2w-subsidy-deadline-july-2026",
     "/ev-subsidies-india",
     "/ev-charging-station-setup-india",
     "/about",

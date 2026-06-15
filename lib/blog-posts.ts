@@ -1030,6 +1030,42 @@ export const POSTS: BlogPost[] = [
     hiExcerpt:
       "BYD India ने भारतीय बाज़ार के लिए अपनी DM-i 'सुपर प्लग-इन हाइब्रिड' तकनीक का खुलासा किया है और Seal U को यहाँ अपनी पहली PHEV के रूप में पुष्टि की है, जो 2026 के अंत तक आएगी। 1,000 km से अधिक की कंबाइंड रेंज और लगभग 140 km तक की इलेक्ट्रिक-ओनली रेंज के साथ, जानिए BYD के हाइब्रिड कदम का भारतीय खरीदारों के लिए क्या मतलब है।",
   },
+  {
+    slug: "ev-cars-record-share-may-2026",
+    title: "Electric Cars Hit Record 6.6% Share in India in May 2026",
+    subtitle: "EV passenger sales jump 81% as fuel prices bite",
+    excerpt:
+      "Electric passenger vehicle retail sales surged 81% year-on-year to 26,682 units in May 2026, taking EV cars to a record 6.6% of the market, FADA data shows. Tata led with 10,340 units, ahead of Mahindra and JSW MG. Here's what the record month means for buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 15, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tata-ev-sales-cross-10000-may-2026", "electric-two-wheeler-sales-record-may-2026", "petrol-price-100-ev-demand-june-2026", "india-ev-sales-fy2026"],
+    hiTitle: "मई 2026 में भारत में इलेक्ट्रिक कारों की हिस्सेदारी रिकॉर्ड 6.6% पर",
+    hiSubtitle: "ईंधन कीमतें चुभने से EV पैसेंजर बिक्री 81% उछली",
+    hiExcerpt:
+      "FADA डेटा के अनुसार, मई 2026 में इलेक्ट्रिक पैसेंजर वाहन रिटेल बिक्री सालाना 81% बढ़कर 26,682 यूनिट हो गई, जिससे EV कारें बाज़ार के रिकॉर्ड 6.6% तक पहुँच गईं। Tata 10,340 यूनिट के साथ आगे रही, उसके बाद Mahindra और JSW MG। जानिए इस रिकॉर्ड महीने का खरीदारों के लिए क्या मतलब है।",
+  },
+  {
+    slug: "pm-e-drive-2w-subsidy-deadline-july-2026",
+    title: "PM E-Drive Scooter Subsidy Ends July 31 — Buy Before the Cap Runs Out",
+    subtitle: "₹5,000 e-scooter incentive is fund-limited and nearly used up",
+    excerpt:
+      "The PM E-Drive demand incentive for electric two-wheelers now ends on July 31, 2026 — but the scheme is fund-limited and could close sooner. With about 22 lakh of the 24.79 lakh e-scooter slots already claimed, here's what buyers need to know before the cap runs out.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 15, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["ev-subsidies-road-tax-by-state-india-2026", "top-5-electric-scooters-india-2026", "electric-two-wheeler-sales-record-may-2026", "best-electric-motorcycles-india-2026"],
+    hiTitle: "PM E-Drive स्कूटर सब्सिडी 31 जुलाई को खत्म — कैप खत्म होने से पहले खरीदें",
+    hiSubtitle: "₹5,000 का ई-स्कूटर प्रोत्साहन फंड-सीमित और लगभग खत्म",
+    hiExcerpt:
+      "इलेक्ट्रिक टू-व्हीलर के लिए PM E-Drive डिमांड प्रोत्साहन अब 31 जुलाई 2026 को खत्म होगा — पर यह योजना फंड-सीमित है और जल्दी बंद हो सकती है। 24.79 लाख ई-स्कूटर स्लॉट में से लगभग 22 लाख पहले ही क्लेम हो चुके हैं, जानिए कैप खत्म होने से पहले खरीदारों को क्या जानना चाहिए।",
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────
