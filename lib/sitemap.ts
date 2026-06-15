@@ -2,6 +2,7 @@ import { readdirSync, existsSync } from "fs";
 import { join } from "path";
 import { EVS, BRANDS, vehiclePath } from "@/lib/ev-data";
 import { POSTS, CATEGORIES } from "@/lib/blog-posts";
+import { allPairSlugs } from "@/lib/compare-pairs";
 import { SITE, toISODate } from "@/lib/seo";
 
 const BASE = SITE.url;
@@ -140,6 +141,12 @@ export function otherEntries(): UrlEntry[] {
       priority: 0.6,
     })),
     { path: "/compare-electric-vehicles", lastmod: TODAY, changefreq: "monthly", priority: 0.8 },
+    ...allPairSlugs().map((slug) => ({
+      path: `/compare/${slug}`,
+      lastmod: TODAY,
+      changefreq: "monthly" as const,
+      priority: 0.6,
+    })),
     { path: "/ev-calculators", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
     { path: "/ev-guides", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
     { path: "/ev-subsidies-india", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },

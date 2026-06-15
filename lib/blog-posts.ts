@@ -976,6 +976,42 @@ export const POSTS: BlogPost[] = [
     hiExcerpt:
       "पश्चिम एशिया में तनाव के बीच दो हफ़्तों से भी कम समय में पेट्रोल-डीज़ल करीब ₹7.5 प्रति लीटर महँगे हुए हैं, जिससे कई भारतीय शहरों में पेट्रोल ₹100 के पार चला गया है। पंप की कीमतें चुभने के साथ EV की रनिंग-कॉस्ट बचत पहले से कहीं बड़ी दिखती है। जानिए इस ईंधन झटके का भारतीय खरीदारों के लिए क्या मतलब है।",
   },
+  {
+    slug: "mercedes-s-class-s450e-phev-india-2026",
+    title: "Mercedes S-Class S 450e Launched: India's First Plug-in Hybrid S-Class",
+    subtitle: "The flagship sedan goes electric-first with a 100 km PHEV range",
+    excerpt:
+      "Mercedes-Benz launched the 2026 S-Class facelift in India on June 15, offered solely as the plug-in hybrid S 450e — its first non-AMG PHEV S-Class here. A 3.0-litre inline-six pairs with a 22 kWh battery for 435 hp and a claimed 100 km of electric range. Here's what the flagship's electrification means.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 15, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["byd-dm-i-phev-india-2026", "tesla-hyderabad-experience-centre-june-2026", "best-electric-cars-india-2026", "tesla-model-y-price-cut-india-2026"],
+    hiTitle: "Mercedes S-Class S 450e लॉन्च: भारत की पहली प्लग-इन हाइब्रिड S-Class",
+    hiSubtitle: "फ्लैगशिप सेडान अब इलेक्ट्रिक-फर्स्ट, 100 km की PHEV रेंज के साथ",
+    hiExcerpt:
+      "Mercedes-Benz ने 15 जून को भारत में 2026 S-Class फेसलिफ्ट लॉन्च की, जो सिर्फ़ प्लग-इन हाइब्रिड S 450e के रूप में पेश की गई — यह यहाँ की पहली नॉन-AMG PHEV S-Class है। 3.0-लीटर इनलाइन-सिक्स इंजन 22 kWh बैटरी के साथ मिलकर 435 hp और दावा की गई 100 km की इलेक्ट्रिक रेंज देता है। जानिए फ्लैगशिप के इलेक्ट्रिक होने का क्या मतलब है।",
+  },
+  {
+    slug: "byd-dm-i-phev-india-2026",
+    title: "BYD Confirms DM-i Plug-in Hybrid for India",
+    subtitle: "Super-efficient PHEV tech with 1,000 km+ combined range is India-bound",
+    excerpt:
+      "BYD India has revealed its DM-i 'Super Plug-in Hybrid' technology for the Indian market, confirming the Seal U as its first PHEV here, due by the end of 2026. With combined ranges past 1,000 km and up to ~140 km of electric-only running, here's why BYD's hybrid push matters for Indian buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 15, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["byd-electric-cars", "best-electric-cars-india-2026", "mercedes-s-class-s450e-phev-india-2026", "tata-sierra-ev-launch-2026"],
+    hiTitle: "BYD ने भारत के लिए DM-i प्लग-इन हाइब्रिड की पुष्टि की",
+    hiSubtitle: "1,000 km+ कंबाइंड रेंज वाली सुपर-एफिशिएंट PHEV तकनीक भारत आ रही है",
+    hiExcerpt:
+      "BYD India ने भारतीय बाज़ार के लिए अपनी DM-i 'सुपर प्लग-इन हाइब्रिड' तकनीक का खुलासा किया है और Seal U को यहाँ अपनी पहली PHEV के रूप में पुष्टि की है, जो 2026 के अंत तक आएगी। 1,000 km से अधिक की कंबाइंड रेंज और लगभग 140 km तक की इलेक्ट्रिक-ओनली रेंज के साथ, जानिए BYD के हाइब्रिड कदम का भारतीय खरीदारों के लिए क्या मतलब है।",
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────

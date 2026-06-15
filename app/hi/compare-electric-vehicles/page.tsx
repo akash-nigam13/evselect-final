@@ -5,9 +5,11 @@ import AdPlaceholder from "@/components/AdPlaceholder";
 import Aurora from "@/components/ui/Aurora";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import { webAppSchema, faqPageSchema } from "@/lib/seo";
+import { webAppSchema, faqPageSchema, SITE } from "@/lib/seo";
 import { altsFor, localizedHref } from "@/lib/i18n";
 import CompareClient from "@/components/compare/CompareClient";
+import { getById } from "@/lib/ev-data";
+import { COMPARE_PAIRS, comparePath } from "@/lib/compare-pairs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +17,20 @@ export const metadata: Metadata = {
   description:
     "भारत में किन्हीं भी दो या तीन EVs की साथ-साथ तुलना करें — रेंज, बैटरी, कीमत, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक का लाइव डेटा।",
   alternates: altsFor("/compare-electric-vehicles", "hi"),
+  openGraph: {
+    title: "इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें | EVSelect.in",
+    description:
+      "भारत में 2–3 EVs की साथ-साथ तुलना करें — कीमत, रेंज, बैटरी, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक।",
+    url: `${SITE.url}/hi/compare-electric-vehicles`,
+    type: "website",
+  },
 };
+
+const popularComparisons = COMPARE_PAIRS.map(([a, b]) => {
+  const ea = getById(a);
+  const eb = getById(b);
+  return ea && eb ? { slug: `${a}-vs-${b}`, a: ea, b: eb, path: comparePath(a, b) } : null;
+}).filter(Boolean) as { slug: string; a: { name: string }; b: { name: string }; path: string }[];
 
 const faqs = [
   {
@@ -54,7 +69,7 @@ export default function HiComparePage() {
               तुलना इंजन
             </p>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">
-              किन्हीं भी <span className="text-gradient-brand">EVs की तुलना</span>, तुरंत
+              <span className="text-gradient-brand">इलेक्ट्रिक वाहनों</span> की साथ-साथ तुलना करें
             </h1>
             <p className="mx-auto mt-4 max-w-xl font-body text-ev-text/60">
               दो या तीन इलेक्ट्रिक वाहन चुनें और हर ज़रूरी स्पेक का पूरा साथ-साथ
@@ -88,6 +103,28 @@ export default function HiComparePage() {
               कितनी बचत कर सकते हैं।
             </p>
           </div>
+
+          <section className="mx-auto mb-12 max-w-5xl">
+            <h2 className="mb-2 font-display text-2xl font-bold text-white">
+              लोकप्रिय EV तुलनाएँ
+            </h2>
+            <p className="mb-6 font-body text-sm text-ev-text/60">
+              खरीदार जिन मुकाबलों के बारे में सबसे ज़्यादा पूछते हैं, सीधे उन पर जाएँ।
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {popularComparisons.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={c.path}
+                  className="card-hover rounded-xl border border-ev-border bg-ev-card p-4"
+                >
+                  <span className="text-sm font-semibold text-white">
+                    {c.a.name} <span className="text-brand">vs</span> {c.b.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
 
           <section className="mx-auto mt-16 max-w-3xl">
             <h2 className="mb-6 font-display text-2xl font-bold text-white">

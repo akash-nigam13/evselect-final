@@ -75,6 +75,8 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/electric-car-vs-cng-car-india",
     "/blog/tvs-1-million-electric-scooter-sales-2026",
     "/blog/petrol-price-100-ev-demand-june-2026",
+    "/blog/mercedes-s-class-s450e-phev-india-2026",
+    "/blog/byd-dm-i-phev-india-2026",
     "/ev-subsidies-india",
     "/ev-charging-station-setup-india",
     "/about",
@@ -107,7 +109,7 @@ const basePath = (path: string) => normPath(path.split(/[?#]/)[0]);
 const HI_DYNAMIC: RegExp[] = [
   /^\/brand\/[^/]+$/,
   // Vehicle pages: /<brandSlug>/<modelSlug> (exclude reserved top-level sections).
-  /^\/(?!(?:catalog|brand|blog|compare-electric-vehicles|ev-calculators|ev-guides|ev-news|ev-subsidies-india|ev-charging-station-setup-india|ev-selection-tool|about|about-ev-batteries|contact|privacy|terms|editorial-policy|advertising-disclosure|search)\/)[a-z0-9-]+\/[a-z0-9-]+$/,
+  /^\/(?!(?:catalog|brand|blog|compare|compare-electric-vehicles|ev-calculators|ev-guides|ev-news|ev-subsidies-india|ev-charging-station-setup-india|ev-selection-tool|about|about-ev-batteries|contact|privacy|terms|editorial-policy|advertising-disclosure|search)\/)[a-z0-9-]+\/[a-z0-9-]+$/,
 ];
 
 /** Is there a published translation of `path` for locale `l`? */
