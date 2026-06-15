@@ -30,6 +30,8 @@ export default function EvCard({ ev }: EvCardProps) {
         <VehiclePhoto
           id={ev.id}
           image={ev.image ?? null}
+          credit={ev.imageCredit ?? null}
+          source={ev.imageSource ?? null}
           accent={ev.accent}
           name={ev.fullName}
           className="mb-5"

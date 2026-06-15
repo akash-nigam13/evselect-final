@@ -37,6 +37,10 @@ export interface EV {
   upcoming?: boolean;
   /** optional photo URL; if unset the UI tries /vehicles/<id>.jpg then a placeholder */
   image?: string | null;
+  /** attribution caption for the photo, e.g. "Author · CC BY-SA 4.0" */
+  imageCredit?: string | null;
+  /** link to the photo's source page (e.g. its Wikimedia Commons file page) */
+  imageSource?: string | null;
   notableFeatures: string[];
 }
 
@@ -1843,6 +1847,34 @@ export const EVS: EV[] = [
   {"id":"mahindra-xuv-3xo-ev-39-4-kwh","category":"car","brand":"Mahindra","model":"XUV 3XO EV","variant":"39.4 kWh","name":"Mahindra XUV 3XO EV","fullName":"Mahindra XUV 3XO EV 39.4 kWh","bodyType":"SUV","priceMinLakh":13.89,"priceMaxLakh":14.96,"batteryKwh":39.4,"rangeKmARAI":null,"realRangeKm":285,"powerBhp":148,"torqueNm":310,"accelSec":8.3,"accelNote":"0-100 km/h","topSpeedKmph":null,"fastChargeKw":null,"fastChargeTime":"0-80% in 50 min","acChargeKw":7.2,"chargeTimeFull":"0-100% in ~6.5h (7.2 kW)","driveType":"FWD","seating":5,"bootLitres":null,"kerbWeightKg":null,"year":2026,"accent":"#22d3ee","upcoming":false,"notableFeatures":["Level 2 ADAS suite","Dual 10.25-inch screens","Panoramic sunroof","6 airbags & 360-degree camera"]},
   {"id":"simple-ultra-6-5-kwh","category":"scooter","brand":"Simple","model":"Ultra","variant":null,"name":"Simple Ultra","fullName":"Simple Ultra","bodyType":"Scooter","priceMinLakh":2.35,"priceMaxLakh":2.35,"batteryKwh":6.5,"rangeKmARAI":400,"realRangeKm":280,"powerBhp":null,"torqueNm":null,"accelSec":2.77,"accelNote":"0-40 km/h","topSpeedKmph":115,"fastChargeKw":null,"fastChargeTime":null,"acChargeKw":null,"chargeTimeFull":null,"driveType":null,"seating":2,"bootLitres":null,"kerbWeightKg":null,"year":2026,"accent":"#a3e635","upcoming":false,"notableFeatures":["India's largest scooter battery (6.5 kWh)","400 km IDC claimed range","Dual battery (5 + 1.5 kWh) setup","7-inch console with traction control"]}
 ];
+
+// ── Vehicle photos (legally reusable) ────────────────────────────
+// Verified Creative Commons / public-domain photos from Wikimedia Commons,
+// attached by id-prefix so every variant of a model shares the photo. We
+// hotlink via Special:FilePath (a stable URL that always resolves to the
+// current file, and simply 404s — falling back to the placeholder — if the
+// file ever moves). `imageCredit` + `imageSource` carry the attribution the
+// CC licences require; the caption links back to the Commons file page.
+const COMMONS_PHOTOS: { prefix: string; file: string; credit: string; source: string }[] = [
+  { prefix: "tata-nexon-ev", file: "2020 Tata Nexon EV (India) front view.png", credit: "Hindustan Times / DriveSpark · CC BY 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:2020_Tata_Nexon_EV_(India)_front_view.png" },
+  { prefix: "tata-tiago-ev", file: "2022 Tata Tiago EV IB XZ+ Tech LR front view.png", credit: "DriveSpark · CC BY 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:2022_Tata_Tiago_EV_IB_XZ%2B_Tech_LR_front_view.png" },
+  { prefix: "tata-punch-ev", file: "Tata punch.ev.jpg", credit: "CC0 (public domain) · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Tata_punch.ev.jpg" },
+  { prefix: "mg-comet-ev", file: "2023 MG Comet EV Plush (India).png", credit: "DriveSpark · CC BY 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:2023_MG_Comet_EV_Plush_(India).png" },
+  { prefix: "hyundai-creta-electric", file: "Hyundai Creta Electric SU2 EV PE (3).jpg", credit: "CC BY 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Hyundai_Creta_Electric_SU2_EV_PE_(3).jpg" },
+  { prefix: "hyundai-ioniq-5", file: "Hyundai IONIQ 5 NE Atlas White Matte (1).jpg", credit: "Damian B Oh · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Hyundai_IONIQ_5_NE_Atlas_White_Matte_(1).jpg" },
+  { prefix: "kia-ev6", file: "Kia EV6 GT-Line CV Moonscape Gray Matte (1).jpg", credit: "Damian B Oh · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Kia_EV6_GT-Line_CV_Moonscape_Gray_Matte_(1).jpg" },
+  { prefix: "byd-atto-3", file: "BYD Atto 3 front-left.jpg", credit: "CC BY 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_front-left.jpg" },
+  { prefix: "byd-seal", file: "2022 BYD Seal.jpg", credit: "CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:2022_BYD_Seal.jpg" },
+];
+
+for (const ev of EVS) {
+  if (ev.image != null) continue;
+  const p = COMMONS_PHOTOS.find((c) => ev.id.startsWith(c.prefix));
+  if (!p) continue;
+  ev.image = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(p.file)}?width=900`;
+  ev.imageCredit = p.credit;
+  ev.imageSource = p.source;
+}
 
 export const CATEGORY_LABELS: Record<EVCategory, string> = {
   car: "Electric Cars",

@@ -215,7 +215,7 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
 
               {/* Right column: photo + stats */}
               <div className="space-y-4">
-                <VehiclePhoto id={ev.id} image={ev.image ?? null} accent={ev.accent} name={ev.fullName} />
+                <VehiclePhoto id={ev.id} image={ev.image ?? null} credit={ev.imageCredit ?? null} source={ev.imageSource ?? null} accent={ev.accent} name={ev.fullName} />
                 {tiles.length > 0 && (
                   <div className="grid grid-cols-2 gap-3">
                     {tiles.map((tile) => {
