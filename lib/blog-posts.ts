@@ -703,6 +703,24 @@ export const POSTS: BlogPost[] = [
       "इलेक्ट्रिक कार बनाम CNG कार भारत में किफ़ायती खरीदार की असली दुविधा है। यह 2026 गाइड EV और CNG कारों की तुलना अपफ्रंट कीमत, रनिंग कॉस्ट, GST, रिफ्यूलिंग, बूट स्पेस और रीसेल पर करती है ताकि आप सही चुनाव कर सकें।",
   },
 
+  {
+    slug: "ev-charging-time-india",
+    title: "EV Charging Time in India (2026): How Long Does It Take to Charge an Electric Car?",
+    subtitle: "AC vs DC times, the 10–80% rule and what really decides the wait",
+    excerpt:
+      "How long does it take to charge an electric car in India? A 2026 guide to EV charging time — home AC vs DC fast charging, why the 10–80% window matters, scooter vs car times, and the factors that speed it up or slow it down.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "8 min",
+    date: "Jun 15, 2026",
+    accent: "#C6F94E",
+    related: ["ev-charger-types-connectors-india", "home-ev-charging-cost-india", "ev-charging-infrastructure-india", "real-world-range-vs-arai-india"],
+    hiTitle: "भारत में EV चार्जिंग समय (2026): इलेक्ट्रिक कार चार्ज होने में कितना समय लगता है?",
+    hiSubtitle: "AC बनाम DC समय, 10–80% का नियम, और असल में इंतज़ार क्या तय करता है",
+    hiExcerpt:
+      "भारत में इलेक्ट्रिक कार को चार्ज होने में कितना समय लगता है? 2026 की यह गाइड EV चार्जिंग समय समझाती है — होम AC बनाम DC फ़ास्ट चार्जिंग, 10–80% विंडो क्यों मायने रखती है, स्कूटर बनाम कार के समय, और कौन-से कारक इसे तेज़ या धीमा करते हैं।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",

@@ -73,6 +73,7 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/tata-ev-discounts-june-2026",
     "/blog/ultraviolette-tesseract-delayed-2027",
     "/blog/electric-car-vs-cng-car-india",
+    "/blog/ev-charging-time-india",
     "/blog/tvs-1-million-electric-scooter-sales-2026",
     "/blog/petrol-price-100-ev-demand-june-2026",
     "/blog/mercedes-s-class-s450e-phev-india-2026",
