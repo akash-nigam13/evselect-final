@@ -1084,6 +1084,42 @@ export const POSTS: BlogPost[] = [
     hiExcerpt:
       "इलेक्ट्रिक टू-व्हीलर के लिए PM E-Drive डिमांड प्रोत्साहन अब 31 जुलाई 2026 को खत्म होगा — पर यह योजना फंड-सीमित है और जल्दी बंद हो सकती है। 24.79 लाख ई-स्कूटर स्लॉट में से लगभग 22 लाख पहले ही क्लेम हो चुके हैं, जानिए कैप खत्म होने से पहले खरीदारों को क्या जानना चाहिए।",
   },
+  {
+    slug: "tata-price-hike-july-2026",
+    title: "Tata Raises Car & EV Prices by Up to 1.5% From July 1",
+    subtitle: "The first hike for its EV range this year — right as June discounts run",
+    excerpt:
+      "Tata Motors will raise prices across its passenger-vehicle range, including its electric cars, by up to 1.5% from July 1, 2026, blaming rising input costs. It is the first price increase for Tata's EV lineup this year — and it lands just as the brand runs its biggest June discounts. Here's what it means for buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "4 min",
+    date: "Jun 16, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tata-ev-discounts-june-2026", "tata-ev-sales-cross-10000-may-2026", "ev-cars-record-share-may-2026", "petrol-vs-electric-5-year-cost-india"],
+    hiTitle: "Tata 1 जुलाई से कारों और EV की कीमतें 1.5% तक बढ़ाएगी",
+    hiSubtitle: "इस साल EV रेंज की पहली बढ़ोतरी — वह भी जून की छूट के बीच",
+    hiExcerpt:
+      "Tata Motors 1 जुलाई 2026 से अपनी पैसेंजर-वाहन रेंज में, इलेक्ट्रिक कारों समेत, कीमतें 1.5% तक बढ़ाएगी और इसके लिए बढ़ती इनपुट लागत को ज़िम्मेदार ठहराया है। यह इस साल Tata की EV लाइनअप की पहली कीमत बढ़ोतरी है — और यह तब आ रही है जब ब्रांड अपनी सबसे बड़ी जून छूट चला रहा है। जानिए खरीदारों के लिए इसका क्या मतलब है।",
+  },
+  {
+    slug: "delhi-ev-policy-2-0-2026",
+    title: "Delhi EV Policy 2.0: Up to ₹1 Lakh Subsidy, Tied to Scrapping Old Cars",
+    subtitle: "Scrappage-linked incentives, faster DBT payouts and an e-scooter sweetener",
+    excerpt:
+      "Delhi's Budget 2026 has introduced EV Policy 2.0 with a ₹200 crore outlay, offering up to ₹1 lakh off an electric car under ₹15 lakh, a flat ₹10,000 for e-two-wheelers and bigger benefits if you scrap an old petrol or diesel vehicle. Payouts move to direct bank transfer. Here's what's confirmed and who gains.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 16, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["ev-subsidies-road-tax-by-state-india-2026", "pm-e-drive-2w-subsidy-deadline-july-2026", "best-electric-cars-under-15-lakh-india", "how-to-choose-first-ev-india"],
+    hiTitle: "दिल्ली EV नीति 2.0: ₹1 लाख तक सब्सिडी, पुरानी कार स्क्रैप करने से जुड़ी",
+    hiSubtitle: "स्क्रैपेज-लिंक्ड प्रोत्साहन, तेज़ DBT भुगतान और ई-स्कूटर पर सहूलियत",
+    hiExcerpt:
+      "दिल्ली के बजट 2026 में ₹200 करोड़ के परिव्यय के साथ EV नीति 2.0 पेश की गई है, जिसमें ₹15 लाख से कम की इलेक्ट्रिक कार पर ₹1 लाख तक की छूट, ई-टू-व्हीलर पर सपाट ₹10,000 और पुराने पेट्रोल या डीज़ल वाहन को स्क्रैप करने पर बड़े फ़ायदे मिलते हैं। भुगतान अब सीधे बैंक ट्रांसफर से होगा। जानिए क्या पुष्टि हुई है और किसे फ़ायदा।",
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────
