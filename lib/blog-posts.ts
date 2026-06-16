@@ -721,6 +721,24 @@ export const POSTS: BlogPost[] = [
       "भारत में इलेक्ट्रिक कार को चार्ज होने में कितना समय लगता है? 2026 की यह गाइड EV चार्जिंग समय समझाती है — होम AC बनाम DC फ़ास्ट चार्जिंग, 10–80% विंडो क्यों मायने रखती है, स्कूटर बनाम कार के समय, और कौन-से कारक इसे तेज़ या धीमा करते हैं।",
   },
 
+  {
+    slug: "ev-battery-replacement-cost-india",
+    title: "EV Battery Replacement Cost in India (2026): What It Really Costs",
+    subtitle: "Per-kWh prices, warranty cover and why most owners never pay",
+    excerpt:
+      "How much does it cost to replace an EV battery in India? A 2026 guide to real replacement prices for cars and scooters, the 8-year warranty that usually covers you, and why most owners never see the bill.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "9 min",
+    date: "Jun 16, 2026",
+    accent: "#8B7BFF",
+    related: ["ev-battery-lifespan-india", "ev-battery-life-india-weather", "ev-resale-value-battery-health-india", "petrol-vs-electric-5-year-cost-india"],
+    hiTitle: "भारत में EV बैटरी रिप्लेसमेंट लागत (2026): असल में कितना खर्च आता है",
+    hiSubtitle: "प्रति-kWh कीमतें, वारंटी कवर और ज़्यादातर मालिक क्यों कभी नहीं चुकाते",
+    hiExcerpt:
+      "भारत में EV बैटरी बदलवाने में कितना खर्च आता है? 2026 की यह गाइड कारों और स्कूटरों के लिए असली रिप्लेसमेंट कीमतें, 8 साल की वारंटी जो आमतौर पर आपको कवर करती है, और ज़्यादातर मालिक यह बिल क्यों कभी नहीं देखते — सब समझाती है।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",

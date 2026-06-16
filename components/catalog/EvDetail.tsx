@@ -18,6 +18,7 @@ import Counter from "@/components/ui/Counter";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import VehiclePhoto from "@/components/catalog/VehiclePhoto";
+import VariantTable from "@/components/catalog/VariantTable";
 import ToolsCTA from "@/components/ToolsCTA";
 import { EVS, priceLabel, brandSlug, type EV, vehiclePath } from "@/lib/ev-data";
 import { productSchema, faqPageSchema } from "@/lib/seo";
@@ -293,6 +294,9 @@ export default function EvDetail({ ev, locale = "en" }: { ev: EV; locale?: Local
             })}
           </div>
         </section>
+
+        {/* Variant lineup */}
+        <VariantTable ev={ev} locale={locale} />
 
         {/* Highlights */}
         {ev.notableFeatures.length > 0 && (

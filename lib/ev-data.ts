@@ -5,6 +5,20 @@
 
 export type EVCategory = "car" | "scooter" | "motorcycle";
 
+/** A single purchasable trim/variant of a model. */
+export interface Variant {
+  /** Trim/variant name, e.g. "Creative+ 45" or "S1 Pro 4 kWh". */
+  name: string;
+  batteryKwh?: number | null;
+  /** Claimed (ARAI/IDC) range in km. */
+  rangeKm?: number | null;
+  powerBhp?: number | null;
+  /** Ex-showroom price in ₹ lakh. */
+  priceLakh?: number | null;
+  /** One short highlight, e.g. "Adds sunroof + ADAS". */
+  note?: string | null;
+}
+
 export interface EV {
   id: string;
   category: EVCategory;
@@ -41,6 +55,8 @@ export interface EV {
   imageCredit?: string | null;
   /** link to the photo's source page (e.g. its Wikimedia Commons file page) */
   imageSource?: string | null;
+  /** full purchasable variant/trim lineup; rendered as a table on the page */
+  variants?: Variant[];
   notableFeatures: string[];
 }
 
@@ -1874,6 +1890,586 @@ for (const ev of EVS) {
   ev.image = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(p.file)}?width=900`;
   ev.imageCredit = p.credit;
   ev.imageSource = p.source;
+}
+
+// ── Variant / trim lineups ───────────────────────────────────────
+// Full purchasable variant tables, attached by id-prefix so every config of a
+// model shares the lineup. Prices are indicative ex-showroom (₹ lakh) and
+// change with offers — refresh periodically. Researched from public Indian
+// sources; see VARIANT_SOURCES for citations.
+const VEHICLE_VARIANTS: { id: string; variants: Variant[] }[] = [
+  { id: "tata-tiago-ev-long-range-24-kwh", variants: [
+    { name: "Pure+ 24", batteryKwh: 24, rangeKm: 285, powerBhp: 75 },
+    { name: "Creative+ 24", batteryKwh: 24, rangeKm: 285, powerBhp: 75, priceLakh: 9.99 },
+  ] },
+  { id: "mg-comet-ev", variants: [
+    { name: "Executive", batteryKwh: 17.3, rangeKm: 230, powerBhp: 42, priceLakh: 7.36 },
+    { name: "Excite", batteryKwh: 17.3, rangeKm: 230, powerBhp: 42 },
+    { name: "Excite FC", batteryKwh: 17.4, rangeKm: 230, powerBhp: 42 },
+    { name: "Exclusive", batteryKwh: 17.3, rangeKm: 230, powerBhp: 42 },
+    { name: "Exclusive FC", batteryKwh: 17.4, rangeKm: 230, powerBhp: 42, priceLakh: 9.86 },
+  ] },
+  { id: "tata-punch-ev-long-range-40-kwh", variants: [
+    { name: "Smart+ 40", batteryKwh: 40, rangeKm: 468, powerBhp: 129, priceLakh: 10.89 },
+    { name: "Adventure 40", batteryKwh: 40, rangeKm: 468, powerBhp: 129, priceLakh: 11.59 },
+    { name: "Empowered 40", batteryKwh: 40, rangeKm: 468, powerBhp: 129, priceLakh: 12.29 },
+    { name: "Empowered+S 40", batteryKwh: 40, rangeKm: 468, powerBhp: 129, priceLakh: 12.59 },
+  ] },
+  { id: "tata-nexon-ev-long-range-45-kwh", variants: [
+    { name: "Creative 45", batteryKwh: 45, rangeKm: 489, powerBhp: 143, priceLakh: 13.99 },
+    { name: "Fearless 45", batteryKwh: 45, rangeKm: 489, powerBhp: 143, priceLakh: 14.99 },
+    { name: "Empowered Plus 45", batteryKwh: 45, rangeKm: 489, powerBhp: 143, priceLakh: 16.99 },
+    { name: "Empowered Plus A 45", batteryKwh: 45, rangeKm: 489, powerBhp: 143, priceLakh: 17.49 },
+  ] },
+  { id: "citroen-ec3", variants: [
+    { name: "Feel", batteryKwh: 29.2, rangeKm: 320, powerBhp: 56, priceLakh: 12.9 },
+    { name: "Shine", batteryKwh: 29.2, rangeKm: 320, powerBhp: 56 },
+    { name: "Shine DT", batteryKwh: 29.2, rangeKm: 320, powerBhp: 56, priceLakh: 13.41 },
+  ] },
+  { id: "mg-windsor-ev-38-kwh", variants: [
+    { name: "Excite", batteryKwh: 38, rangeKm: 332, powerBhp: 134, priceLakh: 14 },
+    { name: "Exclusive", batteryKwh: 38, rangeKm: 332, powerBhp: 134, priceLakh: 15.53 },
+    { name: "Essence", batteryKwh: 38, rangeKm: 332, powerBhp: 134, priceLakh: 16.53 },
+  ] },
+  { id: "mg-zs-ev", variants: [
+    { name: "Executive", batteryKwh: 50.3, rangeKm: 461, powerBhp: 176, priceLakh: 18.98 },
+    { name: "Excite Pro", batteryKwh: 50.3, rangeKm: 461, powerBhp: 176 },
+    { name: "Exclusive Plus", batteryKwh: 50.3, rangeKm: 461, powerBhp: 176 },
+    { name: "Essence", batteryKwh: 50.3, rangeKm: 461, powerBhp: 176, priceLakh: 25.75 },
+  ] },
+  { id: "mg-windsor-ev-pro-52-9-kwh", variants: [
+    { name: "Exclusive Pro", batteryKwh: 52.9, rangeKm: 449, powerBhp: 134, priceLakh: 17.49 },
+    { name: "Essence Pro", batteryKwh: 52.9, rangeKm: 449, powerBhp: 134, priceLakh: 18.1 },
+  ] },
+  { id: "tata-curvv-ev-55-kwh", variants: [
+    { name: "Accomplished X 55", batteryKwh: 55, rangeKm: 502, powerBhp: 165, priceLakh: 17.49 },
+    { name: "Empowered X 55", batteryKwh: 55, rangeKm: 502, powerBhp: 165, priceLakh: 19.19 },
+    { name: "Empowered X 55 Dark", batteryKwh: 55, rangeKm: 502, powerBhp: 165, priceLakh: 19.49 },
+  ] },
+  { id: "hyundai-creta-electric-long-range-51-4-kwh", variants: [
+    { name: "Excellence LR", batteryKwh: 51.4, rangeKm: 510, powerBhp: 169, priceLakh: 23.82 },
+  ] },
+  { id: "mahindra-be-6-79-kwh", variants: [
+    { name: "Pack Two 79", batteryKwh: 79, rangeKm: 683, powerBhp: 282, priceLakh: 23.5 },
+    { name: "Pack Three Select 79", batteryKwh: 79, rangeKm: 683, powerBhp: 282 },
+    { name: "Pack Three 79", batteryKwh: 79, rangeKm: 683, powerBhp: 282, priceLakh: 26.9 },
+  ] },
+  { id: "maruti-suzuki-e-vitara-61-kwh", variants: [
+    { name: "Zeta 61", batteryKwh: 61.1, rangeKm: 543, powerBhp: 172, priceLakh: 17.49 },
+    { name: "Alpha 61", batteryKwh: 61.1, rangeKm: 543, powerBhp: 172, priceLakh: 19.79 },
+  ] },
+  { id: "mahindra-xev-9e-79-kwh", variants: [
+    { name: "Pack One 79", batteryKwh: 79, rangeKm: 656, powerBhp: 282, priceLakh: 21.9 },
+    { name: "Pack Two 79", batteryKwh: 79, rangeKm: 656, powerBhp: 282, priceLakh: 24.9 },
+    { name: "Pack Three Select 79", batteryKwh: 79, rangeKm: 656, powerBhp: 282, priceLakh: 27.9 },
+    { name: "Pack Three 79", batteryKwh: 79, rangeKm: 656, powerBhp: 282, priceLakh: 30.5 },
+  ] },
+  { id: "tata-harrier-ev-qwd-75-kwh", variants: [
+    { name: "Fearless+ QWD 75", batteryKwh: 75, rangeKm: 622, powerBhp: 390, priceLakh: 26.49 },
+    { name: "Empowered QWD 75", batteryKwh: 75, rangeKm: 622, powerBhp: 390, priceLakh: 28.99 },
+    { name: "Empowered QWD 75 Stealth", batteryKwh: 75, rangeKm: 622, powerBhp: 390, priceLakh: 29.74 },
+    { name: "Empowered QWD 75 Stealth ACFC", batteryKwh: 75, rangeKm: 622, powerBhp: 390, priceLakh: 30.23 },
+  ] },
+  { id: "mahindra-xuv-3xo-ev-39-4-kwh", variants: [
+    { name: "AX5", batteryKwh: 39.4, powerBhp: 147, priceLakh: 13.89 },
+    { name: "AX7L", batteryKwh: 39.4, powerBhp: 147, priceLakh: 14.96 },
+  ] },
+  { id: "tata-sierra-ev", variants: [
+    { name: "Single-motor (launch)", rangeKm: 500 },
+    { name: "Dual-motor AWD (launch)", rangeKm: 500 },
+  ] },
+  { id: "mahindra-xev-9s", variants: [
+    { name: "Pack One Above 59", batteryKwh: 59, rangeKm: 521, powerBhp: 231, priceLakh: 19.95 },
+    { name: "Pack Two Above 79", batteryKwh: 79, rangeKm: 679, powerBhp: 286, priceLakh: 25.45 },
+    { name: "Pack Three 79", batteryKwh: 79, rangeKm: 679, powerBhp: 286, priceLakh: 27.35 },
+    { name: "Pack Three Above 79", batteryKwh: 79, rangeKm: 679, powerBhp: 286, priceLakh: 29.45 },
+  ] },
+  { id: "citroen-basalt-ev", variants: [
+    { name: "Basalt EV (launch)", batteryKwh: 35, rangeKm: 450 },
+  ] },
+  { id: "kia-syros-ev", variants: [
+    { name: "Syros EV (launch)", batteryKwh: 42, rangeKm: 390, powerBhp: 133, priceLakh: 14 },
+  ] },
+  { id: "kia-carens-clavis-ev-42-kwh", variants: [
+    { name: "HTK Plus", batteryKwh: 42, rangeKm: 404, powerBhp: 133, priceLakh: 17.99 },
+    { name: "HTX", batteryKwh: 42, rangeKm: 404, powerBhp: 133 },
+    { name: "HTX 6Str", batteryKwh: 42, rangeKm: 404, powerBhp: 133, priceLakh: 20.49 },
+  ] },
+  { id: "kia-carens-clavis-ev-51-4-kwh-long-range", variants: [
+    { name: "HTX ER", batteryKwh: 51.4, rangeKm: 490, powerBhp: 171, priceLakh: 21.99 },
+    { name: "GTX Plus ER", batteryKwh: 51.4, rangeKm: 490, powerBhp: 171 },
+    { name: "X-Line ER", batteryKwh: 51.4, rangeKm: 490, powerBhp: 171, priceLakh: 24.49 },
+  ] },
+  { id: "toyota-urban-cruiser-ev", variants: [
+    { name: "E1 (49 kWh)", batteryKwh: 49, rangeKm: 440, powerBhp: 142 },
+    { name: "E2 (61 kWh)", batteryKwh: 61, rangeKm: 543, powerBhp: 174 },
+    { name: "E3 (61 kWh)", batteryKwh: 61, rangeKm: 543, powerBhp: 174, priceLakh: 23.6 },
+  ] },
+  { id: "byd-atto-3-superior-60-48-kwh", variants: [
+    { name: "Dynamic", batteryKwh: 49.92, rangeKm: 468, powerBhp: 201, priceLakh: 24.99 },
+    { name: "Premium", batteryKwh: 60.48, rangeKm: 521, powerBhp: 201, priceLakh: 29.85 },
+    { name: "Superior", batteryKwh: 60.48, rangeKm: 521, powerBhp: 201, priceLakh: 33.99 },
+  ] },
+  { id: "byd-emax-7-superior-71-8-kwh", variants: [
+    { name: "Premium", batteryKwh: 55.4, rangeKm: 420, powerBhp: 161, priceLakh: 26.9 },
+    { name: "Superior", batteryKwh: 71.8, rangeKm: 530, powerBhp: 201, priceLakh: 29.9 },
+  ] },
+  { id: "byd-seal-premium-82-56-kwh", variants: [
+    { name: "Dynamic", batteryKwh: 61.44, rangeKm: 510, powerBhp: 204, priceLakh: 41 },
+    { name: "Premium", batteryKwh: 82.56, rangeKm: 650, powerBhp: 313, priceLakh: 45.7 },
+    { name: "Performance", batteryKwh: 82.56, rangeKm: 580, powerBhp: 522, priceLakh: 53.15 },
+  ] },
+  { id: "byd-sealion-7-premium-rwd", variants: [
+    { name: "Premium (RWD)", batteryKwh: 82.56, rangeKm: 567, powerBhp: 313, priceLakh: 49.4 },
+  ] },
+  { id: "byd-sealion-7-performance-awd", variants: [
+    { name: "Performance (AWD)", batteryKwh: 82.56, rangeKm: 542, powerBhp: 530, priceLakh: 54.9 },
+  ] },
+  { id: "hyundai-ioniq-5-84-kwh", variants: [
+    { name: "84 kWh RWD", batteryKwh: 84, rangeKm: 690, powerBhp: 225, priceLakh: 55.7 },
+  ] },
+  { id: "hyundai-ioniq-6", variants: [
+    { name: "77.4 kWh RWD", batteryKwh: 77.4, rangeKm: 614, powerBhp: 228 },
+  ] },
+  { id: "kia-ev6-gt-line-awd-84-kwh", variants: [
+    { name: "GT-Line AWD", batteryKwh: 84, rangeKm: 663, powerBhp: 325, priceLakh: 65.97 },
+  ] },
+  { id: "kia-ev9-gt-line", variants: [
+    { name: "GT-Line AWD", batteryKwh: 99.8, rangeKm: 561, powerBhp: 379, priceLakh: 130 },
+  ] },
+  { id: "tesla-model-y-premium-rwd", variants: [
+    { name: "Premium RWD", batteryKwh: 60, rangeKm: 500, powerBhp: 235, priceLakh: 50.89 },
+  ] },
+  { id: "tesla-model-y-long-range-rwd", variants: [
+    { name: "Long Range RWD", batteryKwh: 84.2, rangeKm: 622, powerBhp: 340, priceLakh: 67.89 },
+  ] },
+  { id: "tesla-model-y-l-long-wheelbase-awd", variants: [
+    { name: "Model Y L (6-seat LWB AWD)", batteryKwh: 88.2, rangeKm: 681, priceLakh: 61.99 },
+  ] },
+  { id: "tesla-model-3", variants: [
+    { name: "Dual-motor AWD", powerBhp: 460 },
+  ] },
+  { id: "vinfast-vf6-59-6-kwh", variants: [
+    { name: "Earth", batteryKwh: 59.6, rangeKm: 468, powerBhp: 177, priceLakh: 17.29 },
+    { name: "Wind", batteryKwh: 59.6, rangeKm: 463, powerBhp: 204, priceLakh: 18.69 },
+    { name: "Wind Infinity", batteryKwh: 59.6, rangeKm: 463, powerBhp: 204, priceLakh: 19.19 },
+  ] },
+  { id: "vinfast-vf6", variants: [
+    { name: "Earth", batteryKwh: 59.6, rangeKm: 468, powerBhp: 177, priceLakh: 17.29 },
+    { name: "Wind", batteryKwh: 59.6, rangeKm: 463, powerBhp: 204, priceLakh: 18.69 },
+    { name: "Wind Infinity", batteryKwh: 59.6, rangeKm: 463, powerBhp: 204, priceLakh: 19.19 },
+  ] },
+  { id: "vinfast-vf7-70-8-kwh", variants: [
+    { name: "Earth", batteryKwh: 59.6, rangeKm: 438, powerBhp: 175, priceLakh: 21.89 },
+    { name: "Wind", batteryKwh: 70.8, rangeKm: 532, powerBhp: 204, priceLakh: 23.89 },
+    { name: "Wind Infinity", batteryKwh: 70.8, rangeKm: 532, powerBhp: 204, priceLakh: 24.89 },
+    { name: "Sky AWD", batteryKwh: 70.8, rangeKm: 510, powerBhp: 353, priceLakh: 25.79 },
+    { name: "Sky Infinity AWD", batteryKwh: 70.8, rangeKm: 510, powerBhp: 353, priceLakh: 26.79 },
+  ] },
+  { id: "vinfast-vf7", variants: [
+    { name: "Earth", batteryKwh: 59.6, rangeKm: 438, powerBhp: 175, priceLakh: 21.89 },
+    { name: "Wind", batteryKwh: 70.8, rangeKm: 532, powerBhp: 204, priceLakh: 23.89 },
+    { name: "Wind Infinity", batteryKwh: 70.8, rangeKm: 532, powerBhp: 204, priceLakh: 24.89 },
+    { name: "Sky AWD", batteryKwh: 70.8, rangeKm: 510, powerBhp: 353, priceLakh: 25.79 },
+    { name: "Sky Infinity AWD", batteryKwh: 70.8, rangeKm: 510, powerBhp: 353, priceLakh: 26.79 },
+  ] },
+  { id: "vinfast-vf-mpv-7-60-13-kwh", variants: [
+    { name: "VF MPV 7", batteryKwh: 60.13, rangeKm: 517, powerBhp: 201, priceLakh: 24.49 },
+  ] },
+  { id: "volvo-ex30", variants: [
+    { name: "Single Motor ER (RWD) Ultra", batteryKwh: 69, rangeKm: 480, powerBhp: 272, priceLakh: 41 },
+  ] },
+  { id: "volvo-ex40-single-motor-ultra", variants: [
+    { name: "Plus (Single Motor)", batteryKwh: 69, rangeKm: 475, powerBhp: 238, priceLakh: 50.1 },
+    { name: "Ultra (Single Motor)", batteryKwh: 69, rangeKm: 475, powerBhp: 238, priceLakh: 56.1 },
+  ] },
+  { id: "volvo-ec40", variants: [
+    { name: "Twin Motor (AWD)", batteryKwh: 78, rangeKm: 530, powerBhp: 408, priceLakh: 59 },
+  ] },
+  { id: "volvo-ex90", variants: [
+    { name: "Twin Motor", batteryKwh: 111, rangeKm: 600, powerBhp: 408 },
+    { name: "Twin Motor Performance", batteryKwh: 111, rangeKm: 600, powerBhp: 517 },
+  ] },
+  { id: "mg-cyberster", variants: [
+    { name: "GT (Dual-Motor AWD)", batteryKwh: 77, rangeKm: 580, powerBhp: 510, priceLakh: 74.99 },
+  ] },
+  { id: "mg-m9", variants: [
+    { name: "Presidential Limo", batteryKwh: 90, rangeKm: 548, powerBhp: 241, priceLakh: 69.9 },
+  ] },
+  { id: "mercedes-benz-eqa", variants: [
+    { name: "EQA 250+", batteryKwh: 70.5, rangeKm: 560, powerBhp: 188, priceLakh: 67.2 },
+  ] },
+  { id: "mercedes-benz-eqb", variants: [
+    { name: "EQB 250+", batteryKwh: 70.5, rangeKm: 535, powerBhp: 188, priceLakh: 70.9 },
+    { name: "EQB 350 4MATIC AMG Line", batteryKwh: 70.5, rangeKm: 520, powerBhp: 288, priceLakh: 77.5 },
+  ] },
+  { id: "mercedes-benz-eqe-suv-500-4matic", variants: [
+    { name: "EQE SUV 500 4MATIC", batteryKwh: 90.56, rangeKm: 550, powerBhp: 402, priceLakh: 141 },
+  ] },
+  { id: "mercedes-benz-eqs-580-4matic", variants: [
+    { name: "EQS 580 4MATIC", batteryKwh: 107.8, rangeKm: 857, powerBhp: 516, priceLakh: 148 },
+  ] },
+  { id: "mercedes-benz-eqs-suv-580-4matic", variants: [
+    { name: "EQS SUV 580 4MATIC", batteryKwh: 122, rangeKm: 809, powerBhp: 544, priceLakh: 148 },
+  ] },
+  { id: "mercedes-maybach-eqs-680-suv-680-4matic", variants: [
+    { name: "Maybach EQS 680 4MATIC", batteryKwh: 107.8, rangeKm: 611, powerBhp: 649, priceLakh: 225 },
+  ] },
+  { id: "bmw-ix1-lwb-edrive20l", variants: [
+    { name: "iX1 LWB eDrive20L M Sport", batteryKwh: 66.4, rangeKm: 531, powerBhp: 204, priceLakh: 49 },
+  ] },
+  { id: "bmw-i4-edrive35", variants: [
+    { name: "i4 eDrive35 M Sport", batteryKwh: 70.2, rangeKm: 483, powerBhp: 286, priceLakh: 72.5 },
+    { name: "i4 eDrive40 M Sport", batteryKwh: 83.9, rangeKm: 590, powerBhp: 340, priceLakh: 77.5 },
+  ] },
+  { id: "bmw-i5-m60-xdrive", variants: [
+    { name: "i5 M60 xDrive", batteryKwh: 81.2, rangeKm: 516, powerBhp: 593, priceLakh: 120 },
+  ] },
+  { id: "bmw-ix-xdrive50", variants: [
+    { name: "iX xDrive50", batteryKwh: 105.2, rangeKm: 635, powerBhp: 516, priceLakh: 139.5 },
+  ] },
+  { id: "bmw-i7-xdrive60", variants: [
+    { name: "i7 eDrive50 M Sport", batteryKwh: 101.7, rangeKm: 603, powerBhp: 449, priceLakh: 205 },
+    { name: "i7 M70 xDrive", batteryKwh: 101.7, rangeKm: 560, powerBhp: 650, priceLakh: 250 },
+  ] },
+  { id: "audi-q8-e-tron-55-quattro", variants: [
+    { name: "Q8 e-tron 50 quattro", batteryKwh: 95, rangeKm: 491, powerBhp: 340, priceLakh: 115 },
+    { name: "Q8 e-tron 55 quattro", batteryKwh: 114, rangeKm: 582, powerBhp: 408, priceLakh: 127 },
+  ] },
+  { id: "audi-e-tron-gt", variants: [
+    { name: "e-tron GT quattro", batteryKwh: 93.4, rangeKm: 500, powerBhp: 476, priceLakh: 171.57 },
+    { name: "RS e-tron GT", batteryKwh: 93.4, rangeKm: 481, powerBhp: 598, priceLakh: 195.29 },
+  ] },
+  { id: "audi-q6-e-tron", variants: [
+    { name: "Q6 e-tron quattro", batteryKwh: 94.9, rangeKm: 625, powerBhp: 387 },
+  ] },
+  { id: "porsche-taycan", variants: [
+    { name: "Taycan (RWD)", batteryKwh: 89, rangeKm: 668, powerBhp: 408, priceLakh: 170 },
+    { name: "Taycan 4S", batteryKwh: 105, rangeKm: 705, powerBhp: 598, priceLakh: 196 },
+    { name: "Taycan Turbo", batteryKwh: 105, rangeKm: 683, powerBhp: 884, priceLakh: 270 },
+  ] },
+  { id: "porsche-macan-ev", variants: [
+    { name: "Macan EV", batteryKwh: 100, rangeKm: 641, powerBhp: 335, priceLakh: 121 },
+    { name: "Macan EV 4S", batteryKwh: 100, rangeKm: 606, powerBhp: 516, priceLakh: 158 },
+    { name: "Macan EV Turbo", batteryKwh: 100, rangeKm: 591, powerBhp: 639, priceLakh: 183 },
+  ] },
+  { id: "mini-countryman-electric-e", variants: [
+    { name: "Countryman E", batteryKwh: 66.45, rangeKm: 462, powerBhp: 204, priceLakh: 54.9 },
+    { name: "Countryman SE All4", batteryKwh: 66.45, rangeKm: 440, powerBhp: 313, priceLakh: 66.9 },
+  ] },
+  { id: "lotus-eletre", variants: [
+    { name: "Eletre", batteryKwh: 112, rangeKm: 600, powerBhp: 603, priceLakh: 255 },
+    { name: "Eletre R", batteryKwh: 112, rangeKm: 490, powerBhp: 905, priceLakh: 299 },
+  ] },
+  { id: "rolls-royce-spectre", variants: [
+    { name: "Spectre", batteryKwh: 102, rangeKm: 530, powerBhp: 584, priceLakh: 750 },
+  ] },
+  { id: "ola-s1-pro-gen-3-4-kwh", variants: [
+    { name: "S1 Pro 3 kWh", batteryKwh: 3, rangeKm: 176, powerBhp: 14.75, priceLakh: 1.1 },
+    { name: "S1 Pro 4 kWh", batteryKwh: 4, rangeKm: 242, powerBhp: 14.75, priceLakh: 1.25 },
+  ] },
+  { id: "ola-s1-x-gen-3-4-kwh", variants: [
+    { name: "S1 X 2 kWh", batteryKwh: 2, rangeKm: 108, priceLakh: 0.8 },
+    { name: "S1 X 3 kWh", batteryKwh: 3, rangeKm: 176, priceLakh: 0.9 },
+    { name: "S1 X 4 kWh", batteryKwh: 4, rangeKm: 242, priceLakh: 1 },
+  ] },
+  { id: "ola-s1-x-5-2-kwh-4680-bharat-cell", variants: [
+    { name: "S1 X+ 5.2 kWh", batteryKwh: 5.2, rangeKm: 320, powerBhp: 14.75, priceLakh: 1.3 },
+  ] },
+  { id: "ola-s1-air-3-kwh", variants: [
+    { name: "S1 Air 2 kWh", batteryKwh: 2, rangeKm: 84, powerBhp: 6.03, priceLakh: 0.85 },
+    { name: "S1 Air 3 kWh", batteryKwh: 3, rangeKm: 125, powerBhp: 6.03, priceLakh: 1 },
+    { name: "S1 Air 4 kWh", batteryKwh: 4, rangeKm: 165, powerBhp: 6.03, priceLakh: 1.1 },
+  ] },
+  { id: "ather-450x-3-7-kwh", variants: [
+    { name: "450X 2.9 kWh", batteryKwh: 2.9, rangeKm: 126, powerBhp: 7.2, priceLakh: 1.46 },
+    { name: "450X 3.7 kWh", batteryKwh: 3.7, rangeKm: 161, powerBhp: 7.2, priceLakh: 1.57 },
+  ] },
+  { id: "ather-rizta-z-3-7-kwh", variants: [
+    { name: "Rizta Z 2.9 kWh", batteryKwh: 2.9, rangeKm: 123, powerBhp: 4.9, priceLakh: 1.3 },
+    { name: "Rizta Z 3.7 kWh", batteryKwh: 3.7, rangeKm: 159, powerBhp: 4.9, priceLakh: 1.5 },
+  ] },
+  { id: "tvs-iqube-3-5-kwh", variants: [
+    { name: "iQube 3.1 kWh", batteryKwh: 3.1, rangeKm: 116, powerBhp: 5.5, priceLakh: 1.25 },
+  ] },
+  { id: "tvs-iqube-st-5-3-kwh", variants: [
+    { name: "iQube ST 5.3 kWh", batteryKwh: 5.3, rangeKm: 212, powerBhp: 5.5, priceLakh: 1.62 },
+  ] },
+  { id: "bajaj-chetak-c3501-35-series", variants: [
+    { name: "Chetak 3501 (35 Series)", batteryKwh: 3.5, rangeKm: 153, powerBhp: 5.49, priceLakh: 1.3 },
+  ] },
+  { id: "bajaj-chetak-3001-30-series", variants: [
+    { name: "Chetak 3001 (30 Series)", batteryKwh: 3, rangeKm: 127, powerBhp: 5.36, priceLakh: 1.07 },
+  ] },
+  { id: "hero-vida-v2-pro-3-94-kwh", variants: [
+    { name: "Vida V2 Pro 3.94 kWh", batteryKwh: 3.94, rangeKm: 165, powerBhp: 8, priceLakh: 1.35 },
+  ] },
+  { id: "hero-vida-vx2-plus-dual-3-4-kwh", variants: [
+    { name: "Vida VX2 Plus 3.4 kWh", batteryKwh: 3.4, rangeKm: 142, powerBhp: 6, priceLakh: 1.1 },
+  ] },
+  { id: "ampere-nexus-ex-st", variants: [
+    { name: "Nexus EX 3 kWh", batteryKwh: 3, rangeKm: 136, powerBhp: 4, priceLakh: 1.15 },
+    { name: "Nexus ST 3 kWh", batteryKwh: 3, rangeKm: 136, powerBhp: 4, priceLakh: 1.2 },
+  ] },
+  { id: "simple-one-gen-2-5-kwh", variants: [
+    { name: "Simple One Gen 2 5 kWh", batteryKwh: 5, rangeKm: 265, powerBhp: 11.8, priceLakh: 1.78 },
+  ] },
+  { id: "river-indie", variants: [
+    { name: "River Indie 4 kWh", batteryKwh: 4, rangeKm: 161, powerBhp: 9, priceLakh: 1.43 },
+  ] },
+  { id: "bgauss-ruv-350-ex-max", variants: [
+    { name: "RUV 350 i EX 2.3 kWh", batteryKwh: 2.3, rangeKm: 105, powerBhp: 4.7, priceLakh: 1.1 },
+    { name: "RUV 350 Max 3 kWh", batteryKwh: 3, rangeKm: 145, powerBhp: 4.7, priceLakh: 1.35 },
+  ] },
+  { id: "ather-450-apex", variants: [
+    { name: "450 Apex 3.7 kWh", batteryKwh: 3.7, rangeKm: 157, powerBhp: 8.6, priceLakh: 1.9 },
+  ] },
+  { id: "ather-450s-2-9-kwh", variants: [
+    { name: "450S 2.9 kWh", batteryKwh: 2.9, rangeKm: 122, powerBhp: 7.2, priceLakh: 1.3 },
+    { name: "450S 3.7 kWh", batteryKwh: 3.7, rangeKm: 161, powerBhp: 7.2, priceLakh: 1.46 },
+  ] },
+  { id: "ola-s1-pro-gen-3-5-3-kwh", variants: [
+    { name: "S1 Pro+ 5.3 kWh", batteryKwh: 5.3, rangeKm: 320, powerBhp: 14.75, priceLakh: 1.88 },
+  ] },
+  { id: "ola-gig", variants: [
+    { name: "Gig 1.5 kWh", batteryKwh: 1.5, rangeKm: 112, priceLakh: 0.4 },
+  ] },
+  { id: "tvs-x", variants: [
+    { name: "TVS X 4.44 kWh", batteryKwh: 4.44, rangeKm: 140, powerBhp: 14.75, priceLakh: 2.5 },
+  ] },
+  { id: "tvs-orbiter-v2-3-1-kwh", variants: [
+    { name: "Orbiter V2 3.1 kWh", batteryKwh: 3.1, rangeKm: 158, priceLakh: 0.999 },
+  ] },
+  { id: "tvs-orbiter-v1-1-8-kwh", variants: [
+    { name: "Orbiter V1 1.8 kWh", batteryKwh: 1.8, rangeKm: 86, priceLakh: 0.845 },
+  ] },
+  { id: "suzuki-e-access", variants: [
+    { name: "e-Access 3.07 kWh", batteryKwh: 3.07, rangeKm: 95, powerBhp: 4.5, priceLakh: 1.88 },
+  ] },
+  { id: "honda-activa-e", variants: [
+    { name: "Activa e: Standard", batteryKwh: 3, rangeKm: 102, powerBhp: 8, priceLakh: 1.17 },
+    { name: "Activa e: RoadSync Duo", batteryKwh: 3, rangeKm: 102, powerBhp: 8, priceLakh: 1.52 },
+  ] },
+  { id: "honda-qc1", variants: [
+    { name: "QC1 1.5 kWh", batteryKwh: 1.5, rangeKm: 80, powerBhp: 2, priceLakh: 0.9 },
+  ] },
+  { id: "hero-vida-z", variants: [
+    { name: "Vida Z (upcoming)" },
+  ] },
+  { id: "ampere-primus", variants: [
+    { name: "Primus", batteryKwh: 3, rangeKm: 107, powerBhp: 5.36, priceLakh: 1.2 },
+  ] },
+  { id: "okinawa-okhi-90", variants: [
+    { name: "Okhi-90", batteryKwh: 3.6, rangeKm: 161, powerBhp: 5.1, priceLakh: 1.5 },
+  ] },
+  { id: "okinawa-praisepro", variants: [
+    { name: "PraisePro", batteryKwh: 2.08, rangeKm: 81, priceLakh: 0.84 },
+  ] },
+  { id: "okaya-faast-f4", variants: [
+    { name: "Faast F4", batteryKwh: 4.32, rangeKm: 160, priceLakh: 1.1 },
+  ] },
+  { id: "pure-ev-epluto-7g", variants: [
+    { name: "ePluto 7G Standard", batteryKwh: 2.5, rangeKm: 90, priceLakh: 0.97 },
+    { name: "ePluto 7G Pro", batteryKwh: 3, rangeKm: 120, priceLakh: 1.05 },
+    { name: "ePluto 7G Max", batteryKwh: 3.5, rangeKm: 151, priceLakh: 1.18 },
+  ] },
+  { id: "pure-ev-etrance-neo", variants: [
+    { name: "eTrance Neo+ SX", batteryKwh: 1.8, rangeKm: 85, priceLakh: 0.8 },
+    { name: "eTrance Neo+ Plus", batteryKwh: 2.5, rangeKm: 101, priceLakh: 1.06 },
+  ] },
+  { id: "bounce-infinity-e1", variants: [
+    { name: "Infinity E1 (1.9 kWh)", batteryKwh: 1.9, rangeKm: 70, priceLakh: 1.16 },
+    { name: "Infinity E1+ (2.5 kWh)", batteryKwh: 2.5, rangeKm: 100, priceLakh: 1.26 },
+  ] },
+  { id: "kinetic-green-zulu", variants: [
+    { name: "Zulu STD", batteryKwh: 2.27, rangeKm: 104, priceLakh: 0.8 },
+  ] },
+  { id: "bgauss-c12-max-2-7-kwh", variants: [
+    { name: "C12 Max (2.0 kWh)", batteryKwh: 2, rangeKm: 85, priceLakh: 1.08 },
+    { name: "C12 Max (2.7 kWh)", batteryKwh: 2.7, rangeKm: 123, powerBhp: 3.35, priceLakh: 1.27 },
+  ] },
+  { id: "bgauss-d15", variants: [
+    { name: "D15 i", batteryKwh: 3.2, rangeKm: 115, powerBhp: 2.01, priceLakh: 1.46 },
+    { name: "D15 Pro", batteryKwh: 3.2, rangeKm: 115, powerBhp: 2.01, priceLakh: 1.59 },
+  ] },
+  { id: "ivoomi-jeet-x", variants: [
+    { name: "Jeet X Standard", batteryKwh: 2, rangeKm: 100, priceLakh: 0.85 },
+    { name: "Jeet X 180", batteryKwh: 4, rangeKm: 200, priceLakh: 1.05 },
+  ] },
+  { id: "ivoomi-jeet-x-ze", variants: [
+    { name: "Jeet X ZE 2.1", batteryKwh: 2.1, rangeKm: 120, priceLakh: 0.9 },
+    { name: "Jeet X ZE 2.5", batteryKwh: 2.5, rangeKm: 140, priceLakh: 0.95 },
+    { name: "Jeet X ZE 3.0", batteryKwh: 3, rangeKm: 170, priceLakh: 1 },
+  ] },
+  { id: "lectrix-nduro-3-0", variants: [
+    { name: "NDuro 2.0", batteryKwh: 2.3, rangeKm: 90, priceLakh: 1 },
+    { name: "NDuro 3.0", batteryKwh: 3, rangeKm: 117, priceLakh: 1.09 },
+  ] },
+  { id: "joy-e-bike-gen-next-nanu", variants: [
+    { name: "Gen Next Nanu+", batteryKwh: 2.18, rangeKm: 100, priceLakh: 0.88 },
+  ] },
+  { id: "komaki-se", variants: [
+    { name: "SE", batteryKwh: 1.8, rangeKm: 80, priceLakh: 0.61 },
+  ] },
+  { id: "battre-iot", variants: [
+    { name: "IOT", batteryKwh: 1.44, rangeKm: 85, priceLakh: 0.8 },
+  ] },
+  { id: "ultraviolette-tesseract", variants: [
+    { name: "Tesseract 3.5", batteryKwh: 3.5, rangeKm: 162, priceLakh: 1.45 },
+    { name: "Tesseract 5", batteryKwh: 5, rangeKm: 220, priceLakh: 1.7 },
+    { name: "Tesseract 6", batteryKwh: 6, rangeKm: 261, priceLakh: 2 },
+  ] },
+  { id: "ather-el", variants: [
+    { name: "Ather EL (upcoming)" },
+  ] },
+  { id: "yamaha-aerox-e", variants: [
+    { name: "Aerox E", batteryKwh: 6, rangeKm: 106, powerBhp: 12.6, priceLakh: 2.5 },
+  ] },
+  { id: "yamaha-ec-06", variants: [
+    { name: "EC-06", batteryKwh: 4, rangeKm: 169, powerBhp: 8.87, priceLakh: 1.68 },
+  ] },
+  { id: "tvs-iqube-s-4-7-kwh", variants: [
+    { name: "iQube S (4.7 kWh)", batteryKwh: 4.7, rangeKm: 175, powerBhp: 5.9, priceLakh: 1.37 },
+  ] },
+  { id: "bajaj-chetak-c25", variants: [
+    { name: "Chetak C25 (C2501)", batteryKwh: 2.5, rangeKm: 113, powerBhp: 2.95, priceLakh: 0.91 },
+  ] },
+  { id: "simple-ultra-6-5-kwh", variants: [
+    { name: "Ultra", batteryKwh: 6.5, rangeKm: 400, powerBhp: 11.8, priceLakh: 2.35 },
+  ] },
+  { id: "revolt-rv400-brz-standard", variants: [
+    { name: "RV400 BRZ", batteryKwh: 3.24, rangeKm: 150, priceLakh: 1.43 },
+  ] },
+  { id: "revolt-rv1-base-2-2-kwh", variants: [
+    { name: "RV1", batteryKwh: 2.2, rangeKm: 100, priceLakh: 0.85 },
+  ] },
+  { id: "revolt-rv1-3-24-kwh", variants: [
+    { name: "RV1+", batteryKwh: 3.24, rangeKm: 160, priceLakh: 1 },
+  ] },
+  { id: "revolt-rv-blazex", variants: [
+    { name: "RV BlazeX", batteryKwh: 3.24, rangeKm: 150, priceLakh: 1.15 },
+  ] },
+  { id: "tork-kratos-r", variants: [
+    { name: "Kratos R", batteryKwh: 4, rangeKm: 180, powerBhp: 12.07, priceLakh: 1.5 },
+  ] },
+  { id: "tork-kratos", variants: [
+    { name: "Kratos", batteryKwh: 4, rangeKm: 180, powerBhp: 10.05, priceLakh: 1.37 },
+  ] },
+  { id: "tork-kratos-x", variants: [
+    { name: "Kratos X", batteryKwh: 4, rangeKm: 180, powerBhp: 16.09, priceLakh: 1.82 },
+  ] },
+  { id: "ultraviolette-f77-mach-2-standard-7-1-kwh", variants: [
+    { name: "F77 Mach 2 (Standard)", batteryKwh: 7.1, rangeKm: 211, powerBhp: 36.2, priceLakh: 3.09 },
+  ] },
+  { id: "ultraviolette-f77-mach-2-recon-recon-10-3-kwh", variants: [
+    { name: "F77 Mach 2 Recon", batteryKwh: 10.3, rangeKm: 323, powerBhp: 40.2, priceLakh: 4.24 },
+  ] },
+  { id: "ultraviolette-shockwave", variants: [
+    { name: "Shockwave", batteryKwh: 4, rangeKm: 165, powerBhp: 14.5, priceLakh: 1.75 },
+  ] },
+  { id: "ultraviolette-f99", variants: [
+    { name: "F99", batteryKwh: 10.3, rangeKm: 307, powerBhp: 120, priceLakh: 8 },
+  ] },
+  { id: "oben-rorr-original-4-4-kwh", variants: [
+    { name: "Rorr", batteryKwh: 4.4, rangeKm: 200, priceLakh: 1.5 },
+  ] },
+  { id: "oben-rorr-ez-up-to-4-4-kwh", variants: [
+    { name: "Rorr EZ 2.6 kWh", batteryKwh: 2.6, rangeKm: 87 },
+    { name: "Rorr EZ 3.4 kWh", batteryKwh: 3.4, rangeKm: 130 },
+    { name: "Rorr EZ 4.4 kWh", batteryKwh: 4.4, rangeKm: 175 },
+  ] },
+  { id: "oben-rorr-evo-3-4-kwh", variants: [
+    { name: "Rorr Evo", batteryKwh: 3.4, rangeKm: 180, powerBhp: 12.07, priceLakh: 1.25 },
+  ] },
+  { id: "matter-aera-5000-geared", variants: [
+    { name: "Aera 5000+", batteryKwh: 5, rangeKm: 172, powerBhp: 15.4, priceLakh: 1.94 },
+  ] },
+  { id: "matter-aera-5000", variants: [
+    { name: "Aera 5000", batteryKwh: 5, rangeKm: 172, powerBhp: 15.4, priceLakh: 1.81 },
+  ] },
+  { id: "orxa-mantis", variants: [
+    { name: "Mantis", batteryKwh: 8.9, rangeKm: 221, powerBhp: 27.12, priceLakh: 3.6 },
+  ] },
+  { id: "kabira-km4000-mark-2", variants: [
+    { name: "KM4000 Mark 2", batteryKwh: 5.15, rangeKm: 120, priceLakh: 1.51 },
+  ] },
+  { id: "kabira-km3000-mark-2", variants: [
+    { name: "KM3000 Mark 2", batteryKwh: 5.15, rangeKm: 120, priceLakh: 1.5 },
+  ] },
+  { id: "royal-enfield-flying-flea-c6", variants: [
+    { name: "Flying Flea C6", batteryKwh: 3.91, rangeKm: 154, powerBhp: 20, priceLakh: 2.79 },
+  ] },
+  { id: "ola-roadster-x-2-5-kwh", variants: [
+    { name: "Roadster X 2.5 kWh", batteryKwh: 2.5, rangeKm: 140, powerBhp: 14.75, priceLakh: 1.04 },
+  ] },
+  { id: "ola-roadster-x-4-5-kwh", variants: [
+    { name: "Roadster X 4.5 kWh", batteryKwh: 4.5, rangeKm: 252, powerBhp: 14.75, priceLakh: 1.29 },
+  ] },
+  { id: "ola-roadster-x-9-1-kwh", variants: [
+    { name: "Roadster X+ 9.1 kWh", batteryKwh: 9.1, rangeKm: 501, powerBhp: 14.75, priceLakh: 1.29 },
+  ] },
+  { id: "ola-roadster-3-5-kwh", variants: [
+    { name: "Roadster 3.5 kWh", batteryKwh: 3.5, rangeKm: 151, powerBhp: 17.4, priceLakh: 1.05 },
+    { name: "Roadster 4.5 kWh", batteryKwh: 4.5, rangeKm: 190, powerBhp: 17.4, priceLakh: 1.2 },
+    { name: "Roadster 6 kWh", batteryKwh: 6, rangeKm: 248, powerBhp: 17.4, priceLakh: 1.4 },
+  ] },
+  { id: "ola-roadster-pro-8-kwh", variants: [
+    { name: "Roadster Pro 8 kWh", batteryKwh: 8, rangeKm: 316, powerBhp: 70.7, priceLakh: 2 },
+  ] },
+  { id: "ola-roadster-pro-16-kwh", variants: [
+    { name: "Roadster Pro 16 kWh", batteryKwh: 16, rangeKm: 579, powerBhp: 70.7, priceLakh: 2.5 },
+  ] },
+  { id: "hero-vida-vxz", variants: [
+    { name: "Vida VXZ (upcoming)" },
+  ] },
+  { id: "hop-electric-oxo-standard", variants: [
+    { name: "Oxo Prime", batteryKwh: 3.75, rangeKm: 140, powerBhp: 8.31, priceLakh: 1.33 },
+  ] },
+  { id: "hop-electric-oxo-x", variants: [
+    { name: "Oxo X", batteryKwh: 3.75, rangeKm: 150, powerBhp: 8.31, priceLakh: 1.61 },
+  ] },
+  { id: "komaki-ranger", variants: [
+    { name: "Ranger", batteryKwh: 4, rangeKm: 160, priceLakh: 1.3 },
+  ] },
+  { id: "komaki-mx3", variants: [
+    { name: "MX3", batteryKwh: 2.17, rangeKm: 85, priceLakh: 1.15 },
+  ] },
+  { id: "srivaru-motors-prana-2-0-grand", variants: [
+    { name: "Prana 2.0 Grand", batteryKwh: 5, rangeKm: 150, powerBhp: 13.41, priceLakh: 2.55 },
+  ] },
+  { id: "srivaru-motors-prana-2-0-elite", variants: [
+    { name: "Prana 2.0 Elite", batteryKwh: 8.44, rangeKm: 250, powerBhp: 13.41, priceLakh: 3.2 },
+  ] },
+  { id: "pure-ev-etryst-350", variants: [
+    { name: "eTryst 350", batteryKwh: 3.5, rangeKm: 171, powerBhp: 5.36, priceLakh: 1.55 },
+  ] },
+  { id: "odysse-evoqis", variants: [
+    { name: "Evoqis", batteryKwh: 4.32, rangeKm: 140, powerBhp: 5.77, priceLakh: 1.71 },
+  ] },
+  { id: "joy-e-bike-beast", variants: [
+    { name: "Beast", batteryKwh: 5.18, rangeKm: 110, powerBhp: 6.7, priceLakh: 2.42 },
+  ] },
+  { id: "joy-e-bike-hurricane", variants: [
+    { name: "Hurricane", batteryKwh: 4.75, rangeKm: 80, powerBhp: 6.7, priceLakh: 2.33 },
+  ] },
+  { id: "joy-e-bike-thunderbolt", variants: [
+    { name: "Thunderbolt", batteryKwh: 5.18, rangeKm: 110, powerBhp: 6.7, priceLakh: 2.33 },
+  ] },
+  { id: "joy-e-bike-skyline", variants: [
+    { name: "Skyline", batteryKwh: 5.18, rangeKm: 110, powerBhp: 6.7, priceLakh: 2.29 },
+  ] },
+  { id: "bajaj-electric-motorcycle", variants: [
+    { name: "Bajaj Electric Motorcycle (upcoming)" },
+  ] },
+  { id: "honda-shine-e", variants: [
+    { name: "Honda Shine e: (upcoming)" },
+  ] },
+];
+
+for (const { id, variants } of VEHICLE_VARIANTS) {
+  for (const ev of EVS) {
+    if (ev.id === id && !ev.variants) ev.variants = variants;
+  }
 }
 
 export const CATEGORY_LABELS: Record<EVCategory, string> = {
