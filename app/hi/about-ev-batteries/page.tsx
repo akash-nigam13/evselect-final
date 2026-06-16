@@ -253,9 +253,6 @@ export default function AboutBatteriesPage() {
                 </div>
               </section>
 
-              {/* Mid-content Ad */}
-              <AdPlaceholder format="leaderboard" slot="8888888882" />
-
               {/* 3. India-specific */}
               <section id="india">
                 <SectionHeading
@@ -414,8 +411,6 @@ export default function AboutBatteriesPage() {
                   अभी तुलना करें <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
-
-              <AdPlaceholder format="rectangle" slot="8888888885" />
             </aside>
           </div>
         </div>
