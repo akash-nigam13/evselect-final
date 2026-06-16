@@ -18,8 +18,8 @@ export async function generateMetadata({
     return { title: "Brand not found | EVSelect.in" };
   }
   return {
-    title: `${brand.name} Electric Vehicles — Models, Specs & Prices`,
-    description: `Explore all ${brand.count} ${brand.name} electric vehicles in India. Compare range, battery, price and specs across the ${brand.name} EV lineup.`,
+    title: `${brand.name} EV Price in India 2026 — All ${brand.count} Models, Range & Specs`,
+    description: `${brand.name} electric vehicles in India (2026): compare all ${brand.count} ${brand.name} EV models on price, range, battery and specs. Full ${brand.name} EV price list and lineup in one place.`,
     alternates: altsFor(`/brand/${brand.slug}`, "en"),
   };
 }

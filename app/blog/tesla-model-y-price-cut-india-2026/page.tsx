@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tesla Cuts Model Y Price in India by Rs 9 Lakh",
+  title: "Tesla Model Y Price Cut in India 2026: New ₹50.89 Lakh Price Explained",
   description:
-    "Tesla cut the Model Y's India price by about Rs 9 lakh in May 2026, to Rs 50.89 lakh. We unpack the new pricing and why import duty keeps it premium.",
+    "Tesla cut the Model Y price in India by about ₹9 lakh in 2026 — now from ₹50.89 lakh. Here's the new price, why import duty keeps it premium, and how it compares with Indian EVs.",
   alternates: altsFor("/blog/tesla-model-y-price-cut-india-2026", "en"),
   openGraph: {
-    title: "Tesla Cuts Model Y Price in India by Rs 9 Lakh",
+    title: "Tesla Model Y Price Cut in India 2026: New ₹50.89 Lakh Price",
     type: "article",
   },
 };

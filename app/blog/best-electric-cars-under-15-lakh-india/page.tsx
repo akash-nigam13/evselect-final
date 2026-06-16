@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Best Electric Cars Under ₹15 Lakh in India (2026 Guide)",
+  title: "7 Best Electric Cars Under ₹15 Lakh in India (2026)",
   description:
-    "The best electric cars under ₹15 lakh in India for 2026 — Tata Tiago EV, Punch EV, Nexon EV, MG Comet & Windsor, Citroen eC3 and Mahindra XUV 3XO EV compared on price, range and value.",
+    "Looking for an electric car under ₹15 lakh in India? Compare the 7 best — Tata Tiago EV, Punch EV, Nexon EV, MG Comet & Windsor, Citroen eC3 and Mahindra XUV 3XO EV — on price, range, battery and value for 2026.",
   alternates: altsFor("/blog/best-electric-cars-under-15-lakh-india", "en"),
   openGraph: {
-    title: "Best Electric Cars Under ₹15 Lakh in India (2026 Guide)",
+    title: "7 Best Electric Cars Under ₹15 Lakh in India (2026)",
     type: "article",
   },
 };

@@ -22,10 +22,10 @@ export async function generateMetadata({
   }
   const range = ev.rangeKmARAI != null ? `${ev.rangeKmARAI} km रेंज, ` : "";
   return {
-    title: `${ev.name} — स्पेक्स, रेंज और कीमत | EVSelect.in`,
-    description: `${ev.fullName}: ${range}${
-      ev.batteryKwh != null ? `${ev.batteryKwh} kWh बैटरी, ` : ""
-    }कीमत ${priceLabel(ev)}। पूरी स्पेसिफिकेशन, चार्जिंग जानकारी और हाइलाइट्स।`,
+    title: `${ev.name} की कीमत भारत में 2026 — रेंज, स्पेक्स और वेरिएंट`,
+    description: `${ev.fullName} की भारत में कीमत: ${priceLabel(ev)}। ${range}${
+      ev.batteryKwh != null ? `${ev.batteryKwh} kWh बैटरी। ` : ""
+    }पूरी वेरिएंट सूची, स्पेसिफिकेशन, चार्जिंग जानकारी और हाइलाइट्स।`,
     alternates: altsFor(vehiclePath(ev), "hi"),
   };
 }

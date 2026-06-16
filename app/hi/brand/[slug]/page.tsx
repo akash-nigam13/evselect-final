@@ -18,8 +18,8 @@ export async function generateMetadata({
     return { title: "ब्रांड नहीं मिला | EVSelect.in" };
   }
   return {
-    title: `${brand.name} इलेक्ट्रिक वाहन — मॉडल, स्पेसिफिकेशन और कीमत`,
-    description: `भारत में सभी ${brand.count} ${brand.name} इलेक्ट्रिक वाहन देखें। ${brand.name} EV लाइनअप में रेंज, बैटरी, कीमत और स्पेसिफिकेशन की तुलना करें।`,
+    title: `${brand.name} EV की कीमत भारत में 2026 — सभी ${brand.count} मॉडल, रेंज और स्पेक्स`,
+    description: `भारत में ${brand.name} इलेक्ट्रिक वाहन (2026): सभी ${brand.count} ${brand.name} EV मॉडलों की कीमत, रेंज, बैटरी और स्पेसिफिकेशन की तुलना करें। पूरी ${brand.name} EV कीमत सूची एक ही जगह।`,
     alternates: altsFor(`/brand/${brand.slug}`, "hi"),
   };
 }

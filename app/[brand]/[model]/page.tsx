@@ -22,10 +22,10 @@ export async function generateMetadata({
   }
   const range = ev.rangeKmARAI != null ? `${ev.rangeKmARAI} km range, ` : "";
   return {
-    title: `${ev.name} — Specs, Range & Price | EVSelect.in`,
-    description: `${ev.fullName}: ${range}${
-      ev.batteryKwh != null ? `${ev.batteryKwh} kWh battery, ` : ""
-    }priced at ${priceLabel(ev)}. Full specifications, charging details and highlights.`,
+    title: `${ev.name} Price in India 2026 — Range, Specs & Variants`,
+    description: `${ev.fullName} price in India: ${priceLabel(ev)}. ${range}${
+      ev.batteryKwh != null ? `${ev.batteryKwh} kWh battery. ` : ""
+    }Full variant list, specifications, charging details and highlights.`,
     alternates: altsFor(vehiclePath(ev), "en"),
   };
 }
