@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor, localizedHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tesla 17 जून को हैदराबाद में अपना 5वाँ भारत केंद्र खोलेगी",
+  title: "Tesla ने हैदराबाद में 5वाँ भारत केंद्र खोला, 2026 Model Y लाइनअप पेश",
   description:
-    "Tesla 17 जून 2026 को हैदराबाद में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोलेगी, जो दिल्ली, गुड़गाँव, मुंबई और बेंगलुरु के केंद्रों में जुड़ जाएगा। Model Y की डिलीवरी जुलाई में शुरू होगी। जानिए खरीदारों के लिए इसका क्या मतलब है।",
+    "Tesla ने 17 जून 2026 को हैदराबाद के HITEC City में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोला, जहाँ 2026 Model Y Premium RWD (₹50.89 लाख) और छह-सीट Model Y L (₹61.99 लाख, 681 km) पेश की गईं। जानिए खरीदारों के लिए इसका क्या मतलब है।",
   alternates: altsFor("/blog/tesla-hyderabad-experience-centre-june-2026", "hi"),
   openGraph: {
-    title: "Tesla 17 जून को हैदराबाद में अपना 5वाँ भारत केंद्र खोलेगी",
+    title: "Tesla ने हैदराबाद में 5वाँ भारत केंद्र खोला, 2026 Model Y लाइनअप पेश",
     type: "article",
   },
 };
@@ -18,11 +18,13 @@ export default function Page() {
   return (
     <ArticleShell slug="tesla-hyderabad-experience-centre-june-2026" locale="hi">
       <p>
-        <Link href={localizedHref("/brand/tesla", "hi")}>Tesla</Link> 17 जून 2026
-        को हैदराबाद में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोलने जा रही है, जो नई
-        दिल्ली, गुड़गाँव, मुंबई और बेंगलुरु के मौजूदा केंद्रों में जुड़ जाएगा। शहर के
-        कोंडापुर इलाके में बनने वाला यह नया केंद्र, भारतीय बाज़ार में औपचारिक प्रवेश
-        के एक साल से भी कम समय में कंपनी के स्थिर भौतिक विस्तार को आगे बढ़ाता है।
+        <Link href={localizedHref("/brand/tesla", "hi")}>Tesla</Link> ने 17 जून 2026
+        को हैदराबाद में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोल दिया, जो नई दिल्ली,
+        गुड़गाँव, मुंबई और बेंगलुरु के मौजूदा केंद्रों में जुड़ गया। HITEC City की
+        Knowledge City (मादापुर) में स्थित यह नया केंद्र, भारतीय बाज़ार में औपचारिक
+        प्रवेश के एक साल से भी कम समय में कंपनी के स्थिर भौतिक विस्तार को आगे बढ़ाता है।
+        Tesla ने तेलंगाना भर के मालिकों की सेवा के लिए बोल्लारम इंडस्ट्रियल एरिया से
+        डिलीवरी और आफ्टर-सेल्स कामकाज भी शुरू कर दिया है।
       </p>
 
       <h2>हैदराबाद ही क्यों, और अभी क्यों</h2>
@@ -38,11 +40,14 @@ export default function Page() {
 
       <h2>आप असल में क्या खरीद सकते हैं</h2>
       <p>
-        फ़िलहाल Tesla भारत में एक ही मॉडल बेचती है — Model Y। पाँच-सीट वाली Model Y
-        Premium RWD करीब ₹50.89 लाख (एक्स-शोरूम) से शुरू होती है, जबकि लंबी Model Y L
-        Premium AWD लगभग ₹61.99 लाख पर। RWD कार 500 km तक की WLTP रेंज और 5.9 सेकंड का
-        0–100 km/h समय का दावा करती है, और ग्राहक डिलीवरी जुलाई 2026 में शुरू होने वाली
-        है। आगे चलकर Model 3 सेडान के आने की व्यापक उम्मीद है।
+        हैदराबाद केंद्र Tesla की पूरी 2026 Model Y लाइनअप पेश करता है। पाँच-सीट वाली
+        Model Y Premium RWD करीब ₹50.89 लाख (एक्स-शोरूम) से शुरू होती है, जिसकी डिलीवरी
+        जुलाई 2026 में शुरू होगी। इसके ऊपर है नई छह-सीट, तीन-पंक्ति वाली Model Y L,
+        जिसकी कीमत ₹61.99 लाख से शुरू होती है — 681 km तक की दावा की गई WLTP रेंज, 5.0
+        सेकंड का 0–100 km/h समय और 2,539 लीटर तक का कार्गो स्पेस; L की डिलीवरी पहले ही
+        शुरू हो चुकी है। एक इंट्रोडक्टरी पेशकश के तौर पर, 30 जून 2026 से पहले ऑर्डर करने
+        वाले ग्राहकों को मुफ़्त Tesla Wall Connector मिलेगा। आगे चलकर Model 3 सेडान के
+        आने की व्यापक उम्मीद है।
       </p>
 
       <h2>पेच: कीमत</h2>
@@ -77,12 +82,12 @@ export default function Page() {
       <h2>स्रोत</h2>
       <p>
         जैसा कि{" "}
-        <a href="http://www.republicworld.com/automobile/tesla-expands-india-footprint-with-hyderabad-experience-centre-set-to-open-on-june-17-2026-06-10-127679" target="_blank" rel="noopener noreferrer">
-          Republic World
+        <a href="https://www.business-standard.com/companies/news/tesla-expands-india-network-with-fifth-experience-centre-in-hyderabad-126061701021_1.html" target="_blank" rel="noopener noreferrer">
+          Business Standard
         </a>{" "}
         ·{" "}
-        <a href="https://www.newsbytesapp.com/news/auto/tesla-opens-5th-india-experience-center-in-hyderabad-june-17/tldr" target="_blank" rel="noopener noreferrer">
-          NewsBytes
+        <a href="https://www.deccanherald.com/business/companies/tesla-opens-first-experience-centre-in-hyderabad-fifth-in-india-4042523" target="_blank" rel="noopener noreferrer">
+          Deccan Herald
         </a>{" "}
         द्वारा रिपोर्ट किया गया।
       </p>

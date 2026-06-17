@@ -960,21 +960,21 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "tesla-hyderabad-experience-centre-june-2026",
-    title: "Tesla to Open Its 5th India Centre in Hyderabad on June 17",
-    subtitle: "Showroom push widens as Model Y deliveries near",
+    title: "Tesla Opens 5th India Centre in Hyderabad, Shows 2026 Model Y Lineup",
+    subtitle: "HITEC City showroom debuts the Model Y L six-seater at ₹61.99 lakh",
     excerpt:
-      "Tesla will open its fifth India experience centre in Hyderabad on June 17, 2026, adding to outlets in Delhi, Gurugram, Mumbai and Bengaluru. The expansion comes as Model Y deliveries are set to begin in July. Here's what it means for Indian buyers.",
+      "Tesla opened its fifth India experience centre in Hyderabad's HITEC City on June 17, 2026, joining outlets in Delhi, Gurugram, Mumbai and Bengaluru. It showcases the 2026 Model Y Premium RWD (₹50.89 lakh) and the new six-seat Model Y L (₹61.99 lakh, 681 km), with a free Wall Connector for orders before June 30. Here's what it means for Indian buyers.",
     category: "Market News",
     categorySlug: "market-news",
     readTime: "4 min",
-    date: "Jun 10, 2026",
+    date: "Jun 18, 2026",
     accent: "#60A5FA",
     news: true,
     related: ["tesla-model-y-price-cut-india-2026", "tesla-electric-cars-india", "india-ev-charging-network-2026", "how-to-choose-first-ev-india"],
-    hiTitle: "Tesla 17 जून को हैदराबाद में अपना 5वाँ भारत केंद्र खोलेगी",
-    hiSubtitle: "Model Y डिलीवरी नज़दीक आते ही शोरूम विस्तार तेज़",
+    hiTitle: "Tesla ने हैदराबाद में 5वाँ भारत केंद्र खोला, 2026 Model Y लाइनअप पेश",
+    hiSubtitle: "HITEC City शोरूम में छह-सीट Model Y L ₹61.99 लाख से पेश",
     hiExcerpt:
-      "Tesla 17 जून 2026 को हैदराबाद में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोलेगी, जो दिल्ली, गुड़गाँव, मुंबई और बेंगलुरु के केंद्रों में जुड़ जाएगा। यह विस्तार तब हो रहा है जब Model Y की डिलीवरी जुलाई में शुरू होने वाली है। जानिए भारतीय खरीदारों के लिए इसका क्या मतलब है।",
+      "Tesla ने 17 जून 2026 को हैदराबाद के HITEC City में अपना पाँचवाँ भारत एक्सपीरियंस सेंटर खोला, जो दिल्ली, गुड़गाँव, मुंबई और बेंगलुरु के केंद्रों में जुड़ गया। इसमें 2026 Model Y Premium RWD (₹50.89 लाख) और नई छह-सीट Model Y L (₹61.99 लाख, 681 km) पेश की गई हैं, और 30 जून से पहले ऑर्डर पर मुफ़्त Wall Connector मिलेगा। जानिए भारतीय खरीदारों के लिए इसका क्या मतलब है।",
   },
   {
     slug: "jsw-mg-1000-community-ev-chargers-2026",

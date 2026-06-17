@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tesla to Open Its 5th India Centre in Hyderabad on June 17",
+  title: "Tesla Opens 5th India Centre in Hyderabad, Shows 2026 Model Y Lineup",
   description:
-    "Tesla will open its fifth India experience centre in Hyderabad on June 17, 2026, joining outlets in Delhi, Gurugram, Mumbai and Bengaluru. Model Y deliveries begin in July. Here's what it means for buyers.",
+    "Tesla opened its fifth India experience centre in Hyderabad's HITEC City on June 17, 2026, showcasing the 2026 Model Y Premium RWD (₹50.89 lakh) and six-seat Model Y L (₹61.99 lakh, 681 km). Here's what it means for buyers.",
   alternates: altsFor("/blog/tesla-hyderabad-experience-centre-june-2026", "en"),
   openGraph: {
-    title: "Tesla to Open Its 5th India Centre in Hyderabad on June 17",
+    title: "Tesla Opens 5th India Centre in Hyderabad, Shows 2026 Model Y Lineup",
     type: "article",
   },
 };
@@ -18,12 +18,14 @@ export default function Page() {
   return (
     <ArticleShell slug="tesla-hyderabad-experience-centre-june-2026">
       <p>
-        <Link href="/brand/tesla">Tesla</Link> is set to open its fifth India
+        <Link href="/brand/tesla">Tesla</Link> opened its fifth India
         experience centre in Hyderabad on <strong>June 17, 2026</strong>, adding
         to its existing outlets in New Delhi, Gurugram, Mumbai and Bengaluru. The
-        new centre, in the city&apos;s Kondapur area, continues the company&apos;s
-        steady physical roll-out less than a year after it formally entered the
-        Indian market.
+        new centre, in Knowledge City within HITEC City, Madhapur, continues the
+        company&apos;s steady physical roll-out less than a year after it formally
+        entered the Indian market. Tesla has also begun delivery and after-sales
+        operations from the Bollaram Industrial Area to support owners across
+        Telangana.
       </p>
 
       <h2>Why Hyderabad, and why now</h2>
@@ -39,11 +41,14 @@ export default function Page() {
 
       <h2>What you can actually buy</h2>
       <p>
-        For now Tesla sells a single model in India — the Model Y. The five-seat
-        Model Y Premium RWD starts at about ₹50.89 lakh (ex-showroom), with the
-        longer Model Y L Premium AWD at roughly ₹61.99 lakh. The RWD car claims a
-        WLTP range of up to 500 km and a 0–100 km/h time of 5.9 seconds, with
-        customer deliveries scheduled to begin in July 2026. A Model 3 sedan is
+        The Hyderabad centre showcases Tesla&apos;s full 2026 Model Y lineup. The
+        five-seat Model Y Premium RWD starts at about ₹50.89 lakh (ex-showroom),
+        with deliveries scheduled to begin in July 2026. Sitting above it is the
+        new six-seat, three-row Model Y L, priced from ₹61.99 lakh with a claimed
+        WLTP range of up to 681 km, a 0–100 km/h time of 5.0 seconds and up to
+        2,539 litres of cargo space — deliveries of the L are already underway. As
+        an introductory sweetener, customers who place an order before June 30,
+        2026 receive a complimentary Tesla Wall Connector. A Model 3 sedan is
         widely expected to follow.
       </p>
 
@@ -73,12 +78,12 @@ export default function Page() {
       <h2>Sources</h2>
       <p>
         As reported by{" "}
-        <a href="http://www.republicworld.com/automobile/tesla-expands-india-footprint-with-hyderabad-experience-centre-set-to-open-on-june-17-2026-06-10-127679" target="_blank" rel="noopener noreferrer">
-          Republic World
+        <a href="https://www.business-standard.com/companies/news/tesla-expands-india-network-with-fifth-experience-centre-in-hyderabad-126061701021_1.html" target="_blank" rel="noopener noreferrer">
+          Business Standard
         </a>{" "}
         ·{" "}
-        <a href="https://www.newsbytesapp.com/news/auto/tesla-opens-5th-india-experience-center-in-hyderabad-june-17/tldr" target="_blank" rel="noopener noreferrer">
-          NewsBytes
+        <a href="https://www.deccanherald.com/business/companies/tesla-opens-first-experience-centre-in-hyderabad-fifth-in-india-4042523" target="_blank" rel="noopener noreferrer">
+          Deccan Herald
         </a>
       </p>
     </ArticleShell>
