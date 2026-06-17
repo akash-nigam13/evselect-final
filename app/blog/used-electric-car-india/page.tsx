@@ -1,7 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "Is it safe to buy a used electric car in India?",
+    a: "Yes, provided you verify the battery State of Health and confirm the warranty transfers. A recent used EV (2021 onwards) with 90%+ SOH and a clean history is generally a sound, low-running-cost buy.",
+  },
+  {
+    q: "How do I check the battery health of a used EV?",
+    a: "Get a State of Health (SOH) reading at the brand's authorised service centre, which reads it from the battery management system. Some models also allow an SOH read via an OBD2 scanner and a compatible app. Aim for 90%+ on a car under four years old.",
+  },
+  {
+    q: "Does the EV battery warranty transfer to the second owner?",
+    a: "Usually yes — the standard 8-year / 1,60,000 km cover typically follows the car, with the clock running from the original registration. But many brands require you to formally notify them of the ownership transfer, or the cover lapses. Confirm the terms in writing before buying.",
+  },
+  {
+    q: "Do used electric cars depreciate faster than petrol cars?",
+    a: "In their first few years, often yes — which is exactly why they can be bargains second-hand. The flip side is battery uncertainty, so the depreciation discount is only worth it if the pack is healthy.",
+  },
+  {
+    q: "What are the biggest red flags?",
+    a: "No SOH data or a refusal to get the battery checked, a VAHAN \"salvage\" or \"total loss\" flag, flood-area history, missing service records, and a missing original charger. Any one of these is reason to negotiate hard or walk away.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Buying a Used Electric Car in India (2026): Checklist, Battery Health & Costs",
@@ -148,33 +172,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>Is it safe to buy a used electric car in India?</strong> Yes, provided you verify the
-        battery State of Health and confirm the warranty transfers. A recent used EV (2021 onwards)
-        with 90%+ SOH and a clean history is generally a sound, low-running-cost buy.
-      </p>
-      <p>
-        <strong>How do I check the battery health of a used EV?</strong> Get a State of Health (SOH)
-        reading at the brand's authorised service centre, which reads it from the battery management
-        system. Some models also allow an SOH read via an OBD2 scanner and a compatible app. Aim for
-        90%+ on a car under four years old.
-      </p>
-      <p>
-        <strong>Does the EV battery warranty transfer to the second owner?</strong> Usually yes — the
-        standard 8-year / 1,60,000 km cover typically follows the car, with the clock running from the
-        original registration. But many brands require you to formally notify them of the ownership
-        transfer, or the cover lapses. Confirm the terms in writing before buying.
-      </p>
-      <p>
-        <strong>Do used electric cars depreciate faster than petrol cars?</strong> In their first few
-        years, often yes — which is exactly why they can be bargains second-hand. The flip side is
-        battery uncertainty, so the depreciation discount is only worth it if the pack is healthy.
-      </p>
-      <p>
-        <strong>What are the biggest red flags?</strong> No SOH data or a refusal to get the battery
-        checked, a VAHAN "salvage" or "total loss" flag, flood-area history, missing service records,
-        and a missing original charger. Any one of these is reason to negotiate hard or walk away.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The bottom line: a used electric car in India can be excellent value, but the deal lives and
         dies on battery health and warranty transfer. Verify the SOH, get the warranty re-registered

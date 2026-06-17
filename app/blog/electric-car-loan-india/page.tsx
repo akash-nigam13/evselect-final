@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "What is the interest rate on an electric car loan in India?",
+    a: "In 2026, EV car loans broadly range from about 8.5% to 13% per annum. Public-sector green car loans sit at the lower end; your actual rate depends mainly on your credit score, the lender and the tenure.",
+  },
+  {
+    q: "Can I still claim the ₹1.5 lakh 80EEB deduction in 2026?",
+    a: "Only if your loan was sanctioned between 1 April 2019 and 31 March 2023. Loans taken after that date are not eligible unless the government reintroduces the benefit, and it applies only under the old tax regime.",
+  },
+  {
+    q: "How much down payment do I need for an EV?",
+    a: "Lenders finance roughly 80% to 100% of the price, so a 10–20% down payment is typical. A larger down payment lowers your EMI and can secure a better interest rate.",
+  },
+  {
+    q: "What is the maximum loan tenure?",
+    a: "Most car loans run up to seven years (84 months), with some EV schemes offering a little longer. A longer tenure means a lower EMI but more total interest paid.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Electric Car Loan in India 2026: Interest Rates, EMI & 80EEB",
@@ -135,26 +155,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>What is the interest rate on an electric car loan in India?</strong> In 2026, EV car
-        loans broadly range from about 8.5% to 13% per annum. Public-sector green car loans sit at the
-        lower end; your actual rate depends mainly on your credit score, the lender and the tenure.
-      </p>
-      <p>
-        <strong>Can I still claim the ₹1.5 lakh 80EEB deduction in 2026?</strong> Only if your loan was
-        sanctioned between 1 April 2019 and 31 March 2023. Loans taken after that date are not eligible
-        unless the government reintroduces the benefit, and it applies only under the old tax regime.
-      </p>
-      <p>
-        <strong>How much down payment do I need for an EV?</strong> Lenders finance roughly 80% to 100%
-        of the price, so a 10–20% down payment is typical. A larger down payment lowers your EMI and can
-        secure a better interest rate.
-      </p>
-      <p>
-        <strong>What is the maximum loan tenure?</strong> Most car loans run up to seven years (84
-        months), with some EV schemes offering a little longer. A longer tenure means a lower EMI but
-        more total interest paid.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The bottom line: an electric car loan in 2026 is cheap to service and easy to arrange, but the
         real savings come from a strong credit score, a sensible down payment, and choosing the right

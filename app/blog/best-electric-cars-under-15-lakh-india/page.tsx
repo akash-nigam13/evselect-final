@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "What is the cheapest electric car in India in 2026?",
+    a: "The Tata Tiago EV (from about ₹6.99 lakh) and the MG Comet EV (from about ₹7.5 lakh) are the most affordable, and both get even cheaper upfront under battery-rental (BaaS) plans.",
+  },
+  {
+    q: "Which electric car under ₹15 lakh has the longest range?",
+    a: "On claimed figures, the MG Windsor EV (up to ~449 km) and longer-range Tata Nexon EV variants lead, though real-world range is typically 20–30 percent lower.",
+  },
+  {
+    q: "Is the Maruti e Vitara under ₹15 lakh?",
+    a: "No. Maruti's first EV starts at about ₹15.99 lakh, just above this bracket — so it is a step up rather than a sub-₹15-lakh option.",
+  },
+  {
+    q: "Should I choose a BaaS (battery rental) plan?",
+    a: "It lowers the upfront price but adds a per-km battery cost and means you do not own the battery. It can suit high-mileage city drivers, but do the full math before committing.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "7 Best Electric Cars Under ₹15 Lakh in India (2026)",
@@ -198,25 +218,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>What is the cheapest electric car in India in 2026?</strong> The Tata Tiago EV (from
-        about ₹6.99 lakh) and the MG Comet EV (from about ₹7.5 lakh) are the most affordable, and both
-        get even cheaper upfront under battery-rental (BaaS) plans.
-      </p>
-      <p>
-        <strong>Which electric car under ₹15 lakh has the longest range?</strong> On claimed figures,
-        the MG Windsor EV (up to ~449 km) and longer-range Tata Nexon EV variants lead, though
-        real-world range is typically 20–30 percent lower.
-      </p>
-      <p>
-        <strong>Is the Maruti e Vitara under ₹15 lakh?</strong> No. Maruti's first EV starts at about
-        ₹15.99 lakh, just above this bracket — so it is a step up rather than a sub-₹15-lakh option.
-      </p>
-      <p>
-        <strong>Should I choose a BaaS (battery rental) plan?</strong> It lowers the upfront price but
-        adds a per-km battery cost and means you do not own the battery. It can suit high-mileage city
-        drivers, but do the full math before committing.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The under-₹15-lakh segment has never offered more genuine choice. Decide what you actually need
         — city runabout, family hatchback or compact SUV — confirm you can charge at home, and use the{" "}

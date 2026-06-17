@@ -1,7 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "How long does it take to fully charge an electric car in India?",
+    a: "On a 7.2 kW home wall box, most cars charge fully in about 6–8 hours — ideal overnight. On a 50 kW public DC fast charger you'll reach 80% in roughly an hour, while ultra-fast chargers can do 80% in under 20 minutes for EVs that support them.",
+  },
+  {
+    q: "Why is charging quoted as 10–80% and not 0–100%?",
+    a: "Lithium-ion batteries slow their charging speed near full to protect the cells, so the last 20% is disproportionately slow. The 10–80% window is the fast, useful part — which is why road-trip charging stops at 80%.",
+  },
+  {
+    q: "Does a bigger home charger always charge faster?",
+    a: "Only up to your car's onboard limit. If the EV accepts a maximum of 7.2 kW AC, an 11 kW wall box still charges it at 7.2 kW. Match the charger to the car's onboard capacity.",
+  },
+  {
+    q: "How long does an electric scooter take to charge?",
+    a: "Most electric scooters take about 4–6 hours for a full charge from a normal home socket, reaching 0–80% in roughly 3–4.5 hours. Fast-charging networks can add 20–70% in around 25 minutes.",
+  },
+  {
+    q: "Does charging time affect battery life?",
+    a: "Frequent ultra-fast DC charging and regularly charging to 100% add stress over years. For daily use, slower AC home charging and keeping the battery between roughly 20–80% is gentler on the pack.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "EV Charging Time in India (2026): How Long Does It Take to Charge an Electric Car?",
@@ -182,33 +206,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>How long does it take to fully charge an electric car in India?</strong> On a 7.2 kW
-        home wall box, most cars charge fully in about 6–8 hours — ideal overnight. On a 50 kW public
-        DC fast charger you'll reach 80% in roughly an hour, while ultra-fast chargers can do 80% in
-        under 20 minutes for EVs that support them.
-      </p>
-      <p>
-        <strong>Why is charging quoted as 10–80% and not 0–100%?</strong> Lithium-ion batteries slow
-        their charging speed near full to protect the cells, so the last 20% is disproportionately
-        slow. The 10–80% window is the fast, useful part — which is why road-trip charging stops at
-        80%.
-      </p>
-      <p>
-        <strong>Does a bigger home charger always charge faster?</strong> Only up to your car's
-        onboard limit. If the EV accepts a maximum of 7.2 kW AC, an 11 kW wall box still charges it
-        at 7.2 kW. Match the charger to the car's onboard capacity.
-      </p>
-      <p>
-        <strong>How long does an electric scooter take to charge?</strong> Most electric scooters
-        take about 4–6 hours for a full charge from a normal home socket, reaching 0–80% in roughly
-        3–4.5 hours. Fast-charging networks can add 20–70% in around 25 minutes.
-      </p>
-      <p>
-        <strong>Does charging time affect battery life?</strong> Frequent ultra-fast DC charging and
-        regularly charging to 100% add stress over years. For daily use, slower AC home charging and
-        keeping the battery between roughly 20–80% is gentler on the pack.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The short version: charge slowly at home for daily driving, fast-charge to 80% on trips, and
         stop worrying about the 0–100% number you'll rarely use. When you're shortlisting, compare

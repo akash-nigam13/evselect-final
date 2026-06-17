@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "What is the cheapest electric motorcycle in India in 2026?",
+    a: "The Ola Roadster X (from about ₹89,999) and the Oben Rorr (from about ₹99,000) are the most affordable motorcycle-style electric bikes, with Revolt's lineup also starting under ₹1 lakh in some variants.",
+  },
+  {
+    q: "Which electric motorcycle has the longest range in India?",
+    a: "On claimed figures, the Ultraviolette F77 Mach 2 Recon leads at up to ~323 km, followed by the Ola Roadster X+ at up to ~252 km — though real-world range is typically 20–30 percent lower.",
+  },
+  {
+    q: "Is an electric motorcycle better than an electric scooter?",
+    a: "Neither is universally better. Scooters win for light, short city use and storage; motorcycles win for range, highway speed and riding feel. Pick based on your actual daily distance and roads.",
+  },
+  {
+    q: "Can I charge an electric motorcycle at home?",
+    a: "Yes. Most plug into a regular 16A home socket, and several (like the Revolt RV400) use a removable battery you can carry inside to charge — no special installation needed for basic charging.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Best Electric Motorcycles in India 2026: Price, Range & Picks",
@@ -215,27 +235,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>What is the cheapest electric motorcycle in India in 2026?</strong> The Ola Roadster X
-        (from about ₹89,999) and the Oben Rorr (from about ₹99,000) are the most affordable
-        motorcycle-style electric bikes, with Revolt's lineup also starting under ₹1 lakh in some
-        variants.
-      </p>
-      <p>
-        <strong>Which electric motorcycle has the longest range in India?</strong> On claimed figures,
-        the Ultraviolette F77 Mach 2 Recon leads at up to ~323 km, followed by the Ola Roadster X+ at
-        up to ~252 km — though real-world range is typically 20–30 percent lower.
-      </p>
-      <p>
-        <strong>Is an electric motorcycle better than an electric scooter?</strong> Neither is
-        universally better. Scooters win for light, short city use and storage; motorcycles win for
-        range, highway speed and riding feel. Pick based on your actual daily distance and roads.
-      </p>
-      <p>
-        <strong>Can I charge an electric motorcycle at home?</strong> Yes. Most plug into a regular
-        16A home socket, and several (like the Revolt RV400) use a removable battery you can carry
-        inside to charge — no special installation needed for basic charging.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         India's electric motorcycle market has never offered more genuine choice. Decide what you
         actually need — budget commuter, value performer or flagship — confirm where you will charge,

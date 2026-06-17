@@ -1,7 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "How much does it cost to replace an EV battery in India?",
+    a: "A full out-of-warranty car battery typically costs ₹4–13 lakh depending on pack size (around ₹15,000–22,000 per kWh), while electric scooter batteries cost roughly ₹45,000–1.2 lakh. But most owners never pay this because the battery is covered by warranty.",
+  },
+  {
+    q: "Is the EV battery covered under warranty?",
+    a: "Yes. The standard in India is 8 years or 1,60,000 km, and brands like Tata (up to 15 years) and Mahindra (lifetime for the first private owner) go further. Warranties also guarantee at least 70% capacity, so a defective or heavily degraded pack is repaired or replaced free.",
+  },
+  {
+    q: "How long does an EV battery last in India?",
+    a: "Typically 10–12 years while retaining 70–80% of capacity, degrading about 2–3% a year. Most people change the whole car before the battery wears out.",
+  },
+  {
+    q: "Does the whole battery need replacing if it fails?",
+    a: "Usually not. Modern packs are built from modules, so a single faulty module can often be replaced rather than the entire pack — at a fraction of the full-replacement cost.",
+  },
+  {
+    q: "What voids an EV battery warranty?",
+    a: "Accident damage, water/flood damage, unauthorised repairs or tampering, and use outside the owner's manual. Normal degradation and manufacturing defects are covered.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "EV Battery Replacement Cost in India (2026): What It Really Costs",
@@ -167,33 +191,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>How much does it cost to replace an EV battery in India?</strong> A full
-        out-of-warranty car battery typically costs ₹4–13 lakh depending on pack size (around
-        ₹15,000–22,000 per kWh), while electric scooter batteries cost roughly ₹45,000–1.2 lakh. But
-        most owners never pay this because the battery is covered by warranty.
-      </p>
-      <p>
-        <strong>Is the EV battery covered under warranty?</strong> Yes. The standard in India is 8
-        years or 1,60,000 km, and brands like Tata (up to 15 years) and Mahindra (lifetime for the
-        first private owner) go further. Warranties also guarantee at least 70% capacity, so a
-        defective or heavily degraded pack is repaired or replaced free.
-      </p>
-      <p>
-        <strong>How long does an EV battery last in India?</strong> Typically 10–12 years while
-        retaining 70–80% of capacity, degrading about 2–3% a year. Most people change the whole car
-        before the battery wears out.
-      </p>
-      <p>
-        <strong>Does the whole battery need replacing if it fails?</strong> Usually not. Modern packs
-        are built from modules, so a single faulty module can often be replaced rather than the entire
-        pack — at a fraction of the full-replacement cost.
-      </p>
-      <p>
-        <strong>What voids an EV battery warranty?</strong> Accident damage, water/flood damage,
-        unauthorised repairs or tampering, and use outside the owner's manual. Normal degradation and
-        manufacturing defects are covered.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The bottom line: the EV battery replacement cost in India looks scary on paper but is a bill
         almost no one pays, because the warranty does the heavy lifting and the packs simply last.

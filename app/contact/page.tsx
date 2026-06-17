@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import FaqAccordion from "@/components/FaqAccordion";
 import { contactPageSchema } from "@/lib/seo";
 import { Mail, MessageSquare, Send, MapPin, Clock, CheckCircle, AlertCircle, ChevronDown } from "lucide-react";
 
@@ -73,7 +74,6 @@ type FormState = "idle" | "submitting" | "success" | "error";
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: subjects[0], message: "" });
   const [state, setState] = useState<FormState>("idle");
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -361,30 +361,7 @@ export default function ContactPage() {
             <h2 className="font-display font-bold text-white text-2xl mb-8">
               Frequently Asked <span className="text-gradient-cyan">Questions</span>
             </h2>
-            <div className="max-w-3xl space-y-3">
-              {faqs.map(({ q, a }, i) => (
-                <div
-                  key={q}
-                  className="bg-ev-card border border-ev-border rounded-2xl overflow-hidden transition-colors hover:border-ev-border"
-                >
-                  <button
-                    className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    aria-expanded={openFaq === i}
-                  >
-                    <span className="font-display font-semibold text-white text-sm leading-snug">{q}</span>
-                    <ChevronDown
-                      className={`w-4 h-4 text-ev-muted shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180 text-ev-cyan" : ""}`}
-                    />
-                  </button>
-                  {openFaq === i && (
-                    <div className="px-6 pb-5 text-sm text-ev-text/60 font-body leading-relaxed border-t border-ev-border/40 pt-4">
-                      {a}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={faqs} className="my-6 max-w-3xl" />
           </div>
 
         </div>

@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "Is an electric car cheaper to run than a CNG car?",
+    a: "Yes, if you charge at home. A home-charged EV costs about ₹1–1.5 per km versus roughly ₹3–4 per km for CNG. But if you rely on public fast charging, the EV's per-km cost can rise to ₹3–4 and the gap largely disappears.",
+  },
+  {
+    q: "Which is cheaper to buy, an EV or a CNG car?",
+    a: "A CNG car, usually. Most CNG cars sit around ₹6–12 lakh and the CNG kit adds under ₹1 lakh over petrol, while most mainstream EVs cost more upfront — though entry models like the Tata Tiago EV have narrowed the gap and lower GST plus state subsidies help close it further.",
+  },
+  {
+    q: "Are CNG cars zero-emission like EVs?",
+    a: "No. CNG burns cleaner than petrol and emits less, but it still has a tailpipe and produces emissions. Only a pure electric car has zero tailpipe emissions.",
+  },
+  {
+    q: "Do CNG cars lose boot space?",
+    a: "Yes. The gas cylinder is usually fitted in the boot, cutting luggage space significantly and often leaving no room for a conventional spare wheel. EVs keep a full boot and some even add front storage.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Electric Car vs CNG Car in India 2026: Which Should You Buy?",
@@ -181,27 +201,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>Is an electric car cheaper to run than a CNG car?</strong> Yes, if you charge at home.
-        A home-charged EV costs about ₹1–1.5 per km versus roughly ₹3–4 per km for CNG. But if you rely
-        on public fast charging, the EV's per-km cost can rise to ₹3–4 and the gap largely disappears.
-      </p>
-      <p>
-        <strong>Which is cheaper to buy, an EV or a CNG car?</strong> A CNG car, usually. Most CNG cars
-        sit around ₹6–12 lakh and the CNG kit adds under ₹1 lakh over petrol, while most mainstream EVs
-        cost more upfront — though entry models like the Tata Tiago EV have narrowed the gap and lower
-        GST plus state subsidies help close it further.
-      </p>
-      <p>
-        <strong>Are CNG cars zero-emission like EVs?</strong> No. CNG burns cleaner than petrol and
-        emits less, but it still has a tailpipe and produces emissions. Only a pure electric car has
-        zero tailpipe emissions.
-      </p>
-      <p>
-        <strong>Do CNG cars lose boot space?</strong> Yes. The gas cylinder is usually fitted in the
-        boot, cutting luggage space significantly and often leaving no room for a conventional spare
-        wheel. EVs keep a full boot and some even add front storage.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The right answer is the one that matches your parking and your driving, not the one with the
         cheaper sticker. Sort out whether you can charge at home first, run your real numbers through

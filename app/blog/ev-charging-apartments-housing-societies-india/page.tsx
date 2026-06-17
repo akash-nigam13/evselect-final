@@ -1,7 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "Can my housing society refuse to let me install an EV charger?",
+    a: "It can impose reasonable safety and structural conditions and ask for an NOC, but it cannot refuse on vague grounds like \"no policy exists.\" Ministry of Power guidelines and a 2025 Bombay High Court order have made arbitrary denials hard to defend.",
+  },
+  {
+    q: "Do I need a special licence to charge my own EV at home?",
+    a: "No. Charging your own vehicle is treated as a normal electricity connection and needs no separate licence. A licence only comes into play if you sell charging commercially.",
+  },
+  {
+    q: "Should I use my own meter or a separate EV meter?",
+    a: "A separate EV meter is usually worth it if your state offers a concessional EV tariff, since the cheaper per-unit rate repays the setup cost. If no special tariff applies, running off your own meter is simpler.",
+  },
+  {
+    q: "How much does it cost to set up charging in an apartment?",
+    a: "Most owners spend ₹15,000–40,000 on installation, plus a few thousand for any load upgrade and ₹4,000–6,000 for a separate meter. A basic 3.3 kW charger often comes free with the car.",
+  },
+  {
+    q: "What if my parking is shared or unassigned?",
+    a: "A dedicated charger needs a parking slot you control. If parking floats, push the society towards a shared charger on common supply with per-unit billing — it serves everyone and sidesteps the ownership problem.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "EV Charging in Apartments in India: Rules, Rights & Setup (2026)",
@@ -156,32 +180,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>Can my housing society refuse to let me install an EV charger?</strong> It can impose
-        reasonable safety and structural conditions and ask for an NOC, but it cannot refuse on vague
-        grounds like "no policy exists." Ministry of Power guidelines and a 2025 Bombay High Court order
-        have made arbitrary denials hard to defend.
-      </p>
-      <p>
-        <strong>Do I need a special licence to charge my own EV at home?</strong> No. Charging your own
-        vehicle is treated as a normal electricity connection and needs no separate licence. A licence
-        only comes into play if you sell charging commercially.
-      </p>
-      <p>
-        <strong>Should I use my own meter or a separate EV meter?</strong> A separate EV meter is usually
-        worth it if your state offers a concessional EV tariff, since the cheaper per-unit rate repays
-        the setup cost. If no special tariff applies, running off your own meter is simpler.
-      </p>
-      <p>
-        <strong>How much does it cost to set up charging in an apartment?</strong> Most owners spend
-        ₹15,000–40,000 on installation, plus a few thousand for any load upgrade and ₹4,000–6,000 for a
-        separate meter. A basic 3.3 kW charger often comes free with the car.
-      </p>
-      <p>
-        <strong>What if my parking is shared or unassigned?</strong> A dedicated charger needs a parking
-        slot you control. If parking floats, push the society towards a shared charger on common supply
-        with per-unit billing — it serves everyone and sidesteps the ownership problem.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The bottom line: an apartment is a logistics puzzle, not a roadblock. Sort the parking, pick
         your billing route, bring a proper safety plan to the committee, and the rules are now on your

@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "Do strong hybrids need to be plugged in?",
+    a: "No. Strong (self-charging) hybrids and mild hybrids charge their own batteries through the engine and regenerative braking. Only plug-in hybrids and pure EVs need external charging.",
+  },
+  {
+    q: "Is a hybrid cheaper to run than an EV?",
+    a: "No. A strong hybrid is far cheaper than petrol but still costs two to three times more per km than an EV charged at home. The EV wins on running cost; the hybrid wins on refuelling convenience.",
+  },
+  {
+    q: "Why are hybrids taxed higher than EVs in India?",
+    a: "Policy deliberately favours zero-tailpipe vehicles. Pure EVs get 5 percent GST and various state incentives, while hybrids are taxed like petrol cars at 28–40 percent, with no EV-style subsidies.",
+  },
+  {
+    q: "Is a plug-in hybrid worth it in India?",
+    a: "Rarely, in 2026. PHEVs are expensive, scarce and get no tax support, so they only make sense for a narrow set of buyers who can charge daily and still need long petrol range.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Electric Car vs Hybrid Car in India 2026: Which to Buy?",
@@ -178,26 +198,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>Do strong hybrids need to be plugged in?</strong> No. Strong (self-charging) hybrids
-        and mild hybrids charge their own batteries through the engine and regenerative braking. Only
-        plug-in hybrids and pure EVs need external charging.
-      </p>
-      <p>
-        <strong>Is a hybrid cheaper to run than an EV?</strong> No. A strong hybrid is far cheaper
-        than petrol but still costs two to three times more per km than an EV charged at home. The EV
-        wins on running cost; the hybrid wins on refuelling convenience.
-      </p>
-      <p>
-        <strong>Why are hybrids taxed higher than EVs in India?</strong> Policy deliberately favours
-        zero-tailpipe vehicles. Pure EVs get 5 percent GST and various state incentives, while hybrids
-        are taxed like petrol cars at 28–40 percent, with no EV-style subsidies.
-      </p>
-      <p>
-        <strong>Is a plug-in hybrid worth it in India?</strong> Rarely, in 2026. PHEVs are expensive,
-        scarce and get no tax support, so they only make sense for a narrow set of buyers who can
-        charge daily and still need long petrol range.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The right answer is the one that matches your parking and your driving, not the one with the
         most impressive spec sheet. Sort out charging first, run your real numbers through the{" "}

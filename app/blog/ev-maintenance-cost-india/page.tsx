@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
 import JsonLd from "@/components/JsonLd";
+import FaqAccordion from "@/components/FaqAccordion";
 import { faqPageSchema } from "@/lib/seo";
 import { altsFor } from "@/lib/i18n";
 
@@ -240,11 +241,7 @@ export default function Page() {
       </p>
 
       <h2>EV car maintenance cost — frequently asked questions</h2>
-      {faqs.map((f) => (
-        <p key={f.q}>
-          <strong>{f.q}</strong> {f.a}
-        </p>
-      ))}
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The short version is that an EV trades many small, frequent petrol-era expenses for a handful
         of simple, predictable ones. Keep up with the schedule and the running costs stay low. When you

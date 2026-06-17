@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import FaqAccordion from "@/components/FaqAccordion";
 import { altsFor } from "@/lib/i18n";
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "Is EV insurance cheaper than petrol-car insurance in India?",
+    a: "Only partly. The third-party premium is about 15% cheaper by regulation, but the own-damage premium is usually 20–40% higher because of the battery — so a comprehensive EV policy often costs more overall.",
+  },
+  {
+    q: "Does standard insurance cover the EV battery?",
+    a: "Not always. Base comprehensive cover may exclude water ingress and consequential battery damage, and batteries face heavy depreciation on claims. A battery protection cover plus zero depreciation closes those gaps.",
+  },
+  {
+    q: "How much does electric car insurance cost in India?",
+    a: "A mainstream EV's comprehensive premium commonly falls between ₹10,000 and ₹50,000 a year, depending on the car's IDV, your city, claim history and the add-ons you choose.",
+  },
+  {
+    q: "Which add-ons are essential for an EV?",
+    a: "Zero depreciation and battery protection cover are close to essential; charger cover and roadside assistance are strongly recommended and inexpensive.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Electric Car Insurance in India 2026: Costs, Add-Ons & Cover",
@@ -150,26 +170,7 @@ export default function Page() {
       </p>
 
       <h2>FAQ</h2>
-      <p>
-        <strong>Is EV insurance cheaper than petrol-car insurance in India?</strong> Only partly. The
-        third-party premium is about 15% cheaper by regulation, but the own-damage premium is usually
-        20–40% higher because of the battery — so a comprehensive EV policy often costs more overall.
-      </p>
-      <p>
-        <strong>Does standard insurance cover the EV battery?</strong> Not always. Base comprehensive
-        cover may exclude water ingress and consequential battery damage, and batteries face heavy
-        depreciation on claims. A battery protection cover plus zero depreciation closes those gaps.
-      </p>
-      <p>
-        <strong>How much does electric car insurance cost in India?</strong> A mainstream EV's
-        comprehensive premium commonly falls between ₹10,000 and ₹50,000 a year, depending on the car's
-        IDV, your city, claim history and the add-ons you choose.
-      </p>
-      <p>
-        <strong>Which add-ons are essential for an EV?</strong> Zero depreciation and battery
-        protection cover are close to essential; charger cover and roadside assistance are strongly
-        recommended and inexpensive.
-      </p>
+      <FaqAccordion items={faqs} className="my-6" />
       <p>
         The bottom line: EV insurance rewards owners who read past the headline discount. Buy
         comprehensive, add zero depreciation and battery protection, confirm the water-damage clause,
