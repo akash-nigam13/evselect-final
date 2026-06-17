@@ -36,6 +36,86 @@ export const CATEGORIES: BlogCategory[] = [
 ];
 
 export const POSTS: BlogPost[] = [
+  // ── Charging-station business cluster (spokes of /ev-charging-station-setup-india) ──
+  {
+    slug: "cost-to-set-up-ev-charging-station-india",
+    title: "EV Charging Station Setup Cost in India (2026)",
+    subtitle: "AC vs DC capex, hardware prices and the real total to open a station",
+    excerpt:
+      "How much does it cost to set up an EV charging station in India? A 2026 breakdown of AC and DC charger prices, electrical and civil work, and the total to open a small or fast-charging station.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "9 min",
+    date: "Jun 16, 2026",
+    accent: "#C6F94E",
+    featured: true,
+    related: ["is-ev-charging-station-business-profitable-india", "ev-charging-station-subsidy-india", "ev-charging-station-licence-registration-india", "ev-charging-station-franchise-india"],
+  },
+  {
+    slug: "is-ev-charging-station-business-profitable-india",
+    title: "Is the EV Charging Station Business Profitable in India? (2026)",
+    subtitle: "Margins, per-charger earnings and payback period, explained",
+    excerpt:
+      "Is an EV charging station business profitable in India? We break down how operators earn, realistic margins, per-charger monthly income and the typical payback period in 2026.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "9 min",
+    date: "Jun 15, 2026",
+    accent: "#C6F94E",
+    related: ["cost-to-set-up-ev-charging-station-india", "ev-charging-station-subsidy-india", "ev-charging-station-franchise-india", "ev-charging-station-licence-registration-india"],
+  },
+  {
+    slug: "ev-charging-station-licence-registration-india",
+    title: "Licence & Approvals to Open an EV Charging Station in India",
+    subtitle: "Why it's de-licensed — and the permits you actually need",
+    excerpt:
+      "Do you need a licence for an EV charging station in India? Public charging is de-licensed, but you still need a DISCOM load sanction, NOCs, electrical and fire safety sign-offs and GST. The full 2026 checklist.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "8 min",
+    date: "Jun 14, 2026",
+    accent: "#C6F94E",
+    related: ["cost-to-set-up-ev-charging-station-india", "is-ev-charging-station-business-profitable-india", "ev-charging-station-subsidy-india", "ev-charging-station-equipment-ac-dc-india"],
+  },
+  {
+    slug: "ev-charging-station-subsidy-india",
+    title: "Government Subsidy for EV Charging Stations in India (2026)",
+    subtitle: "PM E-Drive central support and state capital subsidies",
+    excerpt:
+      "What subsidies can you get for an EV charging station in India? PM E-Drive central support plus state capital subsidies (Maharashtra, Delhi, Gujarat and more) for 2026, with eligibility explained.",
+    category: "Policy & Incentives",
+    categorySlug: "policy-incentives",
+    readTime: "8 min",
+    date: "Jun 13, 2026",
+    accent: "#F472B6",
+    related: ["cost-to-set-up-ev-charging-station-india", "is-ev-charging-station-business-profitable-india", "ev-charging-station-franchise-india", "ev-subsidies-road-tax-by-state-india-2026"],
+  },
+  {
+    slug: "ev-charging-station-franchise-india",
+    title: "EV Charging Station Franchise in India: Cost & How It Works (2026)",
+    subtitle: "CPO partnerships, investment range and what a franchise gives you",
+    excerpt:
+      "Thinking of an EV charging station franchise in India? How charge-point-operator partnership models work, the typical investment, what the franchise provides, and the ROI to expect in 2026.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "8 min",
+    date: "Jun 12, 2026",
+    accent: "#C6F94E",
+    related: ["cost-to-set-up-ev-charging-station-india", "is-ev-charging-station-business-profitable-india", "ev-charging-station-subsidy-india", "ev-charging-station-equipment-ac-dc-india"],
+  },
+  {
+    slug: "ev-charging-station-equipment-ac-dc-india",
+    title: "AC vs DC Chargers: Which to Install for Your EV Station (India 2026)",
+    subtitle: "Power levels, connectors (CCS2, Type 2, LECCS) and what to buy",
+    excerpt:
+      "Choosing equipment for an EV charging station in India? AC vs DC explained, the connector standards that matter (CCS2, Type 2, LECCS), power levels, and which chargers to install for cars versus two-wheelers.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "8 min",
+    date: "Jun 11, 2026",
+    accent: "#C6F94E",
+    related: ["cost-to-set-up-ev-charging-station-india", "ev-charging-station-licence-registration-india", "is-ev-charging-station-business-profitable-india", "ev-charger-types-connectors-india"],
+  },
   // ── PAA / buying-intent guides ──────────────────────────────
   {
     slug: "best-electric-cars-india-2026",

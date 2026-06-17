@@ -254,6 +254,47 @@ export default function ChargingStationSetupPage() {
 
             <ToolsCTA locale="en" tools={["cost", "compare", "range"]} className="not-prose my-8" />
 
+            <h2>Deep-dive guides</h2>
+            <p>Go deeper on each part of setting up and running a station:</p>
+            <ul>
+              <li>
+                <Link href="/blog/cost-to-set-up-ev-charging-station-india">
+                  EV charging station setup cost in India
+                </Link>{" "}
+                — full AC vs DC capex breakdown.
+              </li>
+              <li>
+                <Link href="/blog/is-ev-charging-station-business-profitable-india">
+                  Is the EV charging station business profitable?
+                </Link>{" "}
+                — margins, per-charger income and payback.
+              </li>
+              <li>
+                <Link href="/blog/ev-charging-station-licence-registration-india">
+                  Licence &amp; approvals to open a station
+                </Link>{" "}
+                — what you do and don&apos;t need.
+              </li>
+              <li>
+                <Link href="/blog/ev-charging-station-subsidy-india">
+                  Government subsidy for charging stations
+                </Link>{" "}
+                — PM E-Drive and state capital subsidies.
+              </li>
+              <li>
+                <Link href="/blog/ev-charging-station-franchise-india">
+                  EV charging station franchise in India
+                </Link>{" "}
+                — CPO partnership models, cost and ROI.
+              </li>
+              <li>
+                <Link href="/blog/ev-charging-station-equipment-ac-dc-india">
+                  AC vs DC chargers: which to install
+                </Link>{" "}
+                — power levels and connector standards.
+              </li>
+            </ul>
+
             <h2>Related</h2>
             <p>
               See which EVs your future customers are driving in the{" "}
