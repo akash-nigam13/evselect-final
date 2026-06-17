@@ -739,6 +739,24 @@ export const POSTS: BlogPost[] = [
       "भारत में EV बैटरी बदलवाने में कितना खर्च आता है? 2026 की यह गाइड कारों और स्कूटरों के लिए असली रिप्लेसमेंट कीमतें, 8 साल की वारंटी जो आमतौर पर आपको कवर करती है, और ज़्यादातर मालिक यह बिल क्यों कभी नहीं देखते — सब समझाती है।",
   },
 
+  {
+    slug: "used-electric-car-india",
+    title: "Buying a Used Electric Car in India (2026): Checklist, Battery Health & Costs",
+    subtitle: "Battery State of Health, warranty transfer and the red flags to walk away from",
+    excerpt:
+      "Thinking of buying a used electric car in India? A 2026 buyer's guide to second-hand EVs — how to check battery State of Health, transfer the 8-year warranty, spot flood damage, and judge whether a used EV is really a bargain.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 17, 2026",
+    accent: "#26E0C4",
+    related: ["ev-resale-value-battery-health-india", "ev-battery-replacement-cost-india", "petrol-vs-electric-5-year-cost-india", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में पुरानी इलेक्ट्रिक कार खरीदना (2026): चेकलिस्ट, बैटरी हेल्थ और लागत",
+    hiSubtitle: "बैटरी State of Health, वारंटी ट्रांसफर और वे रेड फ्लैग जिन पर लौट जाना चाहिए",
+    hiExcerpt:
+      "भारत में पुरानी इलेक्ट्रिक कार खरीदने की सोच रहे हैं? सेकंड-हैंड EV की 2026 बायर गाइड — बैटरी State of Health कैसे जाँचें, 8 साल की वारंटी कैसे ट्रांसफर करें, बाढ़ क्षति कैसे पहचानें, और क्या पुरानी EV सचमुच फ़ायदे का सौदा है।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",

@@ -1,3 +1,4 @@
+import { Children } from "react";
 import Link from "next/link";
 import { Clock, Calendar, User, ArrowRight, GitCompare, Tag } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -39,6 +40,20 @@ export default function ArticleShell({
   const excerpt = isHi && post.hiExcerpt ? post.hiExcerpt : post.excerpt;
 
   const L = (path: string) => localizedHref(path, locale);
+
+  // Inject an in-article ad a few blocks into the body (past the intro), where
+  // readers actually are — far higher-performing than the sidebar slot. Only on
+  // longer posts so short articles don't get an ad jammed near the top.
+  const blocks = Children.toArray(children);
+  const adAt = 4;
+  const bodyWithAd =
+    blocks.length > 6
+      ? [
+          ...blocks.slice(0, adAt),
+          <AdPlaceholder key="in-content-ad" format="rectangle" className="not-prose my-8" />,
+          ...blocks.slice(adAt),
+        ]
+      : blocks;
 
   return (
     <>
@@ -120,7 +135,7 @@ export default function ArticleShell({
         {/* Body + sidebar */}
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid items-start gap-12 lg:grid-cols-[1fr_320px]">
-            <article className="prose-ev max-w-none">{children}</article>
+            <article className="prose-ev max-w-none">{bodyWithAd}</article>
 
             <aside className="flex flex-col gap-6 lg:sticky lg:top-24">
               {/* Related reads — TOP of the sidebar */}
