@@ -45,7 +45,9 @@ export default function Page() {
         A used electric car can be one of the smartest buys on the Indian market right now — or one
         of the riskiest, depending entirely on a single number you can't see by kicking the tyres.
         EVs depreciate faster than petrol cars in their first few years, which is bad news for the
-        original owner but a real opportunity for a second buyer. The catch is that an EV's value
+        original owner but a real opportunity for a second buyer — and once you own one, the rest of{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">owning an electric car in India</Link>{" "}
+        stays just as cheap as it would on a new model. The catch is that an EV's value
         lives almost entirely in its battery, and a tired pack can quietly halve the car's usefulness.
         This guide walks through exactly how to buy a <strong>used electric car in India</strong> in
         2026 — what to check, what the warranty actually covers for a second owner, and the red flags

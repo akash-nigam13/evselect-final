@@ -209,7 +209,9 @@ export default function Page() {
       <FaqAccordion items={faqs} className="my-6" />
       <p>
         The short version: charge slowly at home for daily driving, fast-charge to 80% on trips, and
-        stop worrying about the 0–100% number you'll rarely use. When you're shortlisting, compare
+        stop worrying about the 0–100% number you'll rarely use. Charging speed shapes daily
+        convenience, but the energy itself is only a small slice of{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">what it really costs to run an electric car in India</Link>. When you're shortlisting, compare
         real charging specs side by side in the{" "}
         <Link href="/compare-electric-vehicles">EV comparison tool</Link> or browse the{" "}
         <Link href="/catalog/electric-cars">electric car catalog</Link> to see which models charge

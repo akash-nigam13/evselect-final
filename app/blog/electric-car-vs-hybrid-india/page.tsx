@@ -42,6 +42,9 @@ export default function Page() {
         spending ₹15 lakh or more on a new vehicle, and the honest answer is that the two are not
         really rivals — they solve different problems. An electric car removes petrol from your life
         entirely. A hybrid keeps the petrol pump in the picture but makes each litre go much further.
+        Before you settle the question, it helps to understand{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">what owning an electric car in India actually costs</Link>{" "}
+        over the years you keep it.
         Which one suits you depends less on which is "better" in the abstract and more on where you
         park, how far you drive, and whether you can charge at home. This guide breaks down every
         hybrid type against a pure EV so you can match the technology to your actual usage rather

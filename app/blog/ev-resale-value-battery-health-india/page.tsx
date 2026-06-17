@@ -37,7 +37,8 @@ export default function Page() {
       </p>
       <p>
         This is why resale is really a continuation of the same total-cost thinking you do at
-        purchase. If you have already worked through our{" "}
+        purchase — it is the closing entry in <Link href="/blog/cost-of-owning-an-electric-car-in-india">our guide to EV ownership costs in India</Link>.
+        If you have already worked through our{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">petrol versus electric five-year cost</Link>{" "}
         comparison, resale value is simply the final line in that ledger — and one you can influence
         from day one. The same logic sits inside our{" "}

@@ -86,7 +86,9 @@ export default function Page() {
       <p>
         This is also why the running-cost maths of an EV deserves a complete view rather than a
         headline number. Insurance is just one line in the ledger alongside energy, servicing and
-        resale — our{" "}
+        resale, and our{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">complete EV running-cost guide</Link>{" "}
+        shows where the premium fits. Our{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">5-year cost of ownership comparison</Link>{" "}
         puts all of those together so the insurance premium is seen in context rather than in
         isolation.

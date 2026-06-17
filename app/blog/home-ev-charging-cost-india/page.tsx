@@ -52,7 +52,8 @@ export default function Page() {
         petrol car at ₹100–110 per litre.
       </p>
       <p>
-        Over a year of city driving, that gap compounds into real savings. To see the numbers
+        Over a year of city driving, that gap compounds into real savings, and home charging is just
+        one piece of <Link href="/blog/cost-of-owning-an-electric-car-in-india">the complete EV running-cost guide</Link>. To see the numbers
         for your own usage and electricity tariff, run them through the{" "}
         <Link href="/ev-calculators">cost and range calculators</Link>, and for the longer-term picture
         read our breakdown of the{" "}

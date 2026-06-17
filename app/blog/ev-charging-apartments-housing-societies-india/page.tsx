@@ -47,7 +47,9 @@ export default function Page() {
         from the wall. In an apartment or housing society, the same job touches shared parking, a
         managing committee, your electricity board and sometimes a suspicious neighbour or two. The
         good news in 2026 is that the rules have moved firmly in the EV owner's favour — a flat is no
-        longer a reason to give up on going electric. This guide walks through exactly how EV charging
+        longer a reason to give up on going electric, especially once you weigh{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">the complete cost of owning an electric car in India</Link>{" "}
+        against a petrol equivalent. This guide walks through exactly how EV charging
         in apartments and housing societies works in India: your legal rights, the approvals you need,
         the wiring and billing options, and what it all costs.
       </p>

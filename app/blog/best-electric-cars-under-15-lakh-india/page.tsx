@@ -197,7 +197,9 @@ export default function Page() {
         The purchase price is only half the story. Charged at home, these EVs cost roughly ₹1–1.5 per
         kilometre against ₹6–9 for petrol, which can save a regular commuter tens of thousands of
         rupees a year. On top of that, EVs attract just 5 percent GST and several states add road-tax
-        waivers and registration discounts — sometimes worth lakhs on the on-road price. Check what
+        waivers and registration discounts — sometimes worth lakhs on the on-road price. To see how the
+        sticker, charging, servicing and resale all add up, read our guide to{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">what an electric car really costs to own in India</Link>. Check what
         applies to you in our <Link href="/blog/ev-subsidies-road-tax-by-state-india-2026">state-by-state
         subsidies and road-tax guide</Link>, then run your own numbers through the{" "}
         <Link href="/ev-calculators/ev-vs-petrol-cost-calculator">EV vs petrol cost calculator</Link> to

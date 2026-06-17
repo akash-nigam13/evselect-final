@@ -415,6 +415,20 @@ export const POSTS: BlogPost[] = [
     related: ["ev-resale-value-battery-health-india", "solid-state-batteries-2026", "real-world-range-vs-arai-india", "home-ev-charging-cost-india"],
   },
   {
+    slug: "cost-of-owning-an-electric-car-in-india",
+    title: "Cost of Owning an Electric Car in India (2026): The Complete Guide",
+    subtitle: "Price, charging, servicing, insurance and resale — the full running-cost picture",
+    excerpt:
+      "What does it really cost to own an electric car in India? This complete 2026 guide breaks down the on-road price, charging and running cost per km, servicing, insurance, battery and resale — and links to a deep guide on every part.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "15 min",
+    date: "Jun 17, 2026",
+    accent: "#FFC247",
+    featured: true,
+    related: ["petrol-vs-electric-5-year-cost-india", "ev-maintenance-cost-india", "home-ev-charging-cost-india", "ev-resale-value-battery-health-india"],
+  },
+  {
     slug: "petrol-vs-electric-5-year-cost-india",
     title: "Petrol vs Electric: 5-Year Cost Analysis",
     subtitle: "Total Cost of Ownership for Indian Buyers",

@@ -40,7 +40,8 @@ export default function Page() {
       <p>
         For most buyers, the question is never simply "should I go electric" — it is "can I afford the
         EMI." An electric car still costs more up front than a comparable petrol model, so how you
-        finance it matters almost as much as which car you pick. The good news is that an electric car
+        finance it matters almost as much as which car you pick — and the EMI is just one line in{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">the bigger picture of owning an electric car in India</Link>. The good news is that an electric car
         loan in India works much like any other car loan, and several banks now offer a dedicated
         lower-rate product for EVs. The slightly less good news is that one of the headline perks —
         the Section 80EEB tax deduction — is no longer available to new buyers the way most articles

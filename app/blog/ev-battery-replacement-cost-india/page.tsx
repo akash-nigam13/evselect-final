@@ -185,7 +185,9 @@ export default function Page() {
         peak summer heat, lean on slower AC home charging for daily use and save DC fast-charging for
         trips, and park in shade where you can. Done consistently, these habits keep degradation at
         the low end of the range and comfortably see the pack through its warranty — and usually well
-        past it. If you're still weighing the overall economics of going electric, our{" "}
+        past it. Seen in context, the battery is just one input into{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">the total cost of owning an EV</Link>.
+        If you're still weighing the overall economics of going electric, our{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">petrol vs electric 5-year cost
         analysis</Link> folds battery worries into the bigger ownership picture.
       </p>

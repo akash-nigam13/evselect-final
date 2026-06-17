@@ -177,7 +177,9 @@ export default function Page() {
         though strong new-car demand and rising fuel prices are firming up used-EV prices. The honest
         position in 2026 is that CNG offers more resale certainty today, while an EV offers lower
         lifetime running cost and a cleaner long-term ownership story — provided you protect the
-        battery. Our deep dive on{" "}
+        battery, as our guide to{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">the total cost of owning an EV in India</Link>{" "}
+        sets out in full. Our deep dive on{" "}
         <Link href="/blog/ev-resale-value-battery-health-india">EV resale value and battery health</Link>{" "}
         explains what actually moves an EV's second-hand price.
       </p>

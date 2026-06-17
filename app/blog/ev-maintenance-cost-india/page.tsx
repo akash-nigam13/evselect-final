@@ -244,8 +244,10 @@ export default function Page() {
       <FaqAccordion items={faqs} className="my-6" />
       <p>
         The short version is that an EV trades many small, frequent petrol-era expenses for a handful
-        of simple, predictable ones. Keep up with the schedule and the running costs stay low. When you
-        are ready to shortlist a model, browse the{" "}
+        of simple, predictable ones. Keep up with the schedule and the running costs stay low — and to
+        see how servicing sits alongside every other line item, read our guide to{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">what an EV really costs to own in India</Link>.
+        When you are ready to shortlist a model, browse the{" "}
         <Link href="/catalog/electric-cars">electric car catalog</Link> or put two contenders head to
         head with the <Link href="/compare-electric-vehicles">EV comparison tool</Link>.
       </p>

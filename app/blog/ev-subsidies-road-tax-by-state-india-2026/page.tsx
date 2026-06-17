@@ -108,6 +108,7 @@ export default function Page() {
         <Link href="/ev-calculators">cost tools</Link> shows how a road-tax waiver plus low running costs can
         flip the maths in the EV's favour faster than buyers expect. It also dovetails with the
         ownership thinking in our{" "}
+        <Link href="/blog/cost-of-owning-an-electric-car-in-india">guide to EV ownership costs in India</Link>, our{" "}
         <Link href="/blog/petrol-vs-electric-5-year-cost-india">five-year cost comparison</Link> and the
         broader <Link href="/blog/how-to-choose-first-ev-india">first-EV checklist</Link>.
       </p>
