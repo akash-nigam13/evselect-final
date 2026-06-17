@@ -561,10 +561,10 @@ export const POSTS: BlogPost[] = [
 
   {
     slug: "ev-maintenance-cost-india",
-    title: "EV Maintenance Cost in India: What You'll Actually Pay",
-    subtitle: "Service intervals, what gets checked, and the real bills",
+    title: "EV Car Maintenance Cost in India (2026): What You'll Actually Pay",
+    subtitle: "EV service cost, yearly bills, and how it compares with a petrol SUV",
     excerpt:
-      "Electric cars need far less servicing than petrol — no oil, no spark plugs, no clutch. Here's exactly what an EV needs, how often, and what maintenance really costs in India.",
+      "What does EV car maintenance cost in India? Real 2026 EV service charges, the per-year servicing bill, brake, tyre and battery costs, and how electric SUV maintenance compares with a petrol SUV.",
     category: "Cost & Ownership",
     categorySlug: "cost-ownership",
     readTime: "8 min",

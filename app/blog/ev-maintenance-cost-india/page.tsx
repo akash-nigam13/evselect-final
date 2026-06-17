@@ -1,15 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
+import JsonLd from "@/components/JsonLd";
+import { faqPageSchema } from "@/lib/seo";
 import { altsFor } from "@/lib/i18n";
 
+const faqs = [
+  {
+    q: "How much does EV car maintenance cost per year in India?",
+    a: "A mainstream electric car costs roughly ₹3,500 to ₹9,000 a year in scheduled servicing in India, against ₹9,000 to ₹18,000 for a comparable petrol SUV — typically 40–60% lower, because there is no oil, spark-plug, clutch or fuel-system work.",
+  },
+  {
+    q: "What is the service cost of an electric car in India?",
+    a: "A routine EV service in India is mostly inspection plus fluid top-ups, so it usually runs ₹2,000 to ₹6,000 per visit at an authorised workshop. Coolant (~every 2 years) and brake fluid (~every 3 years) are the main extra jobs, each a few thousand rupees.",
+  },
+  {
+    q: "Is electric SUV maintenance cheaper than a petrol SUV per year?",
+    a: "Yes. A mid-size electric SUV typically costs ₹7,000–₹13,000 a year to maintain versus ₹16,000–₹28,000 for a comparable petrol SUV — a saving of roughly ₹6,000–₹14,000 every year, mainly from skipping oil changes, filters and spark plugs.",
+  },
+  {
+    q: "Do electric cars need servicing at all?",
+    a: "Yes, but far less. There is no oil, spark-plug or clutch work, yet coolant, brake fluid, tyres, the 12V battery and general inspections still need attention on a regular schedule.",
+  },
+  {
+    q: "Why do EVs go through tyres faster?",
+    a: "Their extra weight and instant torque put more stress on tyres, so expect about 25–30% quicker wear. Regular rotation (around every 10,000 km) and correct pressure help offset it.",
+  },
+  {
+    q: "Is the EV battery covered if it degrades?",
+    a: "Usually. Most Indian EVs come with an 8-year / 1,60,000 km battery warranty, with repair or replacement if State of Health drops below the maker's threshold (often around 70%) during that period.",
+  },
+];
+
 export const metadata: Metadata = {
-  title: "EV Maintenance Cost in India 2026: The Honest Breakdown",
+  title: "EV Car Maintenance & Service Cost in India (2026 Breakdown)",
   description:
-    "What electric car maintenance really costs in India — service intervals, what gets checked, tyre and brake life, and the 5-year service bill versus a petrol car.",
+    "What does EV car maintenance cost in India? Real 2026 service charges, yearly servicing bills, brake, tyre and battery costs — and how electric SUV maintenance compares with a petrol SUV per year.",
   alternates: altsFor("/blog/ev-maintenance-cost-india", "en"),
   openGraph: {
-    title: "EV Maintenance Cost in India 2026: The Honest Breakdown",
+    title: "EV Car Maintenance & Service Cost in India (2026 Breakdown)",
     type: "article",
   },
 };
@@ -122,6 +151,63 @@ export default function Page() {
         <Link href="/ev-calculators/ev-vs-petrol-cost-calculator">EV vs petrol cost calculator</Link>.
       </p>
 
+      <h2>Electric SUV vs petrol SUV: maintenance cost per year</h2>
+      <p>
+        The gap is widest on SUVs, where petrol servicing is pricier to begin with. Here is a
+        like-for-like view of typical annual maintenance for a mid-size electric SUV versus a
+        comparable petrol SUV in India in 2026. Figures are indicative and vary by brand, city and
+        usage.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Cost item (per year)</th>
+            <th>Electric SUV</th>
+            <th>Petrol SUV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Scheduled service &amp; labour</td>
+            <td>₹3,500–7,000</td>
+            <td>₹6,000–10,000</td>
+          </tr>
+          <tr>
+            <td>Engine oil &amp; oil filter</td>
+            <td>₹0</td>
+            <td>₹4,000–7,000</td>
+          </tr>
+          <tr>
+            <td>Air/fuel filters &amp; spark plugs</td>
+            <td>₹0</td>
+            <td>₹1,500–3,000</td>
+          </tr>
+          <tr>
+            <td>Brakes (pads &amp; fluid, per year)</td>
+            <td>₹500–1,000</td>
+            <td>₹2,000–4,000</td>
+          </tr>
+          <tr>
+            <td>Tyres (spread per year)</td>
+            <td>₹3,000–5,000</td>
+            <td>₹2,500–4,000</td>
+          </tr>
+          <tr>
+            <td><strong>Typical total per year</strong></td>
+            <td><strong>₹7,000–13,000</strong></td>
+            <td><strong>₹16,000–28,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Across a year, an electric SUV typically costs around ₹6,000–₹14,000 less to maintain than an
+        equivalent petrol SUV — and the saving compounds as the kilometres pile up. The only line
+        where the EV costs <em>more</em> is tyres, which wear faster on the heavier, torquier car. To
+        put your own numbers in, the{" "}
+        <Link href="/ev-calculators/ev-vs-petrol-cost-calculator">EV vs petrol cost calculator</Link>{" "}
+        adds energy and fuel on top of these service figures.
+      </p>
+
       <h2>Brakes, tyres and the big battery</h2>
       <p>
         Brakes are an EV bright spot. Because regenerative braking does most of the slowing, friction
@@ -153,26 +239,12 @@ export default function Page() {
         workshop updates.
       </p>
 
-      <h2>FAQ</h2>
-      <p>
-        <strong>Do electric cars need servicing at all?</strong> Yes, but far less. There is no oil,
-        spark-plug or clutch work, yet coolant, brake fluid, tyres, the 12V battery and general
-        inspections still need attention on a regular schedule.
-      </p>
-      <p>
-        <strong>How much does EV maintenance cost per year in India?</strong> Roughly ₹3,500 to
-        ₹9,000 a year for a mainstream EV, compared with ₹9,000 to ₹18,000 for a similar petrol SUV.
-      </p>
-      <p>
-        <strong>Is the EV battery covered if it degrades?</strong> Usually. Most Indian EVs come with
-        an 8-year / 1,60,000 km battery warranty, with repair or replacement if State of Health drops
-        below the maker's threshold during that period.
-      </p>
-      <p>
-        <strong>Why do EVs go through tyres faster?</strong> Their extra weight and instant torque put
-        more stress on tyres, so expect about 25–30 percent quicker wear — regular rotation and
-        correct pressure help offset it.
-      </p>
+      <h2>EV car maintenance cost — frequently asked questions</h2>
+      {faqs.map((f) => (
+        <p key={f.q}>
+          <strong>{f.q}</strong> {f.a}
+        </p>
+      ))}
       <p>
         The short version is that an EV trades many small, frequent petrol-era expenses for a handful
         of simple, predictable ones. Keep up with the schedule and the running costs stay low. When you
@@ -180,6 +252,8 @@ export default function Page() {
         <Link href="/catalog/electric-cars">electric car catalog</Link> or put two contenders head to
         head with the <Link href="/compare-electric-vehicles">EV comparison tool</Link>.
       </p>
+
+      <JsonLd data={faqPageSchema(faqs)} />
     </ArticleShell>
   );
 }
