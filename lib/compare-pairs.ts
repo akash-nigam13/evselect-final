@@ -35,6 +35,30 @@ export const COMPARE_PAIRS: [string, string][] = [
   ["ola-roadster-x-4-5-kwh", "revolt-rv400-brz-standard"],
   ["tork-kratos-r", "revolt-rv400-brz-standard"],
   ["ultraviolette-f77-mach-2-standard-7-1-kwh", "ola-roadster-pro-8-kwh"],
+
+  // ── Expanded cluster: more high-demand matchups ──
+  // Budget & compact cars
+  ["tata-tiago-ev-long-range-24-kwh", "mg-comet-ev"],
+  ["tata-punch-ev-long-range-40-kwh", "mahindra-xuv-3xo-ev-39-4-kwh"],
+  ["tata-nexon-ev-long-range-45-kwh", "mahindra-xuv-3xo-ev-39-4-kwh"],
+  // Mid-size electric SUVs
+  ["hyundai-creta-electric-long-range-51-4-kwh", "mahindra-xev-9e-79-kwh"],
+  ["mahindra-be-6-79-kwh", "mahindra-xev-9e-79-kwh"],
+  ["tata-curvv-ev-55-kwh", "mahindra-xev-9e-79-kwh"],
+  ["maruti-suzuki-e-vitara-61-kwh", "tata-curvv-ev-55-kwh"],
+  ["byd-atto-3-superior-60-48-kwh", "hyundai-creta-electric-long-range-51-4-kwh"],
+  ["tata-harrier-ev-qwd-75-kwh", "mahindra-be-6-79-kwh"],
+  // Premium / global
+  ["kia-ev6-gt-line-awd-84-kwh", "byd-seal-premium-82-56-kwh"],
+  ["tesla-model-y-premium-rwd", "hyundai-ioniq-5-84-kwh"],
+  // Scooters
+  ["ather-rizta-z-3-7-kwh", "ola-s1-air-3-kwh"],
+  ["bajaj-chetak-c3501-35-series", "ather-rizta-z-3-7-kwh"],
+  ["ola-s1-pro-gen-3-4-kwh", "ather-450-apex"],
+  ["tvs-iqube-3-5-kwh", "hero-vida-v2-pro-3-94-kwh"],
+  // Motorcycles
+  ["ola-roadster-x-4-5-kwh", "tork-kratos-r"],
+  ["oben-rorr-original-4-4-kwh", "revolt-rv400-brz-standard"],
 ];
 
 const SEP = "-vs-";

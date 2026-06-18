@@ -13,9 +13,9 @@ import { getById } from "@/lib/ev-data";
 import { COMPARE_PAIRS, comparePath } from "@/lib/compare-pairs";
 
 export const metadata: Metadata = {
-  title: "Compare Electric Vehicles Side by Side",
+  title: "Compare EV Cars Side by Side — Free EV Comparison Tool (India 2026)",
   description:
-    "Free EV comparison tool — compare any 2 or 3 electric vehicles in India side by side on price, range, battery, power & charging. Live data on 140+ electric cars, scooters & bikes.",
+    "Free EV comparison tool for India — compare any 2 or 3 EV cars, scooters or bikes side by side on price, range, battery, power & charging. Live data on 140+ electric vehicles.",
   alternates: altsFor("/compare-electric-vehicles", "en"),
   openGraph: {
     title: "Compare Electric Vehicles Side by Side | EVSelect.in",
@@ -83,7 +83,7 @@ export default function ComparePage() {
               Comparison Engine
             </p>
             <h1 className="font-display text-4xl font-bold text-white sm:text-5xl">
-              Compare <span className="text-gradient-brand">Electric Vehicles</span> side by side
+              Compare <span className="text-gradient-brand">EV cars, scooters &amp; bikes</span> in India, side by side
             </h1>
             <p className="mx-auto mt-4 max-w-xl font-body text-ev-text/60">
               Put any two or three EVs head to head and get a full side-by-side
@@ -198,6 +198,21 @@ export default function ComparePage() {
             <p>
               New to the jargon? Our <Link href="/ev-guides">EV 101 hub and glossary</Link>{" "}
               explains every term in plain language.
+            </p>
+
+            <h2>Compare EVs by range and price</h2>
+            <p>
+              The two numbers most buyers in India weigh first are range and price, and they often
+              pull in opposite directions. When you compare EV range, look at the real-world row
+              rather than the ARAI/IDC claim — a longer claimed range doesn&apos;t always survive
+              highway speeds and AC use. When you compare EV price, the ex-showroom figure is only the
+              start: on-road price and state subsidies can swing the real cost by lakhs. The tool
+              shows claimed range, real-world range and ex-showroom price side by side so you can see
+              the range-per-rupee trade-off instantly, then estimate the all-in number with the{" "}
+              <Link href="/ev-calculators/ev-vs-petrol-cost-calculator">cost calculator</Link> and{" "}
+              <Link href="/ev-subsidies-india">EV subsidies guide</Link>. For a deeper read on why
+              claimed and real range differ, see{" "}
+              <Link href="/blog/real-world-range-vs-arai-india">real-world range vs ARAI claims</Link>.
             </p>
           </div>
 
