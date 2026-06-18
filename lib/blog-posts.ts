@@ -851,6 +851,24 @@ export const POSTS: BlogPost[] = [
       "भारत में पुरानी इलेक्ट्रिक कार खरीदने की सोच रहे हैं? सेकंड-हैंड EV की 2026 बायर गाइड — बैटरी State of Health कैसे जाँचें, 8 साल की वारंटी कैसे ट्रांसफर करें, बाढ़ क्षति कैसे पहचानें, और क्या पुरानी EV सचमुच फ़ायदे का सौदा है।",
   },
 
+  {
+    slug: "electric-scooter-vs-petrol-scooter-india",
+    title: "Electric Scooter vs Petrol Scooter in India (2026): Which Should You Buy?",
+    subtitle: "Running cost, price, range, charging and maintenance — honestly compared",
+    excerpt:
+      "Electric scooter vs petrol scooter is the real question for most Indian commuters. This 2026 guide compares the two on upfront price, running cost per km, range, charging vs refuelling, maintenance, subsidies and resale — so you can pick the right one for how you actually ride.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 18, 2026",
+    accent: "#26E0C4",
+    related: ["top-5-electric-scooters-india-2026", "petrol-vs-electric-5-year-cost-india", "ev-subsidies-road-tax-by-state-india-2026", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में इलेक्ट्रिक स्कूटर बनाम पेट्रोल स्कूटर (2026): कौन-सा खरीदें?",
+    hiSubtitle: "रनिंग कॉस्ट, कीमत, रेंज, चार्जिंग और मेंटेनेंस — ईमानदारी से तुलना",
+    hiExcerpt:
+      "ज़्यादातर भारतीय कम्यूटरों के लिए असली सवाल इलेक्ट्रिक स्कूटर बनाम पेट्रोल स्कूटर है। यह 2026 गाइड दोनों की तुलना अपफ्रंट कीमत, प्रति-किमी रनिंग कॉस्ट, रेंज, चार्जिंग बनाम रिफ्यूलिंग, मेंटेनेंस, सब्सिडी और रीसेल पर करती है — ताकि आप अपनी असली राइडिंग के अनुसार सही चुन सकें।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
