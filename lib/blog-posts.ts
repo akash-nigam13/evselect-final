@@ -1269,6 +1269,24 @@ export const POSTS: BlogPost[] = [
     hiExcerpt:
       "दिल्ली के बजट 2026 में ₹200 करोड़ के परिव्यय के साथ EV नीति 2.0 पेश की गई है, जिसमें ₹15 लाख से कम की इलेक्ट्रिक कार पर ₹1 लाख तक की छूट, ई-टू-व्हीलर पर सपाट ₹10,000 और पुराने पेट्रोल या डीज़ल वाहन को स्क्रैप करने पर बड़े फ़ायदे मिलते हैं। भुगतान अब सीधे बैंक ट्रांसफर से होगा। जानिए क्या पुष्टि हुई है और किसे फ़ायदा।",
   },
+  {
+    slug: "citroen-ec3x-launched-india-2026",
+    title: "Citroen eC3X Launched in India From ₹10.25 Lakh (₹6.89 Lakh With BaaS)",
+    subtitle: "A budget electric crossover with six airbags, 320 km range and a battery-rental option",
+    excerpt:
+      "Citroen has launched the eC3X electric crossover in India on June 17, 2026, priced from ₹10.25 lakh (ex-showroom) — or just ₹6.89 lakh on its Battery-as-a-Service plan, with battery rent of ₹2.26 per km. It packs a 29.2 kWh battery, a claimed 320 km range, six airbags as standard and 10–80% DC fast charging in about 57 minutes. Here's everything that's new.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 19, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["best-electric-cars-under-15-lakh-india", "tata-tiago-ev-2026-update-launch", "maruti-e-vitara-first-ev-launch", "how-to-choose-first-ev-india"],
+    hiTitle: "Citroen eC3X भारत में ₹10.25 लाख से लॉन्च (BaaS पर ₹6.89 लाख)",
+    hiSubtitle: "छह एयरबैग, 320 km रेंज और बैटरी-किराया विकल्प वाला बजट इलेक्ट्रिक क्रॉसओवर",
+    hiExcerpt:
+      "Citroen ने 17 जून 2026 को भारत में eC3X इलेक्ट्रिक क्रॉसओवर लॉन्च किया है, जिसकी कीमत ₹10.25 लाख (एक्स-शोरूम) से शुरू होती है — या इसके बैटरी-ऐज़-अ-सर्विस प्लान पर सिर्फ़ ₹6.89 लाख, जिसमें ₹2.26 प्रति km बैटरी किराया लगता है। इसमें 29.2 kWh बैटरी, 320 km की दावा की गई रेंज, मानक रूप से छह एयरबैग और लगभग 57 मिनट में 10–80% DC फ़ास्ट चार्जिंग मिलती है। यहाँ जानिए सब कुछ जो नया है।",
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────

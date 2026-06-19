@@ -82,6 +82,7 @@ const TRANSLATED: Partial<Record<Locale, Set<string>>> = {
     "/blog/pm-e-drive-2w-subsidy-deadline-july-2026",
     "/blog/tata-price-hike-july-2026",
     "/blog/delhi-ev-policy-2-0-2026",
+    "/blog/citroen-ec3x-launched-india-2026",
     "/ev-subsidies-india",
     "/ev-charging-station-setup-india",
     "/about",
