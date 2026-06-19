@@ -869,6 +869,25 @@ export const POSTS: BlogPost[] = [
       "ज़्यादातर भारतीय कम्यूटरों के लिए असली सवाल इलेक्ट्रिक स्कूटर बनाम पेट्रोल स्कूटर है। यह 2026 गाइड दोनों की तुलना अपफ्रंट कीमत, प्रति-किमी रनिंग कॉस्ट, रेंज, चार्जिंग बनाम रिफ्यूलिंग, मेंटेनेंस, सब्सिडी और रीसेल पर करती है — ताकि आप अपनी असली राइडिंग के अनुसार सही चुन सकें।",
   },
 
+  {
+    slug: "longest-range-electric-cars-india-2026",
+    title: "Longest Range Electric Cars in India 2026: Which EV Goes Farthest?",
+    subtitle: "The highest-range EVs by claimed km — and what you'll really get",
+    excerpt:
+      "Which electric car has the longest range in India? A 2026 leaderboard of the highest-range EVs — from the Mahindra BE 6 and Tata Harrier EV to the BYD Seal and Mercedes EQS — with claimed figures, real-world range and how much range you actually need.",
+    category: "Range & Efficiency",
+    categorySlug: "range-efficiency",
+    readTime: "10 min",
+    date: "Jun 19, 2026",
+    accent: "#34D399",
+    featured: true,
+    related: ["real-world-range-vs-arai-india", "best-electric-cars-india-2026", "ev-battery-life-india-weather", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में 2026 की सबसे लंबी रेंज वाली इलेक्ट्रिक कारें: कौन-सी EV सबसे दूर जाती है?",
+    hiSubtitle: "दावा किए गए किमी के हिसाब से सबसे ज़्यादा रेंज वाली EV — और असल में आपको क्या मिलेगा",
+    hiExcerpt:
+      "भारत में किस इलेक्ट्रिक कार की रेंज सबसे लंबी है? 2026 की यह लीडरबोर्ड सबसे ज़्यादा रेंज वाली EV दिखाती है — Mahindra BE 6 और Tata Harrier EV से लेकर BYD Seal और Mercedes EQS तक — दावा किए गए आँकड़े, असल रेंज और आपको असल में कितनी रेंज चाहिए, सब के साथ।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",

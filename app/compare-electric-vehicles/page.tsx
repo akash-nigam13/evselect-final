@@ -12,25 +12,37 @@ import { altsFor } from "@/lib/i18n";
 import { getById } from "@/lib/ev-data";
 import { COMPARE_PAIRS, comparePath } from "@/lib/compare-pairs";
 
-export const metadata: Metadata = {
-  title: "Compare EV Cars Side by Side — Free EV Comparison Tool (India 2026)",
-  description:
-    "Free EV comparison tool for India — compare any 2 or 3 EV cars, scooters or bikes side by side on price, range, battery, power & charging. Live data on 140+ electric vehicles.",
-  alternates: altsFor("/compare-electric-vehicles", "en"),
-  openGraph: {
-    title: "Compare Electric Vehicles Side by Side | EVSelect.in",
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Record<string, string | string[] | undefined>;
+}): Promise<Metadata> {
+  // Any parameterised request (e.g. ?ids=...) is a preselected variant of the
+  // tool that serves the same content as the clean page — noindex it (but
+  // follow links) so Google drops the ?ids= duplicates and keeps only the
+  // canonical /compare-electric-vehicles. The deep-links still work for users.
+  const hasParams = Object.keys(searchParams ?? {}).length > 0;
+  return {
+    title: "Compare EV Cars Side by Side — Free EV Comparison Tool (India 2026)",
     description:
-      "Free tool to compare 2–3 EVs in India on price, range, battery, power & charging. 140+ electric cars, scooters & bikes.",
-    url: `${SITE.url}/compare-electric-vehicles`,
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Compare Electric Vehicles Side by Side | EVSelect.in",
-    description:
-      "Free EV comparison tool — compare 2–3 electric vehicles in India side by side on the specs that matter.",
-  },
-};
+      "Free EV comparison tool for India — compare any 2 or 3 EV cars, scooters or bikes side by side on price, range, battery, power & charging. Live data on 140+ electric vehicles.",
+    alternates: altsFor("/compare-electric-vehicles", "en"),
+    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    openGraph: {
+      title: "Compare Electric Vehicles Side by Side | EVSelect.in",
+      description:
+        "Free tool to compare 2–3 EVs in India on price, range, battery, power & charging. 140+ electric cars, scooters & bikes.",
+      url: `${SITE.url}/compare-electric-vehicles`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Compare Electric Vehicles Side by Side | EVSelect.in",
+      description:
+        "Free EV comparison tool — compare 2–3 electric vehicles in India side by side on the specs that matter.",
+    },
+  };
+}
 
 const faqs = [
   {

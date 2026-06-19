@@ -12,19 +12,28 @@ import { getById } from "@/lib/ev-data";
 import { COMPARE_PAIRS, comparePath } from "@/lib/compare-pairs";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें",
-  description:
-    "भारत में किन्हीं भी दो या तीन EVs की साथ-साथ तुलना करें — रेंज, बैटरी, कीमत, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक का लाइव डेटा।",
-  alternates: altsFor("/compare-electric-vehicles", "hi"),
-  openGraph: {
-    title: "इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें | EVSelect.in",
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Record<string, string | string[] | undefined>;
+}): Promise<Metadata> {
+  // noindex any ?ids= preselected variant (same content as the clean page).
+  const hasParams = Object.keys(searchParams ?? {}).length > 0;
+  return {
+    title: "इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें",
     description:
-      "भारत में 2–3 EVs की साथ-साथ तुलना करें — कीमत, रेंज, बैटरी, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक।",
-    url: `${SITE.url}/hi/compare-electric-vehicles`,
-    type: "website",
-  },
-};
+      "भारत में किन्हीं भी दो या तीन EVs की साथ-साथ तुलना करें — रेंज, बैटरी, कीमत, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक का लाइव डेटा।",
+    alternates: altsFor("/compare-electric-vehicles", "hi"),
+    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    openGraph: {
+      title: "इलेक्ट्रिक वाहनों की साथ-साथ तुलना करें | EVSelect.in",
+      description:
+        "भारत में 2–3 EVs की साथ-साथ तुलना करें — कीमत, रेंज, बैटरी, पावर और चार्जिंग। 140+ इलेक्ट्रिक कार, स्कूटर और बाइक।",
+      url: `${SITE.url}/hi/compare-electric-vehicles`,
+      type: "website",
+    },
+  };
+}
 
 const popularComparisons = COMPARE_PAIRS.map(([a, b]) => {
   const ea = getById(a);
