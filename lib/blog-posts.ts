@@ -888,6 +888,24 @@ export const POSTS: BlogPost[] = [
       "भारत में किस इलेक्ट्रिक कार की रेंज सबसे लंबी है? 2026 की यह लीडरबोर्ड सबसे ज़्यादा रेंज वाली EV दिखाती है — Mahindra BE 6 और Tata Harrier EV से लेकर BYD Seal और Mercedes EQS तक — दावा किए गए आँकड़े, असल रेंज और आपको असल में कितनी रेंज चाहिए, सब के साथ।",
   },
 
+  {
+    slug: "lfp-vs-nmc-ev-battery-india",
+    title: "LFP vs NMC EV Battery in India (2026): Which Battery Type Is Better?",
+    subtitle: "Energy density, safety, lifespan and which EVs use which chemistry",
+    excerpt:
+      "LFP vs NMC is the EV battery question that decides range, price, safety and how well a pack survives Indian heat. A 2026 guide to the two main EV battery types in India — what each does well, which cars and scooters use which, and what LMFP and sodium-ion change next.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "9 min",
+    date: "Jun 20, 2026",
+    accent: "#8B7BFF",
+    related: ["ev-battery-lifespan-india", "ev-battery-life-india-weather", "ev-battery-replacement-cost-india", "solid-state-batteries-2026"],
+    hiTitle: "भारत में LFP बनाम NMC EV बैटरी (2026): कौन-सा बैटरी प्रकार बेहतर है?",
+    hiSubtitle: "एनर्जी डेंसिटी, सुरक्षा, लाइफ़स्पैन और कौन-सी EV कौन-सी केमिस्ट्री इस्तेमाल करती है",
+    hiExcerpt:
+      "LFP बनाम NMC वह EV बैटरी सवाल है जो रेंज, कीमत, सुरक्षा और एक पैक भारतीय गर्मी में कितना टिकेगा — सब तय करता है। 2026 की यह गाइड भारत के दो मुख्य EV बैटरी प्रकार समझाती है — हर एक किसमें अच्छा है, कौन-सी कारें और स्कूटर कौन-सा इस्तेमाल करते हैं, और LMFP व सोडियम-आयन आगे क्या बदलते हैं।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
