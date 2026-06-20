@@ -107,13 +107,19 @@ export default function ArticleShell({
                 <User className="h-3.5 w-3.5" style={{ color: accent }} />
                 {isHi ? "द्वारा " : "By "}
                 <Link href={L("/editorial-policy")} className="text-ev-text/80 transition-colors hover:text-brand">
-                  {isHi ? `${SITE.author} संपादकीय टीम` : `${SITE.author} Editorial Team`}
+                  {isHi ? `${SITE.shortName} संपादकीय टीम` : SITE.author}
                 </Link>
               </span>
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" style={{ color: accent }} />
-                {isHi ? "अपडेटेड " : "Updated "}{post.date}
+                {isHi ? "प्रकाशित " : "Published "}{post.date}
               </span>
+              {post.updated && post.updated !== post.date && (
+                <span className="flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5" style={{ color: accent }} />
+                  {isHi ? "अपडेटेड " : "Updated "}{post.updated}
+                </span>
+              )}
               <span className="flex items-center gap-1.5">
                 <Clock className="h-3.5 w-3.5" style={{ color: accent }} />
                 {post.readTime} {t("article.readWord", locale)}
@@ -229,7 +235,7 @@ export default function ArticleShell({
           description: excerpt,
           path: L(`/blog/${post.slug}`),
           datePublished: post.date,
-          dateModified: post.date,
+          dateModified: post.updated ?? post.date,
           section: post.category,
           image: `${SITE.url}/blog/${post.slug}.png`,
         })}

@@ -6,7 +6,8 @@ export interface BlogPost {
   category: string; // label
   categorySlug: string;
   readTime: string;
-  date: string;
+  date: string; // published date (display + datePublished)
+  updated?: string; // last-updated date; shown only when it differs from `date`
   accent: string;
   featured?: boolean;
   news?: boolean;
@@ -663,6 +664,7 @@ export const POSTS: BlogPost[] = [
     categorySlug: "cost-ownership",
     readTime: "8 min",
     date: "Jun 8, 2026",
+    updated: "Jun 21, 2026",
     accent: "#FFC247",
     related: ["petrol-vs-electric-5-year-cost-india", "ev-resale-value-battery-health-india", "ev-battery-life-india-weather", "how-to-choose-first-ev-india"],
     hiTitle: "भारत में EV मेंटेनेंस लागत: आप असल में कितना चुकाएँगे",
@@ -733,6 +735,7 @@ export const POSTS: BlogPost[] = [
     categorySlug: "buying-guide",
     readTime: "9 min",
     date: "Jun 8, 2026",
+    updated: "Jun 21, 2026",
     accent: "#26E0C4",
     related: ["how-to-choose-first-ev-india", "petrol-vs-electric-5-year-cost-india", "real-world-range-vs-arai-india", "ev-subsidies-road-tax-by-state-india-2026"],
     hiTitle: "भारत में ₹15 लाख से कम की सबसे अच्छी इलेक्ट्रिक कारें (2026)",
