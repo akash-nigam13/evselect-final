@@ -2,16 +2,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleShell from "@/components/blog/ArticleShell";
 import FaqAccordion from "@/components/FaqAccordion";
+import JsonLd from "@/components/JsonLd";
+import { itemListSchema, faqPageSchema } from "@/lib/seo";
+import { getById, vehiclePath } from "@/lib/ev-data";
 import { altsFor } from "@/lib/i18n";
 
-const faqs: { q: string; a: React.ReactNode }[] = [
+const faqs: { q: string; a: string }[] = [
   {
-    q: "What is the cheapest electric car in India in 2026?",
-    a: "The Tata Tiago EV (from about ₹6.99 lakh) and the MG Comet EV (from about ₹7.5 lakh) are the most affordable, and both get even cheaper upfront under battery-rental (BaaS) plans.",
+    q: "Which EV car is best under ₹15 lakh in India?",
+    a: "For all-round value the Tata Nexon EV (from ~₹12.49 lakh) is the benchmark, the Tata Tiago EV (~₹6.99 lakh) is the best budget pick, and the Tata Punch EV (~₹9.69 lakh) is the safest small SUV. The best choice depends on whether you want a city car, a hatchback or an SUV.",
+  },
+  {
+    q: "Which brand makes the cheapest electric car in India?",
+    a: "Tata and MG make the most affordable electric cars in India. The Tata Tiago EV starts around ₹6.99 lakh and the MG Comet EV around ₹7.5 lakh — and both drop further upfront on battery-rental (BaaS) plans.",
+  },
+  {
+    q: "What is the cheapest electric car under ₹15 lakh in India in 2026?",
+    a: "The Tata Tiago EV (from about ₹6.99 lakh) and the MG Comet EV (from about ₹7.5 lakh) are the most affordable electric cars in India, and both get even cheaper upfront under battery-rental (BaaS) plans.",
   },
   {
     q: "Which electric car under ₹15 lakh has the longest range?",
     a: "On claimed figures, the MG Windsor EV (up to ~449 km) and longer-range Tata Nexon EV variants lead, though real-world range is typically 20–30 percent lower.",
+  },
+  {
+    q: "Which is the best electric SUV under ₹15 lakh in India?",
+    a: "Among electric SUVs under ₹15 lakh, the Tata Punch EV (from ~₹9.69 lakh) is the safest value pick, the Mahindra XUV 3XO EV (~₹13.9 lakh) is the most feature-loaded, and the MG Windsor EV (from ~₹14 lakh, or ~₹9.99 lakh on BaaS) offers the most rear-seat space.",
+  },
+  {
+    q: "What is the on-road price of an electric car under ₹15 lakh?",
+    a: "On-road price adds registration, road tax and insurance to the ex-showroom figure. But EVs attract just 5% GST, and many states waive road tax and registration, so the on-road price of a sub-₹15-lakh EV is often only marginally above ex-showroom — sometimes lower than a petrol equivalent once subsidies apply.",
+  },
+  {
+    q: "Are there upcoming electric cars under ₹15 lakh in 2026?",
+    a: "Yes. More affordable EVs are arriving through 2026 — newer Tata, MG and Mahindra variants and compact entrants from other brands — though some launch just above ₹15 lakh. We update this list as new models go on sale.",
   },
   {
     q: "Is the Maruti e Vitara under ₹15 lakh?",
@@ -22,6 +45,22 @@ const faqs: { q: string; a: React.ReactNode }[] = [
     a: "It lowers the upfront price but adds a per-km battery cost and means you do not own the battery. It can suit high-mileage city drivers, but do the full math before committing.",
   },
 ];
+
+const listIds = [
+  "mg-comet-ev",
+  "tata-tiago-ev-long-range-24-kwh",
+  "citroen-ec3",
+  "tata-punch-ev-long-range-40-kwh",
+  "mahindra-xuv-3xo-ev-39-4-kwh",
+  "mg-windsor-ev-38-kwh",
+  "tata-nexon-ev-long-range-45-kwh",
+];
+const listItems = listIds
+  .map((id) => {
+    const e = getById(id);
+    return e ? { name: e.name, path: vehiclePath(e) } : null;
+  })
+  .filter(Boolean) as { name: string; path: string }[];
 
 export const metadata: Metadata = {
   title: "7 Best Electric Cars Under ₹15 Lakh in India (2026)",
@@ -192,6 +231,40 @@ export default function Page() {
         side with the <Link href="/compare-electric-vehicles">EV comparison tool</Link>.
       </p>
 
+      <h2>Best electric SUV under ₹15 lakh</h2>
+      <p>
+        If you specifically want an electric SUV under ₹15 lakh, three stand out. The{" "}
+        <strong>Tata Punch EV</strong> (from ~₹9.69 lakh) is the safest value pick — a 5-star micro-SUV
+        with a usable ~250 km real-world range. The <strong>Mahindra XUV 3XO EV</strong> (~₹13.9 lakh)
+        is the most feature-loaded, with a 39.4 kWh pack, ADAS and big screens. And the{" "}
+        <strong>MG Windsor EV</strong> (from ~₹14 lakh, or ~₹9.99 lakh on BaaS) gives the most
+        rear-seat space and range of the three. For SUV buyers, the Punch EV is the value champion and
+        the XUV 3XO EV the one to pick if you want the longest features list under the ₹15 lakh ceiling.
+      </p>
+
+      <h2>Ex-showroom vs on-road price: what you'll actually pay</h2>
+      <p>
+        Every price in this list is <strong>ex-showroom</strong> — the on-road price adds
+        registration, road tax and insurance on top. The good news for EV buyers: electric cars attract
+        just 5% GST, and many states <strong>waive road tax and registration</strong> entirely, so the
+        on-road price of a sub-₹15-lakh EV is often only marginally above ex-showroom (and sometimes
+        below a comparable petrol car once subsidies count). The exact on-road figure depends on your
+        state — check the{" "}
+        <Link href="/blog/ev-subsidies-road-tax-by-state-india-2026">state-by-state road-tax and subsidy guide</Link>{" "}
+        and estimate your all-in cost with the{" "}
+        <Link href="/ev-calculators/ev-emi-calculator">EV EMI calculator</Link>.
+      </p>
+
+      <h2>Upcoming electric cars under ₹15 lakh (2026)</h2>
+      <p>
+        The under-₹15-lakh space is getting busier through 2026. Expect more affordable variants and
+        facelifts of the cars above, plus newer compact EVs from Tata, MG, Hyundai and others — though
+        some debut just above the ₹15 lakh mark before discounts and base trims bring them in. A few,
+        like the Maruti e Vitara, currently start just over the line (~₹15.99 lakh). We refresh this
+        guide as each new model goes on sale, so bookmark it — and browse everything live in the{" "}
+        <Link href="/catalog/electric-cars">electric car catalog</Link>.
+      </p>
+
       <h2>The real cost: cheaper than the sticker suggests</h2>
       <p>
         The purchase price is only half the story. Charged at home, these EVs cost roughly ₹1–1.5 per
@@ -219,6 +292,34 @@ export default function Page() {
         charging first — that single decision shapes how good EV ownership feels.
       </p>
 
+      <h2>More on electric cars under ₹15 lakh</h2>
+      <ul>
+        <li>
+          <Link href="/blog/upcoming-electric-cars-under-15-lakh-india">
+            Upcoming electric cars under ₹15 lakh (2026)
+          </Link>{" "}
+          — what&apos;s launching next at this price.
+        </li>
+        <li>
+          <Link href="/blog/electric-cars-under-15-lakh-on-road-price-india">
+            On-road price of EVs under ₹15 lakh
+          </Link>{" "}
+          — ex-showroom vs the real all-in number.
+        </li>
+        <li>
+          <Link href="/blog/electric-cars-with-sunroof-under-15-lakh-india">
+            Electric cars with a sunroof under ₹15 lakh
+          </Link>{" "}
+          — which EVs actually offer one.
+        </li>
+        <li>
+          <Link href="/blog/7-seater-electric-cars-under-15-lakh-india">
+            7-seater electric cars under ₹15 lakh
+          </Link>{" "}
+          — the honest answer, and the alternatives.
+        </li>
+      </ul>
+
       <h2>FAQ</h2>
       <FaqAccordion items={faqs} className="my-6" />
       <p>
@@ -228,6 +329,8 @@ export default function Page() {
         <Link href="/ev-calculators/ev-vs-petrol-cost-calculator">cost calculator</Link> to lock in the
         right pick for your budget.
       </p>
+
+      <JsonLd data={[itemListSchema(listItems), faqPageSchema(faqs)]} />
     </ArticleShell>
   );
 }

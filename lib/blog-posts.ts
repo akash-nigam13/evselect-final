@@ -672,6 +672,58 @@ export const POSTS: BlogPost[] = [
   },
 
   {
+    slug: "upcoming-electric-cars-under-15-lakh-india",
+    title: "Upcoming Electric Cars Under ₹15 Lakh in India (2026)",
+    subtitle: "New EVs launching at or near the ₹15 lakh mark",
+    excerpt:
+      "Which electric cars under ₹15 lakh are launching in India in 2026? Expected models, prices and timing — from the Hyundai Inster and Tata Altroz EV to new Mahindra and Citroen options.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "7 min",
+    date: "Jun 16, 2026",
+    accent: "#26E0C4",
+    related: ["best-electric-cars-under-15-lakh-india", "best-electric-cars-india-2026", "cost-of-owning-an-electric-car-in-india", "how-to-choose-first-ev-india"],
+  },
+  {
+    slug: "electric-cars-under-15-lakh-on-road-price-india",
+    title: "On-Road Price of Electric Cars Under ₹15 Lakh in India (2026)",
+    subtitle: "Ex-showroom vs on-road — and why EVs barely add tax",
+    excerpt:
+      "What's the on-road price of an electric car under ₹15 lakh in India? How road tax, registration, insurance and TCS add up — and why EV waivers keep the on-road price close to ex-showroom.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "7 min",
+    date: "Jun 15, 2026",
+    accent: "#26E0C4",
+    related: ["best-electric-cars-under-15-lakh-india", "ev-subsidies-road-tax-by-state-india-2026", "cost-of-owning-an-electric-car-in-india", "electric-car-loan-india"],
+  },
+  {
+    slug: "7-seater-electric-cars-under-15-lakh-india",
+    title: "7-Seater Electric Cars Under ₹15 Lakh in India: The Honest Answer (2026)",
+    subtitle: "Are there any — and the cheapest 7-seat EVs that exist",
+    excerpt:
+      "Are there 7-seater electric cars under ₹15 lakh in India? The honest 2026 answer, the cheapest 7-seat EVs available (from ~₹18 lakh), and the best spacious 5-seat EVs under ₹15 lakh instead.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "6 min",
+    date: "Jun 14, 2026",
+    accent: "#26E0C4",
+    related: ["best-electric-cars-under-15-lakh-india", "best-electric-cars-india-2026", "cost-of-owning-an-electric-car-in-india", "how-to-choose-first-ev-india"],
+  },
+  {
+    slug: "electric-cars-with-sunroof-under-15-lakh-india",
+    title: "Electric Cars With Sunroof Under ₹15 Lakh in India (2026)",
+    subtitle: "Which EVs offer a real sunroof or glass roof in this budget",
+    excerpt:
+      "Want an electric car with a sunroof under ₹15 lakh in India? Which EVs offer a real opening sunroof vs a fixed glass roof in 2026 — and which variants actually stay under the ₹15 lakh mark.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "6 min",
+    date: "Jun 13, 2026",
+    accent: "#26E0C4",
+    related: ["best-electric-cars-under-15-lakh-india", "best-electric-cars-india-2026", "cost-of-owning-an-electric-car-in-india", "how-to-choose-first-ev-india"],
+  },
+  {
     slug: "best-electric-cars-under-15-lakh-india",
     title: "Best Electric Cars Under ₹15 Lakh in India (2026)",
     subtitle: "Seven EVs that make the switch genuinely affordable",
