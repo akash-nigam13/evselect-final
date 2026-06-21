@@ -123,7 +123,8 @@ export default function Article1() {
               We analysed India&apos;s best electric scooters on ARAI range, real-world performance, charging times, service networks, and 5-year running costs.
             </p>
             <div className="flex flex-wrap gap-5 text-xs font-mono text-ev-muted border-t border-ev-border/30 pt-5">
-              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Jan 15, 2026</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Published {post.date}</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Updated {post.updated ?? post.date}</span>
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-ev-cyan" />11 min read</span>
               <Link href="/editorial-policy" className="hover:text-brand transition-colors">By EVSelect Editorial Team</Link>
             </div>
@@ -332,6 +333,7 @@ export default function Article1() {
             description: post.excerpt,
             path: `/blog/${post.slug}`,
             datePublished: post.date,
+            dateModified: post.updated ?? post.date,
             section: post.category,
           }),
           faqPageSchema(faqs),

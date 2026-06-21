@@ -82,7 +82,8 @@ export default function Article4() {
               Twice the range. 10-minute charging. No fire risk. Solid-state batteries are moving from lab to road — and their arrival will redefine what Indian EV buyers can expect.
             </p>
             <div className="flex flex-wrap gap-5 text-xs font-mono text-ev-muted border-t border-ev-border/30 pt-5">
-              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" style={{ color: "#a78bfa" }} />Feb 18, 2026</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" style={{ color: "#a78bfa" }} />Published {post.date}</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" style={{ color: "#a78bfa" }} />Updated {post.updated ?? post.date}</span>
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" style={{ color: "#a78bfa" }} />15 min read</span>
               <Link href="/editorial-policy" className="hover:text-brand transition-colors">By EVSelect Editorial Team</Link>
             </div>
@@ -252,6 +253,7 @@ export default function Article4() {
           description: post.excerpt,
           path: `/blog/${post.slug}`,
           datePublished: post.date,
+          dateModified: post.updated ?? post.date,
           section: post.category,
         })}
       />

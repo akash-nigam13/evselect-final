@@ -105,7 +105,8 @@ export default function Article5() {
               India has crossed 25,000 public chargers. We rate every major network, map the best and worst highway corridors, and give you a practical road-trip planning guide.
             </p>
             <div className="flex flex-wrap gap-5 text-xs font-mono text-ev-muted border-t border-ev-border/30 pt-5">
-              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Mar 5, 2026</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Published {post.date}</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-cyan" />Updated {post.updated ?? post.date}</span>
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-ev-cyan" />12 min read</span>
               <Link href="/editorial-policy" className="hover:text-brand transition-colors">By EVSelect Editorial Team</Link>
             </div>
@@ -272,6 +273,7 @@ export default function Article5() {
           description: post.excerpt,
           path: `/blog/${post.slug}`,
           datePublished: post.date,
+          dateModified: post.updated ?? post.date,
           section: post.category,
         })}
       />

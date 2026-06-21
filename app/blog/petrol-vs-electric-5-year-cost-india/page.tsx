@@ -79,7 +79,8 @@ export default function Article3() {
               A rupee-by-rupee breakdown: purchase price, fuel, insurance, maintenance, and resale value. We compare the Tata Nexon EV Max against the Hyundai Creta petrol over 5 years.
             </p>
             <div className="flex flex-wrap gap-5 text-xs font-mono text-ev-muted border-t border-ev-border/30 pt-5">
-              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-amber" />Feb 3, 2026</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-amber" />Published {post.date}</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-ev-amber" />Updated {post.updated ?? post.date}</span>
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-ev-amber" />14 min read</span>
               <Link href="/editorial-policy" className="hover:text-brand transition-colors">By EVSelect Editorial Team</Link>
             </div>
@@ -294,6 +295,7 @@ export default function Article3() {
           description: post.excerpt,
           path: `/blog/${post.slug}`,
           datePublished: post.date,
+          dateModified: post.updated ?? post.date,
           section: post.category,
         })}
       />

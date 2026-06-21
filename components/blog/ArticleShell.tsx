@@ -114,12 +114,10 @@ export default function ArticleShell({
                 <Calendar className="h-3.5 w-3.5" style={{ color: accent }} />
                 {isHi ? "प्रकाशित " : "Published "}{post.date}
               </span>
-              {post.updated && post.updated !== post.date && (
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5" style={{ color: accent }} />
-                  {isHi ? "अपडेटेड " : "Updated "}{post.updated}
-                </span>
-              )}
+              <span className="flex items-center gap-1.5">
+                <Calendar className="h-3.5 w-3.5" style={{ color: accent }} />
+                {isHi ? "अपडेटेड " : "Updated "}{post.updated ?? post.date}
+              </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-3.5 w-3.5" style={{ color: accent }} />
                 {post.readTime} {t("article.readWord", locale)}
