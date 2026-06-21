@@ -961,6 +961,24 @@ export const POSTS: BlogPost[] = [
       "LFP बनाम NMC वह EV बैटरी सवाल है जो रेंज, कीमत, सुरक्षा और एक पैक भारतीय गर्मी में कितना टिकेगा — सब तय करता है। 2026 की यह गाइड भारत के दो मुख्य EV बैटरी प्रकार समझाती है — हर एक किसमें अच्छा है, कौन-सी कारें और स्कूटर कौन-सा इस्तेमाल करते हैं, और LMFP व सोडियम-आयन आगे क्या बदलते हैं।",
   },
 
+  {
+    slug: "battery-as-a-service-baas-ev-india",
+    title: "Battery as a Service (BaaS) for EVs in India (2026): How It Works & Is It Worth It?",
+    subtitle: "Battery rental, per-km costs and the maths that decides if BaaS saves you money",
+    excerpt:
+      "What is Battery as a Service (BaaS) for electric cars in India? A 2026 guide to how EV battery subscription works, real per-km rental costs from Tata, MG, Maruti and Citroen, the hidden minimum-km catch, and how to work out whether BaaS actually saves you money.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "9 min",
+    date: "Jun 21, 2026",
+    accent: "#FFC247",
+    related: ["cost-of-owning-an-electric-car-in-india", "ev-battery-replacement-cost-india", "ev-resale-value-battery-health-india", "best-electric-cars-under-15-lakh-india"],
+    hiTitle: "भारत में EV के लिए बैटरी ऐज़ अ सर्विस (BaaS) (2026): यह कैसे काम करती है और क्या फ़ायदेमंद है?",
+    hiSubtitle: "बैटरी किराया, प्रति-किमी लागत और वह गणित जो तय करता है कि BaaS से बचत होती है या नहीं",
+    hiExcerpt:
+      "इलेक्ट्रिक कारों के लिए बैटरी ऐज़ अ सर्विस (BaaS) क्या है? 2026 की यह गाइड बताती है कि EV बैटरी सब्सक्रिप्शन कैसे काम करता है, Tata, MG, Maruti और Citroen की असली प्रति-किमी किराया दरें, छिपा हुआ न्यूनतम-किमी पेच, और कैसे पता करें कि BaaS से सचमुच पैसा बचता है या नहीं।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
