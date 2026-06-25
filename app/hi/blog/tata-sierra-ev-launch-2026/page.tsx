@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor, localizedHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tata Sierra EV का डेब्यू 30 जून 2026 को: कीमत, रेंज, AWD और स्पेक्स",
+  title: "Tata Sierra EV का इंटीरियर रिवील, 30 जून लॉन्च से पहले: ट्रिपल-स्क्रीन केबिन, AWD और कीमत",
   description:
-    "Tata Motors 30 जून 2026 को Sierra EV का डेब्यू करेगी। acti.ev+ प्लेटफ़ॉर्म पर 65–75 kWh बैटरी, RWD और AWD (QWD) विकल्प और अपेक्षित ₹18–25 लाख कीमत — अब तक की पुष्ट जानकारी।",
+    "Tata के नए टीज़र ने 30 जून 2026 के लॉन्च से पहले Sierra EV का इंटीरियर पहली बार दिखाया — आइवरी ट्रिपल-स्क्रीन केबिन, पैनोरमिक सनरूफ़ और ADAS। AWD (QWD) की पुष्टि, अपेक्षित 65–75 kWh बैटरी, ~500–550 km रेंज और अनुमानित ₹18–25 लाख कीमत।",
   alternates: altsFor("/blog/tata-sierra-ev-launch-2026", "hi"),
   openGraph: {
-    title: "Tata Sierra EV का डेब्यू 30 जून 2026 को: कीमत, रेंज, AWD और स्पेक्स",
+    title: "Tata Sierra EV का इंटीरियर रिवील, 30 जून लॉन्च से पहले: ट्रिपल-स्क्रीन केबिन, AWD और कीमत",
     type: "article",
   },
 };
@@ -18,11 +18,27 @@ export default function Page() {
   return (
     <ArticleShell slug="tata-sierra-ev-launch-2026" locale="hi">
       <p>
-        अब यह आधिकारिक है: Tata Motors <strong>30 जून 2026 को Sierra EV का डेब्यू</strong>{" "}
-        करेगी। 1990 के दशक के प्रतिष्ठित नाम का यह आधुनिक, पूरी तरह इलेक्ट्रिक अवतार साल के
-        सबसे प्रतीक्षित लॉन्च में से एक है — एक प्रीमियम इलेक्ट्रिक SUV जो भारत के तेज़ी से
-        बढ़ते इलेक्ट्रिक-कार खरीदार को लक्ष्य बनाती है। रिवील से पहले अब तक की पुष्ट और
-        रिपोर्ट की गई हर जानकारी यहाँ है (अंतिम कीमत लॉन्च पर घोषित होगी)।
+        Tata Motors ने एक नया टीज़र जारी किया है जो <strong>30 जून 2026 के लॉन्च</strong> से
+        ठीक पहले <strong>Sierra EV का इंटीरियर पहली बार</strong> दिखाता है। एक पहले टीज़र में
+        SUV का प्रोडक्शन एक्सटीरियर और <strong>ऑल-व्हील-ड्राइव पावरट्रेन</strong> की पुष्टि के
+        बाद, नई क्लिप में एक चौड़े मल्टी-स्क्रीन डैशबोर्ड के इर्द-गिर्द बना हल्का, हवादार केबिन
+        दिखता है। 1990 के दशक के प्रतिष्ठित नाम का यह आधुनिक, पूरी तरह इलेक्ट्रिक अवतार साल के
+        सबसे प्रतीक्षित लॉन्च में से एक है — एक प्रीमियम इलेक्ट्रिक SUV जो भारत के तेज़ी से बढ़ते
+        इलेक्ट्रिक-कार खरीदार को लक्ष्य बनाती है। रिवील से पहले अब तक की पुष्ट और रिपोर्ट की गई हर
+        जानकारी यहाँ है (अंतिम कीमत लॉन्च पर घोषित होगी)।
+      </p>
+
+      <h2>इंटीरियर रिवील: आइवरी केबिन और ट्रिपल-स्क्रीन डैशबोर्ड</h2>
+      <p>
+        नया टीज़र Sierra EV के अंदर की पहली झलक देता है। इसमें{" "}
+        <strong>हल्का आइवरी, ड्यूल-टोन केबिन</strong>, एक <strong>पैनोरमिक सनरूफ़</strong> और
+        जो प्रतीत होता है एक <strong>ट्रिपल-स्क्रीन पैनोरमिक डैशबोर्ड</strong> दिखता है — एक
+        सेंट्रल टचस्क्रीन और डिजिटल ड्राइवर डिस्प्ले, साथ में फ्रंट पैसेंजर के लिए तीसरी स्क्रीन,
+        जो पेट्रोल Sierra जैसा लेआउट है। रियर-व्यू मिरर के पीछे लगा कैमरा मॉड्यूल{" "}
+        <strong>ADAS (एडवांस्ड ड्राइवर-असिस्ट) फ़ीचर्स</strong> की ओर इशारा करता है, जबकि
+        दो-स्पोक स्टीयरिंग व्हील — जिस पर Tata.ev ब्रांडिंग की उम्मीद है — और दूसरी पंक्ति के
+        विंडो सनशेड भी दिखते हैं। यह Sierra EV को एक फ़ीचर-भरपूर, प्रीमियम फैमिली SUV के रूप में
+        और मज़बूत करता है।
       </p>
 
       <h2>Tata Sierra EV क्या है?</h2>
@@ -81,12 +97,16 @@ export default function Page() {
       <h2>स्रोत</h2>
       <p>
         आंकड़े प्रकाशकों द्वारा रिपोर्ट किए गए हैं और Tata द्वारा पुष्टि होने तक अपेक्षित हैं।{" "}
-        <a href="https://www.newsx.com/tech-and-auto/tata-sierra-ev-to-debut-soon-65-kwh-battery-500-km-real-world-driving-range-updated-design-and-interiorcheck-all-features-launch-timeline-and-price-197782/" target="_blank" rel="noopener noreferrer">
-          NewsX
+        <a href="https://www.cardekho.com/india-car-news/first-look-at-the-tata-sierra-evrsquos-interior-set-for-another-climbing-record-after-the-harrier-ev-36205.htm" target="_blank" rel="noopener noreferrer">
+          CarDekho
         </a>{" "}
         ·{" "}
-        <a href="https://www.cartoq.com/car-news/tata-sierra-ev-launch-q1-fy2027-battery-specs/" target="_blank" rel="noopener noreferrer">
-          CarToq
+        <a href="https://www.zigwheels.com/news-features/general-news/tata-sierra-ev-exterior-design-revealed-in-latest-teaser/58009/" target="_blank" rel="noopener noreferrer">
+          ZigWheels
+        </a>{" "}
+        ·{" "}
+        <a href="https://www.autocarindia.com/car-news/tata-sierra-ev-teased-ahead-of-june-30-debut-440017" target="_blank" rel="noopener noreferrer">
+          Autocar India
         </a>
       </p>
     </ArticleShell>

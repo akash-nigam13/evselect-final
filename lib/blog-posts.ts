@@ -979,24 +979,42 @@ export const POSTS: BlogPost[] = [
       "इलेक्ट्रिक कारों के लिए बैटरी ऐज़ अ सर्विस (BaaS) क्या है? 2026 की यह गाइड बताती है कि EV बैटरी सब्सक्रिप्शन कैसे काम करता है, Tata, MG, Maruti और Citroen की असली प्रति-किमी किराया दरें, छिपा हुआ न्यूनतम-किमी पेच, और कैसे पता करें कि BaaS से सचमुच पैसा बचता है या नहीं।",
   },
 
+  {
+    slug: "electric-car-rain-floods-india",
+    title: "Can You Drive an Electric Car in the Rain & Floods? EV Monsoon Safety in India (2026)",
+    subtitle: "IP ratings, wading depth, charging in the wet and the real limits",
+    excerpt:
+      "Are electric cars safe to drive in the rain and through floods in India? A 2026 guide to EV monsoon safety — what IP67 really means, how deep an EV can wade, why there's no electrocution risk, whether you can charge in the rain, and when to stop.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "9 min",
+    date: "Jun 25, 2026",
+    accent: "#8B7BFF",
+    related: ["ev-battery-life-india-weather", "ev-insurance-india", "home-ev-charging-cost-india", "how-to-choose-first-ev-india"],
+    hiTitle: "क्या आप बारिश और बाढ़ में इलेक्ट्रिक कार चला सकते हैं? भारत में EV मानसून सुरक्षा (2026)",
+    hiSubtitle: "IP रेटिंग, वेडिंग डेप्थ, गीले में चार्जिंग और असली सीमाएँ",
+    hiExcerpt:
+      "क्या भारत में बारिश और बाढ़ में इलेक्ट्रिक कार चलाना सुरक्षित है? 2026 की यह गाइड EV मानसून सुरक्षा समझाती है — IP67 का असल मतलब, एक EV कितने गहरे पानी में चल सकती है, बिजली के झटके का जोखिम क्यों नहीं, क्या आप बारिश में चार्ज कर सकते हैं, और कब रुकना चाहिए।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
-    title: "Tata Sierra EV to Debut on June 30, 2026: Price, Range, AWD & Specs",
-    subtitle: "Tata confirms the Sierra EV's launch date — here's what to expect",
+    title: "Tata Sierra EV Interior Revealed Ahead of June 30 Launch: Triple-Screen Cabin, AWD & Price",
+    subtitle: "New teaser shows an ivory triple-screen cabin and ADAS — AWD (QWD) confirmed, launch set for June 30",
     excerpt:
-      "Tata Motors will debut the Sierra EV on June 30, 2026. Built on the acti.ev+ platform with 65–75 kWh batteries, RWD and AWD (QWD) options and an expected ₹18–25 lakh price — here's everything confirmed so far.",
+      "Tata's latest teaser has revealed the Sierra EV's interior for the first time — an ivory dual-tone cabin with a triple-screen panoramic dashboard, a panoramic sunroof and ADAS — days before its June 30, 2026 launch. With AWD (QWD) confirmed, expected Harrier EV hardware up to 75 kWh, ~500–550 km range and an estimated ₹18–25 lakh price, here's everything confirmed so far.",
     category: "Market News",
     categorySlug: "market-news",
     readTime: "5 min",
-    date: "Jun 9, 2026",
+    date: "Jun 25, 2026",
     accent: "#60A5FA",
     news: true,
     related: ["india-ev-sales-fy2026", "maruti-e-vitara-first-ev-launch", "tesla-model-y-price-cut-india-2026", "how-to-choose-first-ev-india"],
-    hiTitle: "Tata Sierra EV: लॉन्च टाइमलाइन, कीमत और रेंज",
-    hiSubtitle: "भारत की सबसे प्रतीक्षित इलेक्ट्रिक SUV के बारे में अब तक क्या पता है",
+    hiTitle: "Tata Sierra EV का इंटीरियर रिवील, 30 जून लॉन्च से पहले: ट्रिपल-स्क्रीन केबिन, AWD और कीमत",
+    hiSubtitle: "नए टीज़र में आइवरी ट्रिपल-स्क्रीन केबिन और ADAS दिखे — AWD (QWD) की पुष्टि, लॉन्च 30 जून को",
     hiExcerpt:
-      "Tata की प्रतिष्ठित Sierra अब Gen-2 Acti.ev प्लेटफ़ॉर्म पर इलेक्ट्रिक SUV के रूप में लौट रही है — अपेक्षित 55–65 kWh बैटरी, ~500 km तक रेंज और RWD/AWD विकल्पों के साथ। अब तक रिपोर्ट की गई हर जानकारी यहाँ है।",
+      "Tata के नए टीज़र ने 30 जून 2026 के लॉन्च से ठीक पहले Sierra EV का इंटीरियर पहली बार दिखाया है — आइवरी ड्यूल-टोन केबिन, ट्रिपल-स्क्रीन पैनोरमिक डैशबोर्ड, पैनोरमिक सनरूफ़ और ADAS। AWD (QWD) की पुष्टि, अपेक्षित Harrier EV हार्डवेयर (75 kWh तक), ~500–550 km रेंज और अनुमानित ₹18–25 लाख कीमत के साथ, अब तक पुष्ट हर जानकारी यहाँ है।",
   },
   {
     slug: "india-ev-sales-fy2026",
