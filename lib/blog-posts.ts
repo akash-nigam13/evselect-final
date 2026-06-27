@@ -997,24 +997,43 @@ export const POSTS: BlogPost[] = [
       "क्या भारत में बारिश और बाढ़ में इलेक्ट्रिक कार चलाना सुरक्षित है? 2026 की यह गाइड EV मानसून सुरक्षा समझाती है — IP67 का असल मतलब, एक EV कितने गहरे पानी में चल सकती है, बिजली के झटके का जोखिम क्यों नहीं, क्या आप बारिश में चार्ज कर सकते हैं, और कब रुकना चाहिए।",
   },
 
+  {
+    slug: "best-electric-suv-india-2026",
+    title: "Best Electric SUV in India 2026: Top Picks by Budget, Range & Value",
+    subtitle: "The best electric SUVs from ₹10 lakh to luxury — ranked buyer-first",
+    excerpt:
+      "Which is the best electric SUV in India? A 2026 buyer-first guide to the top electric SUVs across budgets — Tata Punch EV and Nexon EV, Mahindra BE 6 and XEV 9e, Hyundai Creta Electric, Tata Harrier EV and premium picks — compared on range, price, safety and value.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "10 min",
+    date: "Jun 27, 2026",
+    accent: "#26E0C4",
+    featured: true,
+    related: ["best-electric-cars-india-2026", "longest-range-electric-cars-india-2026", "best-electric-cars-under-15-lakh-india", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में 2026 की सबसे अच्छी इलेक्ट्रिक SUV: बजट, रेंज और वैल्यू के हिसाब से टॉप पसंद",
+    hiSubtitle: "₹10 लाख से लग्ज़री तक की सबसे अच्छी इलेक्ट्रिक SUV — बायर-फर्स्ट रैंकिंग",
+    hiExcerpt:
+      "भारत में सबसे अच्छी इलेक्ट्रिक SUV कौन-सी है? 2026 की यह बायर-फर्स्ट गाइड हर बजट की टॉप इलेक्ट्रिक SUV की तुलना करती है — Tata Punch EV और Nexon EV, Mahindra BE 6 और XEV 9e, Hyundai Creta Electric, Tata Harrier EV और प्रीमियम पसंद — रेंज, कीमत, सुरक्षा और वैल्यू पर।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
-    title: "Tata Sierra EV Interior Revealed Ahead of June 30 Launch: Triple-Screen Cabin, AWD & Price",
-    subtitle: "New teaser shows an ivory triple-screen cabin and ADAS — AWD (QWD) confirmed, launch set for June 30",
+    title: "Tata Sierra EV Fully Revealed Ahead of June 30 Launch: Exterior, Triple-Screen Cabin & AWD",
+    subtitle: "Latest teaser shows the full production exterior — slim LED light bar, 19-inch alloys and Sierra.ev badging; AWD (QWD) confirmed, launch set for June 30",
     excerpt:
-      "Tata's latest teaser has revealed the Sierra EV's interior for the first time — an ivory dual-tone cabin with a triple-screen panoramic dashboard, a panoramic sunroof and ADAS — days before its June 30, 2026 launch. With AWD (QWD) confirmed, expected Harrier EV hardware up to 75 kWh, ~500–550 km range and an estimated ₹18–25 lakh price, here's everything confirmed so far.",
+      "Tata has now fully revealed the Sierra EV's production exterior in a fresh teaser — a slim full-width LED light bar, aero 19-inch alloys, a blanked-off grille and Sierra.ev badging — days before its June 30, 2026 launch. Combined with the earlier ivory triple-screen cabin reveal, AWD (QWD), expected Harrier EV hardware up to 75 kWh, a 500 km-plus range and an estimated ₹18–25 lakh price, here's everything confirmed so far.",
     category: "Market News",
     categorySlug: "market-news",
     readTime: "5 min",
-    date: "Jun 25, 2026",
+    date: "Jun 27, 2026",
     accent: "#60A5FA",
     news: true,
     related: ["india-ev-sales-fy2026", "maruti-e-vitara-first-ev-launch", "tesla-model-y-price-cut-india-2026", "how-to-choose-first-ev-india"],
-    hiTitle: "Tata Sierra EV का इंटीरियर रिवील, 30 जून लॉन्च से पहले: ट्रिपल-स्क्रीन केबिन, AWD और कीमत",
-    hiSubtitle: "नए टीज़र में आइवरी ट्रिपल-स्क्रीन केबिन और ADAS दिखे — AWD (QWD) की पुष्टि, लॉन्च 30 जून को",
+    hiTitle: "Tata Sierra EV पूरी तरह रिवील, 30 जून लॉन्च से पहले: एक्सटीरियर, ट्रिपल-स्क्रीन केबिन और AWD",
+    hiSubtitle: "नए टीज़र में पूरा प्रोडक्शन एक्सटीरियर दिखा — स्लिम LED लाइट बार, 19-इंच अलॉय और Sierra.ev बैजिंग; AWD (QWD) की पुष्टि, लॉन्च 30 जून को",
     hiExcerpt:
-      "Tata के नए टीज़र ने 30 जून 2026 के लॉन्च से ठीक पहले Sierra EV का इंटीरियर पहली बार दिखाया है — आइवरी ड्यूल-टोन केबिन, ट्रिपल-स्क्रीन पैनोरमिक डैशबोर्ड, पैनोरमिक सनरूफ़ और ADAS। AWD (QWD) की पुष्टि, अपेक्षित Harrier EV हार्डवेयर (75 kWh तक), ~500–550 km रेंज और अनुमानित ₹18–25 लाख कीमत के साथ, अब तक पुष्ट हर जानकारी यहाँ है।",
+      "Tata ने अब एक नए टीज़र में Sierra EV का पूरा प्रोडक्शन एक्सटीरियर दिखा दिया है — पूरी चौड़ाई वाली स्लिम LED लाइट बार, एयरो 19-इंच अलॉय, ब्लैंक्ड-ऑफ ग्रिल और Sierra.ev बैजिंग — 30 जून 2026 के लॉन्च से ठीक पहले। पहले दिखे आइवरी ट्रिपल-स्क्रीन केबिन, AWD (QWD), अपेक्षित Harrier EV हार्डवेयर (75 kWh तक), 500 km से अधिक रेंज और अनुमानित ₹18–25 लाख कीमत के साथ, अब तक पुष्ट हर जानकारी यहाँ है।",
   },
   {
     slug: "india-ev-sales-fy2026",
@@ -1395,6 +1414,42 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "छह एयरबैग, 320 km रेंज और बैटरी-किराया विकल्प वाला बजट इलेक्ट्रिक क्रॉसओवर",
     hiExcerpt:
       "Citroen ने 17 जून 2026 को भारत में eC3X इलेक्ट्रिक क्रॉसओवर लॉन्च किया है, जिसकी कीमत ₹10.25 लाख (एक्स-शोरूम) से शुरू होती है — या इसके बैटरी-ऐज़-अ-सर्विस प्लान पर सिर्फ़ ₹6.89 लाख, जिसमें ₹2.26 प्रति km बैटरी किराया लगता है। इसमें 29.2 kWh बैटरी, 320 km की दावा की गई रेंज, मानक रूप से छह एयरबैग और लगभग 57 मिनट में 10–80% DC फ़ास्ट चार्जिंग मिलती है। यहाँ जानिए सब कुछ जो नया है।",
+  },
+  {
+    slug: "ather-7-lakh-sales-milestone-2026",
+    title: "Ather Energy Crosses 7 Lakh Scooter Sales — India's 4th-Biggest EV Two-Wheeler Brand",
+    subtitle: "7,04,447 units delivered as of June 25, with the Rizta driving the surge",
+    excerpt:
+      "Ather Energy has crossed 7 lakh cumulative electric-scooter sales in India — 7,04,447 units as of June 25, 2026 — becoming the fourth e-two-wheeler brand to hit the mark after Ola, TVS and Bajaj. It added its last 2 lakh units in just eight months, with the Rizta family scooter now nearly 75% of monthly volumes. Here's what the milestone signals.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 27, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["ather-electric-scooters", "tvs-1-million-electric-scooter-sales-2026", "electric-two-wheeler-sales-record-may-2026", "ather-rizta-price-hike-june-2026"],
+    hiTitle: "Ather Energy ने 7 लाख स्कूटर बिक्री पार की — भारत का चौथा सबसे बड़ा EV टू-व्हीलर ब्रांड",
+    hiSubtitle: "25 जून तक 7,04,447 यूनिट डिलीवर, Rizta ने उछाल को रफ़्तार दी",
+    hiExcerpt:
+      "Ather Energy ने भारत में 7 लाख संचयी इलेक्ट्रिक-स्कूटर बिक्री पार कर ली है — 25 जून 2026 तक 7,04,447 यूनिट — और Ola, TVS व Bajaj के बाद यह मुकाम छूने वाला चौथा ई-टू-व्हीलर ब्रांड बन गया है। इसने अपनी आखिरी 2 लाख यूनिट सिर्फ़ आठ महीनों में जोड़ीं, जिसमें Rizta फैमिली स्कूटर अब मासिक वॉल्यूम का लगभग 75% है। जानिए इस उपलब्धि का क्या मतलब है।",
+  },
+  {
+    slug: "tvs-iqube-s-bigger-battery-2026",
+    title: "2026 TVS iQube S Relaunched With Bigger 4.7 kWh Battery and 175 km Range",
+    subtitle: "Mid-spec scooter gains range and new colours — now priced at ₹1.59 lakh",
+    excerpt:
+      "TVS has relaunched the iQube S with a larger 4.7 kWh battery pack, lifting its claimed range to 175 km, alongside two new colours. Priced at ₹1.59 lakh (ex-showroom, Delhi), it sits in a refreshed five-pack iQube line-up spanning 2.2 kWh to 5.3 kWh. Here's what's new and how it fits the range.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "4 min",
+    date: "Jun 27, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tvs-electric-scooters", "tvs-1-million-electric-scooter-sales-2026", "top-5-electric-scooters-india-2026", "ather-7-lakh-sales-milestone-2026"],
+    hiTitle: "2026 TVS iQube S बड़ी 4.7 kWh बैटरी और 175 km रेंज के साथ फिर लॉन्च",
+    hiSubtitle: "मिड-स्पेक स्कूटर को मिली ज़्यादा रेंज और नए रंग — अब कीमत ₹1.59 लाख",
+    hiExcerpt:
+      "TVS ने iQube S को बड़ी 4.7 kWh बैटरी पैक के साथ फिर लॉन्च किया है, जिससे इसकी दावा की गई रेंज 175 km हो गई है, साथ ही दो नए रंग भी मिले हैं। ₹1.59 लाख (एक्स-शोरूम, दिल्ली) कीमत वाला यह स्कूटर 2.2 kWh से 5.3 kWh तक फैली रिफ़्रेश्ड पाँच-पैक iQube रेंज में बैठता है। जानिए क्या नया है और यह रेंज में कैसे फ़िट होता है।",
   },
 ];
 

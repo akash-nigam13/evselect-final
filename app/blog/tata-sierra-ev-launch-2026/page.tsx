@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tata Sierra EV Interior Revealed Ahead of June 30 Launch: Triple-Screen Cabin, AWD & Price",
+  title: "Tata Sierra EV Fully Revealed Ahead of June 30 Launch: Exterior, Triple-Screen Cabin & AWD",
   description:
-    "Tata's latest teaser reveals the Sierra EV's interior for the first time — an ivory triple-screen cabin, panoramic sunroof and ADAS — ahead of the June 30, 2026 launch. AWD (QWD) confirmed, expected Harrier EV hardware up to 75 kWh, ~500–550 km range and an estimated ₹18–25 lakh price.",
+    "Tata has fully revealed the Sierra EV's production exterior — a slim full-width LED light bar, 19-inch aero alloys and Sierra.ev badging — ahead of the June 30, 2026 launch. AWD (QWD) confirmed, expected Harrier EV hardware up to 75 kWh, a 500 km-plus range and an estimated ₹18–25 lakh price.",
   alternates: altsFor("/blog/tata-sierra-ev-launch-2026", "en"),
   openGraph: {
-    title: "Tata Sierra EV Interior Revealed Ahead of June 30 Launch: Triple-Screen Cabin, AWD & Price",
+    title: "Tata Sierra EV Fully Revealed Ahead of June 30 Launch: Exterior, Triple-Screen Cabin & AWD",
     type: "article",
   },
 };
@@ -18,17 +18,32 @@ export default function Page() {
   return (
     <ArticleShell slug="tata-sierra-ev-launch-2026">
       <p>
-        Tata Motors has released a fresh teaser that reveals the <strong>Sierra
-        EV&apos;s interior for the first time</strong>, just days before its{" "}
-        <strong>June 30, 2026 launch</strong>. Following an earlier teaser that
-        confirmed the SUV&apos;s production exterior and an{" "}
-        <strong>all-wheel-drive powertrain</strong>, the latest clip shows a
-        light, airy cabin built around a wide multi-screen dashboard. The modern,
-        all-electric revival of the iconic 1990s nameplate is shaping up to be one
-        of the most important launches of the year — a premium electric SUV aimed
-        squarely at India&apos;s fast-growing electric-car buyer. Here is everything
-        confirmed and reported so far ahead of the reveal (final pricing will be
-        announced at launch).
+        Tata Motors has now <strong>fully revealed the Sierra EV&apos;s
+        production exterior</strong> in its latest teaser, just days before the{" "}
+        <strong>June 30, 2026 launch</strong>. The new clip — which shows the SUV
+        climbing a giant sand dune — completes the picture after an earlier teaser
+        gave the first look inside the cabin. Together they confirm the design,
+        an <strong>all-wheel-drive powertrain</strong> and a premium, feature-rich
+        package. The modern, all-electric revival of the iconic 1990s nameplate is
+        shaping up to be one of the most important launches of the year — a premium
+        electric SUV aimed squarely at India&apos;s fast-growing electric-car buyer.
+        Here is everything confirmed and reported so far ahead of launch (final
+        pricing will be announced on June 30).
+      </p>
+
+      <h2>Exterior fully revealed: slim LED light bar and aero alloys</h2>
+      <p>
+        The newest teaser shows the Sierra EV&apos;s complete production exterior
+        for the first time. It keeps the boxy, upright silhouette of the original
+        Sierra but adds EV-specific touches: a <strong>blanked-off, body-coloured
+        grille</strong>, sleek LED headlamps, a chunky silver skid plate and
+        gloss-black cladding. A <strong>continuous, razor-thin LED light bar</strong>{" "}
+        spans the full width of the tailgate, with embossed{" "}
+        <strong>&quot;Sierra.ev&quot;</strong> lettering below the Tata logo, while{" "}
+        <strong>aero-optimised dual-tone 19-inch alloy wheels</strong> and
+        Tata.ev door badging mark it out from the petrol and diesel models. The
+        sand-dune sequence in the teaser also signals the AWD version&apos;s
+        off-road intent.
       </p>
 
       <h2>Interior revealed: ivory cabin and a triple-screen dashboard</h2>
@@ -133,8 +148,12 @@ export default function Page() {
           ZigWheels
         </a>{" "}
         ·{" "}
-        <a href="https://www.autocarindia.com/car-news/tata-sierra-ev-teased-ahead-of-june-30-debut-440017" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.autocarindia.com/car-news/tata-sierra-ev-revealed-440038" target="_blank" rel="noopener noreferrer">
           Autocar India
+        </a>{" "}
+        ·{" "}
+        <a href="https://www.v3cars.com/news/tata-sierra-ev-2026-revealed-ahead-of-launch" target="_blank" rel="noopener noreferrer">
+          V3Cars
         </a>
       </p>
     </ArticleShell>
