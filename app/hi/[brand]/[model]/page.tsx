@@ -27,6 +27,7 @@ export async function generateMetadata({
       ev.batteryKwh != null ? `${ev.batteryKwh} kWh बैटरी। ` : ""
     }पूरी वेरिएंट सूची, स्पेसिफिकेशन, चार्जिंग जानकारी और हाइलाइट्स।`,
     alternates: altsFor(vehiclePath(ev), "hi"),
+    ...(ev.upcoming ? { robots: { index: false, follow: true } } : {}),
   };
 }
 

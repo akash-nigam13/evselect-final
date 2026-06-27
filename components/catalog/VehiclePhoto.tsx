@@ -68,18 +68,40 @@ export default function VehiclePhoto({
 
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden rounded-2xl border border-ev-border ${className}`}
+      className={`relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-ev-border px-6 text-center ${className}`}
       style={{ aspectRatio: "16 / 10", background: `linear-gradient(135deg, ${accent}14, #07080b)` }}
     >
       <div
         className="absolute inset-0"
-        style={{ background: `radial-gradient(ellipse at 60% 40%, ${accent}22, transparent 70%)` }}
+        style={{ background: `radial-gradient(ellipse at 60% 40%, ${accent}26, transparent 70%)` }}
       />
-      <span className="select-none font-display text-7xl font-bold opacity-10" style={{ color: accent }}>
-        EV
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
+      />
+      {/* Bolt mark */}
+      <svg
+        viewBox="0 0 24 24"
+        className="relative mb-3 h-9 w-9"
+        fill="none"
+        stroke={accent}
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+      </svg>
+      <span className="relative select-none font-display text-base font-bold leading-tight text-white/90 sm:text-lg">
+        {name}
       </span>
-      <span className="absolute bottom-3 left-3 font-mono text-[10px] uppercase tracking-widest text-ev-muted">
-        Photo coming soon
+      <span className="relative mt-1.5 font-mono text-[10px] uppercase tracking-[0.3em] text-ev-muted">
+        EVSelect.in
       </span>
     </div>
   );

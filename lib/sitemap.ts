@@ -93,7 +93,7 @@ export function localeEntries(): UrlEntry[] {
   const dynamicHi = [
     ...CATEGORIES.map((c) => `/hi/blog/category/${c.slug}`),
     ...BRANDS.map((b) => `/hi/brand/${b.slug}`),
-    ...EVS.map((e) => `/hi${vehiclePath(e)}`),
+    ...EVS.filter((e) => !e.upcoming).map((e) => `/hi${vehiclePath(e)}`),
   ];
   const paths = Array.from(new Set([...discovered, ...dynamicHi]));
   return paths.map((path) => ({ path, lastmod: TODAY, changefreq: "weekly", priority: 0.7 }));
@@ -101,7 +101,7 @@ export function localeEntries(): UrlEntry[] {
 
 // ── Per-section collectors ───────────────────────────────────────
 const vehicleEntries = (cat: "car" | "scooter" | "motorcycle"): UrlEntry[] =>
-  EVS.filter((e) => e.category === cat).map((e) => ({
+  EVS.filter((e) => e.category === cat && !e.upcoming).map((e) => ({
     path: vehiclePath(e),
     lastmod: TODAY,
     changefreq: "weekly",

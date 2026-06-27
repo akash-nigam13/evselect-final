@@ -27,6 +27,9 @@ export async function generateMetadata({
       ev.batteryKwh != null ? `${ev.batteryKwh} kWh battery. ` : ""
     }Full variant list, specifications, charging details and highlights.`,
     alternates: altsFor(vehiclePath(ev), "en"),
+    // Upcoming/unlaunched models are thin and speculative — keep them out of the
+    // index (but follow links) until they have real specs, price and a photo.
+    ...(ev.upcoming ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
