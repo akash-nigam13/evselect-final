@@ -619,6 +619,58 @@ export const POSTS: BlogPost[] = [
       "बैटरी हेल्थ EV की रीसेल वैल्यू तय करती है। जानिए डिग्रेडेशन को क्या प्रभावित करता है, State of Health कैसे मापा जाता है, और अपनी बैटरी व रीसेल कीमत दोनों की रक्षा कैसे करें।",
   },
   {
+    slug: "how-to-claim-ev-subsidy-india",
+    title: "How to Claim Your EV Subsidy in India (2026 Step-by-Step)",
+    subtitle: "PM E-Drive e-vouchers, state DBT, and the documents you need",
+    excerpt:
+      "How do you actually claim an EV subsidy in India? A step-by-step 2026 guide to the PM E-Drive e-voucher (claimed at the dealer via Aadhaar), state reimbursements, and the documents required.",
+    category: "Policy & Incentives",
+    categorySlug: "policy-incentives",
+    readTime: "7 min",
+    date: "Jun 21, 2026",
+    accent: "#F472B6",
+    related: ["ev-subsidies-road-tax-by-state-india-2026", "electric-scooter-subsidy-india", "pm-e-drive-scheme-explained-india", "ev-subsidy-on-electric-cars-india"],
+  },
+  {
+    slug: "electric-scooter-subsidy-india",
+    title: "Electric Scooter Subsidy in India 2026: PM E-Drive & State Benefits",
+    subtitle: "The per-kWh incentive, the ₹5,000 cap, and the July 2026 deadline",
+    excerpt:
+      "What subsidy can you get on an electric scooter in India in 2026? The PM E-Drive two-wheeler incentive (₹2,500/kWh, capped at ₹5,000), the 31 July 2026 deadline, and state top-ups explained.",
+    category: "Policy & Incentives",
+    categorySlug: "policy-incentives",
+    readTime: "7 min",
+    date: "Jun 20, 2026",
+    accent: "#F472B6",
+    related: ["how-to-claim-ev-subsidy-india", "pm-e-drive-scheme-explained-india", "ev-subsidies-road-tax-by-state-india-2026", "ev-subsidy-on-electric-cars-india"],
+  },
+  {
+    slug: "pm-e-drive-scheme-explained-india",
+    title: "PM E-Drive Scheme Explained (2026): What It Covers & Who Gets It",
+    subtitle: "₹10,900 crore, e-vouchers, and why private cars are excluded",
+    excerpt:
+      "What is the PM E-Drive scheme? A clear 2026 explainer of India's ₹10,900-crore EV scheme — what it covers (e-2W, e-3W, buses, charging), the e-voucher process, deadlines, and why private cars are excluded.",
+    category: "Policy & Incentives",
+    categorySlug: "policy-incentives",
+    readTime: "8 min",
+    date: "Jun 19, 2026",
+    accent: "#F472B6",
+    related: ["electric-scooter-subsidy-india", "how-to-claim-ev-subsidy-india", "ev-subsidy-on-electric-cars-india", "ev-subsidies-road-tax-by-state-india-2026"],
+  },
+  {
+    slug: "ev-subsidy-on-electric-cars-india",
+    title: "Is There a Subsidy on Electric Cars in India? (2026 Reality)",
+    subtitle: "No central cash subsidy — but 5% GST and state tax waivers",
+    excerpt:
+      "Is there a government subsidy on electric cars in India in 2026? The honest answer: no central purchase subsidy, but 5% GST plus state road-tax and registration waivers. Central vs state benefits, explained.",
+    category: "Policy & Incentives",
+    categorySlug: "policy-incentives",
+    readTime: "7 min",
+    date: "Jun 18, 2026",
+    accent: "#F472B6",
+    related: ["ev-subsidies-road-tax-by-state-india-2026", "how-to-claim-ev-subsidy-india", "pm-e-drive-scheme-explained-india", "electric-scooter-subsidy-india"],
+  },
+  {
     slug: "ev-subsidies-road-tax-by-state-india-2026",
     title: "EV Subsidies, Road Tax & Incentives by State (2026 Guide)",
     subtitle: "What you actually save, and where",
@@ -1014,6 +1066,24 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "₹10 लाख से लग्ज़री तक की सबसे अच्छी इलेक्ट्रिक SUV — बायर-फर्स्ट रैंकिंग",
     hiExcerpt:
       "भारत में सबसे अच्छी इलेक्ट्रिक SUV कौन-सी है? 2026 की यह बायर-फर्स्ट गाइड हर बजट की टॉप इलेक्ट्रिक SUV की तुलना करती है — Tata Punch EV और Nexon EV, Mahindra BE 6 और XEV 9e, Hyundai Creta Electric, Tata Harrier EV और प्रीमियम पसंद — रेंज, कीमत, सुरक्षा और वैल्यू पर।",
+  },
+
+  {
+    slug: "electric-car-vs-diesel-car-india",
+    title: "Electric Car vs Diesel Car in India (2026): Which Should You Buy?",
+    subtitle: "Running cost, GST, the 10-year diesel rule and real-world fit — honestly compared",
+    excerpt:
+      "Electric car vs diesel car is the big-SUV buyer's real dilemma in India. This 2026 guide compares EVs and diesel cars on upfront price, GST, running cost per km, maintenance, highway range, the 10-year diesel rule and resale — so you can pick the right one.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "9 min",
+    date: "Jun 28, 2026",
+    accent: "#26E0C4",
+    related: ["electric-car-vs-cng-car-india", "petrol-vs-electric-5-year-cost-india", "electric-car-vs-hybrid-india", "best-electric-suv-india-2026"],
+    hiTitle: "भारत में इलेक्ट्रिक कार बनाम डीज़ल कार (2026): कौन-सी खरीदें?",
+    hiSubtitle: "रनिंग कॉस्ट, GST, 10-साल का डीज़ल नियम और असली फिट — ईमानदारी से तुलना",
+    hiExcerpt:
+      "बड़ी SUV खरीदार के लिए भारत में असली दुविधा इलेक्ट्रिक कार बनाम डीज़ल कार है। यह 2026 गाइड EV और डीज़ल कारों की तुलना अपफ्रंट कीमत, GST, प्रति-किमी रनिंग कॉस्ट, मेंटेनेंस, हाईवे रेंज, 10-साल के डीज़ल नियम और रीसेल पर करती है — ताकि आप सही चुनाव कर सकें।",
   },
 
   // ── News (May 2026) ──────────────────────────────────────────
@@ -1450,6 +1520,24 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "मिड-स्पेक स्कूटर को मिली ज़्यादा रेंज और नए रंग — अब कीमत ₹1.59 लाख",
     hiExcerpt:
       "TVS ने iQube S को बड़ी 4.7 kWh बैटरी पैक के साथ फिर लॉन्च किया है, जिससे इसकी दावा की गई रेंज 175 km हो गई है, साथ ही दो नए रंग भी मिले हैं। ₹1.59 लाख (एक्स-शोरूम, दिल्ली) कीमत वाला यह स्कूटर 2.2 kWh से 5.3 kWh तक फैली रिफ़्रेश्ड पाँच-पैक iQube रेंज में बैठता है। जानिए क्या नया है और यह रेंज में कैसे फ़िट होता है।",
+  },
+  {
+    slug: "hero-vida-vx2-launch-july-2026",
+    title: "Hero Vida VX2 to Launch July 1 — Hero's Most Affordable e-Scooter, From ₹59,490 With BaaS",
+    subtitle: "Removable batteries, a pay-as-you-go battery plan and up to 142 km range aim to undercut TVS and Bajaj",
+    excerpt:
+      "Hero MotoCorp will launch the Vida VX2 — its most affordable electric scooter yet — on July 1, 2026. Pre-launch details confirm two variants (VX2 Go and VX2 Plus), portable removable batteries, up to 142 km of claimed range and a Battery-as-a-Service plan that drops the starting price to about ₹59,490. Here's everything we know.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 27, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["hero-electric-scooters", "top-5-electric-scooters-india-2026", "electric-two-wheeler-sales-record-may-2026", "tvs-iqube-s-bigger-battery-2026"],
+    hiTitle: "Hero Vida VX2 1 जुलाई को लॉन्च — Hero का सबसे किफ़ायती ई-स्कूटर, BaaS पर ₹59,490 से",
+    hiSubtitle: "रिमूवेबल बैटरियाँ, पे-ऐज़-यू-गो बैटरी प्लान और 142 km तक रेंज, TVS व Bajaj को टक्कर देने के लिए",
+    hiExcerpt:
+      "Hero MotoCorp 1 जुलाई 2026 को अपना अब तक का सबसे किफ़ायती इलेक्ट्रिक स्कूटर Vida VX2 लॉन्च करेगी। लॉन्च-पूर्व जानकारी में दो वेरिएंट (VX2 Go और VX2 Plus), पोर्टेबल रिमूवेबल बैटरियाँ, 142 km तक की दावा की गई रेंज और एक Battery-as-a-Service प्लान की पुष्टि हुई है जो शुरुआती कीमत को लगभग ₹59,490 तक ले आता है। यहाँ जानिए सब कुछ।",
   },
 ];
 

@@ -246,6 +246,35 @@ export default function EvSubsidiesPage() {
               ))}
             </div>
 
+            <h2>Deep-dive guides</h2>
+            <p>Go deeper on each part of India&apos;s EV incentives:</p>
+            <ul>
+              <li>
+                <Link href="/blog/pm-e-drive-scheme-explained-india">
+                  PM E-Drive scheme explained
+                </Link>{" "}
+                — what the ₹10,900-crore scheme covers and who qualifies.
+              </li>
+              <li>
+                <Link href="/blog/electric-scooter-subsidy-india">
+                  Electric scooter subsidy in India
+                </Link>{" "}
+                — the per-kWh incentive, the ₹5,000 cap and the July 2026 deadline.
+              </li>
+              <li>
+                <Link href="/blog/ev-subsidy-on-electric-cars-india">
+                  Is there a subsidy on electric cars?
+                </Link>{" "}
+                — the central-vs-state reality for car buyers.
+              </li>
+              <li>
+                <Link href="/blog/how-to-claim-ev-subsidy-india">
+                  How to claim your EV subsidy
+                </Link>{" "}
+                — the step-by-step e-voucher and documents process.
+              </li>
+            </ul>
+
             <h2>Keep going</h2>
             <p>
               Want to see how incentives change a specific car&apos;s real cost? Use the{" "}
