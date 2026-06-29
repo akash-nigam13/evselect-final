@@ -1165,6 +1165,24 @@ export const POSTS: BlogPost[] = [
       "बड़ी SUV खरीदार के लिए भारत में असली दुविधा इलेक्ट्रिक कार बनाम डीज़ल कार है। यह 2026 गाइड EV और डीज़ल कारों की तुलना अपफ्रंट कीमत, GST, प्रति-किमी रनिंग कॉस्ट, मेंटेनेंस, हाईवे रेंज, 10-साल के डीज़ल नियम और रीसेल पर करती है — ताकि आप सही चुनाव कर सकें।",
   },
 
+  {
+    slug: "charge-ev-with-solar-panels-india",
+    title: "Charging Your EV With Solar Panels in India (2026): Costs, Setup & Savings",
+    subtitle: "Rooftop solar sizing, the PM Surya Ghar subsidy, net metering and real per-km savings",
+    excerpt:
+      "Can you charge an EV with solar panels in India? A 2026 guide to pairing rooftop solar with your electric car — how big a system you need, what it costs after the PM Surya Ghar subsidy, how net metering solves the daytime problem, and the real per-km savings.",
+    category: "Charging",
+    categorySlug: "charging",
+    readTime: "9 min",
+    date: "Jun 29, 2026",
+    accent: "#C6F94E",
+    related: ["home-ev-charging-cost-india", "ev-charging-time-india", "cost-of-owning-an-electric-car-in-india", "ev-subsidies-road-tax-by-state-india-2026"],
+    hiTitle: "भारत में सोलर पैनल से अपनी EV चार्ज करना (2026): लागत, सेटअप और बचत",
+    hiSubtitle: "रूफटॉप सोलर साइज़िंग, PM Surya Ghar सब्सिडी, नेट मीटरिंग और असली प्रति-किमी बचत",
+    hiExcerpt:
+      "क्या आप भारत में सोलर पैनल से EV चार्ज कर सकते हैं? 2026 की यह गाइड रूफटॉप सोलर को आपकी इलेक्ट्रिक कार के साथ जोड़ने को समझाती है — कितना बड़ा सिस्टम चाहिए, PM Surya Ghar सब्सिडी के बाद कितना खर्च आता है, नेट मीटरिंग दिन वाली दिक्कत कैसे हल करती है, और असली प्रति-किमी बचत कितनी है।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
@@ -1617,6 +1635,42 @@ export const POSTS: BlogPost[] = [
     hiSubtitle: "रिमूवेबल बैटरियाँ, पे-ऐज़-यू-गो बैटरी प्लान और 142 km तक रेंज, TVS व Bajaj को टक्कर देने के लिए",
     hiExcerpt:
       "Hero MotoCorp 1 जुलाई 2026 को अपना अब तक का सबसे किफ़ायती इलेक्ट्रिक स्कूटर Vida VX2 लॉन्च करेगी। लॉन्च-पूर्व जानकारी में दो वेरिएंट (VX2 Go और VX2 Plus), पोर्टेबल रिमूवेबल बैटरियाँ, 142 km तक की दावा की गई रेंज और एक Battery-as-a-Service प्लान की पुष्टि हुई है जो शुरुआती कीमत को लगभग ₹59,490 तक ले आता है। यहाँ जानिए सब कुछ।",
+  },
+  {
+    slug: "tata-motors-ev-roadmap-fy31-2026",
+    title: "Tata Motors to Add 4 New EVs and 10+ Refreshes by FY31, Eyes 30% EV Share",
+    subtitle: "Sierra.ev and an Avinya-based flagship lead a roadmap promising 2–3x range and 3x faster charging",
+    excerpt:
+      "Tata Motors Passenger Vehicles has laid out an aggressive electric roadmap — four all-new EVs and more than ten product refreshes by FY31 — as it targets over 30% EV penetration and aims to 2–3x its range and triple charging speeds. Here's what the plan means for buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 28, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["tata-electric-cars", "tata-sierra-ev-launch-2026", "upcoming-electric-cars-india-2026", "best-electric-cars-india-2026"],
+    hiTitle: "Tata Motors FY31 तक 4 नई EV और 10+ अपडेट लाएगी, 30% EV हिस्सेदारी का लक्ष्य",
+    hiSubtitle: "Sierra.ev और Avinya-आधारित फ्लैगशिप उस रोडमैप की अगुवाई करेंगे जो 2–3 गुना रेंज और 3 गुना तेज़ चार्जिंग का वादा करता है",
+    hiExcerpt:
+      "Tata Motors पैसेंजर व्हीकल्स ने एक आक्रामक इलेक्ट्रिक रोडमैप पेश किया है — FY31 तक चार बिल्कुल नई EV और दस से अधिक प्रोडक्ट रिफ़्रेश — और 30% से अधिक EV पैठ का लक्ष्य रखा है, साथ ही रेंज को 2–3 गुना और चार्जिंग गति को तीन गुना करने का इरादा है। जानिए इस योजना का खरीदारों के लिए क्या मतलब है।",
+  },
+  {
+    slug: "vinfast-electric-scooters-india-2026",
+    title: "VinFast Patents Viper E-Scooter in India, Readies Three-Model 2W Launch",
+    subtitle: "Evo, Feliz and Viper electric scooters are lined up for H2 2026 as the Vietnamese giant enters India's two-wheeler market",
+    excerpt:
+      "VinFast has registered a design patent for its Viper electric scooter in India — the clearest sign yet that the Vietnamese EV maker is about to enter the country's two-wheeler market. It plans to bring three e-scooters, the Evo, Feliz and Viper, in the second half of 2026. Here's what it means for Indian buyers.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 28, 2026",
+    accent: "#60A5FA",
+    news: true,
+    related: ["vinfast-electric-cars", "best-electric-scooters-under-1-lakh-india", "top-5-electric-scooters-india-2026", "ola-electric-scooters"],
+    hiTitle: "VinFast ने भारत में Viper ई-स्कूटर का पेटेंट कराया, तीन मॉडलों की 2W लॉन्च की तैयारी",
+    hiSubtitle: "Evo, Feliz और Viper इलेक्ट्रिक स्कूटर 2026 की दूसरी छमाही के लिए तय, वियतनामी दिग्गज भारत के टू-व्हीलर बाज़ार में उतरने को तैयार",
+    hiExcerpt:
+      "VinFast ने भारत में अपने Viper इलेक्ट्रिक स्कूटर के लिए एक डिज़ाइन पेटेंट दर्ज कराया है — यह अब तक का सबसे स्पष्ट संकेत है कि वियतनामी EV निर्माता देश के टू-व्हीलर बाज़ार में उतरने वाला है। कंपनी 2026 की दूसरी छमाही में तीन ई-स्कूटर — Evo, Feliz और Viper — लाने की योजना बना रही है। जानिए भारतीय खरीदारों के लिए इसका क्या मतलब है।",
   },
 ];
 
