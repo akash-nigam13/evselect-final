@@ -1548,21 +1548,21 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "delhi-ev-policy-2-0-2026",
-    title: "Delhi EV Policy 2.0: Up to ₹1 Lakh Subsidy, Tied to Scrapping Old Cars",
-    subtitle: "Scrappage-linked incentives, faster DBT payouts and an e-scooter sweetener",
+    title: "Delhi Cabinet Approves EV Policy 2026: 100% Road-Tax Waiver, ₹30,000 e-Scooter Subsidy, Petrol 2W Ban From 2028",
+    subtitle: "Full road-tax and registration waiver on cars up to ₹30 lakh, tiered purchase and scrappage incentives, and firm ICE phase-out dates",
     excerpt:
-      "Delhi's Budget 2026 has introduced EV Policy 2.0 with a ₹200 crore outlay, offering up to ₹1 lakh off an electric car under ₹15 lakh, a flat ₹10,000 for e-two-wheelers and bigger benefits if you scrap an old petrol or diesel vehicle. Payouts move to direct bank transfer. Here's what's confirmed and who gains.",
+      "The Delhi Cabinet approved EV Policy 2026 on June 29, backed by a ₹7,000 crore-plus outlay. It offers a 100% road-tax and registration waiver on EVs (cars up to ₹30 lakh ex-showroom), up to ₹30,000 for e-scooters, up to ₹1 lakh for goods carriers, ₹1 lakh scrappage on cars, and bars new petrol/CNG two-wheeler registrations from April 2028. Here's everything confirmed.",
     category: "Market News",
     categorySlug: "market-news",
     readTime: "5 min",
-    date: "Jun 16, 2026",
+    date: "Jun 30, 2026",
     accent: "#60A5FA",
     news: true,
     related: ["ev-subsidies-road-tax-by-state-india-2026", "pm-e-drive-2w-subsidy-deadline-july-2026", "best-electric-cars-under-15-lakh-india", "how-to-choose-first-ev-india"],
-    hiTitle: "दिल्ली EV नीति 2.0: ₹1 लाख तक सब्सिडी, पुरानी कार स्क्रैप करने से जुड़ी",
-    hiSubtitle: "स्क्रैपेज-लिंक्ड प्रोत्साहन, तेज़ DBT भुगतान और ई-स्कूटर पर सहूलियत",
+    hiTitle: "दिल्ली कैबिनेट ने EV नीति 2026 मंज़ूर की: 100% रोड-टैक्स छूट, ₹30,000 ई-स्कूटर सब्सिडी, 2028 से पेट्रोल 2W पर रोक",
+    hiSubtitle: "₹30 लाख तक की कारों पर पूरा रोड-टैक्स व रजिस्ट्रेशन माफ़, श्रेणीबद्ध खरीद व स्क्रैपेज प्रोत्साहन और ICE फेज़-आउट की पक्की तारीख़ें",
     hiExcerpt:
-      "दिल्ली के बजट 2026 में ₹200 करोड़ के परिव्यय के साथ EV नीति 2.0 पेश की गई है, जिसमें ₹15 लाख से कम की इलेक्ट्रिक कार पर ₹1 लाख तक की छूट, ई-टू-व्हीलर पर सपाट ₹10,000 और पुराने पेट्रोल या डीज़ल वाहन को स्क्रैप करने पर बड़े फ़ायदे मिलते हैं। भुगतान अब सीधे बैंक ट्रांसफर से होगा। जानिए क्या पुष्टि हुई है और किसे फ़ायदा।",
+      "दिल्ली कैबिनेट ने 29 जून को EV नीति 2026 मंज़ूर की, जो ₹7,000 करोड़ से अधिक के परिव्यय पर आधारित है। इसमें EV पर 100% रोड-टैक्स व रजिस्ट्रेशन छूट (₹30 लाख एक्स-शोरूम तक की कार), ई-स्कूटर पर ₹30,000 तक, माल वाहनों पर ₹1 लाख तक, कार स्क्रैप करने पर ₹1 लाख और अप्रैल 2028 से नए पेट्रोल/CNG टू-व्हीलर रजिस्ट्रेशन पर रोक शामिल है। जानिए पूरी पुष्टि।",
   },
   {
     slug: "citroen-ec3x-launched-india-2026",

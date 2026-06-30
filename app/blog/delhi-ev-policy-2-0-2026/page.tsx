@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Delhi EV Policy 2.0: Up to ₹1 Lakh Subsidy, Tied to Scrapping Old Cars",
+  title: "Delhi Approves EV Policy 2026: 100% Road-Tax Waiver, ₹30,000 e-Scooter Subsidy",
   description:
-    "Delhi's Budget 2026 introduces EV Policy 2.0 — up to ₹1 lakh off an EV under ₹15 lakh, ₹10,000 for e-two-wheelers, scrappage-linked benefits and faster DBT payouts. Here's what's confirmed.",
+    "The Delhi Cabinet approved EV Policy 2026 on June 29 — a 100% road-tax and registration waiver on EVs (cars up to ₹30 lakh), up to ₹30,000 for e-scooters, ₹1 lakh scrappage, and a phase-out of new petrol/CNG two-wheelers from April 2028. Here's what's confirmed.",
   alternates: altsFor("/blog/delhi-ev-policy-2-0-2026", "en"),
   openGraph: {
-    title: "Delhi EV Policy 2.0: Up to ₹1 Lakh Subsidy, Tied to Scrapping Old Cars",
+    title: "Delhi Approves EV Policy 2026: 100% Road-Tax Waiver, ₹30,000 e-Scooter Subsidy",
     type: "article",
   },
 };
@@ -18,50 +18,68 @@ export default function Page() {
   return (
     <ArticleShell slug="delhi-ev-policy-2-0-2026">
       <p>
-        Delhi has unveiled <strong>EV Policy 2.0</strong> as part of its Budget 2026,
-        backing it with a dedicated <strong>₹200 crore outlay</strong> to push
-        battery-powered vehicles in the capital. The framework runs until March 31,
-        2030 unless revised — and its defining feature is that the biggest incentives
-        are now tied to <strong>scrapping an old petrol or diesel vehicle</strong>.
+        The Delhi Cabinet has approved <strong>EV Policy 2026</strong> on June 29,
+        clearing one of India&apos;s most ambitious state electric-mobility plans.
+        Chief Minister Rekha Gupta said the framework — backed by a direct outlay of
+        more than <strong>₹7,000 crore</strong> over four years (with the total
+        benefit, including foregone tax, put above ₹15,000 crore) — will now go to the
+        Lieutenant Governor for final sign-off before rollout. As approved, it is set
+        to run from <strong>July 1, 2026 to March 31, 2030</strong> and focuses
+        exclusively on battery electric vehicles (BEVs).
       </p>
 
-      <h2>What you can claim</h2>
+      <h2>Buying an EV in Delhi gets cheaper</h2>
       <p>
-        Private electric cars priced under ₹15 lakh can attract a subsidy of up to{" "}
-        <strong>₹1 lakh</strong>, capped at the first 1 lakh applicants. Electric
-        two-wheelers get a flat <strong>₹10,000</strong> incentive, while electric
-        three-wheelers (L5M) carry a <strong>₹25,000</strong> scrappage incentive on
-        the purchase of a new EV. The higher subsidy brackets are deliberately linked
-        to decommissioning older, more polluting Bharat Stage (BS)-IV and earlier
-        vehicles registered in Delhi.
+        The headline benefit is a <strong>100% waiver of road tax and registration
+        fees</strong> on electric vehicles. For electric passenger cars, that waiver
+        applies only to models priced up to <strong>₹30 lakh</strong> (ex-showroom) —
+        a far wider net than the earlier ₹15 lakh budget proposal, covering most
+        mainstream EVs sold in the capital.
+      </p>
+      <p>
+        On top of that, the government will pay direct purchase incentives, highest in
+        the first year and tapering in years two and three. Electric two-wheeler buyers
+        can get up to <strong>₹30,000</strong>, electric auto-rickshaws up to{" "}
+        <strong>₹50,000</strong>, and electric mini-trucks and small commercial goods
+        vehicles up to <strong>₹1 lakh</strong>. Dealers must tell buyers at booking
+        whether their vehicle qualifies.
       </p>
 
-      <h2>The big fix: faster payouts</h2>
+      <h2>Extra money for scrapping an old vehicle</h2>
       <p>
-        A long-standing complaint with Indian EV subsidies has been the wait. Delhi
-        says all incentives under EV Policy 2.0 will be paid via{" "}
-        <strong>Direct Benefit Transfer (DBT)</strong> straight to the buyer&apos;s
-        bank account — cutting the disbursal time from more than 40 days to under a
-        week. If it works as promised, it removes one of the most cited frustrations
-        of buying an EV with a subsidy on paper that takes months to arrive.
+        The policy rewards replacing older vehicles with EVs. Scrapping an old
+        two-wheeler is worth <strong>₹10,000</strong>, an auto-rickshaw{" "}
+        <strong>₹25,000</strong>, a private car <strong>₹1 lakh</strong>, a light
+        commercial goods vehicle <strong>₹50,000</strong>, and a Gramin Sewa shared
+        three-wheeler <strong>₹15,000</strong>. As before, all incentives are paid
+        straight to the buyer&apos;s bank account via Direct Benefit Transfer (DBT).
       </p>
 
-      <h2>Why the scrappage angle matters</h2>
+      <h2>The phase-out timeline</h2>
       <p>
-        By tying the richest benefits to scrapping an old ICE car, Delhi is trying to
-        do two things at once — get the dirtiest vehicles off its roads and steer that
-        demand toward EVs. For a household sitting on an ageing petrol or diesel car,
-        the combined value of scrappage benefit plus EV subsidy can meaningfully
-        change the maths on switching, especially in the sub-₹15 lakh bracket where
-        most of India&apos;s{" "}
-        <Link href="/blog/best-electric-cars-under-15-lakh-india">affordable EVs</Link>{" "}
-        sit.
+        This is where EV Policy 2026 goes further than most. From{" "}
+        <strong>January 1, 2027</strong>, only electric auto-rickshaws and electric
+        goods three-wheelers — plus electric mini-trucks and last-mile delivery vans —
+        can be newly registered in Delhi. From <strong>April 1, 2028</strong>, no new
+        petrol or CNG scooters and motorcycles can be registered either. Crucially,
+        the policy does <strong>not</strong> ban existing petrol or CNG vehicles; the
+        restriction applies only to fresh registrations after those dates.
+      </p>
+
+      <h2>Trucks, school buses and charging</h2>
+      <p>
+        The first 1,000 medium electric trucks bought within three months of
+        notification get a 10-year exemption from Delhi&apos;s &apos;No Entry&apos;
+        restrictions. Schools must electrify 10% of their bus fleet within two years,
+        20% within three, and 30% by March 31, 2030. To support all this, Delhi plans
+        more than <strong>30,000 new charging points</strong> across the city — a
+        direct answer to the range-anxiety and access worries that hold back many
+        first-time buyers.
       </p>
 
       <h2>How it fits the national picture</h2>
       <p>
-        State incentives stack on top of the central PM E-Drive scheme — and the two
-        interact. Note that the central{" "}
+        State incentives stack on top of the central PM E-Drive scheme. Note that the{" "}
         <Link href="/blog/pm-e-drive-2w-subsidy-deadline-july-2026">
           PM E-Drive two-wheeler subsidy is fund-limited and ends July 31
         </Link>
@@ -76,27 +94,32 @@ export default function Page() {
 
       <h2>The bottom line</h2>
       <p>
-        EV Policy 2.0 is one of India&apos;s more aggressive state EV pushes — large
-        per-vehicle benefits, a clean-air scrappage hook and a real attempt to fix
-        slow payouts. The catches are the application caps and the conditions, so
-        Delhi buyers should confirm eligibility and scrappage requirements before
-        booking. If you&apos;re still choosing, start with our{" "}
+        EV Policy 2026 is among the most aggressive state EV pushes yet — a full
+        road-tax waiver up to ₹30 lakh, sizeable per-vehicle incentives, a clean-air
+        scrappage hook and firm dates to retire new ICE two- and three-wheelers. The
+        caveats: it still needs the Lieutenant Governor&apos;s final approval, and
+        first-year incentives are the richest, so timing matters. If you&apos;re
+        weighing the switch, start with our{" "}
+        <Link href="/blog/best-electric-cars-under-15-lakh-india">
+          guide to affordable EVs
+        </Link>{" "}
+        and the{" "}
         <Link href="/blog/how-to-choose-first-ev-india">first-EV checklist</Link>.
       </p>
 
       <h2>Sources</h2>
       <p>
         As reported by{" "}
-        <a href="https://www.outlookbusiness.com/news/delhi-ev-policy-20-subsidies-scrappage-benefits-and-neighborhood-charging-for-2026" target="_blank" rel="noopener noreferrer">
-          Outlook Business
+        <a href="https://www.businesstoday.in/auto/story/delhi-ev-policy-2026-explained-whats-changing-for-car-bike-and-auto-buyers-539804-2026-06-29" target="_blank" rel="noopener noreferrer">
+          Business Today
         </a>{" "}
         ·{" "}
-        <a href="https://www.cartoq.com/car-news/delhi-budget-2026-ev-policy-2-0-scrappage-incentives/" target="_blank" rel="noopener noreferrer">
-          CarToq
+        <a href="https://www.business-standard.com/india-news/delhi-approves-ev-policy-offers-tax-waiver-on-electric-cars-up-to-30-lakh-126062900555_1.html" target="_blank" rel="noopener noreferrer">
+          Business Standard
         </a>{" "}
         ·{" "}
-        <a href="https://carhp.in/car-guide/delhi-ev-policy-2-0-push-for-scrappage-get-up-to-1-lakh-incentives" target="_blank" rel="noopener noreferrer">
-          Carhp
+        <a href="https://www.indiatvnews.com/business/news/delhi-cabinet-approves-ev-policy-2026-offers-100-exemption-on-road-tax-registration-fees-key-highlights-2026-06-29-1046524" target="_blank" rel="noopener noreferrer">
+          India TV News
         </a>
       </p>
     </ArticleShell>
