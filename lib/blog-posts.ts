@@ -37,6 +37,75 @@ export const CATEGORIES: BlogCategory[] = [
 ];
 
 export const POSTS: BlogPost[] = [
+  // ── BYD Yangwang ──
+  {
+    slug: "byd-yangwang-explained",
+    title: "BYD Yangwang: The Ultra-Luxury EV Brand Explained (2026)",
+    subtitle: "The U7, U9 and U8, the e4 quad-motor platform, and what makes it special",
+    excerpt:
+      "What is BYD Yangwang? A clear 2026 explainer of BYD's ultra-luxury EV marque — the U7 sedan, U9 super-coupe and U8 SUV, the e4 quad-motor platform, tank-turns, and whether it's coming to India.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "8 min",
+    date: "Jun 27, 2026",
+    accent: "#f43f5e",
+    featured: true,
+    related: ["byd-yangwang-india-launch-price", "byd-yangwang-u9-electric-hypercar", "byd-electric-cars", "best-electric-cars-india-2026"],
+  },
+  {
+    slug: "byd-yangwang-india-launch-price",
+    title: "BYD Yangwang in India: Launch, Expected Price & Models (2026)",
+    subtitle: "Is the U8/U9/U7 coming to India — and what it might cost",
+    excerpt:
+      "Will BYD Yangwang launch in India? The 2026 reality — it's not officially confirmed, what was shown at the Bharat Mobility Expo, and the speculative ₹2.5–3.5 crore expected prices doing the rounds.",
+    category: "Buying Guide",
+    categorySlug: "buying-guide",
+    readTime: "7 min",
+    date: "Jun 26, 2026",
+    accent: "#f43f5e",
+    related: ["byd-yangwang-explained", "byd-yangwang-u9-electric-hypercar", "byd-electric-cars", "best-electric-cars-india-2026"],
+  },
+  {
+    slug: "byd-yangwang-u9-electric-hypercar",
+    title: "BYD Yangwang U9: The 1,287 bhp Electric Hypercar That Jumps",
+    subtitle: "Quad motors, 2.36s to 100, and a suspension that leaps potholes",
+    excerpt:
+      "The BYD Yangwang U9 is a ~1,287 bhp pure-electric super-coupe that hits 100 km/h in 2.36s and can literally jump on its suspension. Specs, the U9 Xtreme record run, and the tech behind it.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "7 min",
+    date: "Jun 25, 2026",
+    accent: "#f43f5e",
+    related: ["byd-yangwang-explained", "byd-yangwang-india-launch-price", "yangwang-u9-xtreme-496kmph-record", "byd-electric-cars"],
+  },
+  {
+    slug: "byd-2026-yangwang-lineup-blade-battery-2",
+    title: "BYD Launches 2026 Yangwang Lineup With Blade Battery 2.0",
+    subtitle: "Next-gen battery and flash charging across U7, U8 and U8L",
+    excerpt:
+      "BYD has rolled out its 2026 Yangwang lineup with the second-generation Blade Battery and flash charging — the U7 now claims up to 1,006 km CLTC range. Here's what's new and the prices.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 24, 2026",
+    accent: "#f43f5e",
+    news: true,
+    related: ["byd-yangwang-explained", "yangwang-u9-xtreme-496kmph-record", "byd-yangwang-india-launch-price", "byd-dm-i-phev-india-2026"],
+  },
+  {
+    slug: "yangwang-u9-xtreme-496kmph-record",
+    title: "Yangwang U9 Xtreme Hits 496 km/h & Sets a Nürburgring EV Record",
+    subtitle: "BYD's 3,000 hp hypercar rewrites the EV performance books",
+    excerpt:
+      "BYD's Yangwang U9 Xtreme — a ~3,000 hp, 1,200-volt hypercar — hit 496.22 km/h and set the fastest-ever production-EV lap of the Nürburgring at 6:59. What it means for EV performance.",
+    category: "Market News",
+    categorySlug: "market-news",
+    readTime: "5 min",
+    date: "Jun 23, 2026",
+    accent: "#f43f5e",
+    news: true,
+    related: ["byd-yangwang-u9-electric-hypercar", "byd-yangwang-explained", "byd-2026-yangwang-lineup-blade-battery-2", "best-electric-cars-india-2026"],
+  },
   // ── Charging-station business cluster (spokes of /ev-charging-station-setup-india) ──
   {
     slug: "cost-to-set-up-ev-charging-station-india",
@@ -207,7 +276,7 @@ export const POSTS: BlogPost[] = [
     readTime: "10 min",
     date: "Jun 6, 2026",
     accent: "#26E0C4",
-    related: ["best-selling-electric-cars-india","safest-electric-cars-india","tata-electric-cars","top-5-electric-scooters-india-2026"],
+    related: ["best-selling-electric-cars-india","safest-electric-cars-india","tata-electric-cars","byd-yangwang-explained"],
   },
   {
     slug: "best-selling-electric-cars-india",
@@ -1486,7 +1555,7 @@ export const POSTS: BlogPost[] = [
     date: "Jun 15, 2026",
     accent: "#60A5FA",
     news: true,
-    related: ["byd-electric-cars", "best-electric-cars-india-2026", "mercedes-s-class-s450e-phev-india-2026", "tata-sierra-ev-launch-2026"],
+    related: ["byd-yangwang-explained", "byd-electric-cars", "best-electric-cars-india-2026", "mercedes-s-class-s450e-phev-india-2026"],
     hiTitle: "BYD ने भारत के लिए DM-i प्लग-इन हाइब्रिड की पुष्टि की",
     hiSubtitle: "1,000 km+ कंबाइंड रेंज वाली सुपर-एफिशिएंट PHEV तकनीक भारत आ रही है",
     hiExcerpt:
