@@ -1270,24 +1270,42 @@ export const POSTS: BlogPost[] = [
       "इलेक्ट्रिक कारों में रीजेनरेटिव ब्रेकिंग क्या है? भारत के लिए 2026 की यह गाइड — रीजेन कैसे ब्रेकिंग को रेंज में बदलती है, अलग-अलग रीजेन लेवल, Creta Electric और Nexon EV जैसी कारों पर वन-पेडल ड्राइविंग, यह असल में कितनी रेंज जोड़ती है, और यह आपके ब्रेक पैड क्यों बचाती है।",
   },
 
+  {
+    slug: "ev-tyres-india",
+    title: "EV Tyres in India (2026): Do Electric Cars Need Special Tyres?",
+    subtitle: "Wear, rolling resistance, load index and what to buy when replacing",
+    excerpt:
+      "Do electric cars need special tyres in India? A 2026 guide to EV tyre technology — why EVs wear tyres faster, what higher load index and low rolling resistance actually mean, the CEAT, MRF, Apollo and Michelin options available, and when to replace.",
+    category: "Cost & Ownership",
+    categorySlug: "cost-ownership",
+    readTime: "8 min",
+    date: "Jul 1, 2026",
+    accent: "#FFC247",
+    related: ["ev-maintenance-cost-india", "real-world-range-vs-arai-india", "cost-of-owning-an-electric-car-in-india", "how-to-choose-first-ev-india"],
+    hiTitle: "भारत में EV टायर (2026): क्या इलेक्ट्रिक कारों को ख़ास टायर चाहिए?",
+    hiSubtitle: "घिसाव, रोलिंग रेज़िस्टेंस, लोड इंडेक्स और बदलते समय क्या खरीदें",
+    hiExcerpt:
+      "क्या भारत में इलेक्ट्रिक कारों को ख़ास टायर चाहिए? 2026 की यह गाइड EV टायर तकनीक समझाती है — EV टायर तेज़ी से क्यों घिसते हैं, ज़्यादा लोड इंडेक्स और लो रोलिंग रेज़िस्टेंस का असल मतलब क्या है, CEAT, MRF, Apollo और Michelin के उपलब्ध विकल्प, और कब बदलवाएँ।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
-    title: "Tata Sierra EV Fully Revealed Ahead of June 30 Launch: Exterior, Triple-Screen Cabin & AWD",
-    subtitle: "Latest teaser shows the full production exterior — slim LED light bar, 19-inch alloys and Sierra.ev badging; AWD (QWD) confirmed, launch set for June 30",
+    title: "Tata Sierra EV Launched at ₹18.79 Lakh: Up to 665 km Range, QWD and Triple Screens",
+    subtitle: "Tata's electric SUV goes on sale with 63/75 kWh packs, an optional Quad Wheel Drive dual-motor setup and a 5.8s 0–100 km/h sprint",
     excerpt:
-      "Tata has now fully revealed the Sierra EV's production exterior in a fresh teaser — a slim full-width LED light bar, aero 19-inch alloys, a blanked-off grille and Sierra.ev badging — days before its June 30, 2026 launch. Combined with the earlier ivory triple-screen cabin reveal, AWD (QWD), expected Harrier EV hardware up to 75 kWh, a 500 km-plus range and an estimated ₹18–25 lakh price, here's everything confirmed so far.",
+      "Tata Motors has launched the Sierra EV in India on June 30, 2026 at ₹18.79 lakh (ex-showroom), with the range topping out around ₹26 lakh. The electric SUV offers 63 kWh and 75 kWh battery packs, a claimed MIDC range of up to 665 km, DC fast charging that adds 263 km in 15 minutes, and an optional Quad Wheel Drive dual-motor setup good for 0–100 km/h in 5.8 seconds. Here are the confirmed prices, specs and what it means for buyers.",
     category: "Market News",
     categorySlug: "market-news",
-    readTime: "5 min",
-    date: "Jun 27, 2026",
+    readTime: "6 min",
+    date: "Jul 1, 2026",
     accent: "#60A5FA",
     news: true,
     related: ["india-ev-sales-fy2026", "maruti-e-vitara-first-ev-launch", "tesla-model-y-price-cut-india-2026", "how-to-choose-first-ev-india"],
-    hiTitle: "Tata Sierra EV पूरी तरह रिवील, 30 जून लॉन्च से पहले: एक्सटीरियर, ट्रिपल-स्क्रीन केबिन और AWD",
-    hiSubtitle: "नए टीज़र में पूरा प्रोडक्शन एक्सटीरियर दिखा — स्लिम LED लाइट बार, 19-इंच अलॉय और Sierra.ev बैजिंग; AWD (QWD) की पुष्टि, लॉन्च 30 जून को",
+    hiTitle: "Tata Sierra EV ₹18.79 लाख में लॉन्च: 665 km तक रेंज, QWD और ट्रिपल स्क्रीन",
+    hiSubtitle: "Tata की इलेक्ट्रिक SUV बिक्री पर — 63/75 kWh पैक, वैकल्पिक Quad Wheel Drive ड्यूल-मोटर सेटअप और 5.8 सेकंड में 0–100 km/h",
     hiExcerpt:
-      "Tata ने अब एक नए टीज़र में Sierra EV का पूरा प्रोडक्शन एक्सटीरियर दिखा दिया है — पूरी चौड़ाई वाली स्लिम LED लाइट बार, एयरो 19-इंच अलॉय, ब्लैंक्ड-ऑफ ग्रिल और Sierra.ev बैजिंग — 30 जून 2026 के लॉन्च से ठीक पहले। पहले दिखे आइवरी ट्रिपल-स्क्रीन केबिन, AWD (QWD), अपेक्षित Harrier EV हार्डवेयर (75 kWh तक), 500 km से अधिक रेंज और अनुमानित ₹18–25 लाख कीमत के साथ, अब तक पुष्ट हर जानकारी यहाँ है।",
+      "Tata Motors ने Sierra EV को 30 जून 2026 को भारत में ₹18.79 लाख (एक्स-शोरूम) से लॉन्च कर दिया है, टॉप वेरिएंट लगभग ₹26 लाख तक जाता है। इलेक्ट्रिक SUV में 63 kWh और 75 kWh बैटरी पैक, 665 km तक की दावा की गई MIDC रेंज, 15 मिनट में 263 km जोड़ने वाली DC फ़ास्ट चार्जिंग और वैकल्पिक Quad Wheel Drive ड्यूल-मोटर सेटअप है जो 5.8 सेकंड में 0–100 km/h देता है। पुष्ट कीमतें, स्पेक्स और खरीदारों के लिए इसका मतलब यहाँ है।",
   },
   {
     slug: "india-ev-sales-fy2026",

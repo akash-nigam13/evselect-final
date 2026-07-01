@@ -4,12 +4,12 @@ import ArticleShell from "@/components/blog/ArticleShell";
 import { altsFor, localizedHref } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Tata Sierra EV पूरी तरह रिवील, 30 जून लॉन्च से पहले: एक्सटीरियर, ट्रिपल-स्क्रीन केबिन और AWD",
+  title: "Tata Sierra EV ₹18.79 लाख में लॉन्च: 665 km तक रेंज, QWD और ट्रिपल स्क्रीन",
   description:
-    "Tata ने 30 जून 2026 के लॉन्च से पहले Sierra EV का पूरा प्रोडक्शन एक्सटीरियर दिखा दिया — पूरी चौड़ाई वाली स्लिम LED लाइट बार, 19-इंच एयरो अलॉय और Sierra.ev बैजिंग। AWD (QWD) की पुष्टि, अपेक्षित 65–75 kWh बैटरी, 500 km से अधिक रेंज और अनुमानित ₹18–25 लाख कीमत।",
+    "Tata ने Sierra EV को 30 जून 2026 को भारत में ₹18.79 लाख (एक्स-शोरूम) से लॉन्च किया, टॉप वेरिएंट लगभग ₹26 लाख तक। इसमें 63/75 kWh बैटरी पैक, 665 km तक की दावा की गई MIDC रेंज, 15 मिनट में 263 km जोड़ने वाली DC फ़ास्ट चार्जिंग और वैकल्पिक Quad Wheel Drive ड्यूल-मोटर सेटअप (5.8 सेकंड में 0–100 km/h) है।",
   alternates: altsFor("/blog/tata-sierra-ev-launch-2026", "hi"),
   openGraph: {
-    title: "Tata Sierra EV पूरी तरह रिवील, 30 जून लॉन्च से पहले: एक्सटीरियर, ट्रिपल-स्क्रीन केबिन और AWD",
+    title: "Tata Sierra EV ₹18.79 लाख में लॉन्च: 665 km तक रेंज, QWD और ट्रिपल स्क्रीन",
     type: "article",
   },
 };
@@ -18,14 +18,14 @@ export default function Page() {
   return (
     <ArticleShell slug="tata-sierra-ev-launch-2026" locale="hi">
       <p>
-        Tata Motors ने अब अपने ताज़ा टीज़र में <strong>30 जून 2026 के लॉन्च</strong> से ठीक पहले{" "}
-        <strong>Sierra EV का पूरा प्रोडक्शन एक्सटीरियर</strong> दिखा दिया है। नई क्लिप — जिसमें
-        SUV एक विशाल रेत के टीले पर चढ़ती दिखती है — पहले आए केबिन टीज़र के बाद तस्वीर को पूरा
-        करती है। दोनों मिलकर डिज़ाइन, एक <strong>ऑल-व्हील-ड्राइव पावरट्रेन</strong> और एक
-        प्रीमियम, फ़ीचर-भरपूर पैकेज की पुष्टि करते हैं। 1990 के दशक के प्रतिष्ठित नाम का यह
-        आधुनिक, पूरी तरह इलेक्ट्रिक अवतार साल के सबसे प्रतीक्षित लॉन्च में से एक है — एक प्रीमियम
-        इलेक्ट्रिक SUV जो भारत के तेज़ी से बढ़ते इलेक्ट्रिक-कार खरीदार को लक्ष्य बनाती है। लॉन्च से
-        पहले अब तक की पुष्ट और रिपोर्ट की गई हर जानकारी यहाँ है (अंतिम कीमत 30 जून को घोषित होगी)।
+        Tata Motors ने <strong>Sierra EV को भारत में</strong> <strong>30 जून 2026</strong> को
+        लॉन्च कर दिया है, कीमतें <strong>₹18.79 लाख</strong> (एक्स-शोरूम) से शुरू होकर टॉप वेरिएंट
+        में लगभग <strong>₹26 लाख</strong> तक जाती हैं। 1990 के दशक के प्रतिष्ठित नाम का यह आधुनिक,
+        पूरी तरह इलेक्ट्रिक अवतार साल के सबसे अहम लॉन्च में से एक है — एक प्रीमियम इलेक्ट्रिक SUV जो
+        भारत के तेज़ी से बढ़ते इलेक्ट्रिक-कार खरीदार को लक्ष्य बनाती है, और Tata की रेंज में Curvv EV
+        और Harrier EV के बीच बैठती है। बुकिंग शुरू हो चुकी है, डिलीवरी लगभग जुलाई के मध्य से शुरू
+        होने की उम्मीद है। लॉन्च पर पुष्ट हर जानकारी — कीमत, बैटरी, रेंज, परफ़ॉर्मेंस और खरीदारों के
+        लिए इसका मतलब — यहाँ है।
       </p>
 
       <h2>एक्सटीरियर पूरी तरह रिवील: स्लिम LED लाइट बार और एयरो अलॉय</h2>
@@ -68,22 +68,30 @@ export default function Page() {
       <h2>बैटरी, रेंज और परफ़ॉर्मेंस</h2>
       <p>
         Sierra EV, Tata के <strong>acti.ev+ प्लेटफ़ॉर्म</strong> पर बनी है — वही आर्किटेक्चर
-        जिस पर Harrier EV आधारित है — और रिपोर्ट के अनुसार इसमें <strong>65 kWh और 75 kWh</strong>{" "}
-        बैटरी पैक होंगे, जो ऊँचे ट्रिम पर लगभग <strong>500–550 किलोमीटर</strong> तक की दावा की गई
-        रेंज देंगे। Tata ने RWD और ऑल-व्हील-ड्राइव दोनों वर्शन की पुष्टि की है; ड्यूल-मोटर AWD
-        सेटअप को <strong>QWD (Quad Wheel Drive)</strong> कहा गया है और यह 75 kWh वेरिएंट पर
-        मिलने की उम्मीद है — जिससे Sierra EV ऑल-व्हील-ड्राइव देने वाली सबसे किफ़ायती Tata बन
-        जाएगी। हमेशा की तरह, वास्तविक रेंज दावे से कुछ कम रह सकती है।
+        जिस पर Harrier EV आधारित है — और इसमें <strong>63 kWh और 75 kWh</strong> बैटरी पैक मिलते
+        हैं। Tata 75 kWh वर्शन के लिए <strong>665 km तक की MIDC रेंज</strong> और 63 kWh पैक के लिए
+        आराम से 500 km से अधिक का दावा करती है। DC फ़ास्ट चार्जिंग पर, Tata के अनुसार यह SUV{" "}
+        <strong>15 मिनट में लगभग 263 km रेंज</strong> जोड़ सकती है। एंट्री वेरिएंट में पीछे लगी
+        सिंगल मोटर रियर व्हील चलाती है, जबकि ऊँचे ट्रिम्स में एक फ्रंट मोटर जुड़कर Tata का{" "}
+        <strong>QWD (Quad Wheel Drive)</strong> ऑल-व्हील-ड्राइव सिस्टम देती है — रियर मोटर लगभग{" "}
+        <strong>234 bhp और 340 Nm</strong> तथा फ्रंट मोटर करीब 138 bhp और 164 Nm। यह ड्यूल-मोटर
+        सेटअप तेज़ है, <strong>0–100 km/h का दावा 5.8 सेकंड</strong> का है, और Sierra EV को
+        ऑल-व्हील-ड्राइव देने वाली सबसे किफ़ायती Tata बनाता है। हमेशा की तरह, वास्तविक रेंज दावे से
+        कुछ कम रह सकती है।
       </p>
 
-      <h2>अपेक्षित कीमत और पोज़िशनिंग</h2>
+      <h2>कीमत और पोज़िशनिंग</h2>
       <p>
-        रिपोर्ट की गई कीमत Sierra EV को प्रीमियम इलेक्ट्रिक-SUV श्रेणी में रखती है, अधिकांश स्रोत
-        लगभग <strong>₹18–25 लाख</strong> (एक्स-शोरूम) की अपेक्षित रेंज की ओर इशारा करते हैं — यह
-        Curvv EV और Harrier EV के बीच बैठती है, जिसमें बेस RWD वेरिएंट निचले सिरे के पास है। खंड की तुलना कर रहे खरीदारों के लिए Sierra EV
-        को प्रतिद्वंद्वियों के साथ रेंज, बैटरी और ऑन-रोड कीमत पर रखकर देखना फ़ायदेमंद है — हमारा{" "}
+        लॉन्च पर Sierra EV की कीमत एंट्री रियर-व्हील-ड्राइव वेरिएंट के लिए{" "}
+        <strong>₹18.79 लाख</strong> (एक्स-शोरूम) से शुरू होती है और पूरी तरह लोडेड QWD ट्रिम के लिए
+        लगभग <strong>₹26 लाख</strong> तक जाती है। यह इसे प्रीमियम इलेक्ट्रिक-SUV श्रेणी में मज़बूती
+        से रखती है — Tata की अपनी रेंज में Curvv EV और Harrier EV के बीच, और दूसरे ब्रांड्स की
+        मिड-साइज़ इलेक्ट्रिक SUV से सीधी टक्कर में। खंड की तुलना कर रहे खरीदारों के लिए Sierra EV को
+        प्रतिद्वंद्वियों के साथ रेंज, बैटरी और ऑन-रोड कीमत पर रखकर देखना फ़ायदेमंद है — हमारा{" "}
         <Link href={localizedHref("/compare-electric-vehicles", "hi")}>तुलना टूल</Link> इसी
-        आमने-सामने के फ़ैसले के लिए बना है।
+        आमने-सामने के फ़ैसले के लिए बना है, और आप मासिक किश्त का अनुमान हमारे{" "}
+        <Link href={localizedHref("/ev-calculators/ev-emi-calculator", "hi")}>EV EMI कैलकुलेटर</Link>{" "}
+        से लगा सकते हैं।
       </p>
 
       <h2>यह भारतीय EV बाज़ार के लिए क्यों मायने रखता है</h2>
@@ -98,31 +106,28 @@ export default function Page() {
 
       <h2>आगे किस पर नज़र रखें</h2>
       <ul>
-        <li>Tata से आधिकारिक लॉन्च तारीख और अंतिम, पुष्ट कीमत।</li>
-        <li>प्रत्येक वेरिएंट की पुष्ट बैटरी, प्रमाणित रेंज और चार्जिंग स्पीड।</li>
-        <li>किन ट्रिम्स को AWD मिलेगा और पूरी ADAS फ़ीचर सूची।</li>
+        <li>राज्यों की रोड-टैक्स छूट लागू होने के बाद शहरवार ऑन-रोड कीमतें।</li>
+        <li>वेरिएंट-वार प्रमाणित रेंज और स्वतंत्र टेस्ट में वास्तविक रेंज का आँकड़ा।</li>
+        <li>जुलाई मध्य से डिलीवरी बढ़ने पर वेटिंग पीरियड।</li>
       </ul>
       <p>
-        जब तक Tata इसे आधिकारिक नहीं बनाता, ऊपर दिए स्पेसिफ़िकेशन को पुष्ट नहीं बल्कि अपेक्षित मानें।
-        पुष्ट जानकारी जारी होने पर हम इस पेज को अपडेट करेंगे।
+        यदि आप Sierra EV की तुलना कर रहे हैं, तो शॉर्टलिस्ट करने से पहले इसे{" "}
+        <Link href={localizedHref("/catalog/electric-cars", "hi")}>भारत की इलेक्ट्रिक कारों</Link>{" "}
+        के व्यापक दायरे के साथ देखना उपयोगी रहेगा।
       </p>
 
       <h2>स्रोत</h2>
       <p>
-        आंकड़े प्रकाशकों द्वारा रिपोर्ट किए गए हैं और Tata द्वारा पुष्टि होने तक अपेक्षित हैं।{" "}
-        <a href="https://www.cardekho.com/india-car-news/first-look-at-the-tata-sierra-evrsquos-interior-set-for-another-climbing-record-after-the-harrier-ev-36205.htm" target="_blank" rel="noopener noreferrer">
-          CarDekho
-        </a>{" "}
-        ·{" "}
-        <a href="https://www.zigwheels.com/news-features/general-news/tata-sierra-ev-exterior-design-revealed-in-latest-teaser/58009/" target="_blank" rel="noopener noreferrer">
-          ZigWheels
-        </a>{" "}
-        ·{" "}
-        <a href="https://www.autocarindia.com/car-news/tata-sierra-ev-revealed-440038" target="_blank" rel="noopener noreferrer">
+        कीमतें और स्पेसिफ़िकेशन लॉन्च पर घोषित और इनके द्वारा रिपोर्ट किए गए हैं:{" "}
+        <a href="https://www.autocarindia.com/cars/tata/sierra-ev" target="_blank" rel="noopener noreferrer">
           Autocar India
         </a>{" "}
         ·{" "}
-        <a href="https://www.v3cars.com/news/tata-sierra-ev-2026-revealed-ahead-of-launch" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.rushlane.com/tata-sierra-ev-launch-price-rs-18-79-l-63-75-kwh-500-kms-range-0-100-5-8s-12550178.html" target="_blank" rel="noopener noreferrer">
+          Rushlane
+        </a>{" "}
+        ·{" "}
+        <a href="https://www.v3cars.com/news/2026-tata-sierra-ev-top-highlights-variant-wise-prices" target="_blank" rel="noopener noreferrer">
           V3Cars
         </a>
       </p>
