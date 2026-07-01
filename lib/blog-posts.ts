@@ -1252,6 +1252,24 @@ export const POSTS: BlogPost[] = [
       "क्या आप भारत में सोलर पैनल से EV चार्ज कर सकते हैं? 2026 की यह गाइड रूफटॉप सोलर को आपकी इलेक्ट्रिक कार के साथ जोड़ने को समझाती है — कितना बड़ा सिस्टम चाहिए, PM Surya Ghar सब्सिडी के बाद कितना खर्च आता है, नेट मीटरिंग दिन वाली दिक्कत कैसे हल करती है, और असली प्रति-किमी बचत कितनी है।",
   },
 
+  {
+    slug: "regenerative-braking-electric-cars-india",
+    title: "Regenerative Braking in Electric Cars Explained (India 2026)",
+    subtitle: "How regen works, the levels, one-pedal driving and the range it really adds",
+    excerpt:
+      "What is regenerative braking in electric cars? A 2026 guide for India — how regen turns braking into range, the different regen levels, one-pedal driving on cars like the Creta Electric and Nexon EV, how much range it really adds, and why it saves your brake pads.",
+    category: "Battery & Tech",
+    categorySlug: "battery-tech",
+    readTime: "8 min",
+    date: "Jun 30, 2026",
+    accent: "#8B7BFF",
+    related: ["real-world-range-vs-arai-india", "ev-battery-lifespan-india", "ev-maintenance-cost-india", "how-to-choose-first-ev-india"],
+    hiTitle: "इलेक्ट्रिक कारों में रीजेनरेटिव ब्रेकिंग समझाई गई (भारत 2026)",
+    hiSubtitle: "रीजेन कैसे काम करती है, इसके लेवल, वन-पेडल ड्राइविंग और यह असल में कितनी रेंज जोड़ती है",
+    hiExcerpt:
+      "इलेक्ट्रिक कारों में रीजेनरेटिव ब्रेकिंग क्या है? भारत के लिए 2026 की यह गाइड — रीजेन कैसे ब्रेकिंग को रेंज में बदलती है, अलग-अलग रीजेन लेवल, Creta Electric और Nexon EV जैसी कारों पर वन-पेडल ड्राइविंग, यह असल में कितनी रेंज जोड़ती है, और यह आपके ब्रेक पैड क्यों बचाती है।",
+  },
+
   // ── News (May 2026) ──────────────────────────────────────────
   {
     slug: "tata-sierra-ev-launch-2026",
